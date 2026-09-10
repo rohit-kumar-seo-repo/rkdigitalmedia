@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 10 10;
+    --foreground: 255 255 255;
+  }
+
+  * {
+    @apply border-neogen-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neogen-bg text-neogen-fg font-sans antialiased;
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-neogen-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neogen-border-hover rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neogen-fg-subtle;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-neogen-accent/30 text-neogen-fg;
+  }
+
+  /* Focus visible */
+  :focus-visible {
+    @apply outline-none ring-2 ring-neogen-accent ring-offset-2 ring-offset-neogen-bg;
+  }
+}
+
+@layer components {
+  /* Neogen-style section numbering */
+  .section-number {
+    @apply font-mono text-neogen-fg-subtle text-caption uppercase tracking-widest;
+  }
+
+  .section-title {
+    @apply font-mono text-neogen-fg text-display-sm font-medium tracking-tight;
+  }
+
+  .section-divider {
+    @apply w-12 h-px bg-neogen-accent;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 text-body-sm font-medium font-mono uppercase tracking-wider text-neogen-fg bg-neogen-accent rounded-xl transition-all duration-400 ease-expo hover:bg-neogen-accent-hover hover:shadow-[0_0_30px_-5px_#ff6b3580] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neogen-accent focus-visible:ring-offset-2 focus-visible:ring-offset-neogen-bg;
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 text-body-sm font-medium font-mono uppercase tracking-wider text-neogen-fg bg-neogen-card border border-neogen-border rounded-xl transition-all duration-400 ease-expo hover:bg-neogen-card-hover hover:border-neogen-border-hover hover:shadow-lg active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neogen-accent focus-visible:ring-offset-2 focus-visible:ring-offset-neogen-bg;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 text-body-sm font-medium font-mono uppercase tracking-wider text-neogen-fg-muted bg-transparent rounded-xl transition-all duration-400 ease-expo hover:text-neogen-fg hover:bg-neogen-accent-muted active:scale-[0.98];
+  }
+
+  /* Card styles */
+  .card-base {
+    @apply relative bg-neogen-card border border-neogen-border rounded-2xl p-6 md:p-8 transition-all duration-500 ease-expo hover:bg-neogen-card-hover hover:border-neogen-border-hover hover:shadow-xl;
+  }
+
+  .card-interactive {
+    @apply card-base cursor-pointer hover:scale-[1.01] hover:-translate-y-1;
+  }
+
+  /* Input styles */
+  .input-base {
+    @apply w-full px-5 py-4 text-body text-neogen-fg bg-neogen-bg-secondary border border-neogen-border rounded-xl placeholder-neogen-fg-subtle transition-all duration-300 focus:border-neogen-accent focus:ring-2 focus:ring-neogen-accent/20 focus:outline-none;
+  }
+
+  .label-base {
+    @apply block mb-2 text-body-sm font-medium text-neogen-fg-muted font-mono uppercase tracking-wider;
+  }
+
+  /* Link styles */
+  .link-primary {
+    @apply inline-flex items-center gap-1 text-neogen-accent font-medium transition-colors duration-300 hover:text-neogen-accent-hover;
+  }
+
+  /* Metric display */
+  .metric-value {
+    @apply font-mono text-neogen-fg text-display-lg font-bold tracking-tight;
+  }
+
+  .metric-label {
+    @apply font-sans text-neogen-fg-muted text-body-sm uppercase tracking-wider;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-caption font-medium font-mono uppercase tracking-wider text-neogen-fg-muted bg-neogen-accent-muted border border-neogen-accent/20 rounded-full;
+  }
+
+  .badge-live {
+    @apply badge text-neogen-accent border-neogen-accent/30 bg-neogen-accent/10;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+               slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-neogen-fg via-neogen-fg/80 to-neogen-fg/60 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-accent {
+    @apply bg-gradient-to-r from-neogen-accent via-neogen-accent/80 to-neogen-accent/60 bg-clip-text text-transparent;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: '';
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  /* Grid pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
