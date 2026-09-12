@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Outfit:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,22 +6,38 @@
 
 @layer base {
   :root {
-    --background: 10 10 10;
-    --foreground: 255 255 255;
+    /* Neogen Design System - New Color Palette */
+    --background: #0d0d0d;
+    --foreground: #f0eeee;
+    --primary: #e8282b;
+    --card: #141414;
+    --border: #1f1f1f;
+    --muted-foreground: #6b6b6b;
+    
+    /* Alias with rkd- prefix for component compatibility */
+    --rkd-bg: #0d0d0d;
+    --rkd-fg: #f0eeee;
+    --rkd-primary: #e8282b;
+    --rkd-card: #141414;
+    --rkd-border: #1f1f1f;
+    --rkd-muted: #6b6b6b;
+    --rkd-fg-muted: #a0a0a0;   /* was #6b6b6b — too dark for nav links and body text */
+    --rkd-bg-secondary: #111111;
+    --rkd-primary-hover: #d02225;
+    --rkd-fg-subtle: #ffffff;
+
+    /* Derived colors */
+    --foreground-muted: #6b6b6b;
+    --card-hover: #1a1a1a;
+    --border-hover: #2a2a2a;
+    --primary-glow: rgba(232, 40, 43, 0.3);
+    --primary-muted: rgba(232, 40, 43, 0.12);
   }
 
-  * {
-    @apply border-neogen-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  html,
   body {
-    @apply bg-neogen-bg text-neogen-fg font-sans antialiased;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background-color: #0d0d0d;
+    color: #f0eeee;
   }
 
   /* Custom scrollbar */
@@ -31,94 +47,389 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-neogen-bg;
+    background-color: var(--background);
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-neogen-border-hover rounded-full;
+    background-color: var(--border-hover);
+    border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-neogen-fg-subtle;
+    background-color: var(--muted-foreground);
   }
 
   /* Selection */
   ::selection {
-    @apply bg-neogen-accent/30 text-neogen-fg;
+    background-color: var(--primary-muted);
+    color: var(--foreground);
   }
 
   /* Focus visible */
   :focus-visible {
-    @apply outline-none ring-2 ring-neogen-accent ring-offset-2 ring-offset-neogen-bg;
+    outline: none;
+    ring: 2px;
+    ring-color: var(--primary);
+    ring-offset: 2px;
+    ring-offset-color: var(--background);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
-  /* Neogen-style section numbering */
-  .section-number {
-    @apply font-mono text-neogen-fg-subtle text-caption uppercase tracking-widest;
+  /* Section label (// LABEL) */
+  .section-label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--primary);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
-  .section-title {
-    @apply font-mono text-neogen-fg text-display-sm font-medium tracking-tight;
+  /* Section headings */
+  .section-heading {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: var(--foreground);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  .section-divider {
-    @apply w-12 h-px bg-neogen-accent;
+  .section-heading-h2 {
+    font-size: clamp(1.875rem, 3.75vw, 3rem);
   }
 
-  /* Button variants */
+  .section-heading-h3 {
+    font-size: clamp(1.25rem, 1.75vw, 1.625rem);
+  }
+
+  .section-subhead {
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--muted-foreground);
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 560px;
+  }
+
+  /* Hero specific */
+  .hero-headline {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.125rem, 6vw, 4.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subheadline {
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--muted-foreground);
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 560px;
+  }
+
+  .hero-status {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--muted-foreground);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .hero-meta {
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--muted-foreground);
+    font-size: 0.625rem;
+    line-height: 1.5;
+  }
+
+  /* Stat numbers */
+  .stat-value {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+  }
+
+  .stat-label {
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: var(--muted-foreground);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Buttons - pill shape */
   .btn-primary {
-    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 text-body-sm font-medium font-mono uppercase tracking-wider text-neogen-fg bg-neogen-accent rounded-xl transition-all duration-400 ease-expo hover:bg-neogen-accent-hover hover:shadow-[0_0_30px_-5px_#ff6b3580] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neogen-accent focus-visible:ring-offset-2 focus-visible:ring-offset-neogen-bg;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white transition-all duration-250 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    background-color: var(--primary);
+    border-radius: 9999px;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 30px -5px var(--primary-glow);
+    transform: translateY(-2px);
+  }
+  .btn-primary:focus-visible {
+    ring-color: var(--primary);
+    ring-offset-color: var(--background);
   }
 
   .btn-secondary {
-    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 text-body-sm font-medium font-mono uppercase tracking-wider text-neogen-fg bg-neogen-card border border-neogen-border rounded-xl transition-all duration-400 ease-expo hover:bg-neogen-card-hover hover:border-neogen-border-hover hover:shadow-lg active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neogen-accent focus-visible:ring-offset-2 focus-visible:ring-offset-neogen-bg;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white transition-all duration-250 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+  }
+  .btn-secondary:hover {
+    border-color: rgba(232, 40, 43, 0.4);
+    transform: translateY(-2px);
+  }
+  .btn-secondary:focus-visible {
+    ring-color: var(--primary);
+    ring-offset-color: var(--background);
   }
 
   .btn-ghost {
-    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 text-body-sm font-medium font-mono uppercase tracking-wider text-neogen-fg-muted bg-transparent rounded-xl transition-all duration-400 ease-expo hover:text-neogen-fg hover:bg-neogen-accent-muted active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-[var(--muted-foreground)] transition-all duration-250 active:scale-[0.98];
+    background-color: transparent;
+    border-radius: 9999px;
+  }
+  .btn-ghost:hover {
+    color: var(--foreground);
+    background-color: var(--primary-muted);
   }
 
-  /* Card styles */
+  /* Cards */
   .card-base {
-    @apply relative bg-neogen-card border border-neogen-border rounded-2xl p-6 md:p-8 transition-all duration-500 ease-expo hover:bg-neogen-card-hover hover:border-neogen-border-hover hover:shadow-xl;
+    @apply relative transition-all duration-250;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 2rem;
+  }
+  .card-base:hover {
+    background-color: var(--card-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
 
   .card-interactive {
-    @apply card-base cursor-pointer hover:scale-[1.01] hover:-translate-y-1;
+    @apply card-base cursor-pointer;
   }
 
-  /* Input styles */
+  /* Inputs */
   .input-base {
-    @apply w-full px-5 py-4 text-body text-neogen-fg bg-neogen-bg-secondary border border-neogen-border rounded-xl placeholder-neogen-fg-subtle transition-all duration-300 focus:border-neogen-accent focus:ring-2 focus:ring-neogen-accent/20 focus:outline-none;
+    @apply w-full px-5 py-4 text-base transition-all duration-250 focus:outline-none;
+    color: var(--foreground);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+  }
+  .input-base::placeholder {
+    color: var(--muted-foreground);
+  }
+  .input-base:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-muted);
   }
 
   .label-base {
-    @apply block mb-2 text-body-sm font-medium text-neogen-fg-muted font-mono uppercase tracking-wider;
+    @apply block mb-2 text-sm font-medium font-mono uppercase tracking-wider;
+    color: var(--muted-foreground);
   }
 
-  /* Link styles */
+  /* Links */
   .link-primary {
-    @apply inline-flex items-center gap-1 text-neogen-accent font-medium transition-colors duration-300 hover:text-neogen-accent-hover;
+    @apply inline-flex items-center gap-1 font-medium transition-colors duration-250;
+    color: var(--primary);
+  }
+  .link-primary:hover {
+    color: var(--primary);
+    text-decoration: underline;
   }
 
-  /* Metric display */
-  .metric-value {
-    @apply font-mono text-neogen-fg text-display-lg font-bold tracking-tight;
-  }
-
-  .metric-label {
-    @apply font-sans text-neogen-fg-muted text-body-sm uppercase tracking-wider;
-  }
-
-  /* Badge */
+  /* Badges / Tags */
   .badge {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 text-caption font-medium font-mono uppercase tracking-wider text-neogen-fg-muted bg-neogen-accent-muted border border-neogen-accent/20 rounded-full;
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium font-mono uppercase tracking-wider;
+    color: var(--muted-foreground);
+    background-color: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
   }
 
-  .badge-live {
-    @apply badge text-neogen-accent border-neogen-accent/30 bg-neogen-accent/10;
+  .badge-red {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: var(--primary-muted);
+  }
+
+  /* Gradient text utilities */
+  .gradient-text {
+    background: linear-gradient(to right, var(--foreground), color-mix(in srgb, var(--foreground) 80%, transparent), color-mix(in srgb, var(--foreground) 60%, transparent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-accent {
+    background: linear-gradient(to right, var(--primary), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-red-italic {
+    color: var(--primary);
+    font-style: italic;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 900;
+  }
+
+  /* Section label */
+  .section-label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--primary);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Bracket corners for hero */
+  .bracket-corner {
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background-color: var(--primary);
+    opacity: 0.6;
+  }
+  .bracket-corner-top-left { top: 0; left: 0; border-radius: 2px 0 0 2px; }
+  .bracket-corner-top-right { top: 0; right: 0; border-radius: 0 2px 2px 0; }
+  .bracket-corner-bottom-left { bottom: 0; left: 0; border-radius: 0 0 2px 2px; }
+  .bracket-corner-bottom-right { bottom: 0; right: 0; border-radius: 0 2px 2px 0; }
+  .bracket-corner-horizontal {
+    width: 24px;
+    height: 2px;
+  }
+  .bracket-corner-top-left-horizontal { top: 0; left: 0; }
+  .bracket-corner-top-right-horizontal { top: 0; right: 0; }
+  .bracket-corner-bottom-left-horizontal { bottom: 0; left: 0; }
+  .bracket-corner-bottom-right-horizontal { bottom: 0; right: 0; }
+
+  /* Marquee */
+  .marquee-container {
+    background-color: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .marquee-text {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--foreground);
+    white-space: nowrap;
+  }
+
+  .marquee-text-muted {
+    color: var(--muted-foreground);
+  }
+
+  /* Hero background */
+  .hero-background {
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 30%, rgba(232, 40, 43, 0.18) 0%, transparent 70%),
+      var(--background);
+  }
+
+  /* Noise texture */
+  .noise-overlay::before {
+    content: '';
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideUpSmall {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-33.333%); }
+  }
+  @keyframes marquee-reverse {
+    from { transform: translateX(-33.333%); }
+    to   { transform: translateX(0); }
+  }
+  .animate-marquee         { animation: marquee 25s linear infinite; }
+  .animate-marquee-reverse { animation: marquee-reverse 25s linear infinite; }
+
+  /* Hero fade-up animations (CSS-based, no JS) */
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-fade-up {
+    animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .hero-fade-up:nth-child(1) { animation-delay: 0s; }
+  .hero-fade-up:nth-child(2) { animation-delay: 0.1s; }
+  .hero-fade-up:nth-child(3) { animation-delay: 0.2s; }
+  .hero-fade-up:nth-child(4) { animation-delay: 0.3s; }
+  .hero-fade-up:nth-child(5) { animation-delay: 0.4s; }
+  .hero-fade-up:nth-child(6) { animation-delay: 0.5s; }
+
+  /* Hero background gradient */
+  .hero-background {
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 30%, rgba(232, 40, 43, 0.18) 0%, transparent 70%),
+      var(--background);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -127,32 +438,40 @@
     text-wrap: balance;
   }
 
-  .animate-in {
-    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards,
-               slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  /* CSS-based fade-in animations (always work on static builds) */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .fade-in-up-delay-1 { animation-delay: 0.1s; }
+  .fade-in-up-delay-2 { animation-delay: 0.2s; }
+  .fade-in-up-delay-3 { animation-delay: 0.3s; }
+  .fade-in-up-delay-4 { animation-delay: 0.4s; }
+  .fade-in-up-delay-5 { animation-delay: 0.5s; }
+  .fade-in-up-delay-6 { animation-delay: 0.6s; }
+
+  /* Font families */
+  .font-montserrat {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  .font-outfit {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
-  /* Gradient text */
-  .gradient-text {
-    @apply bg-gradient-to-r from-neogen-fg via-neogen-fg/80 to-neogen-fg/60 bg-clip-text text-transparent;
-  }
-
-  .gradient-text-accent {
-    @apply bg-gradient-to-r from-neogen-accent via-neogen-accent/80 to-neogen-accent/60 bg-clip-text text-transparent;
-  }
-
-  /* Noise texture overlay */
-  .noise-overlay::before {
-    content: '';
-    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  }
-
-  /* Grid pattern */
-  .grid-pattern {
-    background-image: 
-      linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+  /* Section label utility */
+  .section-label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--primary);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 }

@@ -9,40 +9,40 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Neogen dark theme colors
-        'neogen': {
-          'bg': '#0a0a0a',
+        /* Neogen Design System */
+        'rkd': {
+          'bg': '#0d0d0d',
           'bg-secondary': '#111111',
           'bg-tertiary': '#1a1a1a',
           'card': '#141414',
-          'card-hover': '#1c1c1c',
-          'border': '#2a2a2a',
-          'border-hover': '#3a3a3a',
-          'fg': '#ffffff',
-          'fg-muted': '#a3a3a3',
-          'fg-subtle': '#737373',
-          'accent': '#ff6b35', // Orange accent like Neogen
-          'accent-hover': '#e85d2d',
-          'accent-muted': '#ff6b3520',
+          'card-hover': '#1a1a1a',
+          'border': '#1f1f1f',
+          'border-hover': '#2a2a2a',
+          'fg': '#f0eeee',
+          'fg-muted': '#6b6b6b',
+          'fg-subtle': '#6b6b6b',
+          'primary': '#e8282b',
+          'primary-hover': '#d42225',
+          'primary-muted': 'rgba(232, 40, 43, 0.12)',
+          'primary-glow': 'rgba(232, 40, 43, 0.3)',
         },
       },
       fontFamily: {
-        mono: ['JetBrains Mono', 'Fira Code', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        montserrat: ['Montserrat', 'system-ui', 'sans-serif'],
+        outfit: ['Outfit', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       fontSize: {
-        'display-xl': ['clamp(3.5rem, 8vw, 7rem)', { lineHeight: '1.05', letterSpacing: '-0.04em' }],
-        'display-lg': ['clamp(2.5rem, 5vw, 4.5rem)', { lineHeight: '1.1', letterSpacing: '-0.03em' }],
-        'display-md': ['clamp(2rem, 4vw, 3rem)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'display-sm': ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        'heading-xl': ['clamp(1.75rem, 3vw, 2.5rem)', { lineHeight: '1.25' }],
-        'heading-lg': ['clamp(1.5rem, 2.5vw, 2rem)', { lineHeight: '1.3' }],
-        'heading-md': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.35' }],
-        'heading-sm': ['clamp(1.125rem, 1.5vw, 1.25rem)', { lineHeight: '1.4' }],
-        'body-lg': ['1.125rem', { lineHeight: '1.7' }],
+        'display': ['clamp(2.125rem, 6vw, 4.75rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'footer-cta': ['clamp(2.125rem, 9vw, 9rem)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        'h2': ['clamp(1.875rem, 3.75vw, 3rem)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
+        'h3': ['clamp(1.25rem, 1.75vw, 1.625rem)', { lineHeight: '1.25' }],
+        'stat': ['clamp(2.25rem, 4.2vw, 3.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'lead': ['clamp(1rem, 1.2vw, 1.125rem)', { lineHeight: '1.7' }],
         'body': ['1rem', { lineHeight: '1.7' }],
-        'body-sm': ['0.875rem', { lineHeight: '1.6' }],
-        'caption': ['0.75rem', { lineHeight: '1.5', letterSpacing: '0.05em' }],
+        'small': ['0.875rem', { lineHeight: '1.6' }],
+        'meta': ['0.625rem', { lineHeight: '1.5', letterSpacing: '0.15em' }],
+        'meta-lg': ['0.6875rem', { lineHeight: '1.5', letterSpacing: '0.15em' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -53,23 +53,23 @@ module.exports = {
       borderRadius: {
         'xl': '1rem',
         '2xl': '1.5rem',
+        'pill': '9999px',
       },
       transitionDuration: {
+        '250': '250ms',
         '400': '400ms',
       },
       transitionTimingFunction: {
-        'expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'ease-out': 'cubic-bezier(0.16, 1, 0.3, 1)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'slide-up-delay-1': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards',
-        'slide-up-delay-2': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards',
-        'slide-up-delay-3': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards',
-        'slide-up-delay-4': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards',
-        'scale-in': 'scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'border-glow': 'borderGlow 3s ease-in-out infinite',
+        'slide-up-small': 'slideUpSmall 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'marquee': 'marquee 30s linear infinite',
+        'marquee-reverse': 'marquee 30s linear infinite reverse',
         'float': 'float 6s ease-in-out infinite',
+        'spin': 'spin 1s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -80,18 +80,30 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(30px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        scaleIn: {
-          '0%': { opacity: '0', transform: 'scale(0.95)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
+        slideUpSmall: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        borderGlow: {
-          '0%, 100%': { boxShadow: '0 0 0 0 transparent' },
-          '50%': { boxShadow: '0 0 30px -10px #ff6b3540' },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        spin: {
+          to: { transform: 'rotate(360deg)' },
+        },
+      },
+      backgroundImage: {
+        'hero-gradient': 'radial-gradient(ellipse 80% 60% at 70% 30%, rgba(232, 40, 43, 0.18) 0%, transparent 70%), #0d0d0d',
+        'marquee-bg': 'linear-gradient(to right, var(--card), var(--card))',
+        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+        'grid-pattern': "linear-gradient(rgba(232,40,43,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(232,40,43,0.03) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        'grid-60': '60px 60px',
       },
     },
   },

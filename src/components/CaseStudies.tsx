@@ -67,10 +67,10 @@ const caseStudies = [
   },
 ];
 
-export default function CaseStudies() {
+export function CaseStudies() {
   return (
-    <section id="case-studies" className="relative py-20 md:py-32 bg-neogen-bg-secondary border-y border-neogen-border noise-overlay">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <section id="case-studies" className="relative py-20 md:py-32 lg:py-36 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)] noise-overlay">
+      <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           className="mb-16 md:mb-24 max-w-3xl"
@@ -79,12 +79,11 @@ export default function CaseStudies() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="section-number mb-4">// 02. Proof We Ship</p>
-          <h2 className="section-title mb-6">
-            Results You Can{' '}
-            <span className="gradient-text-accent">Screenshot</span>
+          <p className="section-label mb-4">// PROOF, NOT PROMISES</p>
+          <h2 className="section-heading section-heading-h2 mb-6">
+            Results that speak for themselves.
           </h2>
-          <p className="text-body-lg text-neogen-fg-muted">
+          <p className="section-subhead">
             Campaigns, builds, and growth systems that moved real numbers — with the numbers still attached. Every metric verified, every client referenceable.
           </p>
         </motion.div>
@@ -98,20 +97,20 @@ export default function CaseStudies() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="card-base text-center">
-            <div className="metric-value text-neogen-accent">₹5Cr+</div>
-            <div className="metric-label">Total Attributed Revenue</div>
+            <div className="stat-value text-[var(--rkd-primary)]">₹5Cr+</div>
+            <div className="stat-label">Total Attributed Revenue</div>
           </div>
           <div className="card-base text-center">
-            <div className="metric-value text-neogen-accent">12×</div>
-            <div className="metric-label">Peak ROAS Achieved</div>
+            <div className="stat-value text-[var(--rkd-primary)]">12×</div>
+            <div className="stat-label">Peak ROAS Achieved</div>
           </div>
           <div className="card-base text-center">
-            <div className="metric-value text-neogen-accent">22K+</div>
-            <div className="metric-label">Leads Generated</div>
+            <div className="stat-value text-[var(--rkd-primary)]">22K+</div>
+            <div className="stat-label">Leads Generated</div>
           </div>
           <div className="card-base text-center">
-            <div className="metric-value text-neogen-accent">4</div>
-            <div className="metric-label">Core Service Verticals</div>
+            <div className="stat-value text-[var(--rkd-primary)]">4</div>
+            <div className="stat-label">Core Service Verticals</div>
           </div>
         </motion.div>
 
@@ -130,8 +129,8 @@ export default function CaseStudies() {
                   {/* Left: Metrics */}
                   <div className="lg:col-span-1 space-y-6">
                     <div className="flex items-center gap-2">
-                      <span className="badge-live">{study.status}</span>
-                      <span className="font-mono text-caption text-neogen-fg-subtle">{study.sector}</span>
+                      <span className="badge badge-red">{study.status}</span>
+                      <span className="font-mono text-meta text-[var(--rkd-fg-subtle)]">{study.sector}</span>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
@@ -141,10 +140,12 @@ export default function CaseStudies() {
                         { label: 'Leads Generated', value: study.metrics.leads, icon: Users },
                         { label: 'Campaign Period', value: study.metrics.period, icon: Zap },
                       ].map((metric) => (
-                        <div key={metric.label} className="text-center p-4 bg-neogen-bg-secondary rounded-xl">
-                          <metric.icon className="w-5 h-5 text-neogen-accent mx-auto mb-2" aria-hidden="true" />
-                          <div className="font-mono text-heading-sm font-bold text-neogen-fg">{metric.value}</div>
-                          <div className="text-caption text-neogen-fg-subtle uppercase tracking-wider">{metric.label}</div>
+                        <div key={metric.label} className="text-center p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
+                          <metric.icon className="w-5 h-5 text-[var(--rkd-primary)] mx-auto mb-2" aria-hidden="true" />
+                          <div className="font-montserrat font-bold text-[var(--rkd-fg)]" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', lineHeight: '1.2' }}>
+                            {metric.value}
+                          </div>
+                          <div className="text-meta text-[var(--rkd-fg-subtle)] uppercase tracking-wider">{metric.label}</div>
                         </div>
                       ))}
                     </div>
@@ -153,7 +154,7 @@ export default function CaseStudies() {
                       {study.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 text-caption font-mono uppercase tracking-wider text-neogen-fg-muted bg-neogen-bg-secondary border border-neogen-border rounded-full"
+                          className="px-3 py-1 text-meta font-mono uppercase tracking-wider text-[var(--rkd-fg-muted)] bg-[var(--rkd-bg-secondary)] border border-[var(--rkd-border)] rounded-full"
                         >
                           {tag}
                         </span>
@@ -163,25 +164,25 @@ export default function CaseStudies() {
 
                   {/* Center: Description */}
                   <div className="lg:col-span-1 pt-2">
-                    <h3 className="font-mono text-heading-md font-semibold text-neogen-fg mb-4 group-hover:text-neogen-accent transition-colors duration-300">
+                    <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-4 group-hover:text-[var(--rkd-primary)] transition-colors duration-300" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)', lineHeight: '1.35' }}>
                       {study.title}
                     </h3>
-                    <p className="text-body text-neogen-fg-muted leading-relaxed">
+                    <p className="text-body text-[var(--rkd-fg-muted)] leading-relaxed">
                       {study.description}
                     </p>
                   </div>
 
                   {/* Right: CTA */}
                   <div className="lg:col-span-1 flex flex-col items-end lg:items-end pt-2">
-                    <Link
+                    <a
                       href={study.link}
                       className="btn-primary w-full lg:w-auto group"
                       data-cursor-text="Read Case Study"
                     >
                       <span>Read Full Case Study</span>
                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                    </Link>
-                    <p className="mt-6 text-body-sm text-neogen-fg-subtle text-right max-w-xs">
+                    </a>
+                    <p className="mt-6 text-body-sm text-[var(--rkd-fg-subtle)] text-right max-w-xs">
                       Want receipts like these on your account? Book a 30-minute audit call. We'll pull your current numbers, show you where the leaks are, and tell you honestly whether we can move them.
                     </p>
                   </div>
@@ -200,18 +201,18 @@ export default function CaseStudies() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="card-base inline-block max-w-2xl">
-            <p className="section-number mb-4">// Next Step</p>
-            <h3 className="font-mono text-heading-lg font-semibold text-neogen-fg mb-4">
+            <p className="section-label mb-4">// NEXT STEP</p>
+            <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.25' }}>
               Want Receipts Like These On Your Account?
             </h3>
-            <p className="text-body-lg text-neogen-fg-muted mb-8">
+            <p className="text-body-lg text-[var(--rkd-fg-muted)] mb-8" style={{ lineHeight: '1.7' }}>
               Book a 30-minute strategy audit. We'll analyze your current digital presence, identify the leaks, and show you exactly how we'd move the needle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary group">
+              <a href="/contact" className="btn-primary group">
                 Book Free Audit
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </Link>
+              </a>
               <a
                 href="https://wa.me/919871530594"
                 target="_blank"
@@ -224,17 +225,17 @@ export default function CaseStudies() {
                 WhatsApp Us
               </a>
             </div>
-            <div className="mt-6 grid grid-cols-3 gap-4 text-center text-body-sm text-neogen-fg-subtle">
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center text-body-sm text-[var(--rkd-fg-subtle)]">
               <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-neogen-accent" aria-hidden="true" />
+                <CheckCircle className="w-4 h-4 text-[var(--rkd-primary)]" aria-hidden="true" />
                 <span>30 Min Free Audit</span>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-neogen-accent" aria-hidden="true" />
+                <CheckCircle className="w-4 h-4 text-[var(--rkd-primary)]" aria-hidden="true" />
                 <span>No Deck</span>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-neogen-accent" aria-hidden="true" />
+                <CheckCircle className="w-4 h-4 text-[var(--rkd-primary)]" aria-hidden="true" />
                 <span>No Obligation</span>
               </div>
             </div>
@@ -244,3 +245,5 @@ export default function CaseStudies() {
     </section>
   );
 }
+
+export default CaseStudies;

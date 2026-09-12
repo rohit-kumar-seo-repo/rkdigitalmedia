@@ -1,99 +1,82 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube, ArrowRight, ArrowUp } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const footerLinks = {
-  services: [
-    { href: '/services/seo', label: 'Search Engine Optimization' },
-    { href: '/services/google-ads', label: 'Google Ads Services' },
-    { href: '/services/gbp', label: 'Google Business Profile' },
-    { href: '/services/website-design', label: 'Website Design' },
-    { href: '/services/social-media', label: 'Social Media Marketing' },
+const footerNav = {
+  Services: [
+    { label: 'Performance Marketing', href: '/services/performance-marketing' },
+    { label: 'SEO & Search Growth', href: '/services/seo' },
+    { label: 'AI Automation', href: '/services/ai-automation' },
+    { label: 'Web & Conversion', href: '/services/web-development' },
+    { label: 'Creative & Content', href: '/services/creative' },
+    { label: 'CRM & Growth Systems', href: '/services/crm' },
   ],
-  company: [
-    { href: '/about', label: 'About Us' },
-    { href: '/case-studies', label: 'Case Studies' },
-    { href: '/blogs', label: 'Blogs' },
-    { href: '/contact', label: 'Contact Us' },
+  Company: [
+    { label: 'About Us', href: '/about' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Insights', href: '/insights' },
+    { label: 'Process', href: '/process' },
+    { label: 'Contact', href: '/contact' },
   ],
-  resources: [
-    { href: '/privacy', label: 'Privacy Policy' },
-    { href: '/terms', label: 'Terms of Service' },
-    { href: '/sitemap', label: 'Sitemap' },
+  Legal: [
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Service', href: '/terms' },
   ],
 };
 
-export default function Footer() {
+const socialLinks = [
+  { icon: Facebook, href: 'https://facebook.com/rkdigitalmedia', label: 'R.K Digital Media on Facebook' },
+  { icon: Instagram, href: 'https://instagram.com/rkdigitalmedia', label: 'R.K Digital Media on Instagram' },
+  { icon: Twitter, href: 'https://twitter.com/rkdigitalmedia', label: 'R.K Digital Media on Twitter' },
+  { icon: Youtube, href: 'https://youtube.com/@rkdigitalmedia', label: 'R.K Digital Media on YouTube' },
+];
+
+export function Footer() {
   return (
-    <footer className="relative bg-neogen-bg-secondary border-t border-neogen-border noise-overlay">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+    <footer className="relative bg-[var(--rkd-bg)] border-t border-[var(--rkd-border)] noise-overlay">
+      <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
+        {/* Top Section */}
+        <div className="grid lg:grid-cols-4 gap-8 md:gap-12 mb-16 md:mb-20">
           {/* Brand */}
-          <div className="lg:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center gap-3" aria-label="R.K Digital Media - Home">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-neogen-accent">
-                <span className="font-mono font-bold text-neogen-fg text-xl">RK</span>
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center gap-3 text-[var(--rkd-fg)] hover:opacity-80 transition-opacity duration-300 mb-6">
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--rkd-primary)]">
+                <span className="font-montserrat font-bold text-[var(--rkd-fg)] text-xl">RK</span>
               </div>
-              <span className="font-mono font-semibold text-heading-sm tracking-wide">
-                R.K Digital Media
-              </span>
+              <span className="font-montserrat font-semibold tracking-wide">R.K DIGITAL MEDIA</span>
             </Link>
-            <p className="text-body text-neogen-fg-muted max-w-xs">
-              Helping businesses in Greater Noida, Noida, and NCR generate real leads, traffic, and sales through result-driven SEO, Google Ads, website development, and local marketing strategies.
+            <p className="text-body text-[var(--rkd-fg-muted)] leading-relaxed mb-6 max-w-xs">
+              Scaling local businesses, daily. One system for SEO, Google Ads, GMB, and web development — engineered for Greater Noida & NCR.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-neogen-fg-muted hover:text-neogen-accent transition-colors rounded-lg hover:bg-neogen-card"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-neogen-fg-muted hover:text-neogen-accent transition-colors rounded-lg hover:bg-neogen-card"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-neogen-fg-muted hover:text-neogen-accent transition-colors rounded-lg hover:bg-neogen-card"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-neogen-fg-muted hover:text-neogen-accent transition-colors rounded-lg hover:bg-neogen-card"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-xl bg-[var(--rkd-card)] border border-[var(--rkd-border)] flex items-center justify-center text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] hover:border-[var(--rkd-primary)]/30 transition-all duration-300"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" aria-hidden="true" />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Services */}
-          <nav aria-label="Services">
-            <h3 className="font-mono text-heading-sm font-semibold text-neogen-fg mb-4">Services</h3>
+          <nav className="lg:col-span-1">
+            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Services</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.href}>
+              {footerNav.Services.map((item) => (
+                <li key={item.href}>
                   <Link
-                    href={link.href}
-                    className="font-sans text-body text-neogen-fg-muted hover:text-neogen-accent transition-colors duration-300 flex items-center gap-2 group"
+                    href={item.href}
+                    className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
                   >
-                    {link.label}
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-neogen-accent" aria-hidden="true" />
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -101,76 +84,75 @@ export default function Footer() {
           </nav>
 
           {/* Company */}
-          <nav aria-label="Company">
-            <h3 className="font-mono text-heading-sm font-semibold text-neogen-fg mb-4">Company</h3>
+          <nav className="lg:col-span-1">
+            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Company</h4>
             <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.href}>
+              {footerNav.Company.map((item) => (
+                <li key={item.href}>
                   <Link
-                    href={link.href}
-                    className="font-sans text-body text-neogen-fg-muted hover:text-neogen-accent transition-colors duration-300 flex items-center gap-2 group"
+                    href={item.href}
+                    className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
                   >
-                    {link.label}
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-neogen-accent" aria-hidden="true" />
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-mono text-heading-sm font-semibold text-neogen-fg mb-4">Contact</h3>
-            <address className="space-y-4 not-italic">
-              <a
-                href="https://maps.app.goo.gl/aXxLAXkidrw5g2eJ6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 text-body text-neogen-fg-muted hover:text-neogen-accent transition-colors duration-300 group"
-              >
-                <MapPin className="w-5 h-5 text-neogen-accent mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" aria-hidden="true" />
-                <span>5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, Uttar Pradesh 201016</span>
-              </a>
-              <a
-                href="tel:+919871530594"
-                className="flex items-center gap-3 text-body text-neogen-fg-muted hover:text-neogen-accent transition-colors duration-300 group"
-              >
-                <Phone className="w-5 h-5 text-neogen-accent flex-shrink-0 group-hover:scale-110 transition-transform" aria-hidden="true" />
-                <span>+91 98715 30594</span>
-              </a>
-              <a
-                href="mailto:info@rkdigitalmedia.in"
-                className="flex items-center gap-3 text-body text-neogen-fg-muted hover:text-neogen-accent transition-colors duration-300 group"
-              >
-                <Mail className="w-5 h-5 text-neogen-accent flex-shrink-0 group-hover:scale-110 transition-transform" aria-hidden="true" />
-                <span>info@rkdigitalmedia.in</span>
-              </a>
+          {/* Legal + Contact */}
+          <div className="lg:col-span-1">
+            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Legal</h4>
+            <ul className="space-y-3 mb-10">
+              {footerNav.Legal.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Contact</h4>
+            <address className="not-italic text-body-sm text-[var(--rkd-fg-muted)] space-y-2">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
+                <span>5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, UP 201016</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
+                <a href="tel:+919871530594" className="hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
+                <a href="mailto:info@rkdigitalmedia.in" className="hover:text-[var(--rkd-primary)] transition-colors">info@rkdigitalmedia.in</a>
+              </div>
             </address>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 md:mt-16 pt-8 border-t border-neogen-border">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <p className="text-body-sm text-neogen-fg-subtle font-mono uppercase tracking-wider">
-              © 2024 R.K Digital Media. All rights reserved.
-            </p>
-            <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 text-body-sm text-neogen-fg-subtle">
-              <span className="font-mono">Powered by Rohit Kumar SEO</span>
-              <nav aria-label="Legal">
-                <ul className="flex flex-wrap gap-4">
-                  <li>
-                    <Link href="/privacy" className="hover:text-neogen-accent transition-colors">Privacy Policy</Link>
-                  </li>
-                  <li>
-                    <Link href="/terms" className="hover:text-neogen-accent transition-colors">Terms of Service</Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+        <div className="pt-8 border-t border-[var(--rkd-border)] flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-body-sm text-[var(--rkd-fg-subtle)]">
+            © 2026 R.K Digital Media. All rights reserved.
+          </p>
+          <p className="text-body-sm text-[var(--rkd-fg-subtle)]">
+            Built by R.K Digital Media
+          </p>
+          <a
+            href="#"
+            className="w-10 h-10 rounded-xl bg-[var(--rkd-card)] border border-[var(--rkd-border)] flex items-center justify-center text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] hover:border-[var(--rkd-primary)]/30 transition-all duration-300"
+            aria-label="Back to top"
+          >
+            <ArrowUp className="w-5 h-5" aria-hidden="true" />
+          </a>
         </div>
       </div>
     </footer>
   );
 }
+
+export default Footer;
