@@ -13,13 +13,29 @@ const services = [
 
 export function Contact() {
   const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle');
+  const [errorDetails, setErrorDetails] = useState<string>('');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('sending');
+    setErrorDetails('');
     const fd = new FormData(e.currentTarget);
-    const res = await fetch('/api/contact', { method: 'POST', body: fd });
-    setStatus(res.ok ? 'sent' : 'error');
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', body: fd });
+      const data = await res.json();
+      console.log('API response:', res.status, data);
+      if (res.ok) {
+        setStatus('sent');
+      } else {
+        setStatus('error');
+        setErrorDetails(data?.error || data?.details || JSON.stringify(data));
+        console.error('API error:', data);
+      }
+    } catch (err) {
+      console.error('Network error:', err);
+      setStatus('error');
+      setErrorDetails(err instanceof Error ? err.message : 'Network error');
+    }
   }
 
   return (
@@ -99,7 +115,19 @@ export function Contact() {
               </div>
 
               {status === 'error' && (
-                <p className="text-red-400 text-sm font-outfit">Something went wrong. Please email us directly at info@rkdigitalmedia.in</p>
+                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm font-outfit">
+                  Something went wrong. Please email us directly at info@rkdigitalmedia.in
+                  <details className="mt-2 text-xs text-red-500/80">
+                    <summary>Show error details</summary>
+                    <pre className="mt-1 whitespace-pre-wrap">Error: {errorDetails || 'Unknown error'}</pre>
+                  </details>
+                </div>
+              )}
+
+              {status === 'sending' && (
+                <div className="p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg text-yellow-400 text-sm font-outfit">
+                  Sending... please wait
+                </div>
               )}
             </form>
           )}

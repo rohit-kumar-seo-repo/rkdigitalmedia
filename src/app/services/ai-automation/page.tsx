@@ -4,6 +4,43 @@ import { ArrowRight } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'AI Automation Services | R.K Digital Media Greater Noida',
   description: 'WhatsApp AI agents, voice agents, CRM automation, n8n workflows. 24/7 lead coverage, 80% faster response, 40% lower cost per lead.',
+  keywords: [
+    'AI automation agency Greater Noida',
+    'WhatsApp AI agent services',
+    'voice AI agent development',
+    'CRM automation services',
+    'n8n workflow automation',
+    'lead qualification bot',
+    'AI chatbot development',
+    'marketing automation agency',
+    'business process automation',
+    'AI lead generation',
+  ],
+  openGraph: {
+    title: 'AI Automation Services | R.K Digital Media Greater Noida',
+    description: 'WhatsApp AI agents, voice agents, CRM automation, n8n workflows. 24/7 lead coverage, 80% faster response, 40% lower cost per lead.',
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://rkdigitalmedia.in/services/ai-automation',
+    siteName: 'R.K Digital Media',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Automation Services | R.K Digital Media',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Automation Services | R.K Digital Media Greater Noida',
+    description: 'WhatsApp AI agents, voice agents, CRM automation, n8n workflows. 24/7 lead coverage, 80% faster response, 40% lower cost per lead.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://rkdigitalmedia.in/services/ai-automation',
+  },
 };
 
 const steps = [
@@ -29,9 +66,29 @@ const stats = [
   { value: '40%', label: 'Lower Cost Per Lead' },
 ];
 
+const faqItems = [
+  { question: 'What AI platforms do you use?', answer: 'We build on n8n for workflows, integrate with OpenAI/Claude for LLM agents, Vapi/Retell for voice, and connect to your CRM (GHL, HubSpot, Pipedrive).' },
+  { question: 'How long to deploy an AI agent?', answer: 'Typical WhatsApp/voice agent: 2 weeks from audit to live. Complex CRM workflows: 3-4 weeks. We provide exact timeline after process audit.' },
+  { question: 'Will AI replace my sales team?', answer: 'No — AI handles instant response, qualification, and booking. Your team closes warm leads. We design human handoff points for complex conversations.' },
+  { question: 'What if the AI makes mistakes?', answer: 'We build fallback logic: confidence thresholds, human escalation triggers, and audit logs. You review edge cases weekly during first month.' },
+  { question: 'How much does AI automation cost?', answer: 'Setup fee + monthly retainer based on workflows/agents. Typically ₹50K-₹2L setup + ₹25K-₹1L/month. ROI positive within 60 days for most clients.' },
+];
+
+const graphSchemaString = '{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"Service","name":"AI Automation Services","description":"WhatsApp AI agents, voice agents, CRM automation, n8n workflows. 24/7 lead coverage, 80% faster response, 40% lower cost per lead.","url":"https://rkdigitalmedia.in/services/ai-automation","provider":{"@type":"LocalBusiness","@id":"https://rkdigitalmedia.in/#localbusiness","name":"R.K Digital Media"},"category":"AI Automation","areaServed":[{"@type":"Place","name":"Greater Noida"},{"@type":"Place","name":"Noida"},{"@type":"Place","name":"Delhi NCR"},{"@type":"Place","name":"Ghaziabad"},{"@type":"Place","name":"Faridabad"},{"@type":"Place","name":"Gurugram"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What AI platforms do you use?","acceptedAnswer":{"@type":"Answer","text":"We build on n8n for workflows, integrate with OpenAI/Claude for LLM agents, Vapi/Retell for voice, and connect to your CRM (GHL, HubSpot, Pipedrive)."}},{"@type":"Question","name":"How long to deploy an AI agent?","acceptedAnswer":{"@type":"Answer","text":"Typical WhatsApp/voice agent: 2 weeks from audit to live. Complex CRM workflows: 3-4 weeks. We provide exact timeline after process audit."}},{"@type":"Question","name":"Will AI replace my sales team?","acceptedAnswer":{"@type":"Answer","text":"No — AI handles instant response, qualification, and booking. Your team closes warm leads. We design human handoff points for complex conversations."}},{"@type":"Question","name":"What if the AI makes mistakes?","acceptedAnswer":{"@type":"Answer","text":"We build fallback logic: confidence thresholds, human escalation triggers, and audit logs. You review edge cases weekly during first month."}},{"@type":"Question","name":"How much does AI automation cost?","acceptedAnswer":{"@type":"Answer","text":"Setup fee + monthly retainer based on workflows/agents. Typically ₹50K-₹2L setup + ₹25K-₹1L/month. ROI positive within 60 days for most clients."}}]}]}';
+
+const faqSchemaString = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What AI platforms do you use?","acceptedAnswer":{"@type":"Answer","text":"We build on n8n for workflows, integrate with OpenAI/Claude for LLM agents, Vapi/Retell for voice, and connect to your CRM (GHL, HubSpot, Pipedrive)."}},{"@type":"Question","name":"How long to deploy an AI agent?","acceptedAnswer":{"@type":"Answer","text":"Typical WhatsApp/voice agent: 2 weeks from audit to live. Complex CRM workflows: 3-4 weeks. We provide exact timeline after process audit."}},{"@type":"Question","name":"Will AI replace my sales team?","acceptedAnswer":{"@type":"Answer","text":"No — AI handles instant response, qualification, and booking. Your team closes warm leads. We design human handoff points for complex conversations."}},{"@type":"Question","name":"What if the AI makes mistakes?","acceptedAnswer":{"@type":"Answer","text":"We build fallback logic: confidence thresholds, human escalation triggers, and audit logs. You review edge cases weekly during first month."}},{"@type":"Question","name":"How much does AI automation cost?","acceptedAnswer":{"@type":"Answer","text":"Setup fee + monthly retainer based on workflows/agents. Typically ₹50K-₹2L setup + ₹25K-₹1L/month. ROI positive within 60 days for most clients."}}]}';
+
 export default function AIAutomationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: graphSchemaString }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqSchemaString }}
+      />
       <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center py-24">
           <p className="section-label mb-4">// SERVICE</p>
@@ -91,6 +148,28 @@ export default function AIAutomationPage() {
                 <div className="font-montserrat font-black text-5xl text-[var(--rkd-primary)] mb-2">{stat.value}</div>
                 <div className="text-[var(--rkd-fg-muted)] font-outfit">{stat.label}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-[var(--rkd-bg)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// FAQ</p>
+          <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-12" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
+            Common Questions About Our <span className="text-red-italic">AI Automation</span>
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqItems.map((faq, index) => (
+              <details key={index} className="group bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl p-6">
+                <summary className="flex items-center justify-between cursor-pointer list-none font-montserrat font-semibold text-[var(--rkd-fg)]">
+                  {faq.question}
+                  <svg className="w-5 h-5 text-[var(--rkd-primary)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-4 text-[var(--rkd-fg-muted)] leading-relaxed">{faq.answer}</div>
+              </details>
             ))}
           </div>
         </div>

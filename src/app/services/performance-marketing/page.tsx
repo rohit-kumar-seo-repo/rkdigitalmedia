@@ -4,6 +4,43 @@ import { ArrowRight } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Performance Marketing Services | R.K Digital Media Greater Noida',
   description: 'Meta Ads, Google Ads (Search, Shopping, PMax), landing page CRO, and WhatsApp follow-up. 3×–12× ROAS, first leads in 48 hours.',
+  keywords: [
+    'performance marketing agency Greater Noida',
+    'Meta Ads agency Noida',
+    'Google Ads management Greater Noida',
+    'Facebook Ads agency Greater Noida',
+    'Performance Max campaigns',
+    'lead generation services',
+    'ROAS optimization',
+    'WhatsApp marketing automation',
+    'landing page CRO',
+    'ad account audit',
+  ],
+  openGraph: {
+    title: 'Performance Marketing Services | R.K Digital Media Greater Noida',
+    description: 'Meta Ads, Google Ads (Search, Shopping, PMax), landing page CRO, and WhatsApp follow-up. 3×–12× ROAS, first leads in 48 hours.',
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://rkdigitalmedia.in/services/performance-marketing',
+    siteName: 'R.K Digital Media',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Performance Marketing Services | R.K Digital Media',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Performance Marketing Services | R.K Digital Media Greater Noida',
+    description: 'Meta Ads, Google Ads (Search, Shopping, PMax), landing page CRO, and WhatsApp follow-up. 3×–12× ROAS, first leads in 48 hours.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://rkdigitalmedia.in/services/performance-marketing',
+  },
 };
 
 const steps = [
@@ -29,9 +66,29 @@ const stats = [
   { value: '60%', label: 'Avg CAC Reduction vs Average' },
 ];
 
+const faqItems = [
+  { question: 'What platforms do you advertise on?', answer: 'We specialize in Meta Ads (Facebook + Instagram) and Google Ads (Search, Shopping, Performance Max). We also integrate with WhatsApp for lead follow-up.' },
+  { question: 'How much ad spend do you manage?', answer: 'We work with monthly ad budgets from ₹50K to ₹50L+. Strategy and management fee is separate from ad spend.' },
+  { question: 'When will I see results?', answer: 'First qualified leads typically arrive within 48 hours of campaign launch. ROAS optimization takes 2-4 weeks of testing.' },
+  { question: 'Do you handle creative production?', answer: 'Yes, we provide creative direction, ad copy, and coordinate with designers/videographers. We also test 10+ creative variations per month.' },
+  { question: 'What is your reporting cadence?', answer: 'Weekly performance summaries via Slack/Email, monthly strategy calls with full dashboard access. Real-time data always available.' },
+];
+
+const graphSchemaString = '{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"Service","name":"Performance Marketing Services","description":"Meta Ads, Google Ads (Search, Shopping, PMax), landing page CRO, and WhatsApp follow-up. 3×–12× ROAS, first leads in 48 hours.","url":"https://rkdigitalmedia.in/services/performance-marketing","provider":{"@type":"LocalBusiness","@id":"https://rkdigitalmedia.in/#localbusiness","name":"R.K Digital Media"},"category":"Performance Marketing","areaServed":[{"@type":"Place","name":"Greater Noida"},{"@type":"Place","name":"Noida"},{"@type":"Place","name":"Delhi NCR"},{"@type":"Place","name":"Ghaziabad"},{"@type":"Place","name":"Faridabad"},{"@type":"Place","name":"Gurugram"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What platforms do you advertise on?","acceptedAnswer":{"@type":"Answer","text":"We specialize in Meta Ads (Facebook + Instagram) and Google Ads (Search, Shopping, Performance Max). We also integrate with WhatsApp for lead follow-up."}},{"@type":"Question","name":"How much ad spend do you manage?","acceptedAnswer":{"@type":"Answer","text":"We work with monthly ad budgets from ₹50K to ₹50L+. Strategy and management fee is separate from ad spend."}},{"@type":"Question","name":"When will I see results?","acceptedAnswer":{"@type":"Answer","text":"First qualified leads typically arrive within 48 hours of campaign launch. ROAS optimization takes 2-4 weeks of testing."}},{"@type":"Question","name":"Do you handle creative production?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide creative direction, ad copy, and coordinate with designers/videographers. We also test 10+ creative variations per month."}},{"@type":"Question","name":"What is your reporting cadence?","acceptedAnswer":{"@type":"Answer","text":"Weekly performance summaries via Slack/Email, monthly strategy calls with full dashboard access. Real-time data always available."}}]}]}';
+
+const faqSchemaString = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What platforms do you advertise on?","acceptedAnswer":{"@type":"Answer","text":"We specialize in Meta Ads (Facebook + Instagram) and Google Ads (Search, Shopping, Performance Max). We also integrate with WhatsApp for lead follow-up."}},{"@type":"Question","name":"How much ad spend do you manage?","acceptedAnswer":{"@type":"Answer","text":"We work with monthly ad budgets from ₹50K to ₹50L+. Strategy and management fee is separate from ad spend."}},{"@type":"Question","name":"When will I see results?","acceptedAnswer":{"@type":"Answer","text":"First qualified leads typically arrive within 48 hours of campaign launch. ROAS optimization takes 2-4 weeks of testing."}},{"@type":"Question","name":"Do you handle creative production?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide creative direction, ad copy, and coordinate with designers/videographers. We also test 10+ creative variations per month."}},{"@type":"Question","name":"What is your reporting cadence?","acceptedAnswer":{"@type":"Answer","text":"Weekly performance summaries via Slack/Email, monthly strategy calls with full dashboard access. Real-time data always available."}}]}';
+
 export default function PerformanceMarketingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: graphSchemaString }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqSchemaString }}
+      />
       <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center py-24">
           <p className="section-label mb-4">// SERVICE</p>
@@ -91,6 +148,28 @@ export default function PerformanceMarketingPage() {
                 <div className="font-montserrat font-black text-5xl text-[var(--rkd-primary)] mb-2">{stat.value}</div>
                 <div className="text-[var(--rkd-fg-muted)] font-outfit">{stat.label}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-[var(--rkd-bg)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// FAQ</p>
+          <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-12" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
+            Common Questions About Our <span className="text-red-italic">Performance Marketing</span>
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqItems.map((faq, index) => (
+              <details key={index} className="group bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl p-6">
+                <summary className="flex items-center justify-between cursor-pointer list-none font-montserrat font-semibold text-[var(--rkd-fg)]">
+                  {faq.question}
+                  <svg className="w-5 h-5 text-[var(--rkd-primary)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-4 text-[var(--rkd-fg-muted)] leading-relaxed">{faq.answer}</div>
+              </details>
             ))}
           </div>
         </div>

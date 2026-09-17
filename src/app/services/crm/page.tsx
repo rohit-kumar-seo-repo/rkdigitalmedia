@@ -4,6 +4,43 @@ import { ArrowRight } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'CRM & Growth Systems Services | R.K Digital Media Greater Noida',
   description: 'GoHighLevel setup, WhatsApp API, n8n workflows. 7-day launch, 90% lead response rate, 3× pipeline visibility.',
+  keywords: [
+    'CRM setup agency Greater Noida',
+    'GoHighLevel implementation Noida',
+    'WhatsApp Business API integration',
+    'n8n workflow automation',
+    'sales pipeline automation',
+    'lead management system',
+    'revenue operations agency',
+    'CRM migration services',
+    'marketing automation setup',
+    'GoHighLevel expert Greater Noida',
+  ],
+  openGraph: {
+    title: 'CRM & Growth Systems Services | R.K Digital Media Greater Noida',
+    description: 'GoHighLevel setup, WhatsApp API, n8n workflows. 7-day launch, 90% lead response rate, 3× pipeline visibility.',
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://rkdigitalmedia.in/services/crm',
+    siteName: 'R.K Digital Media',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'CRM & Growth Systems Services | R.K Digital Media',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CRM & Growth Systems Services | R.K Digital Media Greater Noida',
+    description: 'GoHighLevel setup, WhatsApp API, n8n workflows. 7-day launch, 90% lead response rate, 3× pipeline visibility.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://rkdigitalmedia.in/services/crm',
+  },
 };
 
 const steps = [
@@ -30,9 +67,29 @@ const stats = [
   { value: '3×', label: 'Pipeline Visibility' },
 ];
 
+const faqItems = [
+  { question: 'Which CRMs do you implement?', answer: 'We specialize in GoHighLevel (GHL) for SMBs and agencies. We also integrate with HubSpot, Pipedrive, and custom CRMs via n8n/API.' },
+  { question: 'How long does CRM setup take?', answer: 'Standard GHL setup: 7 days to go live. Complex migrations with data cleanup: 2-3 weeks. We provide exact timeline after audit.' },
+  { question: 'Do you provide team training?', answer: 'Yes — we deliver live training sessions, recorded SOPs, and 30 days of post-launch support with weekly office hours.' },
+  { question: 'Can you integrate WhatsApp with CRM?', answer: 'Yes — we set up WhatsApp Business API (via Meta or 360dialog), create template messages, and build automated flows for lead qualification and follow-up.' },
+  { question: 'What if we need custom workflows?', answer: 'We build custom n8n workflows for lead routing, scoring, enrichment, and cross-system sync. Any API-accessible tool can be connected.' },
+];
+
+const graphSchemaString = '{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"Service","name":"CRM & Growth Systems Services","description":"GoHighLevel setup, WhatsApp API, n8n workflows. 7-day launch, 90% lead response rate, 3× pipeline visibility.","url":"https://rkdigitalmedia.in/services/crm","provider":{"@type":"LocalBusiness","@id":"https://rkdigitalmedia.in/#localbusiness","name":"R.K Digital Media"},"category":"CRM & Growth Systems","areaServed":[{"@type":"Place","name":"Greater Noida"},{"@type":"Place","name":"Noida"},{"@type":"Place","name":"Delhi NCR"},{"@type":"Place","name":"Ghaziabad"},{"@type":"Place","name":"Faridabad"},{"@type":"Place","name":"Gurugram"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which CRMs do you implement?","acceptedAnswer":{"@type":"Answer","text":"We specialize in GoHighLevel (GHL) for SMBs and agencies. We also integrate with HubSpot, Pipedrive, and custom CRMs via n8n/API."}},{"@type":"Question","name":"How long does CRM setup take?","acceptedAnswer":{"@type":"Answer","text":"Standard GHL setup: 7 days to go live. Complex migrations with data cleanup: 2-3 weeks. We provide exact timeline after audit."}},{"@type":"Question","name":"Do you provide team training?","acceptedAnswer":{"@type":"Answer","text":"Yes — we deliver live training sessions, recorded SOPs, and 30 days of post-launch support with weekly office hours."}},{"@type":"Question","name":"Can you integrate WhatsApp with CRM?","acceptedAnswer":{"@type":"Answer","text":"Yes — we set up WhatsApp Business API (via Meta or 360dialog), create template messages, and build automated flows for lead qualification and follow-up."}},{"@type":"Question","name":"What if we need custom workflows?","acceptedAnswer":{"@type":"Answer","text":"We build custom n8n workflows for lead routing, scoring, enrichment, and cross-system sync. Any API-accessible tool can be connected."}}]}]}';
+
+const faqSchemaString = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which CRMs do you implement?","acceptedAnswer":{"@type":"Answer","text":"We specialize in GoHighLevel (GHL) for SMBs and agencies. We also integrate with HubSpot, Pipedrive, and custom CRMs via n8n/API."}},{"@type":"Question","name":"How long does CRM setup take?","acceptedAnswer":{"@type":"Answer","text":"Standard GHL setup: 7 days to go live. Complex migrations with data cleanup: 2-3 weeks. We provide exact timeline after audit."}},{"@type":"Question","name":"Do you provide team training?","acceptedAnswer":{"@type":"Answer","text":"Yes — we deliver live training sessions, recorded SOPs, and 30 days of post-launch support with weekly office hours."}},{"@type":"Question","name":"Can you integrate WhatsApp with CRM?","acceptedAnswer":{"@type":"Answer","text":"Yes — we set up WhatsApp Business API (via Meta or 360dialog), create template messages, and build automated flows for lead qualification and follow-up."}},{"@type":"Question","name":"What if we need custom workflows?","acceptedAnswer":{"@type":"Answer","text":"We build custom n8n workflows for lead routing, scoring, enrichment, and cross-system sync. Any API-accessible tool can be connected."}}]}';
+
 export default function CRMPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: graphSchemaString }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqSchemaString }}
+      />
       <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center py-24">
           <p className="section-label mb-4">// SERVICE</p>
@@ -92,6 +149,28 @@ export default function CRMPage() {
                 <div className="font-montserrat font-black text-5xl text-[var(--rkd-primary)] mb-2">{stat.value}</div>
                 <div className="text-[var(--rkd-fg-muted)] font-outfit">{stat.label}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32 bg-[var(--rkd-bg)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// FAQ</p>
+          <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-12" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
+            Common Questions About Our <span className="text-red-italic">CRM Services</span>
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqItems.map((faq, index) => (
+              <details key={index} className="group bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl p-6">
+                <summary className="flex items-center justify-between cursor-pointer list-none font-montserrat font-semibold text-[var(--rkd-fg)]">
+                  {faq.question}
+                  <svg className="w-5 h-5 text-[var(--rkd-primary)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-4 text-[var(--rkd-fg-muted)] leading-relaxed">{faq.answer}</div>
+              </details>
             ))}
           </div>
         </div>

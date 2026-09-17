@@ -4,7 +4,9 @@ import { ArrowUpRight } from 'lucide-react';
 
 const services = [
   { title: 'Performance Marketing', slug: 'performance-marketing', desc: 'Meta Ads, Google Ads, PMax — full-funnel campaigns engineered for 3×–12× ROAS.' },
+  { title: 'Google Ads', slug: 'google-ads', desc: 'Search, Shopping, Performance Max, YouTube. Suspension recovery. 8.5× ROAS.' },
   { title: 'SEO & Search Growth', slug: 'seo', desc: 'Technical SEO, local SEO, AEO/GEO. Page 1 rankings in 90 days.' },
+  { title: 'Google My Business', slug: 'gmb', desc: 'GBP setup, optimization, reviews, citations. Map Pack domination. 50+ keywords.' },
   { title: 'AI Automation', slug: 'ai-automation', desc: 'WhatsApp AI agents, voice bots, CRM automation. 24/7 lead handling.' },
   { title: 'Web & Conversion', slug: 'web-development', desc: 'Next.js & WordPress sites built for Core Web Vitals and conversions.' },
   { title: 'Creative & Content', slug: 'creative', desc: '30 creatives/month, video production, motion graphics, brand identity.' },

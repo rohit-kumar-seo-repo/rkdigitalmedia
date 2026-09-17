@@ -9,6 +9,11 @@ export async function POST(req: Request) {
   const service = fd.get('service') || '';
   const message = fd.get('message') || '';
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY not configured');
+    return NextResponse.json({ error: 'Email service not configured' }, { status: 500 });
+  }
+
   const html = `
     <h2>New Enquiry — R.K Digital Media</h2>
     <table cellpadding="8" style="border-collapse:collapse">
@@ -30,7 +35,6 @@ export async function POST(req: Request) {
      body: JSON.stringify({
       from: 'RK Digital Media <onboarding@resend.dev>',
       to: 'info@rkdigitalmedia.in',
-      cc: 'info@rohitkumarseo.com',
       reply_to: String(email),
       subject: `New Enquiry from ${name} — ${service}`,
       html,
@@ -40,7 +44,7 @@ export async function POST(req: Request) {
   if (!res.ok) {
     const err = await res.text();
     console.error('Resend error:', err);
-    return NextResponse.json({ error: 'Failed' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to send email', details: err }, { status: 500 });
   }
   return NextResponse.json({ success: true });
 }

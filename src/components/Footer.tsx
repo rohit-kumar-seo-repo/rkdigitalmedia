@@ -7,7 +7,9 @@ import { cn } from '@/lib/utils';
 const footerNav = {
   Services: [
     { label: 'Performance Marketing', href: '/services/performance-marketing' },
+    { label: 'Google Ads', href: '/services/google-ads' },
     { label: 'SEO & Search Growth', href: '/services/seo' },
+    { label: 'Google My Business', href: '/services/gmb' },
     { label: 'AI Automation', href: '/services/ai-automation' },
     { label: 'Web & Conversion', href: '/services/web-development' },
     { label: 'Creative & Content', href: '/services/creative' },

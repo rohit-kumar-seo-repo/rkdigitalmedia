@@ -1,67 +1,87 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, FileText, Clock, TrendingUp } from 'lucide-react';
-
-const insights = [
-  {
-    slug: 'local-seo-checklist-2024',
-    title: 'The Complete Local SEO Checklist for Greater Noida Businesses (2024)',
-    excerpt: 'Every technical, content, and off-page step to dominate the map pack in Noida, Greater Noida, and Ghaziabad. 47-point checklist included.',
-    category: 'SEO',
-    readTime: '12 min',
-    date: '2024-01-15',
-  },
-  {
-    slug: 'google-ads-suspension-recovery',
-    title: 'Google Ads Suspended? Here\'s the Exact Recovery Process We Use',
-    excerpt: 'Step-by-step: policy audit, landing page rebuild, feed cleanup, appeal template, and scaling after reinstatement. Real case study inside.',
-    category: 'Google Ads',
-    readTime: '10 min',
-    date: '2024-01-08',
-  },
-  {
-    slug: 'ai-automation-for-local-business',
-    title: 'AI Automation for Local Business: 5 Workflows That Run While You Sleep',
-    excerpt: 'Lead qualification, appointment booking, WhatsApp follow-up, review requests, and CRM sync — built in n8n. Copy our templates.',
-    category: 'AI Automation',
-    readTime: '8 min',
-    date: '2024-01-02',
-  },
-  {
-    slug: 'website-conversion-rate-optimization',
-    title: 'Website CRO for Service Businesses: From 1% to 4%+ Conversion',
-    excerpt: 'Landing page architecture, trust signals, form optimization, speed wins, and heatmap-driven iterations. No guesswork.',
-    category: 'Web Development',
-    readTime: '9 min',
-    date: '2023-12-28',
-  },
-  {
-    slug: 'b2b-linkedin-ads-playbook',
-    title: 'LinkedIn Ads for B2B Industrial: Targeting Procurement Managers at Scale',
-    excerpt: 'ABM campaign structure, lead gen forms, retargeting sequences, and CRM integration. How we got 25% meeting-to-opportunity rate.',
-    category: 'Performance Marketing',
-    readTime: '11 min',
-    date: '2023-12-20',
-  },
-  {
-    slug: 'gmb-optimization-case-study',
-    title: 'GMB Optimization: From 0 Reviews to 4.9★ and Map Pack #1 in 90 Days',
-    excerpt: 'Profile setup, review generation system, post scheduling, Q&A seeding, and photo strategy. The exact process for our home services client.',
-    category: 'Local SEO',
-    readTime: '7 min',
-    date: '2023-12-15',
-  },
-];
+import { ArrowRight, FileText, Clock, TrendingUp, ArrowLeft } from 'lucide-react';
+import { blogPosts } from './blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Insights | R.K Digital Media',
+  title: 'Insights & Blog | R.K Digital Media Greater Noida',
   description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.',
+  keywords: [
+    'digital marketing blog Greater Noida',
+    'SEO blog India',
+    'Google Ads blog',
+    'local SEO case studies',
+    'AI automation blog',
+    'digital marketing insights',
+    'marketing agency blog',
+  ],
+  openGraph: {
+    title: 'Insights & Blog | R.K Digital Media Greater Noida',
+    description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.',
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://rkdigitalmedia.in/insights',
+    siteName: 'R.K Digital Media',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Insights & Blog | R.K Digital Media',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Insights & Blog | R.K Digital Media Greater Noida',
+    description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://rkdigitalmedia.in/insights',
+  },
+};
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'R.K Digital Media Insights',
+  description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization.',
+  url: 'https://rkdigitalmedia.in/insights',
+  publisher: {
+    '@type': 'Organization',
+    name: 'R.K Digital Media',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://rkdigitalmedia.in/logo.png',
+    },
+  },
+  blogPosts: blogPosts.map(post => ({
+    '@type': 'BlogPosting',
+    headline: post.title,
+    url: `https://rkdigitalmedia.in/insights/${post.slug}`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Rohit Kumar',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'R.K Digital Media',
+    },
+  })),
 };
 
 export default function InsightsPage() {
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern fade-in-up">
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
+      <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center">
           <p className="section-label mb-4">// INSIGHTS</p>
           <h1 className="font-montserrat font-black text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: '1.1' }}>
@@ -76,11 +96,11 @@ export default function InsightsPage() {
       <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {insights.map((post, index) => (
+            {blogPosts.map((post, index) => (
               <Link
                 key={post.slug}
                 href={`/insights/${post.slug}`}
-                className="card-interactive group block fade-in-up"
+                className="card-interactive group block"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center gap-2 text-meta font-mono uppercase tracking-wider text-[var(--rkd-primary)] mb-4">
@@ -104,13 +124,14 @@ export default function InsightsPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <a href="/contact" className="btn-primary group inline-flex fade-in-up-delay-2">
+            <a href="/contact" className="btn-primary group inline-flex">
               Suggest a Topic
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </div>
         </div>
       </section>
+
     </>
   );
 }
