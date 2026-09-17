@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   },
 };
 
+const sectionImages = {
+  'SEO (Organic)': '/seo-benefits.svg',
+  'Google Ads (Paid)': '/google-ads-benefits.svg',
+  'Head-to-Head Comparison': '/comparison-chart.svg',
+  'Best Strategy': '/seo-ads-strategy.svg',
+};
+
 export default function PostPage() {
   return (
     <>
@@ -52,24 +59,30 @@ export default function PostPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="card-base p-6">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-4">SEO (Organic)</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-3">
-                  <li><strong>Time to Results:</strong> 3-6 months for Map Pack, 6-12 months for organic rankings</li>
-                  <li><strong>Cost:</strong> One-time setup + ongoing maintenance (no per-click cost)</li>
-                  <li><strong>LTV Impact:</strong> High — compound traffic growth over time</li>
-                  <li><strong>Credibility:</strong> Higher trust — users skip ads</li>
-                  <li><strong>Sustainability:</strong> Assets you own; no platform dependency</li>
-                </ul>
+                <p>
+                  <img src="/images/seo-benefits.svg" alt="SEO benefits illustration" className="w-full mb-4 rounded-lg" />
+                  <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-3">
+                    <li><strong>Time to Results:</strong> 3-6 months for Map Pack, 6-12 months for organic rankings</li>
+                    <li><strong>Cost:</strong> One-time setup + ongoing maintenance (no per-click cost)</li>
+                    <li><strong>LTV Impact:</strong> High — compound traffic growth over time</li>
+                    <li><strong>Credibility:</strong> Higher trust — users skip ads</li>
+                    <li><strong>Sustainability:</strong> Assets you own; no platform dependency</li>
+                  </ul>
+                </p>
               </div>
 
               <div className="card-base p-6">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-4">Google Ads (Paid)</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-3">
-                  <li><strong>Time to Results:</strong> Leads in 24-48 hours</li>
-                  <li><strong>Cost:</strong> Per-click; ₹50K-₹1Cr+ monthly ad spend + management fee</li>
-                  <li><strong>LTV Impact:</strong> Immediate but stops when budget stops</li>
-                  <li><strong>Credibility:</strong> Some users trust less (ad label)</li>
-                  <li><strong>Sustainability:</strong> Rental model — stops when you stop paying</li>
-                </ul>
+                <p>
+                  <img src="/images/google-ads-benefits.svg" alt="Google Ads benefits illustration" className="w-full mb-4 rounded-lg" />
+                  <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-3">
+                    <li><strong>Time to Results:</strong> Leads in 24-48 hours</li>
+                    <li><strong>Cost:</strong> Per-click; ₹50K-₹1Cr+ monthly ad spend + management fee</li>
+                    <li><strong>LTV Impact:</strong> Immediate but stops when budget stops</li>
+                    <li><strong>Credibility:</strong> Some users trust less (ad label)</li>
+                    <li><strong>Sustainability:</strong> Rental model — stops when you stop paying</li>
+                  </ul>
+                </p>
               </div>
             </div>
 

@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   },
 };
 
+const sectionImages = {
+  'Days 1-10: Technical Audit & GMB Setup': '/technical-audit.svg',
+  'Days 11-30: Citation Building & Content': '/citation-building.svg',
+  'Days 31-60: Map Pack Push': '/map-pack-push.svg',
+  'Days 61-90: Rank & Scale': '/rank-scaling.svg',
+};
+
 export default function PostPage() {
   return (
     <>
@@ -55,6 +62,7 @@ export default function PostPage() {
                   <strong>Days 1-10: Technical Audit & GMB Setup</strong>
                 </p>
                 <p>
+                  <img src="/images/technical-audit.svg" alt="Technical SEO audit illustration" className="w-full mb-4 rounded-lg" />
                   Technical SEO audit: site speed, mobile-friendliness, structured data.
                   Complete GMB optimization: categories, attributes, description, services
                   menu, geo-tagged photos, and initial review generation setup.
@@ -65,6 +73,7 @@ export default function PostPage() {
                   <strong>Days 11-30: Citation Building & Content</strong>
                 </p>
                 <p>
+                  <img src="/images/citation-building.svg" alt="Citation building illustration" className="w-full mb-4 rounded-lg" />
                   Consistent NAP citations across 50+ directories. Content engine launch:
                   3 blog posts + service page updates with local keywords. Link building
                   outreach to local businesses and industry directories.
@@ -75,6 +84,7 @@ export default function PostPage() {
                   <strong>Days 31-60: Map Pack Push</strong>
                 </p>
                 <p>
+                  <img src="/images/map-pack-push.svg" alt="Map pack ranking illustration" className="w-full mb-4 rounded-lg" />
                   Review generation campaign (QR codes, SMS, email). GMB posts weekly.
                   Local link building from Greater Noida/NCR businesses. On-page optimization
                   for 50+ target Map Pack keywords.
@@ -85,6 +95,7 @@ export default function PostPage() {
                   <strong>Days 61-90: Rank & Scale</strong>
                 </p>
                 <p>
+                  <img src="/images/rank-scaling.svg" alt="Rank tracking and reporting illustration" className="w-full mb-4 rounded-lg" />
                   Monthly rank grid tracking (5km-20km radius). Map Pack position reporting.
                   Additional citation cleanup. Expansion to secondary keywords. Client
                   dashboard setup with weekly performance reports.

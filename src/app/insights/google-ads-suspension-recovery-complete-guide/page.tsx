@@ -27,6 +27,14 @@ export const metadata: Metadata = {
   },
 };
 
+// Helper to generate a unique data-uri pattern for each section
+const sectionImages = {
+  '1. Policy Audit': '/policy-audit.svg',
+  '2. Landing Page Fixes': '/landing-fixes.svg',
+  '3. Appeal Templates': '/appeal-templates.svg',
+  '4. Post-Reinstatement Scaling': '/scaling.svg',
+};
+
 export default function PostPage() {
   return (
     <>
@@ -55,6 +63,7 @@ export default function PostPage() {
                   <strong>1. Policy Audit</strong>
                 </p>
                 <p>
+                  <img src="/images/policy-audit.svg" alt="Policy audit process diagram" className="w-full mb-4 rounded-lg" />
                   Full audit of your account structure, campaigns, keywords, match types,
                   extensions, bidding strategies, tracking setup, and policy compliance.
                 </p>
@@ -64,6 +73,7 @@ export default function PostPage() {
                   <strong>2. Landing Page Fixes</strong>
                 </p>
                 <p>
+                  <img src="/images/landing-fixes.svg" alt="Landing page fix illustration" className="w-full mb-4 rounded-lg" />
                   Identify and fix policy violations on landing pages: misrepresentation,
                   circumventing systems, prohibited content, and consent requirements.
                 </p>
@@ -73,6 +83,7 @@ export default function PostPage() {
                   <strong>3. Appeal Templates</strong>
                 </p>
                 <p>
+                  <img src="/images/appeal-templates.svg" alt="Appeal template example" className="w-full mb-4 rounded-lg" />
                   Prepare documented appeal templates with correct legal language, evidence,
                   and step-by-step reinstatement requests submitted to Google Ads support.
                 </p>
@@ -82,6 +93,7 @@ export default function PostPage() {
                   <strong>4. Post-Reinstatement Scaling</strong>
                 </p>
                 <p>
+                  <img src="/images/scaling.svg" alt="ROAS scaling graph illustration" className="w-full mb-4 rounded-lg" />
                   Once the account is restored: gradual budget ramp-up, conversion tracking
                   verification, audience expansion, and ROAS optimization to prevent re-suspension.
                 </p>

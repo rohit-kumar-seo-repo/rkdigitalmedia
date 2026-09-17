@@ -27,6 +27,14 @@ export const metadata: Metadata = {
   },
 };
 
+const sectionImages = {
+  'WhatsApp AI Agent': '/whatsapp-agent.svg',
+  'Voice Bot': '/voice-bot.svg',
+  'CRM Automation': '/crm-automation.svg',
+  'n8n Workflows': '/n8n-workflows.svg',
+  'Human Handoff': '/human-handoff.svg',
+};
+
 export default function PostPage() {
   return (
     <>
@@ -52,48 +60,43 @@ export default function PostPage() {
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
               <div className="card-base p-6 hover:scale-105 transition-transform">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">WhatsApp AI Agent</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-2">
-                  <li>Instant reply to inquiries</li>
-                  <li>Qualify leads via conversational forms</li>
-                  <li>Book appointments directly</li>
-                  <li>24/7 coverage without human overhead</li>
-                </ul>
+                <p>
+                  <img src="/images/whatsapp-agent.svg" alt="WhatsApp AI agent illustration" className="w-full mb-4 rounded-lg" />
+                  Instant reply to inquiries, qualify leads via conversational forms,
+                  book appointments directly, 24/7 coverage without human overhead.
+                </p>
               </div>
               <div className="card-base p-6 hover:scale-105 transition-transform">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">Voice Bot</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-2">
-                  <li>Handle inbound calls automatically</li>
-                  <li>Screen and route qualified leads</li>
-                  <li>Collect information via voice</li>
-                  <li>Reduce missed call rate</li>
-                </ul>
+                <p>
+                  <img src="/images/voice-bot.svg" alt="Voice bot illustration" className="w-full mb-4 rounded-lg" />
+                  Handle inbound calls automatically, screen and route qualified leads,
+                  collect information via voice, reduce missed call rate.
+                </p>
               </div>
               <div className="card-base p-6 hover:scale-105 transition-transform">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">CRM Automation</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-2">
-                  <li>Auto-create contacts from forms</li>
-                  <li>Assign leads to sales reps</li>
-                  <li>Trigger follow-up sequences</li>
-                  <li>Track lead lifecycle stages</li>
-                </ul>
+                <p>
+                  <img src="/images/crm-automation.svg" alt="CRM automation illustration" className="w-full mb-4 rounded-lg" />
+                  Auto-create contacts from forms, assign leads to sales reps,
+                  trigger follow-up sequences, track lead lifecycle stages.
+                </p>
               </div>
               <div className="card-base p-6 hover:scale-105 transition-transform">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">n8n Workflows</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-2">
-                  <li>Lead routing and scoring</li>
-                  <li>Cross-platform integration</li>
-                  <li>Scheduled campaigns</li>
-                  <li>Error handling and auditing</li>
-                </ul>
+                <p>
+                  <img src="/images/n8n-workflows.svg" alt="n8n workflows illustration" className="w-full mb-4 rounded-lg" />
+                  Lead routing and scoring, cross-platform integration, scheduled campaigns,
+                  error handling and auditing.
+                </p>
               </div>
               <div className="card-base p-6 hover:scale-105 transition-transform">
                 <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">Human Handoff</h3>
-                <ul className="list-disc list-inside text-[var(--rkd-fg-muted)] space-y-2">
-                  <li>Seamless transfer to human agent</li>
-                  <li>Conversation context preserved</li>
-                  <li>Audit logs for compliance</li>
-                  <li>Monthly optimization reviews</li>
-                </ul>
+                <p>
+                  <img src="/images/human-handoff.svg" alt="Human handoff illustration" className="w-full mb-4 rounded-lg" />
+                  Seamless transfer to human agent, conversation context preserved,
+                  audit logs for compliance, monthly optimization reviews.
+                </p>
               </div>
             </div>
 
