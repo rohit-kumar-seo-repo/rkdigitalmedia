@@ -1,0 +1,88 @@
+import type { Metadata } from 'next';
+
+const blogPosts = [
+  {
+    slug: 'google-ads-suspension-recovery-complete-guide',
+    title: 'Google Ads Suspension Recovery: Complete 2025 Guide (98% Success Rate)',
+    excerpt: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts.',
+    category: 'Google Ads',
+    readTime: '15 min',
+    date: '2025-01-10',
+    keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process'],
+  },
+  {
+    slug: 'local-seo-greater-noida-map-pack-strategy',
+    title: 'Local SEO Strategy for Greater Noida: Rank Page 1 in 90 Days',
+    excerpt: 'Technical SEO, GMB optimization, citations, content, and link building for Greater Noida service businesses. Exact framework we use for 50+ Map Pack keywords.',
+    category: 'Local SEO',
+    readTime: '18 min',
+    date: '2024-12-28',
+    keywords: ['local SEO Greater Noida', 'SEO services Greater Noida', 'Map Pack optimization', 'local business SEO strategy'],
+  },
+  {
+    slug: 'ai-automation-lead-generation-5-workflows',
+    title: 'AI Automation for Lead Generation: 5 Workflows That Run 24/7',
+    excerpt: 'WhatsApp AI agents, voice bots, CRM automation, n8n workflows. Complete setup guide with templates. Cut response time 80%, cost per lead 40%.',
+    category: 'AI Automation',
+    readTime: '14 min',
+    date: '2025-01-02',
+    keywords: ['AI lead generation automation', 'WhatsApp AI agent setup', 'n8n workflow templates', 'CRM automation for small business'],
+  },
+  {
+    slug: 'seo-vs-paid-ads-2025-which-wins',
+    title: 'SEO vs Paid Ads for Greater Noida Businesses: Which Wins in 2025?',
+    excerpt: 'Compare SEO and Google Ads for local service businesses in Greater Noida. Real data on CAC, LTV, time-to-results, and when to use each channel.',
+    category: 'SEO Strategy',
+    readTime: '12 min',
+    date: '2025-01-15',
+    keywords: ['SEO vs PPC Greater Noida', 'SEO or Google Ads for local business', 'organic vs paid search', 'digital marketing ROI'],
+  },
+  {
+    slug: 'gmb-optimization-map-pack-checklist-50-steps',
+    title: 'GMB Optimization Checklist: 50 Steps to Map Pack #1 in Greater Noida',
+    excerpt: 'Complete Google Business Profile optimization: categories, citations, reviews, posts, Q&A, photos. 47-point checklist + tracking template included.',
+    category: 'Local SEO',
+    readTime: '10 min',
+    date: '2024-12-05',
+    keywords: ['GMB optimization checklist', 'Google Business Profile SEO', 'Map Pack ranking factors', 'local SEO Greater Noida'],
+  },
+  // NEW ARTICLES ADDED
+  {
+    slug: 'google-ads-expert-noida',
+    title: 'Google Ads Expert in Noida: Certified Specialist for Business Growth | R.K Digital Media',
+    excerpt: 'Certified Google Ads Expert in Noida offering search, shopping, and PPC management services. 8.5x ROAS, suspension recovery, and campaign optimization. Google Partner certified agency.',
+    category: 'Google Ads',
+    readTime: '10 min',
+    date: '2025-01-17',
+    keywords: ['Google Ads Expert in Noida', 'Google Ads expert Noida', 'Certified Google Ads professional Noida', 'PPC expert Noida'],
+  },
+  {
+    slug: 'google-ads-expert-delhi',
+    title: 'Google Ads Expert in Delhi: Certified Specialist for Business Growth | R.K Digital Media',
+    excerpt: 'Certified Google Ads Expert in Delhi offering search, shopping, and PPC management services. 8.5x ROAS, suspension recovery, and campaign optimization. Google Partner certified agency serving Delhi NCR businesses.',
+    category: 'Google Ads',
+    readTime: '10 min',
+    date: '2025-01-17',
+    keywords: ['Google Ads Expert in Delhi', 'Google Ads expert Delhi', 'Certified Google Ads professional Delhi', 'PPC expert Delhi'],
+  },
+  {
+    slug: 'google-ads-expert-greater-noida',
+    title: 'Google Ads Expert in Greater Noida: Certified Specialist for Business Growth | R.K Digital Media',
+    excerpt: 'Certified Google Ads Expert in Greater Noida offering search, shopping, and PPC management services. 8.5x ROAS, suspension recovery, and campaign optimization. Google Partner certified agency serving Noida, Greater Noida, and Delhi NCR businesses.',
+    category: 'Google Ads',
+    readTime: '10 min',
+    date: '2025-01-17',
+    keywords: ['Google Ads Expert in Greater Noida', 'Google Ads expert Greater Noida', 'Certified Google Ads professional Greater Noida', 'PPC expert Greater Noida'],
+  },
+  {
+    slug: 'google-ads-campaign-types',
+    title: 'Type of Google Ads Campaigns: Which One Is Right for Your Business? | R.K Digital Media',
+    excerpt: 'Complete guide to types of Google Ads campaigns: Search, Display, Shopping, Video, and PMax. Statistics, pros & cons, and which campaign type works best for different business goals. Google Certified breakdown.',
+    category: 'Google Ads',
+    readTime: '15 min',
+    date: '2025-01-17',
+    keywords: ['type of Google Ads campaigns', 'Google Ads campaign types', 'Search vs Display vs Shopping Google Ads', 'Google PMax campaign'],
+  },
+];
+
+export { blogPosts };
