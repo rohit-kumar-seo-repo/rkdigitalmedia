@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, FileText, Clock, TrendingUp, ArrowLeft } from 'lucide-react';
-import { blogPosts } from './blog-posts';
+import { blogPosts } from '../blog-posts';
 
 export const metadata: Metadata = {
   title: 'Insights & Blog | R.K Digital Media Greater Noida',
