@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" rx="16" fill="#141414"/>
+  <rect x="1" y="1" width="798" height="398" rx="15" fill="none" stroke="#1f1f1f" stroke-width="2"/>
+  <rect x="360" y="130" width="80" height="6" rx="3" fill="#e8282b"/>
+  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#f0eeee">SEO vs Paid Ads</text>
+  <text x="400" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6b6b6b">R.K Digital Media</text>
+</svg>

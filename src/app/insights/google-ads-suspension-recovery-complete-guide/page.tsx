@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 // Helper to generate a unique data-uri pattern for each section
 const sectionImages = {
-  '1. Policy Audit': '/policy-audit.svg',
-  '2. Landing Page Fixes': '/landing-fixes.svg',
-  '3. Appeal Templates': '/appeal-templates.svg',
-  '4. Post-Reinstatement Scaling': '/scaling.svg',
+  '1. Policy Audit': '/images/policy-audit.svg',
+  '2. Landing Page Fixes': '/images/landing-fixes.svg',
+  '3. Appeal Templates': '/images/appeal-templates.svg',
+  '4. Post-Reinstatement Scaling': '/images/scaling.svg',
 };
 
 export default function PostPage() {

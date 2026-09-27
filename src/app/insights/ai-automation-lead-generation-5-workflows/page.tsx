@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 };
 
 const sectionImages = {
-  'WhatsApp AI Agent': '/whatsapp-agent.svg',
-  'Voice Bot': '/voice-bot.svg',
-  'CRM Automation': '/crm-automation.svg',
-  'n8n Workflows': '/n8n-workflows.svg',
-  'Human Handoff': '/human-handoff.svg',
+  'WhatsApp AI Agent': '/images/whatsapp-agent.svg',
+  'Voice Bot': '/images/voice-bot.svg',
+  'CRM Automation': '/images/crm-automation.svg',
+  'n8n Workflows': '/images/n8n-workflows.svg',
+  'Human Handoff': '/images/human-handoff.svg',
 };
 
 export default function PostPage() {

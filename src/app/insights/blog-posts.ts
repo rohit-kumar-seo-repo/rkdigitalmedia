@@ -46,6 +46,43 @@ const blogPosts = [
     date: '2024-12-05',
     keywords: ['GMB optimization checklist', 'Google Business Profile SEO', 'Map Pack ranking factors', 'local SEO Greater Noida'],
   },
+  // NEW ARTICLES ADDED
+  {
+    slug: 'google-ads-expert-noida',
+    title: 'Google Ads Expert in Noida: Certified Specialist for Business Growth | R.K Digital Media',
+    excerpt: 'Certified Google Ads Expert in Noida offering search, shopping, and PPC management services. 8.5x ROAS, suspension recovery, and campaign optimization. Google Partner certified agency.',
+    category: 'Google Ads',
+    readTime: '10 min',
+    date: '2025-01-17',
+    keywords: ['Google Ads Expert in Noida', 'Google Ads expert Noida', 'Certified Google Ads professional Noida', 'PPC expert Noida'],
+  },
+  {
+    slug: 'google-ads-expert-delhi',
+    title: 'Google Ads Expert in Delhi: Certified Specialist for Business Growth | R.K Digital Media',
+    excerpt: 'Certified Google Ads Expert in Delhi offering search, shopping, and PPC management services. 8.5x ROAS, suspension recovery, and campaign optimization. Google Partner certified agency serving Delhi NCR businesses.',
+    category: 'Google Ads',
+    readTime: '10 min',
+    date: '2025-01-17',
+    keywords: ['Google Ads Expert in Delhi', 'Google Ads expert Delhi', 'Certified Google Ads professional Delhi', 'PPC expert Delhi'],
+  },
+  {
+    slug: 'google-ads-expert-greater-noida',
+    title: 'Google Ads Expert in Greater Noida: Certified Specialist for Business Growth | R.K Digital Media',
+    excerpt: 'Certified Google Ads Expert in Greater Noida offering search, shopping, and PPC management services. 8.5x ROAS, suspension recovery, and campaign optimization. Google Partner certified agency serving Noida, Greater Noida, and Delhi NCR businesses.',
+    category: 'Google Ads',
+    readTime: '10 min',
+    date: '2025-01-17',
+    keywords: ['Google Ads Expert in Greater Noida', 'Google Ads expert Greater Noida', 'Certified Google Ads professional Greater Noida', 'PPC expert Greater Noida'],
+  },
+  {
+    slug: 'google-ads-campaign-types',
+    title: 'Type of Google Ads Campaigns: Which One Is Right for Your Business? | R.K Digital Media',
+    excerpt: 'Complete guide to types of Google Ads campaigns: Search, Display, Shopping, Video, and PMax. Statistics, pros & cons, and which campaign type works best for different business goals. Google Certified breakdown.',
+    category: 'Google Ads',
+    readTime: '15 min',
+    date: '2025-01-17',
+    keywords: ['type of Google Ads campaigns', 'Google Ads campaign types', 'Search vs Display vs Shopping Google Ads', 'Google PMax campaign'],
+  },
 ];
 
 export { blogPosts };

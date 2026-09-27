@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 };
 
 const sectionImages = {
-  'Days 1-10: Technical Audit & GMB Setup': '/technical-audit.svg',
-  'Days 11-30: Citation Building & Content': '/citation-building.svg',
-  'Days 31-60: Map Pack Push': '/map-pack-push.svg',
-  'Days 61-90: Rank & Scale': '/rank-scaling.svg',
+  'Days 1-10: Technical Audit & GMB Setup': '/images/technical-audit.svg',
+  'Days 11-30: Citation Building & Content': '/images/citation-building.svg',
+  'Days 31-60: Map Pack Push': '/images/map-pack-push.svg',
+  'Days 61-90: Rank & Scale': '/images/rank-scaling.svg',
 };
 
 export default function PostPage() {

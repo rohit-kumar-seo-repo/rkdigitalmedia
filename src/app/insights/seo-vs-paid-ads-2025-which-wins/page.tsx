@@ -28,10 +28,10 @@ export const metadata: Metadata = {
 };
 
 const sectionImages = {
-  'SEO (Organic)': '/seo-benefits.svg',
-  'Google Ads (Paid)': '/google-ads-benefits.svg',
-  'Head-to-Head Comparison': '/comparison-chart.svg',
-  'Best Strategy': '/seo-ads-strategy.svg',
+  'SEO (Organic)': '/images/seo-benefits.svg',
+  'Google Ads (Paid)': '/images/google-ads-benefits.svg',
+  'Head-to-Head Comparison': '/images/comparison-chart.svg',
+  'Best Strategy': '/images/seo-ads-strategy.svg',
 };
 
 export default function PostPage() {
