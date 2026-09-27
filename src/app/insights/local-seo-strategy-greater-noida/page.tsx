@@ -1,119 +1,133 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowRight, FileText, Clock, TrendingUp, ArrowLeft } from 'lucide-react';
+import { blogPosts } from './blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Local SEO Strategy for Greater Noida: Rank Page 1 in 90 Days | R.K Digital Media',
-  description: 'Technical SEO, GMB optimization, citations, content, and link building for Greater Noida service businesses. Exact framework we use for 50+ Map Pack keywords. Local SEO services Greater Noida.',
-  keywords: ['local SEO Greater Noida', 'SEO services Greater Noida', 'Map Pack optimization', 'local business SEO strategy', 'Greater Noida local SEO', 'Map Pack ranking factors'],
+  title: 'Insights & Blog | R.K Digital Media Greater Noida',
+  description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.',
+  keywords: [
+    'digital marketing blog Greater Noida',
+    'SEO blog India',
+    'Google Ads blog',
+    'local SEO case studies',
+    'AI automation blog',
+    'digital marketing insights',
+    'marketing agency blog',
+  ],
   openGraph: {
-    title: 'Local SEO Strategy for Greater Noida: Rank Page 1 in 90 Days | R.K Digital Media',
-    description: 'Technical SEO, GMB optimization, citations, content, and link building for Greater Noida service businesses.',
-    type: 'article',
+    title: 'Insights & Blog | R.K Digital Media Greater Noida',
+    description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.',
+    type: 'website',
     locale: 'en_IN',
-    url: 'https://rkdigitalmedia.in/insights/local-seo-strategy-greater-noida',
+    url: 'https://rkdigitalmedia.in/insights',
+    siteName: 'R.K Digital Media',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Local SEO Strategy Greater Noida | R.K Digital Media',
+        alt: 'Insights & Blog | R.K Digital Media',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Local SEO Strategy for Greater Noida: Rank Page 1 in 90 Days | R.K Digital Media',
-    description: 'Technical SEO, GMB optimization, citations, content, and link building for Greater Noida service businesses.',
+    title: 'Insights & Blog | R.K Digital Media Greater Noida',
+    description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization.',
     images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://rkdigitalmedia.in/insights',
   },
 };
 
-const sectionImages = {
-  'Days 1-10: Technical Audit & GMB Setup': '/images/technical-audit.svg',
-  'Days 11-30: Citation Building & Content': '/images/citation-building.svg',
-  'Days 31-60: Map Pack Push': '/images/map-pack-push.svg',
-  'Days 61-90: Rank & Scale': '/images/rank-scaling.svg',
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'R.K Digital Media Insights',
+  description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization.',
+  url: 'https://rkdigitalmedia.in/insights',
+  publisher: {
+    '@type': 'Organization',
+    name: 'R.K Digital Media',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://rkdigitalmedia.in/logo.png',
+    },
+  },
+  blogPosts: blogPosts.map(post => ({
+    '@type': 'BlogPosting',
+    headline: post.title,
+    url: `https://rkdigitalmedia.in/insights/${post.slug}`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Rohit Kumar',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'R.K Digital Media',
+    },
+  })),
 };
 
-export default function PostPage() {
+export default function InsightsPage() {
   return (
     <>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
       <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center py-24">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center">
           <p className="section-label mb-4">// INSIGHTS</p>
           <h1 className="font-montserrat font-black text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: '1.1' }}>
-            Local SEO Strategy
+            Frameworks That <span className="text-red-italic">Compound</span>
           </h1>
           <p className="text-body-lg text-[var(--rkd-fg-muted)] max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
-            Rank page 1 in Greater Noida Map Pack within 90 days using our proven framework.
+            Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.
           </p>
         </div>
       </section>
 
       <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <div className="prose lg:prose-xl max-w-none">
-            <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
-              Our 90-Day Framework
-            </h2>
-            <ol className="list-decimal list-inside space-y-4 text-[var(--rkd-fg-muted)] leading-relaxed">
-              <li>
-                <p className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-2">
-                  <strong>Days 1-10: Technical Audit & GMB Setup</strong>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogPosts.map((post, index) => (
+              <Link
+                key={post.slug}
+                href={`/insights/${post.slug}`}
+                className="card-interactive group block"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center gap-2 text-meta font-mono uppercase tracking-wider text-[var(--rkd-primary)] mb-4">
+                  {post.category}
+                </div>
+                <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-3 group-hover:text-[var(--rkd-primary)] transition-colors" style={{ fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)', lineHeight: '1.4' }}>
+                  {post.title}
+                </h3>
+                <p className="text-body-sm text-[var(--rkd-fg-muted)] mb-4 line-clamp-2" style={{ lineHeight: '1.6' }}>
+                  {post.excerpt}
                 </p>
-                <p>
-                  <img src="/images/technical-audit.svg" alt="Technical SEO audit illustration" className="w-full mb-4 rounded-lg" />
-                  Technical SEO audit: site speed, mobile-friendliness, structured data.
-                  Complete GMB optimization: categories, attributes, description, services
-                  menu, geo-tagged photos, and initial review generation setup.
-                </p>
-              </li>
-              <li>
-                <p className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-2">
-                  <strong>Days 11-30: Citation Building & Content</strong>
-                </p>
-                <p>
-                  <img src="/images/citation-building.svg" alt="Citation building illustration" className="w-full mb-4 rounded-lg" />
-                  Consistent NAP citations across 50+ directories. Content engine launch:
-                  3 blog posts + service page updates with local keywords. Link building
-                  outreach to local businesses and industry directories.
-                </p>
-              </li>
-              <li>
-                <p className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-2">
-                  <strong>Days 31-60: Map Pack Push</strong>
-                </p>
-                <p>
-                  <img src="/images/map-pack-push.svg" alt="Map pack ranking illustration" className="w-full mb-4 rounded-lg" />
-                  Review generation campaign (QR codes, SMS, email). GMB posts weekly.
-                  Local link building from Greater Noida/NCR businesses. On-page optimization
-                  for 50+ target Map Pack keywords.
-                </p>
-              </li>
-              <li>
-                <p className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-2">
-                  <strong>Days 61-90: Rank & Scale</strong>
-                </p>
-                <p>
-                  <img src="/images/rank-scaling.svg" alt="Rank tracking and reporting illustration" className="w-full mb-4 rounded-lg" />
-                  Monthly rank grid tracking (5km-20km radius). Map Pack position reporting.
-                  Additional citation cleanup. Expansion to secondary keywords. Client
-                  dashboard setup with weekly performance reports.
-                </p>
-              </li>
-            </ol>
+                <div className="flex items-center gap-4 text-meta text-[var(--rkd-fg-subtle)]">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" aria-hidden="true" />
+                    {post.readTime}
+                  </span>
+                  <span>{post.date}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-            <div className="mt-8 pt-8 border-t border-[var(--rkd-border)]">
-              <p className="font-montserrat font-medium text-[var(--rkd-primary)] mb-2">
-                50+ Map Pack Keywords · 90-Day Guaranteed Movement · NAP Consistency
-              </p>
-              <a href="/contact" className="btn-primary inline-flex mt-4">
-                Book Free Audit
-                <svg className="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5v7" />
-                </svg>
-              </a>
-            </div>
+          <div className="mt-16 text-center">
+            <a href="/contact" className="btn-primary group inline-flex">
+              Suggest a Topic
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </section>
