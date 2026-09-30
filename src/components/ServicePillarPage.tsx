@@ -28,6 +28,7 @@ export type ServicePillarData = {
     }>;
     sourcesIntro: string;
     sources: Array<{ name: string; href: string }>;
+    relatedGuides?: Array<{ name: string; href: string; description: string }>;
   };
 };
 
@@ -226,6 +227,24 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
                 ))}
               </div>
             </div>
+            {data.policyHub.relatedGuides && data.policyHub.relatedGuides.length > 0 && (
+              <div className="mt-10">
+                <h3 className="section-heading section-heading-h3 mb-6">Related Google Ads recovery guides</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {data.policyHub.relatedGuides.map((guide) => (
+                    <Link key={guide.href} href={guide.href} className="card-base p-6 group">
+                      <h4 className="font-montserrat font-bold text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)] transition-colors">
+                        {guide.name}
+                      </h4>
+                      <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed mt-2">{guide.description}</p>
+                      <span className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[var(--rkd-primary)] mt-4">
+                        Read guide <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
       )}
