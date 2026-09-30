@@ -1,260 +1,137 @@
 'use client';
 
+import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Users, Target, Shield, Zap, Lightbulb, Globe, CheckCircle } from 'lucide-react';
 
-const team = [
-  {
-    name: 'Rohit Kumar',
-    role: 'Founder & CEO',
-    bio: 'Vision, strategy, and the growth systems behind every R.K Digital Media engagement. 8+ years driving digital growth for local businesses across NCR.',
-    initials: 'RK',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Head of SEO & Content',
-    bio: 'Technical SEO, content strategy, and local search domination. Turns search visibility into qualified leads for service businesses.',
-    initials: 'PS',
-  },
-  {
-    name: 'Amit Verma',
-    role: 'Performance Marketing Lead',
-    bio: 'Google Ads, Meta Ads, and conversion optimization. Specialist in account recovery and scaling campaigns to 8×+ ROAS.',
-    initials: 'AV',
-  },
-  {
-    name: 'Neha Singh',
-    role: 'GMB & Local Marketing Specialist',
-    bio: 'Google Business Profile optimization, review management, and local citation building. Maps pack domination for multi-location businesses.',
-    initials: 'NS',
-  },
+const capabilities = [
+  ['01', 'Google Ads', 'Search, Shopping, Performance Max and YouTube campaigns built around measurable demand.'],
+  ['02', 'SEO', 'Technical SEO, content and search-intent strategy for organic growth.'],
+  ['03', 'Google Business Profile', 'Profile optimisation, local visibility, services, reviews and location signals.'],
+  ['04', 'Website Development', 'Fast, conversion-focused websites and landing pages with a strong technical foundation.'],
+  ['05', 'Suspension Recovery', 'Account, website and policy diagnosis followed by a structured recovery process.'],
+  ['06', 'AI Automation', 'Lead capture, qualification, routing, CRM and repetitive workflow automation.'],
 ];
 
-const values = [
-  { icon: Target, title: 'Local First', desc: 'We live and work in Greater Noida. Every strategy accounts for ground reality — not just search volume from a dashboard.' },
-  { icon: Shield, title: 'Transparent by Default', desc: 'You see everything — rankings, spend, leads, conversions. No vanity metrics, no gatekeeping data.' },
-  { icon: Lightbulb, title: 'Systems Over Hustle', desc: 'Documented processes, not heroics. If it can\'t be repeated next quarter, it wasn\'t a real win.' },
-  { icon: Zap, title: 'Speed to Value', desc: 'First wins in 30 days. Audit → Strategy → Execution → Results. No 6-month retainers before you see movement.' },
-  { icon: Globe, title: 'NCR Coverage', desc: 'Noida, Greater Noida, Ghaziabad, Faridabad, Gurugram, Delhi. We know every locality, every competitor, every nuance.' },
-  { icon: Users, title: 'Partner, Not Vendor', desc: 'One accountability line. One revenue target. We succeed when you grow — not when we send an invoice.' },
+const principles = [
+  ['Evidence before promises', 'We separate documented results from targets, estimates and assumptions.'],
+  ['One connected system', 'Ads, search, website, local visibility and conversion tracking should work together.'],
+  ['Clear ownership', 'You should know what is being changed, why it is being changed and what will be measured.'],
+  ['Useful work first', 'We prioritise changes that improve visibility, acquisition, conversion or operational efficiency.'],
+];
+
+const process = [
+  ['01', 'Diagnose', 'Understand the business, market, existing assets and the actual constraint before recommending work.'],
+  ['02', 'Prioritise', 'Separate high-impact fixes from nice-to-have activity and define what success will be measured against.'],
+  ['03', 'Build', 'Execute across the relevant search, paid, website, local or automation layer.'],
+  ['04', 'Learn', 'Review what changed, what the data says and what should happen next.'],
 ];
 
 export function About() {
   return (
-    <section id="about" className="relative py-20 md:py-32 lg:py-36 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)] noise-overlay">
-      <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          className="mb-16 md:mb-24 max-w-3xl"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="section-label mb-4">// ABOUT US</p>
-          <h2 className="section-heading section-heading-h2 mb-6">
-            Empowering Businesses with <span className="text-red-italic">Smart Digital Marketing</span>
-          </h2>
-          <p className="section-subhead">
-            R.K Digital Media is a Greater Noida-based growth agency built to replace fragmented vendors with one system that ships — SEO, Google Ads, GMB, and web development engineered as a single revenue engine for ambitious local businesses.
-          </p>
-        </motion.div>
-
-        {/* Origin Story */}
-        <motion.div
-          className="mb-20 md:mb-28"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="section-label mb-4">// 01. ORIGIN</p>
-          <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-8 max-w-2xl" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.25' }}>
-            Why R.K Digital Media Exists.
-          </h3>
-
-          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-start">
-            <div className="space-y-6">
-              <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed" style={{ lineHeight: '1.7' }}>
-                It started with a pattern I kept seeing: local businesses in Noida and Greater Noida working with five different vendors — an SEO freelancer, a Google Ads agency, a website developer, a social media manager — zero sync between them.
+    <main className="rkd-about bg-[var(--rkd-bg)]">
+      <section className="relative overflow-hidden border-b border-[var(--rkd-border)]">
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_72%_35%,rgba(232,40,43,0.13),transparent_34%)]" />
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6 pt-20 md:pt-28 pb-20 md:pb-28 relative">
+          <div className="flex items-center justify-between gap-6 mb-14">
+            <p className="section-label">// ABOUT R.K DIGITAL MEDIA</p>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-fg-muted)]">NOIDA / NCR / INDIA</span>
+          </div>
+          <div className="grid lg:grid-cols-[1.12fr_0.88fr] gap-12 lg:gap-20 items-end">
+            <motion.h1 initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7}} className="hero-headline text-[var(--rkd-fg)]">
+              One growth partner. <span className="text-red-italic">Fewer moving parts.</span>
+            </motion.h1>
+            <motion.div initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7,delay:.08}}>
+              <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-xl">
+                R.K Digital Media is a founder-led digital growth business based in Greater Noida. We bring paid acquisition, organic search, local visibility, websites and automation into one connected operating system.
               </p>
-              <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed" style={{ lineHeight: '1.7' }}>
-                The SEO person doesn't talk to the ads person. The website dev doesn't know about GMB. The business owner gets five reports that contradict each other. Nothing connects. Money leaks everywhere.
-              </p>
-              <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed" style={{ lineHeight: '1.7' }}>
-                The obvious answer wasn't another vendor in the stack — it was to build the partner that didn't exist yet. One team that owns SEO, Google Ads, GMB, and web development as a single integrated system. One accountability line, one revenue target, one operating cadence.
-              </p>
-              <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed font-medium" style={{ lineHeight: '1.7' }}>
-                That's the promise: scaling local businesses, daily.
-              </p>
-            </div>
-
-            <div className="card-base relative overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
-                    <div className="stat-value text-[var(--rkd-primary)]">8+</div>
-                    <div className="stat-label">Years in Business</div>
-                  </div>
-                  <div className="p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
-                    <div className="stat-value text-[var(--rkd-primary)]">1200+</div>
-                    <div className="stat-label">Clients Served</div>
-                  </div>
-                  <div className="p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
-                    <div className="stat-value text-[var(--rkd-primary)]">500+</div>
-                    <div className="stat-label">Projects Delivered</div>
-                  </div>
-                  <div className="p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
-                    <div className="stat-value text-[var(--rkd-primary)]">98%</div>
-                    <div className="stat-label">Client Retention</div>
-                  </div>
-                </div>
-                <div className="relative aspect-square bg-[var(--rkd-bg-secondary)] rounded-xl flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <p className="font-mono text-meta text-[var(--rkd-fg-subtle)] uppercase tracking-widest mb-2">HQ</p>
-                    <p className="font-montserrat font-semibold text-[var(--rkd-fg)]" style={{ fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)', lineHeight: '1.4' }}>Greater Noida</p>
-                    <p className="text-body-sm text-[var(--rkd-fg-muted)] mt-1">5th Ave, Gaur City 1, Sector 4</p>
-                    <p className="text-body-sm text-[var(--rkd-fg-muted)]">Ghaziabad, UP 201016</p>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-3 mt-8">
+                <Link href="/contact" className="btn-primary group">Start a Conversation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+                <Link href="/case-studies" className="btn-secondary">See the Work <ArrowUpRight className="w-4 h-4" /></Link>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-[var(--rkd-border)] bg-[var(--rkd-card)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
+          {[
+            ['10+', 'Years experience'],
+            ['6', 'Core services'],
+            ['NCR', 'Primary local market'],
+            ['FOUNDER-LED', 'Direct accountability'],
+          ].map(([value,label],i)=><div key={label} className={`py-7 md:py-9 pr-5 md:pr-8 ${i<3?'md:border-r border-[var(--rkd-border)]':''}`}><div className="font-montserrat font-black text-2xl md:text-3xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-12 lg:gap-24">
+            <div><p className="section-label mb-4">// 01. WHY WE EXIST</p><h2 className="section-heading section-heading-h2">The problem is rarely <span className="text-red-italic">one channel.</span></h2></div>
+            <div className="space-y-6 text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed">
+              <p>Businesses often end up with separate people for SEO, Google Ads, websites, local search and follow-up. Each person can do their job while the system still fails to produce a coherent acquisition path.</p>
+              <p>Search traffic can land on a weak page. Paid campaigns can send expensive clicks to the wrong destination. A strong Google Business Profile can sit beside a website that does not convert. Leads can arrive without a reliable follow-up process.</p>
+              <p>R.K Digital Media was built around the opposite model: diagnose the full journey, identify the constraint and bring the relevant parts together.</p>
+              <p className="text-[var(--rkd-fg)] font-medium">The objective is not to sell every service. It is to use the right service for the problem.</p>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Values */}
-        <motion.div
-          className="mb-20 md:mb-28"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="section-label mb-4">// 02. PRINCIPLES</p>
-          <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-8 max-w-2xl" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.25' }}>
-            6 Values, 0 Slogans.
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="card-base"
-              >
-                <div className="w-12 h-12 rounded-xl bg-[var(--rkd-primary)]/10 flex items-center justify-center mb-4 group-hover:bg-[var(--rkd-primary)]/20 transition-colors duration-300">
-                  <value.icon className="w-6 h-6 text-[var(--rkd-primary)]" aria-hidden="true" />
-                </div>
-                <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-3" style={{ fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)', lineHeight: '1.4' }}>
-                  {value.title}
-                </h4>
-                <p className="text-body-sm text-[var(--rkd-fg-muted)]" style={{ lineHeight: '1.6' }}>{value.desc}</p>
-              </motion.div>
-            ))}
+      <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// 02. WHAT WE DO</p>
+          <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-12 lg:gap-20 mb-12">
+            <h2 className="section-heading section-heading-h2">Six capabilities. <span className="text-red-italic">One system.</span></h2>
+            <p className="text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl">The service mix is deliberately focused. Each capability exists because it can affect a different part of the acquisition or operational journey.</p>
           </div>
-        </motion.div>
-
-        {/* Team */}
-        <motion.div
-          className="mb-20 md:mb-28"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="section-label mb-4">// 03. THE TEAM</p>
-          <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-8 max-w-2xl" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.25' }}>
-            Small Team, Big Throughput.
-          </h3>
-          <p className="text-body-lg text-[var(--rkd-fg-muted)] mb-12 max-w-2xl" style={{ lineHeight: '1.7' }}>
-            Every member owns a craft end-to-end and ships directly to clients — no agency layers between you and the people doing the work.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="card-base"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-xl bg-[var(--rkd-primary)] flex items-center justify-center flex-shrink-0">
-                    <span className="font-montserrat font-bold text-[var(--rkd-fg)] text-lg">{member.initials}</span>
-                  </div>
-                  <div>
-                    <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)]" style={{ fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)', lineHeight: '1.4' }}>{member.name}</h4>
-                    <p className="text-body-sm text-[var(--rkd-primary)] font-medium">{member.role}</p>
-                  </div>
-                </div>
-                <p className="text-body-sm text-[var(--rkd-fg-muted)]" style={{ lineHeight: '1.6' }}>{member.bio}</p>
-              </motion.div>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--rkd-border)]">
+            {capabilities.map(([n,title,text])=><Link href={`/services/${title==='Google Ads'?'google-ads':title==='SEO'?'seo':title==='Google Business Profile'?'gmb':title==='Website Development'?'web-development':title==='Suspension Recovery'?'google-ads-suspension-recovery':'ai-automation'}`} key={n} className="bg-[var(--rkd-bg-secondary)] p-7 md:p-9 group hover:bg-[var(--rkd-card)] transition-colors">
+              <span className="font-mono text-xs text-[var(--rkd-primary)]">{n}</span>
+              <h3 className="font-montserrat font-bold text-xl text-[var(--rkd-fg)] mt-6 mb-3 group-hover:text-[var(--rkd-primary)] transition-colors">{title}</h3>
+              <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p>
+              <ArrowUpRight className="w-4 h-4 mt-7 text-[var(--rkd-fg-muted)] group-hover:text-[var(--rkd-primary)] group-hover:translate-x-1 transition-all" />
+            </Link>)}
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Force Multiplier */}
-        <motion.div
-          className="card-base relative overflow-hidden"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="section-label mb-4">// 04. FORCE MULTIPLIER</p>
-          <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-8" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.25' }}>
-            Systems That Compound.
-          </h3>
+      <section className="py-20 md:py-28">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// 03. HOW WE WORK</p>
+          <div className="grid lg:grid-cols-4 gap-6">
+            {process.map(([n,title,text])=><div key={n} className="border-t border-[var(--rkd-border)] pt-6"><span className="font-mono text-xs text-[var(--rkd-primary)]">{n}</span><h3 className="font-montserrat font-bold text-xl text-[var(--rkd-fg)] mt-5 mb-3">{title}</h3><p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p></div>)}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center">
-              <div className="stat-value text-[var(--rkd-primary)] mb-1">50+</div>
-              <div className="stat-label">Automated Workflows</div>
-            </div>
-            <div className="text-center border-x border-[var(--rkd-border)] md:border-x-0 md:border-y py-4 md:py-0">
-              <div className="stat-value text-[var(--rkd-primary)] mb-1">30%</div>
-              <div className="stat-label">Faster Delivery</div>
-            </div>
-            <div className="text-center">
-              <div className="stat-value text-[var(--rkd-primary)] mb-1">100%</div>
-              <div className="stat-label">Transparent Reporting</div>
+      <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// 04. OPERATING PRINCIPLES</p>
+          <div className="grid md:grid-cols-2 gap-px bg-[var(--rkd-border)]">
+            {principles.map(([title,text])=><div key={title} className="bg-[var(--rkd-bg-secondary)] p-7 md:p-10"><div className="flex gap-4"><Check className="w-5 h-5 mt-1 text-[var(--rkd-primary)] shrink-0" /><div><h3 className="font-montserrat font-bold text-lg text-[var(--rkd-fg)] mb-2">{title}</h3><p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p></div></div></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-32">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-24 items-end">
+            <div><p className="section-label mb-4">// 05. BASED IN GREATER NOIDA</p><h2 className="section-heading section-heading-h2">Local understanding. <span className="text-red-italic">Wider reach.</span></h2></div>
+            <div className="space-y-5 text-[var(--rkd-fg-muted)] leading-relaxed">
+              <p>Our primary market is Noida, Greater Noida, Ghaziabad and Delhi NCR, while the same systems can support businesses outside the region.</p>
+              <p>For local businesses, that means strategy can account for service areas, location intent, Maps visibility and the competitive landscape around the customer.</p>
+              <div className="flex flex-wrap gap-2 pt-2">{['Noida','Greater Noida','Ghaziabad','Delhi','Gurugram','Faridabad','India','Worldwide'].map(x=><span key={x} className="px-3 py-1.5 rounded-full border border-[var(--rkd-border)] font-mono text-[10px] uppercase tracking-wider text-[var(--rkd-fg-muted)]">{x}</span>)}</div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-6 text-body-sm text-[var(--rkd-fg-muted)]">
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Automated rank tracking & alerts</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Auto-reporting dashboards</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Keyword opportunity alerts</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Competitor monitoring</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>GMB insights automation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Ad performance anomaly detection</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+      <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6"><div className="max-w-4xl"><p className="section-label mb-5">// NEXT STEP</p><h2 className="section-heading section-heading-h2 mb-6">Let's start with the <span className="text-red-italic">actual problem.</span></h2><p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl mb-8">Tell us what is limiting growth right now. We’ll review the situation and explain what we would investigate first.</p><Link href="/contact" className="btn-primary group inline-flex">Talk to R.K Digital Media <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link></div></div>
+      </section>
+    </main>
   );
 }
 
