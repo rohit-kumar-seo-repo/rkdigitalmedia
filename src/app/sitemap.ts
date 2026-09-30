@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { suspensionPolicies } from '@/data/suspension-policies';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://rkdigitalmedia.in';
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/services/ai-automation`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/services/web-development`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/services/google-ads-suspension-recovery`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...suspensionPolicies.map((policy) => ({
+      url: `${base}/services/google-ads-suspension-recovery/policies/${policy.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })),
     { url: `${base}/case-studies`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/case-studies/local-seo-domination`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/case-studies/google-ads-recovery`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
