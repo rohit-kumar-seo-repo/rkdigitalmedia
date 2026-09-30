@@ -11,7 +11,7 @@ const blogPosts = [
     keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process'],
   },
   {
-    slug: 'local-seo-greater-noida-map-pack-strategy',
+    slug: 'local-seo-strategy-greater-noida',
     title: 'Local SEO Strategy for Greater Noida: Rank Page 1 in 90 Days',
     excerpt: 'Technical SEO, GMB optimization, citations, content, and link building for Greater Noida service businesses. Exact framework we use for 50+ Map Pack keywords.',
     category: 'Local SEO',
