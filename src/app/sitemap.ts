@@ -32,10 +32,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     // Blog
     { url: `${base}/insights`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${base}/insights/seo-vs-paid-ads-greater-noida`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/google-ads-suspension-recovery-guide`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/gmb-optimization-map-pack-checklist`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/ai-automation-lead-generation`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/insights/seo-vs-paid-ads-2025-which-wins`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/insights/google-ads-suspension-recovery-complete-guide`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/insights/gmb-optimization-map-pack-checklist-50-steps`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/insights/ai-automation-lead-generation-5-workflows`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/insights/local-seo-strategy-greater-noida`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   ];
 }
