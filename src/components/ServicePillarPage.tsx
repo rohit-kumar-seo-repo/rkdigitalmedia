@@ -16,6 +16,19 @@ export type ServicePillarData = {
   included: string[];
   faqs: [string, string][];
   caseStudy?: { eyebrow: string; title: string; text: string; href: string };
+  policyHub?: {
+    title: string;
+    intro: string;
+    policies: Array<{
+      name: string;
+      summary: string;
+      check: string;
+      href: string;
+      label: string;
+    }>;
+    sourcesIntro: string;
+    sources: Array<{ name: string; href: string }>;
+  };
 };
 
 export function ServicePillarPage({ data }: { data: ServicePillarData }) {
@@ -162,10 +175,65 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
         </div>
       </section>
 
+      {data.policyHub && (
+        <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
+          <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+            <p className="section-label mb-4">// {data.caseStudy ? '07' : '06'}. POLICY REFERENCE</p>
+            <div className="max-w-4xl mb-12">
+              <h2 className="section-heading section-heading-h2 mb-5">
+                {data.policyHub.title}
+              </h2>
+              <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed">
+                {data.policyHub.intro}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-px bg-[var(--rkd-border)]">
+              {data.policyHub.policies.map((policy, index) => (
+                <article key={policy.name} className="bg-[var(--rkd-bg-secondary)] p-7 md:p-9">
+                  <div className="flex items-start justify-between gap-5">
+                    <span className="font-mono text-xs text-[var(--rkd-primary)]">0{index + 1}</span>
+                    <a
+                      href={policy.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs uppercase tracking-wider text-[var(--rkd-primary)] hover:underline"
+                    >
+                      {policy.label} ↗
+                    </a>
+                  </div>
+                  <h3 className="section-heading section-heading-h3 mt-5 mb-3">{policy.name}</h3>
+                  <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed mb-4">{policy.summary}</p>
+                  <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">
+                    <span className="text-[var(--rkd-fg)] font-semibold">What we check:</span> {policy.check}
+                  </p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-10 p-7 md:p-9 border border-[var(--rkd-border)] bg-[var(--rkd-card)] rounded-xl">
+              <h3 className="section-heading section-heading-h3 mb-3">Official Google Ads sources</h3>
+              <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed mb-6">{data.policyHub.sourcesIntro}</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-3">
+                {data.policyHub.sources.map((source) => (
+                  <a
+                    key={source.name}
+                    href={source.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors underline underline-offset-4"
+                  >
+                    {source.name} ↗
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {data.caseStudy && (
         <section className="py-20 md:py-28 bg-[var(--rkd-bg)]">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-            <p className="section-label mb-4">// 07. DOCUMENTED WORK</p>
+            <p className="section-label mb-4">// 08. DOCUMENTED WORK</p>
             <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end">
               <div>
                 <p className="text-xs uppercase tracking-wider text-[var(--rkd-primary)] mb-4">{data.caseStudy.eyebrow}</p>
@@ -182,7 +250,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
 
       <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
-          <p className="section-label mb-4">// {data.caseStudy ? '08' : '07'}. FAQ</p>
+          <p className="section-label mb-4">// {data.caseStudy ? '09' : '08'}. FAQ</p>
           <h2 className="section-heading section-heading-h2 mb-12">
             Common questions about <span className="text-red-italic">{data.label.toLowerCase()}.</span>
           </h2>
