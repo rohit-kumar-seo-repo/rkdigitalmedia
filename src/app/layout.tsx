@@ -61,7 +61,7 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://rkdigitalmedia.in/#localbusiness',
   name: 'R.K Digital Media',
-  description: 'Leading digital marketing agency in Greater Noida offering SEO, Google Ads, GMB optimization, website development, and AI automation. 1200+ clients served, 500+ projects, 8+ years.',
+  description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   url: 'https://rkdigitalmedia.in',
   telephone: '+91-98715-30594',
   email: 'info@rkdigitalmedia.in',
@@ -110,29 +110,6 @@ const localBusinessSchema = {
       { '@type': 'Offer', name: 'AI Automation Services', url: 'https://rkdigitalmedia.in/services/ai-automation' },
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '7',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: [
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Mohini Bhardwaj' },
-      datePublished: '2023-01-15',
-      reviewBody: 'This digital marketing agency is the best agency I have seen ever. The work in this agency is best. I like the behaviour of employees also.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Diksha Mangla' },
-      datePublished: '2023-02-20',
-      reviewBody: 'Awesome and fast work. One of the best Digital marketing agency must try.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-    },
-  ],
 };
 
 const webSiteSchema = {
@@ -171,7 +148,7 @@ export const metadata: Metadata = {
     default: 'R.K Digital Media | Digital Marketing Agency in Greater Noida',
     template: '%s | R.K Digital Media',
   },
-  description: 'Leading digital marketing agency in Greater Noida offering SEO, Google Ads, GMB optimization, website development, and AI automation. 1200+ clients served, 500+ projects, 8+ years. Serving clients across India and worldwide.',
+  description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   keywords: [
     'digital marketing agency',
     'SEO services',
@@ -219,12 +196,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'R.K Digital Media | Digital Marketing Agency in Greater Noida',
-    description: 'Leading digital marketing agency in Greater Noida offering SEO, Google Ads, GMB optimization, website development, and AI automation.',
+    description: 'Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
     images: ['/og-image.jpg'],
     creator: '@rkdigitalmedia',
   },
   verification: {
-    google: 'google-site-verification-code',
   },
   alternates: {
     canonical: 'https://rkdigitalmedia.in',
