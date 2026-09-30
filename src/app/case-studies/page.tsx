@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/Header';
-import CustomCursor from '@/components/ui/CustomCursor';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -67,10 +65,7 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <>
-      <CustomCursor />
-      <Header />
-      <main id="top" className="pt-16">
+    <main id="top" className="pt-16">
         {/* 1. Hero Section */}
         <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)]">
           <div className="absolute inset-0 bg-[var(--rkd-bg)]" />
@@ -99,7 +94,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div className="flex flex-col justify-center items-center md:items-start">
                   <p className="text-[var(--rkd-fg-muted)] text-sm font-outfit leading-relaxed max-w-xs mb-8">
-                    Verified metrics from real campaigns. Every number referenceable.
+                    Selected project metrics and outcomes from the corresponding case-study records.
                   </p>
                   <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--rkd-primary)] text-white font-montserrat font-bold hover:bg-[var(--rkd-primary-hover)] transition-colors">
                     BOOK A FREE AUDIT
@@ -114,7 +109,7 @@ export default function CaseStudiesPage() {
         {/* 3. Portfolio Metrics Strip */}
         <section className="py-16 bg-[var(--rkd-bg)] border-y border-[var(--rkd-border)]">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-            <p className="section-label mb-8 text-center">● LIVE // PORTFOLIO METRICS</p>
+            <p className="section-label mb-8 text-center">// SELECTED PROJECT METRICS</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {portfolioMetrics.map((item) => (
                 <div key={item.num} className="bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl p-6 md:p-8 text-center">
@@ -218,7 +213,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-      </main>
-    </>
+    </main>
   );
 }
