@@ -3,6 +3,7 @@ import { Montserrat, Outfit } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/ui/CustomCursor';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 import Script from 'next/script';
 import './globals.css';
 
@@ -248,6 +249,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <WhatsAppFloat />
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
