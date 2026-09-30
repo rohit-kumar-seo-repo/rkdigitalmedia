@@ -1,120 +1,27 @@
 import type { Metadata } from 'next';
+import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'AI Automation for Lead Generation: 5 Workflows That Run 24/7 | R.K Digital Media',
-  description: 'WhatsApp AI agents, voice bots, CRM automation, n8n workflows. Complete setup guide with templates. Cut response time 80%, cost per lead 40%. AI automation services Greater Noida.',
-  keywords: ['AI lead generation automation', 'WhatsApp AI agent setup', 'n8n workflow templates', 'CRM automation for small business', 'AI automation Greater Noida', 'WhatsApp business automation'],
-  openGraph: {
-    title: 'AI Automation for Lead Generation: 5 Workflows That Run 24/7 | R.K Digital Media',
-    description: 'WhatsApp AI agents, voice bots, CRM automation, n8n workflows. Complete setup guide with templates. Cut response time 80%, cost per lead 40%.',
-    type: 'article',
-    locale: 'en_IN',
-    url: 'https://rkdigitalmedia.in/insights/ai-automation-lead-generation-5-workflows',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Automation for Lead Generation | R.K Digital Media',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Automation for Lead Generation: 5 Workflows That Run 24/7 | R.K Digital Media',
-    description: 'WhatsApp AI agents, voice bots, CRM automation, n8n workflows. Complete setup guide with templates.',
-    images: ['/og-image.jpg'],
-  },
+  title: "AI Automation for Lead Generation: 5 Workflows Worth Automating | R.K Digital Media",
+  description: "Five practical workflows for capturing, qualifying and following up with leads—plus where automation should stop and a human should take over.",
+  openGraph: { title: "AI Automation for Lead Generation: 5 Workflows Worth Automating", description: "Five practical workflows for capturing, qualifying and following up with leads—plus where automation should stop and a human should take over.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/ai-automation-lead-generation-5-workflows", siteName: 'R.K Digital Media' },
+  alternates: { canonical: "https://rkdigitalmedia.in/insights/ai-automation-lead-generation-5-workflows" },
 };
 
-const sectionImages = {
-  'WhatsApp AI Agent': '/images/whatsapp-agent.svg',
-  'Voice Bot': '/images/voice-bot.svg',
-  'CRM Automation': '/images/crm-automation.svg',
-  'n8n Workflows': '/images/n8n-workflows.svg',
-  'Human Handoff': '/images/human-handoff.svg',
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: "AI Automation for Lead Generation: 5 Workflows Worth Automating",
+  description: "Five practical workflows for capturing, qualifying and following up with leads—plus where automation should stop and a human should take over.",
+  url: "https://rkdigitalmedia.in/insights/ai-automation-lead-generation-5-workflows",
+  dateModified: '2026-10-01',
+  author: { '@type': 'Person', name: 'Rohit Kumar' },
+  publisher: { '@type': 'Organization', name: 'R.K Digital Media', url: 'https://rkdigitalmedia.in' }
 };
 
 export default function PostPage() {
-  return (
-    <>
-
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center py-24">
-          <p className="section-label mb-4">// INSIGHTS</p>
-          <h1 className="font-montserrat font-black text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: '1.1' }}>
-            AI Automation for Lead Generation
-          </h1>
-          <p className="text-body-lg text-[var(--rkd-fg-muted)] max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
-            5 workflows that run 24/7 to cut response time 80% and cost per lead 40%.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <div className="prose lg:prose-xl max-w-none">
-            <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}>
-              5 Powerful Workflows
-            </h2>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-              <div className="card-base p-6 hover:scale-105 transition-transform">
-                <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">WhatsApp AI Agent</h3>
-                <p>
-                  <img src="/images/whatsapp-agent.svg" alt="WhatsApp AI agent illustration" className="w-full mb-4 rounded-lg" />
-                  Instant reply to inquiries, qualify leads via conversational forms,
-                  book appointments directly, 24/7 coverage without human overhead.
-                </p>
-              </div>
-              <div className="card-base p-6 hover:scale-105 transition-transform">
-                <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">Voice Bot</h3>
-                <p>
-                  <img src="/images/voice-bot.svg" alt="Voice bot illustration" className="w-full mb-4 rounded-lg" />
-                  Handle inbound calls automatically, screen and route qualified leads,
-                  collect information via voice, reduce missed call rate.
-                </p>
-              </div>
-              <div className="card-base p-6 hover:scale-105 transition-transform">
-                <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">CRM Automation</h3>
-                <p>
-                  <img src="/images/crm-automation.svg" alt="CRM automation illustration" className="w-full mb-4 rounded-lg" />
-                  Auto-create contacts from forms, assign leads to sales reps,
-                  trigger follow-up sequences, track lead lifecycle stages.
-                </p>
-              </div>
-              <div className="card-base p-6 hover:scale-105 transition-transform">
-                <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">n8n Workflows</h3>
-                <p>
-                  <img src="/images/n8n-workflows.svg" alt="n8n workflows illustration" className="w-full mb-4 rounded-lg" />
-                  Lead routing and scoring, cross-platform integration, scheduled campaigns,
-                  error handling and auditing.
-                </p>
-              </div>
-              <div className="card-base p-6 hover:scale-105 transition-transform">
-                <h3 className="font-montserrat font-semibold text-[var(--rkd-primary)] mb-3">Human Handoff</h3>
-                <p>
-                  <img src="/images/human-handoff.svg" alt="Human handoff illustration" className="w-full mb-4 rounded-lg" />
-                  Seamless transfer to human agent, conversation context preserved,
-                  audit logs for compliance, monthly optimization reviews.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-[var(--rkd-border)]">
-              <p className="font-montserrat font-medium text-[var(--rkd-primary)] mb-2">
-                80% Faster Response · 40% Lower Cost Per Lead · 24/7 Coverage
-              </p>
-              <a href="/contact" className="btn-primary inline-flex mt-4">
-                Book Free Audit
-                <svg className="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5v7" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </>
-  );
+  return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+    <InsightArticle category="AI AUTOMATION" title="AI Automation for Lead Generation: 5 Workflows Worth Automating" intro="Five practical workflows for capturing, qualifying and following up with leads—plus where automation should stop and a human should take over." readTime="12 min" updated="October 1, 2026" toc={["What should actually be automated?","Instant lead response","Lead qualification","CRM routing","Follow-up sequences","Human handoff and measurement"]} sections={[{"label":"PRINCIPLE","title":"What should actually be automated?","paragraphs":["Automate repetitive movement of information before you automate judgment. A useful system can capture a lead, enrich a record, send a first response and create a follow-up task without pretending a bot can understand every commercial situation."]},{"label":"WORKFLOW 01","title":"Instant lead response","paragraphs":["When a form, WhatsApp message or ad lead arrives, create a CRM record, acknowledge the enquiry and route it to the right person. Speed matters, but the first message should set expectations rather than overwhelm the prospect."]},{"label":"WORKFLOW 02","title":"Lead qualification","paragraphs":["Use a short set of questions—service needed, location, budget range, timeline and preferred contact method—to separate obvious opportunities from enquiries that need more information. Keep an exit path to a human."]},{"label":"WORKFLOW 03","title":"CRM routing","paragraphs":["Assign leads by service, geography, language, business hours or salesperson. Store the source campaign and landing page so reporting can connect spend to actual enquiries."]},{"label":"WORKFLOW 04","title":"Follow-up sequences","paragraphs":["Build a small sequence around real customer questions rather than sending the same sales pitch repeatedly. Stop automated messages when the person replies, books a meeting or asks not to be contacted."]},{"label":"WORKFLOW 05","title":"Human handoff and measurement","paragraphs":["Define conditions that require a person: complaints, unusual requests, high-value opportunities, pricing negotiation or uncertainty. Measure response time, qualified leads, booked meetings and closed revenue—not just messages sent."]}]} />
+  </>;
 }
