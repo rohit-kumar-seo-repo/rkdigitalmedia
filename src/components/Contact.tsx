@@ -2,12 +2,12 @@
 import { useState } from 'react';
 
 const services = [
-  'Performance Marketing',
-  'SEO & Search Growth',
-  'AI Automation',
-  'Web & Conversion',
-  'Creative & Content',
-  'CRM & Growth Systems',
+  'Google Ads Services',
+  'Website Development Services',
+  'Google Ads Suspension Recovery',
+  'SEO Services',
+  'Google Business Profile Management',
+  'AI Automation Services',
   'Not sure — advise me',
 ];
 
@@ -47,14 +47,14 @@ export function Contact() {
           {/* Header row */}
           <div className="flex items-center justify-between mb-10">
             <span className="font-montserrat font-bold text-[var(--rkd-primary)] tracking-widest text-sm uppercase">// Start a Project</span>
-            <span className="font-montserrat text-[var(--rkd-fg-muted)] tracking-widest text-xs uppercase">~4 HR Response</span>
+            <span className="font-montserrat text-[var(--rkd-fg-muted)] tracking-widest text-xs uppercase">PERSONAL REVIEW</span>
           </div>
 
           {status === 'sent' ? (
             <div className="text-center py-16">
               <div className="text-5xl mb-4">✓</div>
               <h3 className="font-montserrat font-black text-2xl text-[var(--rkd-fg)] mb-2">Message Sent!</h3>
-              <p className="text-[var(--rkd-fg-muted)]">We'll get back to you within 4 hours.</p>
+              <p className="text-[var(--rkd-fg-muted)]">We'll review your enquiry and get back to you as soon as possible.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -135,7 +135,7 @@ export function Contact() {
           {/* Privacy footer */}
           <p className="mt-8 font-montserrat text-xs tracking-widest uppercase text-[var(--rkd-fg-muted)] border-t border-[var(--rkd-border)] pt-6">
             By submitting, you agree to our{' '}
-            <a href="/privacy-policy" className="underline hover:text-[var(--rkd-fg)] transition-colors">Privacy Policy</a>.
+            <a href="/privacy" className="underline hover:text-[var(--rkd-fg)] transition-colors">Privacy Policy</a>.
             {' '}We never share your details with third parties.
           </p>
         </div>
