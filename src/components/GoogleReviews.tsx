@@ -1,6 +1,7 @@
 'use client';
 
-import TestimonialsSection, { TestimonialsData } from '@/components/ui/community-testimonial';
+import TestimonialsSection from '@/components/ui/community-testimonial';
+import type { TestimonialsData } from '@/components/ui/community-testimonial';
 
 const testimonialsData: TestimonialsData = {
   title: 'Trusted by Businesses Across Industries',
