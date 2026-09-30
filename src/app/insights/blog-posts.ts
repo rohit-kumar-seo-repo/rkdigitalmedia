@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 const blogPosts = [
   {
     slug: 'google-ads-suspension-recovery-complete-guide',
-    title: 'Google Ads Suspension Recovery: Complete 2025 Guide (98% Success Rate)',
-    excerpt: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts.',
+    title: 'Google Ads Suspension Recovery: A Practical Account Review & Appeal Guide',
+    excerpt: 'A practical guide to diagnosing suspension reasons, reviewing account and website risks, correcting genuine issues and preparing a factual appeal.',
     category: 'Google Ads',
-    readTime: '15 min',
-    date: '2025-01-10',
+    readTime: '12 min',
+    date: '2026-10-01',
     keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process'],
   },
   {
