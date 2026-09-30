@@ -1,152 +1,165 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: 'Google Ads Suspension Recovery Services | R.K Digital Media',
-  description:
-    'Google Ads suspension recovery service covering account, website, billing, ad and policy review, appeal preparation and post-reinstatement risk reduction.',
-  alternates: { canonical: 'https://rkdigitalmedia.in/services/google-ads-suspension-recovery' },
+  title: "Google Ads Suspension Recovery Services | R.K Digital Media",
+  description: "Structured Google Ads suspension recovery covering account, website, billing, ad and policy review, corrective actions and appeal preparation.",
+  alternates: { canonical: "https://rkdigitalmedia.in/services/google-ads-suspension-recovery" },
   openGraph: {
-    title: 'Google Ads Suspension Recovery Services | R.K Digital Media',
-    description: 'Structured Google Ads suspension review, compliance fixes and appeal preparation.',
+    title: "Google Ads Suspension Recovery Services | R.K Digital Media",
+    description: "Structured Google Ads suspension recovery covering account, website, billing, ad and policy review, corrective actions and appeal preparation.",
     type: 'website',
-    url: 'https://rkdigitalmedia.in/services/google-ads-suspension-recovery',
+    url: "https://rkdigitalmedia.in/services/google-ads-suspension-recovery",
+    siteName: 'R.K Digital Media',
   },
 };
 
-const checks = [
-  'Account and policy-status review',
-  'Website and landing-page compliance review',
-  'Business identity, contact and transparency checks',
-  'Ad, asset and destination review',
-  'Merchant Center and product-data review where applicable',
-  'Billing and account-structure checks',
-  'Appeal evidence and explanation preparation',
-  'Post-reinstatement risk-reduction checklist',
-];
+const data: ServicePillarData = {
+  "number": "03",
+  "label": "GOOGLE ADS SUSPENSION RECOVERY",
+  "title": "Google Ads Suspension Recovery Services built around diagnosis first",
+  "intro": "A structured review of the account, website, billing, ads, assets and relevant business systems to identify policy risks before preparing a clearer appeal.",
+  "intent": "A suspension is not normally solved by repeatedly submitting the same appeal. The useful first step is diagnosis: understand the notice, inspect relevant parts of the advertising ecosystem, correct genuine issues and document what changed.",
+  "outcomes": [
+    "A clearer picture of the policy or trust issue described by the suspension notice.",
+    "A documented list of website, account, billing or advertising issues that need attention.",
+    "A more evidence-based appeal rather than repeated generic submissions.",
+    "A post-reinstatement checklist to reduce repeat risk."
+  ],
+  "capabilities": [
+    [
+      "Suspension notice review",
+      "Analyse the stated reason and identify account-specific facts that need investigation."
+    ],
+    [
+      "Website & landing-page review",
+      "Check transparency, contact information, claims, destinations and relevant policy considerations."
+    ],
+    [
+      "Account & ad review",
+      "Inspect account structure, ads, assets and business information for inconsistencies or risky patterns."
+    ],
+    [
+      "Billing & business identity",
+      "Review relevant payment, business-information and account-ownership details where they relate to the issue."
+    ],
+    [
+      "Corrective action plan",
+      "Prioritise genuine changes and document what was changed before the appeal."
+    ],
+    [
+      "Appeal preparation",
+      "Prepare a factual explanation of the business, corrective actions and supporting evidence. Google makes the final decision."
+    ]
+  ],
+  "process": [
+    [
+      "Collect",
+      "Gather the suspension notice, account context, website details and relevant business documentation."
+    ],
+    [
+      "Audit",
+      "Review the parts of the account and destination relevant to the stated policy issue."
+    ],
+    [
+      "Correct",
+      "Implement appropriate website, account or advertising changes."
+    ],
+    [
+      "Appeal & monitor",
+      "Prepare the appeal, then maintain a post-reinstatement risk checklist."
+    ]
+  ],
+  "useCases": [
+    [
+      "Account suspension",
+      "When an active Ads account has been suspended and needs structured review."
+    ],
+    [
+      "Repeated disapprovals",
+      "When recurring ad or asset issues suggest a broader destination or policy problem."
+    ],
+    [
+      "Website-related issues",
+      "When the advertising account is connected to a website needing compliance or transparency work."
+    ],
+    [
+      "E-commerce advertisers",
+      "When product data, landing pages and Merchant Center context are relevant."
+    ],
+    [
+      "Business-information concerns",
+      "When account, billing or business identity information needs consistency checks."
+    ],
+    [
+      "Pre-appeal review",
+      "When the business wants corrective actions reviewed before submitting an appeal."
+    ]
+  ],
+  "included": [
+    "Suspension notice analysis",
+    "Account and policy review",
+    "Website and landing-page review",
+    "Ad and asset checks",
+    "Relevant billing / identity checks",
+    "Corrective-action checklist",
+    "Appeal preparation support",
+    "Post-reinstatement risk checklist"
+  ],
+  "faqs": [
+    [
+      "Can you guarantee reinstatement?",
+      "No. Google makes the final policy and account decision. The service focuses on diagnosis, corrective action and a clearer evidence-based appeal."
+    ],
+    [
+      "Should I create a new Ads account after suspension?",
+      "Creating replacement accounts can create additional policy or account-relationship complications. The appropriate next step depends on the suspension reason and account context."
+    ],
+    [
+      "Do you need Ads account access?",
+      "The exact access needed depends on the issue. A suspension notice and website can be enough for an initial review, while deeper diagnosis may require appropriate account access."
+    ],
+    [
+      "Can you also fix the website?",
+      "Yes. Where the website is part of the problem, corrective website work can be scoped alongside the recovery review."
+    ]
+  ],
+  "caseStudy": {
+    "eyebrow": "Google Ads / documented project",
+    "title": "Google Ads Suspension Recovery & Scale",
+    "text": "The documented project covers policy review, landing-page work, product-feed cleanup, appeal preparation and campaign rebuilding after reinstatement.",
+    "href": "/case-studies/google-ads-recovery"
+  }
+};
 
-export default function GoogleAdsSuspensionRecoveryPage() {
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {'@type':'BreadcrumbList','itemListElement':[
+      {'@type':'ListItem','position':1,'name':'Home','item':'https://rkdigitalmedia.in/'},
+      {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
+      {'@type':'ListItem','position':3,'name':"Google Ads Suspension Recovery Services built around diagnosis first",'item':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
+    ]},
+    {'@type':'Service','name':"Google Ads Suspension Recovery Services built around diagnosis first",'serviceType':"Google Ads Suspension Recovery Services built around diagnosis first",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
+  ]
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': data.faqs.map((faq) => ({
+    '@type': 'Question',
+    'name': faq.question,
+    'acceptedAnswer': {'@type':'Answer','text':faq.answer},
+  })),
+};
+
+export default function Page() {
   return (
-    <main id="top">
-      <section className="relative min-h-[68vh] flex items-center bg-[var(--rkd-bg)] grid-pattern">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6 py-28 md:py-36 w-full">
-          <p className="section-label mb-5">// GOOGLE ADS POLICY & RECOVERY</p>
-          <h1 className="font-montserrat font-black text-[var(--rkd-fg)] max-w-5xl mb-7" style={{ fontSize: 'clamp(2.6rem, 6vw, 5.5rem)', lineHeight: '1.02' }}>
-            Google Ads Suspension <span className="text-red-italic">Recovery Services</span>
-          </h1>
-          <p className="text-body-lg text-[var(--rkd-fg-muted)] max-w-3xl leading-relaxed">
-            When an Ads account is suspended, repeatedly appealing without understanding the underlying issue can waste time and make diagnosis harder. We review the account and its business destination systematically, identify likely policy and trust issues, help implement the required fixes, and prepare a clearer appeal.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-9">
-            <Link href="/contact" className="btn-primary">
-              Request a Suspension Review <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link href="/case-studies/google-ads-recovery" className="btn-secondary">
-              See the Recovery Case Study
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              ['01', 'Diagnose first', 'We start with the suspension notice and inspect the connected parts of the advertising ecosystem.'],
-              ['02', 'Fix the cause', 'The goal is not to disguise the problem. Relevant website, account, feed or business-information issues need to be addressed.'],
-              ['03', 'Prepare the appeal', 'The appeal should clearly explain the business, the corrective actions and the supporting evidence.'],
-            ].map(([num, title, text]) => (
-              <div key={num} className="card-base p-7">
-                <span className="font-mono text-[var(--rkd-primary)]">{num}</span>
-                <h2 className="font-montserrat font-semibold text-[var(--rkd-fg)] mt-5 mb-3">{title}</h2>
-                <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-[var(--rkd-bg)]">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20">
-            <div>
-              <p className="section-label mb-4">// WHAT WE REVIEW</p>
-              <h2 className="font-montserrat font-bold text-[var(--rkd-fg)]" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.1' }}>
-                A suspension is an <span className="text-red-italic">ecosystem problem.</span>
-              </h2>
-              <p className="mt-6 text-[var(--rkd-fg-muted)] leading-relaxed">
-                Google Ads policy decisions can involve more than the ad itself. The review therefore considers the account, business information, destination experience and supporting product or billing systems that are relevant to the notice.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {checks.map((item) => (
-                <div key={item} className="flex gap-3 p-5 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl">
-                  <CheckCircle2 className="w-5 h-5 shrink-0 text-[var(--rkd-primary)] mt-0.5" />
-                  <span className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <p className="section-label mb-4">// RECOVERY PROCESS</p>
-          <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] max-w-3xl mb-12" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.1' }}>
-            From suspension notice to a <span className="text-red-italic">cleaner account.</span>
-          </h2>
-          <div className="grid md:grid-cols-4 gap-px bg-[var(--rkd-border)]">
-            {[
-              ['01', 'Review', 'Collect the suspension notice, account context and business information.'],
-              ['02', 'Audit', 'Inspect the relevant account, website, ads, destinations, feeds and policies.'],
-              ['03', 'Correct', 'Implement the necessary fixes and document what changed.'],
-              ['04', 'Appeal', 'Prepare a factual, evidence-based appeal and a post-reinstatement checklist.'],
-            ].map(([num, title, text]) => (
-              <div key={num} className="bg-[var(--rkd-bg-secondary)] p-7">
-                <span className="font-mono text-[var(--rkd-primary)]">{num}</span>
-                <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mt-5 mb-3">{title}</h3>
-                <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-[var(--rkd-bg)]">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <p className="section-label mb-4">// CASE STUDY</p>
-          <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-end">
-            <div>
-              <h2 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-5" style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', lineHeight: '1.1' }}>
-                Google Ads Suspension Recovery & Scale
-              </h2>
-              <p className="text-[var(--rkd-fg-muted)] max-w-3xl leading-relaxed">
-                The documented case study covers an e-commerce account suspended for policy issues. The work included a policy review, landing-page rebuild, product-feed cleanup, structured appeal and campaign rebuild after reinstatement.
-              </p>
-            </div>
-            <Link href="/case-studies/google-ads-recovery" className="btn-secondary whitespace-nowrap">
-              Read the case study <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 md:py-36 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)] text-center">
-        <div className="max-w-3xl mx-auto px-4 md:px-6">
-          <p className="section-label mb-4">// NEED A REVIEW?</p>
-          <h2 className="font-montserrat font-black text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', lineHeight: '1.05' }}>
-            Stop guessing. <span className="text-red-italic">Find the policy risk.</span>
-          </h2>
-          <p className="text-[var(--rkd-fg-muted)] leading-relaxed mb-8">
-            Share the suspension notice and relevant account context. We can assess whether the issue appears suitable for a structured recovery review and explain the next steps.
-          </p>
-          <Link href="/contact" className="btn-primary">
-            Request a Suspension Review <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-    </main>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <ServicePillarPage data={data} />
+    </>
   );
 }
