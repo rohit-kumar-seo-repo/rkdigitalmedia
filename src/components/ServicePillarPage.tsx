@@ -14,7 +14,7 @@ export type ServicePillarData = {
   process: [string, string][];
   useCases: [string, string][];
   included: string[];
-  faqs: { question: string; answer: string }[];
+  faqs: [string, string][];
   caseStudy?: { eyebrow: string; title: string; text: string; href: string };
 };
 
@@ -188,12 +188,12 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           </h2>
           <div className="divide-y divide-[var(--rkd-border)] border-y border-[var(--rkd-border)]">
             {data.faqs.map((faq) => (
-              <details key={faq.question} className="py-6 group">
+              <details key={faq[0]} className="py-6 group">
                 <summary className="cursor-pointer list-none flex items-center justify-between gap-6 font-montserrat font-semibold text-[var(--rkd-fg)]">
                   {faq.question}
                   <span className="text-[var(--rkd-primary)] text-xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <p className="mt-4 text-sm text-[var(--rkd-fg-muted)] leading-relaxed max-w-3xl">{faq.answer}</p>
+                <p className="mt-4 text-sm text-[var(--rkd-fg-muted)] leading-relaxed max-w-3xl">{faq[1]}</p>
               </details>
             ))}
           </div>
