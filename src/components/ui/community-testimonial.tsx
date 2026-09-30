@@ -1,7 +1,5 @@
 'use client';
 
-import type { CSSProperties, ReactNode } from 'react';
-
 export interface Testimonial {
   id: string;
   quote: string;
@@ -13,7 +11,6 @@ export interface Testimonial {
 
 export interface TestimonialRow {
   id: string;
-  speed?: string;
   direction?: 'left' | 'right';
   testimonials: Testimonial[];
 }
@@ -24,33 +21,21 @@ export interface TestimonialsData {
   rows: TestimonialRow[];
 }
 
-export const TestimonialCard = ({
-  quote,
-  authorName,
-  authorTitle,
-  initials,
-  rating = 5,
-}: Testimonial) => {
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  const { quote, authorName, authorTitle, initials, rating = 5 } = testimonial;
+
   return (
-    <article className="testimonial-card flex w-[min(86vw,390px)] flex-shrink-0 flex-col gap-5 rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-6 md:w-[390px]">
+    <article className="testimonial-card flex w-[86vw] max-w-[390px] flex-shrink-0 flex-col gap-5 rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-6 md:w-[390px]">
       <div className="flex items-center justify-between gap-4">
-        <div className="font-mono text-[0.625rem] uppercase tracking-[0.15em] text-[var(--rkd-muted)]">
+        <span className="font-mono text-[0.625rem] uppercase tracking-[0.15em] text-[var(--rkd-muted)]">
           Google Review
-        </div>
-        <div className="flex gap-0.5" aria-label={String(rating) + ' out of 5 stars'}>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <span
-              key={index}
-              className={index < rating ? 'text-[var(--rkd-primary)]' : 'text-[var(--border-hover)]'}
-              aria-hidden="true"
-            >
-              ★
-            </span>
-          ))}
-        </div>
+        </span>
+        <span className="font-mono text-xs tracking-[0.08em] text-[var(--rkd-primary)]" aria-label={rating + ' out of 5 stars'}>
+          {'★★★★★'.slice(0, Math.max(0, Math.min(5, rating)))}
+        </span>
       </div>
 
-      <p className="min-h-[112px] font-outfit text-[1rem] leading-7 text-[var(--rkd-fg)]">
+      <p className="min-h-[112px] font-outfit text-base leading-7 text-[var(--rkd-fg)]">
         “{quote}”
       </p>
 
@@ -72,38 +57,37 @@ export const TestimonialCard = ({
       </div>
     </article>
   );
-};
+}
 
-export const HorizontalScroller = ({
-  children,
-  speed = '42s',
+function HorizontalScroller({
+  testimonials,
   direction = 'left',
 }: {
-  children: ReactNode;
-  speed?: string;
+  testimonials: Testimonial[];
   direction?: 'left' | 'right';
-}) => {
-  const style = { '--testimonial-scroll-duration': speed } as CSSProperties;
+}) {
+  const animationClass =
+    direction === 'right'
+      ? 'animate-testimonial-scroll-reverse'
+      : 'animate-testimonial-scroll';
 
   return (
-    <div className="testimonial-scroller group relative w-full overflow-hidden">
-      <div
-        className={
-          'flex w-max items-stretch gap-5 px-3 ' +
-          (direction === 'right'
-            ? 'animate-testimonial-scroll-reverse'
-            : 'animate-testimonial-scroll')
-        }
-        style={style}
-      >
-        <div className="flex items-stretch gap-5">{children}</div>
+    <div className="testimonial-scroller relative w-full overflow-hidden">
+      <div className={'flex w-max items-stretch gap-5 px-3 ' + animationClass}>
+        <div className="flex items-stretch gap-5">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </div>
         <div className="flex items-stretch gap-5" aria-hidden="true">
-          {children}
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={'duplicate-' + testimonial.id} testimonial={testimonial} />
+          ))}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default function TestimonialsSection({ data }: { data: TestimonialsData }) {
   return (
@@ -115,12 +99,11 @@ export default function TestimonialsSection({ data }: { data: TestimonialsData }
           <div className="max-w-3xl">
             <p className="section-label mb-4">// WHAT CLIENTS SAY</p>
             <h2 className="section-heading section-heading-h2">
-              Trusted by Businesses{' '}
-              <span className="text-red-italic">Across Industries</span>
+              Trusted by Businesses <span className="text-red-italic">Across Industries</span>
             </h2>
             <p className="section-subhead mt-5 max-w-2xl">
-              Real feedback from businesses that have worked with R.K Digital Media across
-              SEO, Google Business Profile, paid advertising and digital marketing.
+              Real feedback from businesses that have worked with R.K Digital Media across SEO,
+              Google Business Profile, paid advertising and digital marketing.
             </p>
           </div>
 
@@ -137,11 +120,11 @@ export default function TestimonialsSection({ data }: { data: TestimonialsData }
 
         <div className="flex flex-col gap-5">
           {data.rows.map((row) => (
-            <HorizontalScroller key={row.id} speed={row.speed} direction={row.direction}>
-              {row.testimonials.map((testimonial) => (
-                <TestimonialCard key={testimonial.id} {...testimonial} />
-              ))}
-            </HorizontalScroller>
+            <HorizontalScroller
+              key={row.id}
+              testimonials={row.testimonials}
+              direction={row.direction}
+            />
           ))}
         </div>
 
