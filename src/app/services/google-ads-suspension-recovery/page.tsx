@@ -149,8 +149,8 @@ const faqSchema = {
   '@type': 'FAQPage',
   'mainEntity': data.faqs.map((faq) => ({
     '@type': 'Question',
-    'name': faq.question,
-    'acceptedAnswer': {'@type':'Answer','text':faq.answer},
+    'name': faq[0],
+    'acceptedAnswer': {'@type':'Answer','text':faq[1]},
   })),
 };
 
