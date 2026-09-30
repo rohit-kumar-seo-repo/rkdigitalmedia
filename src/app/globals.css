@@ -475,3 +475,65 @@
     font-weight: 500;
   }
 }
+
+/* Community testimonial marquee */
+@keyframes testimonialScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes testimonialScrollReverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-testimonial-scroll {
+  animation: testimonialScroll var(--testimonial-scroll-duration, 42s) linear infinite;
+}
+
+.animate-testimonial-scroll-reverse {
+  animation: testimonialScrollReverse var(--testimonial-scroll-duration, 42s) linear infinite;
+}
+
+.testimonial-scroller::before,
+.testimonial-scroller::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: clamp(28px, 8vw, 120px);
+  pointer-events: none;
+}
+
+.testimonial-scroller::before {
+  left: 0;
+  background: linear-gradient(to right, var(--rkd-bg-secondary), transparent);
+}
+
+.testimonial-scroller::after {
+  right: 0;
+  background: linear-gradient(to left, var(--rkd-bg-secondary), transparent);
+}
+
+.testimonial-scroller:hover .animate-testimonial-scroll,
+.testimonial-scroller:hover .animate-testimonial-scroll-reverse {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  transition: border-color 250ms ease, background-color 250ms ease, transform 250ms ease;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(232, 40, 43, 0.45);
+  background-color: var(--card-hover);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-testimonial-scroll,
+  .animate-testimonial-scroll-reverse {
+    animation: none;
+  }
+}
