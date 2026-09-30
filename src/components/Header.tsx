@@ -15,25 +15,21 @@ const navItems = [
 ];
 
 const servicesDropdown = [
-  { href: '/services/performance-marketing', label: 'Performance Marketing', description: 'Meta Ads, Google Ads, Lead Gen, Funnels' },
-  { href: '/services/google-ads', label: 'Google Ads', description: 'Search, Shopping, PMax, YouTube, Suspension Recovery' },
-  { href: '/services/seo', label: 'SEO & Search Growth', description: 'Technical, Local, Content, AEO, GEO' },
-  { href: '/services/gmb', label: 'Google My Business', description: 'GBP Setup, Optimization, Reviews, Citations' },
-  { href: '/services/ai-automation', label: 'AI Automation', description: 'Agents, Voice, WhatsApp, CRM, n8n' },
-  { href: '/services/web-development', label: 'Web & Conversion', description: 'Custom Sites, E-commerce, Landing Pages' },
-  { href: '/services/creative', label: 'Creative & Content', description: 'Social, Design, Video, Branding' },
-  { href: '/services/crm', label: 'CRM & Growth Systems', description: 'Setup, Automation, Analytics, Operations' },
+  { href: '/services/google-ads', label: 'Google Ads Services', description: 'Search, Shopping, PMax and YouTube' },
+  { href: '/services/web-development', label: 'Website Development Services', description: 'Websites, landing pages and conversion UX' },
+  { href: '/services/google-ads-suspension-recovery', label: 'Google Ads Suspension Recovery', description: 'Policy review, fixes and appeal preparation' },
+  { href: '/services/seo', label: 'SEO Services', description: 'Technical, content and local search' },
+  { href: '/services/gmb', label: 'Google Business Profile Management', description: 'GBP optimisation, reviews and local visibility' },
+  { href: '/services/ai-automation', label: 'AI Automation Services', description: 'Lead, CRM and workflow automation' },
 ];
 
 const mobileServicesLinks = [
-  { href: '/services/performance-marketing', label: 'Performance Marketing' },
-  { href: '/services/google-ads', label: 'Google Ads' },
-  { href: '/services/seo', label: 'SEO & Search Growth' },
-  { href: '/services/gmb', label: 'Google My Business' },
-  { href: '/services/ai-automation', label: 'AI Automation' },
-  { href: '/services/web-development', label: 'Web & Conversion' },
-  { href: '/services/creative', label: 'Creative & Content' },
-  { href: '/services/crm', label: 'CRM & Growth Systems' },
+  { href: '/services/google-ads', label: 'Google Ads Services' },
+  { href: '/services/web-development', label: 'Website Development Services' },
+  { href: '/services/google-ads-suspension-recovery', label: 'Google Ads Suspension Recovery' },
+  { href: '/services/seo', label: 'SEO Services' },
+  { href: '/services/gmb', label: 'Google Business Profile Management' },
+  { href: '/services/ai-automation', label: 'AI Automation Services' },
 ];
 
 export function Header() {
