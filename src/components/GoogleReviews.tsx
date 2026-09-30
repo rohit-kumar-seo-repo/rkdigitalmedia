@@ -71,14 +71,6 @@ const testimonialsData: TestimonialsData = {
           authorTitle: 'Google reviewer',
           initials: 'IK',
         },
-        {
-          id: 't8',
-          quote:
-            'Very good experience working with R.K Digital Media.',
-          authorName: 'Client feedback',
-          authorTitle: 'Google reviewer',
-          initials: 'CF',
-        },
       ],
     },
   ],
