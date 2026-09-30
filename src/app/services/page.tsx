@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { GoogleReviews } from '@/components/GoogleReviews';
 
 export const metadata: Metadata = {
   title: 'Digital Marketing Services in Noida & Greater Noida | R.K Digital Media',
