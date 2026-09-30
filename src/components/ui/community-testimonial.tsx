@@ -41,7 +41,7 @@ export const TestimonialCard = ({
           {Array.from({ length: 5 }).map((_, index) => (
             <span
               key={index}
-              className={index < rating ? 'text-[var(--rkd-primary)]' : 'text-[var(--rkd-border-hover)]'}
+              className={index < rating ? 'text-[var(--rkd-primary)]' : 'text-[var(--border-hover)]'}
               aria-hidden="true"
             >
               ★
@@ -56,7 +56,7 @@ export const TestimonialCard = ({
 
       <div className="mt-auto flex items-center gap-3 border-t border-[var(--rkd-border)] pt-5">
         <div
-          className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-[rgba(232,40,43,0.35)] bg-[var(--rkd-primary-muted)] font-montserrat text-sm font-bold text-[var(--rkd-primary)]"
+          className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-[rgba(232,40,43,0.35)] bg-[var(--primary-muted)] font-montserrat text-sm font-bold text-[var(--rkd-primary)]"
           aria-hidden="true"
         >
           {initials}
