@@ -1,6 +1,6 @@
 'use client';
 
-import React, { CSSProperties, ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 
 export interface Testimonial {
   id: string;
