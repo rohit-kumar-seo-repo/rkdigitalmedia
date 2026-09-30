@@ -1,0 +1,19 @@
+export type SuspensionPolicyCaseStudy = { title:string; policy:string; text:string; href:string };
+export type SuspensionPolicy = {
+  slug:string; name:string; h1:string; intro:string; explanation:string;
+  riskAreas:string[]; checks:string[]; googleUrl:string; googleSourceName:string;
+  caseStudies:SuspensionPolicyCaseStudy[]; faqs:[string,string][];
+};
+export const commonFaqs:[string,string][] = [
+  ['Can you guarantee that Google will reinstate the account?','No. Google controls enforcement and reinstatement. The service focuses on identifying genuine issues, correcting them and preparing an accurate recovery submission where appropriate.'],
+  ['Should I submit another appeal immediately?','Not automatically. Repeated submissions without understanding the stated policy issue can make the situation harder to diagnose. The appropriate next step depends on the account history and what the review finds.'],
+  ['Do you need access to my Google Ads account?','The initial review can often begin with the suspension notice, website and business information. Deeper diagnosis may require appropriate account access depending on the policy.'],
+  ['Can you fix website issues found during the review?','Yes. Where the website contributes to the policy or trust issue, website corrections can be scoped as part of the recovery work.'],
+];
+export const cases = {
+ salon:{title:'Multi-Location Salon Franchise',policy:'Unacceptable Business Practices',text:'A franchise advertiser had two rejected appeals. The documented review identified missing franchise authorisation, then added the agreement reference, written Google Ads authorisation and franchise disclosure information before the next submission. The published case records reinstatement in 11 days.',href:'https://adssuspensionrecovery.com/case-studies/'},
+ tax:{title:'Tax Filing & Financial Services Firm',policy:'Circumventing Systems',text:'A financial-services advertiser had a high-severity Circumventing Systems suspension, a second account issue, six failed appeals and a business-name mismatch. The documented work focused on clean infrastructure, entity-matched branding, verification documents and removing policy-triggering references from the landing page. The published case records campaigns live in 21 days.',href:'https://adssuspensionrecovery.com/case-studies/'},
+ wildlife:{title:'Wildlife Safari & Nature Tourism Operator',policy:'Unacceptable Business Practices',text:'A tourism operator had multiple unsuccessful appeals because the submitted certification did not match the relevant requirement. The documented review identified the required state tourism department Certificate of Recognition and used it in the next submission. The published case records account reinstatement after correction.',href:'https://adssuspensionrecovery.com/case-studies/'},
+ realEstate:{title:'Real Estate Channel Partner',policy:'Unacceptable Business Practices',text:'A real-estate channel partner advertised multiple brands without clearly establishing authorisation for every advertised brand. The documented corrective work included authorisation documentation, advertiser disclosures, clarified registration details and removal of outdated boilerplate language. The published case records reinstatement in 14 days.',href:'https://adssuspensionrecovery.com/case-studies/'},
+ ayurveda:{title:'Ayurveda & Naturopathy Franchise',policy:'Unacceptable Business Practices',text:'The published case describes a genuine franchise relationship that was not clearly disclosed on the website, alongside unsupported superlative and absolute health claims. Corrective work addressed disclosure language and unsupported claims, followed by an independent website check before re-appeal. Google confirmation of reactivation was received.',href:'https://adssuspensionrecovery.com/case-studies/'},
+} satisfies Record<string,SuspensionPolicyCaseStudy>;
