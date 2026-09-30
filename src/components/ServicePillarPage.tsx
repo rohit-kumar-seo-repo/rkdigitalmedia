@@ -83,7 +83,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           </h2>
           <div className="grid md:grid-cols-2 gap-px bg-[var(--rkd-border)]">
             {data.capabilities.map((item, index) => (
-              <article key={item.title} className="bg-[var(--rkd-bg-secondary)] p-7 md:p-9">
+              <article key={item[0]} className="bg-[var(--rkd-bg-secondary)] p-7 md:p-9">
                 <span className="font-mono text-xs text-[var(--rkd-primary)]">0{index + 1}</span>
                 <h3 className="section-heading section-heading-h3 mt-5 mb-3">{item[0]}</h3>
                 <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{item[1]}</p>
@@ -190,7 +190,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
             {data.faqs.map((faq) => (
               <details key={faq[0]} className="py-6 group">
                 <summary className="cursor-pointer list-none flex items-center justify-between gap-6 font-montserrat font-semibold text-[var(--rkd-fg)]">
-                  {faq.question}
+                  {faq[0]}
                   <span className="text-[var(--rkd-primary)] text-xl group-open:rotate-45 transition-transform">+</span>
                 </summary>
                 <p className="mt-4 text-sm text-[var(--rkd-fg-muted)] leading-relaxed max-w-3xl">{faq[1]}</p>
