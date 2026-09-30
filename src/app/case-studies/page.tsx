@@ -1,218 +1,70 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Results We Ship | R.K Digital Media',
-  description: 'Real results from real campaigns. Campaigns, builds, and automation systems that moved real numbers — with the numbers still attached. Verified metrics, referenceable clients.',
-  openGraph: {
-    title: 'Case Studies | R.K Digital Media',
-    description: 'Real results from real campaigns. Campaigns, builds, and automation systems that moved real numbers — with the numbers still attached.',
-    type: 'website',
-  },
+  title: 'Case Studies | R.K Digital Media',
+  description: 'Selected case studies covering Google Ads, SEO, Google Business Profile, suspension recovery and digital growth work by R.K Digital Media.',
+  openGraph: { title: 'Case Studies | R.K Digital Media', description: 'Selected case studies covering Google Ads, SEO, Google Business Profile, suspension recovery and digital growth work by R.K Digital Media.', type: 'website', url: 'https://rkdigitalmedia.in/case-studies' },
+  alternates: { canonical: 'https://rkdigitalmedia.in/case-studies' },
 };
 
+const caseStudies = [
+  { number:'01', category:'LOCAL SEO', location:'Greater Noida', title:'Local SEO Domination for Home Services', problem:'A home-services business started with little digital visibility and needed a stronger local search foundation.', work:'Google Business Profile optimisation, location pages, review generation and local citation work.', evidence:'50+', evidenceLabel:'MAP PACK KEYWORDS', tags:['SEO','Google Business Profile','Local Search'], href:'/case-studies/local-seo-domination' },
+  { number:'02', category:'GOOGLE ADS', location:'Delhi NCR', title:'Google Ads Suspension Recovery & Scale', problem:'The advertiser faced a Google Ads policy suspension and needed the account reviewed before rebuilding campaigns.', work:'Policy diagnosis, landing-page corrections, account recovery work and subsequent campaign management.', evidence:'8.5×', evidenceLabel:'DOCUMENTED PEAK ROAS', tags:['Google Ads','Suspension Recovery','PPC'], href:'/case-studies/google-ads-recovery' },
+  { number:'03', category:'SOCIAL MEDIA', location:'Greater Noida', title:'Social Media Growth for a Local Brand', problem:'A local retail brand needed a consistent content system and a more structured paid-social testing process.', work:'Content planning, UGC workflow and creative testing across Meta and Instagram.', evidence:'3×', evidenceLabel:'DOCUMENTED ENGAGEMENT RATE', tags:['Meta Ads','Creative','Social Media'], href:'/case-studies/social-media-growth' },
+];
+
+const disciplines = [
+  ['01','Google Ads','Search, Shopping, Performance Max and campaign recovery work.'],
+  ['02','SEO & Local SEO','Technical, on-page and location-based search visibility.'],
+  ['03','Google Business Profile','Profile optimisation and local visibility systems.'],
+  ['04','Suspension Recovery','Policy diagnosis, website corrections and appeal preparation.'],
+  ['05','Web Development','Conversion-focused websites and landing-page foundations.'],
+  ['06','Automation','Lead capture, routing, CRM and repetitive workflow automation.'],
+];
+
 export default function CaseStudiesPage() {
-  const caseStudies = [
-    {
-      category: 'LOCAL SEO',
-      location: 'Greater Noida',
-      liveSince: 'MAR 2024',
-      title: 'Local SEO Domination for Home Services',
-      metric: '50+',
-      metricLabel: 'KEYWORDS IN MAP PACK',
-      description: 'A home services business with zero digital presence. We built their local SEO engine from scratch — GMB optimization, location pages, review generation, and citation building. Now dominating map pack for 50+ high-intent keywords across Noida & Greater Noida.',
-      tags: ['SEO', 'GMB', 'Local Citations'],
-      href: '/case-studies/local-seo-domination',
-    },
-    {
-      category: 'GOOGLE ADS',
-      location: 'Delhi NCR',
-      liveSince: 'JAN 2024',
-      title: 'Google Ads Suspension Recovery & Scale',
-      metric: '8.5×',
-      metricLabel: 'PEAK ROAS · Google Ads',
-      description: 'Client had their Google Ads account suspended for "policy violations." We diagnosed root causes, rebuilt landing pages, fixed policy issues, and got the account reinstated. Scaled from ₹0 to ₹15L/month spend at 8.5× ROAS within 4 months.',
-      tags: ['Google Ads', 'Suspension Recovery', 'Shopping Ads'],
-      href: '/case-studies/google-ads-recovery',
-    },
-    {
-      category: 'SOCIAL MEDIA',
-      location: 'Greater Noida',
-      liveSince: 'JUN 2024',
-      title: 'Social Media Growth for Local Brand',
-      metric: '3×',
-      metricLabel: 'ENGAGEMENT RATE',
-      description: 'Local retail brand needed consistent social presence. Built content calendar, UGC pipeline, and ad creative testing framework. Grew followers 3× and cut CPL by 60% across Meta & Instagram.',
-      tags: ['Meta Ads', 'Creative', 'Community'],
-      href: '/case-studies/social-media-growth',
-    },
-  ];
+  return <main id="top" className="rkd-home">
+    <section className="relative overflow-hidden bg-[var(--rkd-bg)] border-b border-[var(--rkd-border)]">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_75%_40%,rgba(232,40,43,0.14),transparent_35%)]" />
+      <div className="max-w-[80rem] mx-auto px-4 md:px-6 pt-20 md:pt-28 pb-20 md:pb-28 relative">
+        <div className="flex items-center justify-between gap-6 mb-16"><p className="section-label">// SELECTED WORK</p><span className="font-mono text-xs text-[var(--rkd-fg-muted)]">CASE STUDIES / 2026</span></div>
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-end">
+          <h1 className="hero-headline text-[var(--rkd-fg)] max-w-5xl">Work that shows <span className="text-red-italic">what changed.</span></h1>
+          <div><p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-xl">Selected projects across Google Ads, SEO, local search and recovery work. Each case study separates the problem, work performed and documented outcome.</p><Link href="/contact" className="btn-primary inline-flex mt-8 group">Discuss Your Project <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link></div>
+        </div>
+      </div>
+    </section>
 
-  const summaryStats = [
-    { label: 'STATE', value: 'LIVE' },
-    { label: 'TOTAL CLIENTS', value: '12+' },
-    { label: 'PEAK ROAS', value: '8.5×' },
-    { label: 'SECTORS', value: 'Services • E-Commerce • Education' },
-    { label: 'STATUS', value: 'ACTIVE' },
-  ];
+    <section className="border-b border-[var(--rkd-border)] bg-[var(--rkd-card)]">
+      <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
+        {[['03','Featured projects'],['06','Core disciplines'],['—','Results vary by project'],['LIVE','Selected work archive']].map(([value,label],i)=><div key={label} className={`p-6 md:p-8 ${i<3?'border-r border-[var(--rkd-border)]':''}`}><div className="font-montserrat font-black text-2xl md:text-3xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
+      </div>
+    </section>
 
-  const portfolioMetrics = [
-    { num: '01', metric: '8.5× ROAS', sub: 'Google Ads' },
-    { num: '02', metric: '5× increase', sub: 'Organic Traffic' },
-    { num: '03', metric: '₹50L+', sub: 'Attributed Revenue' },
-    { num: '04', metric: '40+', sub: 'Clients Served' },
-  ];
-
-  return (
-    <main id="top" className="pt-16">
-        {/* 1. Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)]">
-          <div className="absolute inset-0 bg-[var(--rkd-bg)]" />
-          <div className="relative max-w-[80rem] mx-auto px-4 md:px-6 py-20 md:py-32 text-center">
-            <h1 className="font-montserrat font-black text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', lineHeight: '1.1' }}>
-              Results we've shipped for Greater Noida businesses.
-            </h1>
-            <p className="text-body-lg text-[var(--rkd-fg-muted)] max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
-              Real campaigns, real builds, real automation — with the numbers still attached.
-            </p>
-          </div>
-        </section>
-
-        {/* 2. Summary Stats Card */}
-        <section className="py-16 md:py-24 bg-[var(--rkd-bg)]">
-          <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-            <div className="bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-2xl p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
-                <div className="space-y-6">
-                  {summaryStats.map((stat, i) => (
-                    <div key={stat.label} className="flex justify-between items-center py-4 border-b border-[var(--rkd-border)] last:border-0">
-                      <span className="font-montserrat font-bold text-[var(--rkd-fg-muted)] text-sm uppercase tracking-widest">{stat.label}</span>
-                      <span className="font-montserrat font-bold text-[var(--rkd-fg)] text-lg md:text-xl">{stat.value}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col justify-center items-center md:items-start">
-                  <p className="text-[var(--rkd-fg-muted)] text-sm font-outfit leading-relaxed max-w-xs mb-8">
-                    Selected project metrics and outcomes from the corresponding case-study records.
-                  </p>
-                  <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--rkd-primary)] text-white font-montserrat font-bold hover:bg-[var(--rkd-primary-hover)] transition-colors">
-                    BOOK A FREE AUDIT
-                    <ArrowUpRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
+    <section className="py-20 md:py-28 bg-[var(--rkd-bg)]">
+      <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+        <p className="section-label mb-4">// 01. FEATURED CASE STUDIES</p><h2 className="section-heading section-heading-h2 max-w-3xl mb-12">The work, <span className="text-red-italic">in context.</span></h2>
+        <div className="space-y-6">{caseStudies.map(study=><Link key={study.number} href={study.href} className="group block border border-[var(--rkd-border)] bg-[var(--rkd-card)] hover:border-[var(--rkd-primary)]/50 transition-colors duration-300">
+          <div className="grid lg:grid-cols-[80px_1fr_220px]">
+            <div className="p-6 md:p-8 border-b lg:border-b-0 lg:border-r border-[var(--rkd-border)]"><span className="font-mono text-xs text-[var(--rkd-primary)]">{study.number}</span></div>
+            <div className="p-7 md:p-10">
+              <div className="flex flex-wrap items-center gap-3 mb-5"><span className="font-mono text-[10px] tracking-widest text-[var(--rkd-primary)]">{study.category}</span><span className="text-[var(--rkd-border)]">/</span><span className="font-mono text-[10px] tracking-widest text-[var(--rkd-fg-muted)]">{study.location}</span></div>
+              <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-[var(--rkd-fg)] leading-tight mb-5 group-hover:text-[var(--rkd-primary)] transition-colors">{study.title}</h3>
+              <div className="grid md:grid-cols-2 gap-7 max-w-3xl"><div><p className="font-mono text-[10px] tracking-widest text-[var(--rkd-fg-muted)] mb-2">THE PROBLEM</p><p className="text-sm leading-relaxed text-[var(--rkd-fg-muted)]">{study.problem}</p></div><div><p className="font-mono text-[10px] tracking-widest text-[var(--rkd-fg-muted)] mb-2">THE WORK</p><p className="text-sm leading-relaxed text-[var(--rkd-fg-muted)]">{study.work}</p></div></div>
+              <div className="flex flex-wrap gap-2 mt-7">{study.tags.map(tag=><span key={tag} className="px-3 py-1.5 border border-[var(--rkd-border)] rounded-full font-mono text-[10px] uppercase tracking-wider text-[var(--rkd-fg-muted)]">{tag}</span>)}</div>
             </div>
+            <div className="p-7 md:p-10 border-t lg:border-t-0 lg:border-l border-[var(--rkd-border)] flex lg:flex-col justify-between gap-8"><div><div className="font-montserrat font-black text-5xl md:text-6xl text-[var(--rkd-primary)] leading-none">{study.evidence}</div><div className="font-mono text-[9px] tracking-widest text-[var(--rkd-fg-muted)] mt-3 max-w-[150px]">{study.evidenceLabel}</div></div><div className="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)] transition-colors">READ CASE STUDY <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></div></div>
           </div>
-        </section>
+        </Link>)}</div>
+      </div>
+    </section>
 
-        {/* 3. Portfolio Metrics Strip */}
-        <section className="py-16 bg-[var(--rkd-bg)] border-y border-[var(--rkd-border)]">
-          <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-            <p className="section-label mb-8 text-center">// SELECTED PROJECT METRICS</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {portfolioMetrics.map((item) => (
-                <div key={item.num} className="bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl p-6 md:p-8 text-center">
-                  <p className="font-montserrat font-black text-[var(--rkd-primary)] text-3xl mb-2">// {item.num}</p>
-                  <p className="font-montserrat font-bold text-[var(--rkd-fg)] text-2xl md:text-3xl mb-1">{item.metric}</p>
-                  <p className="text-[var(--rkd-fg-muted)] text-sm uppercase tracking-wider">{item.sub}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+    <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6"><p className="section-label mb-4">// 02. WHAT THE WORK COVERS</p><div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20 mb-12"><h2 className="section-heading section-heading-h2">Different problems. <span className="text-red-italic">Different systems.</span></h2><p className="text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl">Search visibility, paid acquisition, website performance and account recovery require different diagnosis and execution. The case studies reflect that difference.</p></div><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--rkd-border)]">{disciplines.map(([n,title,text])=><div key={n} className="bg-[var(--rkd-bg-secondary)] p-7 md:p-9 group hover:bg-[var(--rkd-card)] transition-colors"><span className="font-mono text-xs text-[var(--rkd-primary)]">{n}</span><h3 className="font-montserrat font-bold text-xl text-[var(--rkd-fg)] mt-6 mb-3">{title}</h3><p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p></div>)}</div></div></section>
 
-        {/* 4. Case Study Cards */}
-        <section className="py-20 md:py-32 bg-[var(--rkd-bg)]">
-          <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-            {/* Section Label */}
-            <p className="section-label mb-12">// THE WORK — Selected client results.</p>
-            
-            <div className="space-y-8">
-              {caseStudies.map((study) => (
-                <Link
-                  key={study.title}
-                  href={study.href}
-                  className="group bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-2xl p-8 md:p-10 hover:border-[var(--rkd-primary)]/30 transition-all duration-300"
-                >
-                  {/* Top Row */}
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-                    <div className="flex flex-col gap-1">
-                      <span className="font-montserrat font-bold text-[var(--rkd-primary)] text-xs md:text-sm uppercase tracking-widest">
-                        {study.category} — LEFT
-                      </span>
-                      <span className="font-mono text-[var(--rkd-fg-muted)] text-xs uppercase tracking-widest">
-                        LIVE SINCE {study.liveSince}, {study.location}
-                      </span>
-                    </div>
-                  </div>
+    <section className="py-20 md:py-28 bg-[var(--rkd-bg)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6"><p className="section-label mb-4">// 03. HOW TO READ THESE CASE STUDIES</p><div className="grid lg:grid-cols-3 gap-6">{[['01','Problem','What the business was dealing with before the engagement.'],['02','Intervention','What was actually changed, built, tested or corrected.'],['03','Outcome','The measurable result documented for that specific project.']].map(([n,title,text])=><div key={n} className="border-t border-[var(--rkd-border)] pt-6"><span className="font-mono text-xs text-[var(--rkd-primary)]">{n}</span><h3 className="font-montserrat font-bold text-xl text-[var(--rkd-fg)] mt-4 mb-3">{title}</h3><p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{text}</p></div>)}</div><p className="text-xs text-[var(--rkd-fg-muted)] mt-12 max-w-3xl leading-relaxed">Results are project-specific and can vary with market conditions, budget, competition, starting position and implementation. Metrics shown here should be read in the context of their individual case studies.</p></div></section>
 
-                  {/* Center: Title */}
-                  <h3 className="font-montserrat font-bold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', lineHeight: '1.25' }}>
-                    {study.title}
-                  </h3>
-
-                  {/* HUGE Metric */}
-                  <div className="mb-4">
-                    <p className="font-montserrat font-black text-[var(--rkd-primary)]" style={{ fontSize: 'clamp(3.5rem, 8vw, 5.5rem)', lineHeight: '1' }}>
-                      {study.metric}
-                    </p>
-                    <p className="font-mono text-[var(--rkd-fg-muted)] text-xs uppercase tracking-widest mt-1">
-                      {study.metricLabel}
-                    </p>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-[var(--rkd-fg-muted)] text-body-sm md:text-body leading-relaxed mb-6" style={{ lineHeight: '1.7' }}>
-                    {study.description}
-                  </p>
-
-                  {/* Tag Pills */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {study.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-caption font-mono uppercase tracking-wider text-[var(--rkd-fg-muted)] bg-[var(--rkd-bg)] border border-[var(--rkd-border)] rounded-full group-hover:border-[var(--rkd-primary)]/30 transition-colors"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Bottom Row: Read Full Case Study */}
-                  <div className="flex justify-end">
-                    <span className="inline-flex items-center gap-2 font-montserrat font-semibold text-[var(--rkd-fg)] text-sm uppercase tracking-widest group-hover:text-[var(--rkd-primary)] transition-colors">
-                      READ THE FULL CASE STUDY
-                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
-          <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center">
-            <p className="section-label mb-4">// NEXT STEP</p>
-            <h2 className="font-montserrat font-black text-[var(--rkd-fg)] mb-8" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: '1.1' }}>
-              Want Receipts Like These On Your Account?
-            </h2>
-            <p className="text-body-lg text-[var(--rkd-fg-muted)] mb-8 max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
-              Book a 30-minute strategy audit. We'll analyze your current digital presence, identify the leaks, and show you exactly how we'd move the needle.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary group inline-flex">
-                Book Free Audit
-                <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link href="/case-studies" className="btn-secondary group inline-flex">
-                View All Case Studies
-              </Link>
-            </div>
-          </div>
-        </section>
-    </main>
-  );
+    <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6"><div className="max-w-4xl"><p className="section-label mb-5">// NEXT STEP</p><h2 className="section-heading section-heading-h2 mb-6">Have a problem worth <span className="text-red-italic">solving?</span></h2><p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl mb-8">Tell us what is currently limiting your acquisition, visibility or recovery. We’ll review the situation and explain what we would investigate first.</p><div className="flex flex-col sm:flex-row gap-4"><Link href="/contact" className="btn-primary group">Start a Conversation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link><Link href="/services" className="btn-secondary">Explore Services <ArrowUpRight className="w-4 h-4" /></Link></div></div></div></section>
+  </main>;
 }
