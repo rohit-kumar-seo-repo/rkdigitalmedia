@@ -101,43 +101,13 @@ const localBusinessSchema = {
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Digital Marketing Services',
-    category: [
-      {
-        '@type': 'Offer',
-        name: 'SEO & Search Growth Services',
-        description: 'Technical SEO, Local SEO, Content SEO, AEO/GEO optimization, Link Building',
-        url: 'https://rkdigitalmedia.in/services/seo',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Performance Marketing Services',
-        description: 'Meta Ads, Google Ads, Shopping Ads, Performance Max, Lead Generation',
-        url: 'https://rkdigitalmedia.in/services/performance-marketing',
-      },
-      {
-        '@type': 'Offer',
-        name: 'AI Automation Services',
-        description: 'WhatsApp AI Agents, Voice Bots, CRM Automation, n8n Workflows',
-        url: 'https://rkdigitalmedia.in/services/ai-automation',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Web & Conversion Services',
-        description: 'Next.js Development, WordPress, Shopify, CRO, Landing Pages',
-        url: 'https://rkdigitalmedia.in/services/web-development',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Creative & Content Services',
-        description: 'Ad Creatives, Video Production, Motion Graphics, Brand Identity',
-        url: 'https://rkdigitalmedia.in/services/creative',
-      },
-      {
-        '@type': 'Offer',
-        name: 'CRM & Growth Systems',
-        description: 'GoHighLevel Setup, WhatsApp API, Pipeline Automation, Revenue Operations',
-        url: 'https://rkdigitalmedia.in/services/crm',
-      },
+    itemListElement: [
+      { '@type': 'Offer', name: 'Google Ads Services', url: 'https://rkdigitalmedia.in/services/google-ads' },
+      { '@type': 'Offer', name: 'Website Development Services', url: 'https://rkdigitalmedia.in/services/web-development' },
+      { '@type': 'Offer', name: 'Google Ads Suspension Recovery', url: 'https://rkdigitalmedia.in/services/google-ads-suspension-recovery' },
+      { '@type': 'Offer', name: 'SEO Services', url: 'https://rkdigitalmedia.in/services/seo' },
+      { '@type': 'Offer', name: 'Google Business Profile Management Services', url: 'https://rkdigitalmedia.in/services/gmb' },
+      { '@type': 'Offer', name: 'AI Automation Services', url: 'https://rkdigitalmedia.in/services/ai-automation' },
     ],
   },
   aggregateRating: {
