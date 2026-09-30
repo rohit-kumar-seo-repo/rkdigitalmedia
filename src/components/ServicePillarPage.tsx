@@ -207,6 +207,9 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
                   <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">
                     <span className="text-[var(--rkd-fg)] font-semibold">What we check:</span> {policy.check}
                   </p>
+                  <Link href={`/services/google-ads-suspension-recovery/policies/${policy.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} className="inline-flex items-center gap-2 mt-6 text-sm font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">
+                    Open dedicated recovery guide <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </article>
               ))}
             </div>
