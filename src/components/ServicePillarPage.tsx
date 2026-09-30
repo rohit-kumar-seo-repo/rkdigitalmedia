@@ -118,7 +118,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           </h2>
           <div className="grid md:grid-cols-4 gap-px bg-[var(--rkd-border)]">
             {data.process.map((item, index) => (
-              <article key={item.title} className="bg-[var(--rkd-bg-secondary)] p-7">
+              <article key={item[0]} className="bg-[var(--rkd-bg-secondary)] p-7">
                 <span className="font-mono text-xs text-[var(--rkd-primary)]">0{index + 1}</span>
                 <h3 className="section-heading section-heading-h3 mt-5 mb-3">{item[0]}</h3>
                 <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{item[1]}</p>
@@ -136,7 +136,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           </h2>
           <div className="grid md:grid-cols-3 gap-5">
             {data.useCases.map((item) => (
-              <article key={item.title} className="card-base p-7">
+              <article key={item[0]} className="card-base p-7">
                 <h3 className="section-heading section-heading-h3 mb-4">{item[0]}</h3>
                 <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{item[1]}</p>
               </article>
