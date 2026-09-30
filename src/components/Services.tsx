@@ -3,14 +3,12 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 const services = [
-  { title: 'Performance Marketing', slug: 'performance-marketing', desc: 'Meta Ads, Google Ads, PMax — full-funnel campaigns engineered for 3×–12× ROAS.' },
-  { title: 'Google Ads', slug: 'google-ads', desc: 'Search, Shopping, Performance Max, YouTube. Suspension recovery. 8.5× ROAS.' },
-  { title: 'SEO & Search Growth', slug: 'seo', desc: 'Technical SEO, local SEO, AEO/GEO. Page 1 rankings in 90 days.' },
-  { title: 'Google My Business', slug: 'gmb', desc: 'GBP setup, optimization, reviews, citations. Map Pack domination. 50+ keywords.' },
-  { title: 'AI Automation', slug: 'ai-automation', desc: 'WhatsApp AI agents, voice bots, CRM automation. 24/7 lead handling.' },
-  { title: 'Web & Conversion', slug: 'web-development', desc: 'Next.js & WordPress sites built for Core Web Vitals and conversions.' },
-  { title: 'Creative & Content', slug: 'creative', desc: '30 creatives/month, video production, motion graphics, brand identity.' },
-  { title: 'CRM & Growth Systems', slug: 'crm', desc: 'GoHighLevel, WhatsApp API, automated pipelines. Live in 7 days.' },
+  { title: 'Google Ads Services', slug: 'google-ads', desc: 'Search, Shopping, Performance Max and YouTube campaigns built around qualified demand and measurable conversions.' },
+  { title: 'Website Development Services', slug: 'web-development', desc: 'Conversion-focused websites and landing pages with responsive UX, technical SEO foundations and analytics.' },
+  { title: 'Google Ads Suspension Recovery', slug: 'google-ads-suspension-recovery', desc: 'Structured policy, website and account review to identify risks and prepare a compliant recovery path.' },
+  { title: 'SEO Services', slug: 'seo', desc: 'Technical SEO, content, on-page optimisation and local search strategies built around real search intent.' },
+  { title: 'Google Business Profile Management Services', slug: 'gmb', desc: 'GBP optimisation, services, categories, reviews and local visibility management for location-based businesses.' },
+  { title: 'AI Automation Services', slug: 'ai-automation', desc: 'Lead capture, qualification, routing, CRM and workflow automation that reduces repetitive manual follow-up.' },
 ];
 
 export function Services() {
@@ -20,7 +18,7 @@ export function Services() {
         <p className="section-label mb-4">// WHAT WE DO</p>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <h2 className="font-montserrat font-black text-[var(--rkd-fg)]" style={{fontSize:'clamp(2rem,4vw,3.5rem)',lineHeight:'1.1'}}>
-            Services Engineered<br /><span style={{color:'#e8282b',fontStyle:'italic'}}>For Growth</span>
+            Six Core Services<br /><span style={{color:'#e8282b',fontStyle:'italic'}}>Built Around Growth</span>
           </h2>
           <p className="text-[var(--rkd-fg-muted)] max-w-md font-outfit leading-relaxed">
             Every service is a system. Built to compound — not a one-time campaign, but a growth engine.
