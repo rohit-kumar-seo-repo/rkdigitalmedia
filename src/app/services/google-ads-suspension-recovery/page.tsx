@@ -262,6 +262,13 @@ const data: ServicePillarData = {
       }
     ],
     "sourcesIntro": "The official Google documentation is the controlling reference. Policy names, requirements and enforcement can change, so we use the current Google documentation when reviewing an account rather than relying on an old appeal template.",
+    "relatedGuides": [
+      {
+        "name": "Google Ads Suspension Recovery: A Practical Account Review & Appeal Guide",
+        "href": "/insights/google-ads-suspension-recovery-complete-guide",
+        "description": "A practical walkthrough of diagnosis, account and website review, appeal preparation and post-reinstatement checks."
+      }
+    ],
     "sources": [
       {
         "name": "Google Ads account suspensions overview",
