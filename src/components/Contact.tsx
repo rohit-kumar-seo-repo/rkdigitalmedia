@@ -111,7 +111,7 @@ export function Contact() {
                   </div>
                   <div>
                     <label className="block font-montserrat text-xs tracking-widest uppercase text-[var(--rkd-fg-muted)] mb-2">What is happening?</label>
-                    <textarea name="message" rows={7} placeholder="Tell us what you are trying to improve, what you have already tried, and what is blocking you." className="contact-field resize-y" />
+                    <textarea required name="message" rows={7} placeholder="Tell us what you are trying to improve, what you have already tried, and what is blocking you." className="contact-field resize-y" />
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-2">
                     <p className="text-xs text-[var(--rkd-fg-muted)] leading-relaxed max-w-md">Your enquiry is reviewed directly. We do not need a perfect brief to start the conversation.</p>
