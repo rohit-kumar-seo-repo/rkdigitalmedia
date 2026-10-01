@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     q: 'Can you recover a suspended Google Ads account?',
-    a: 'Yes — this is a specialty. We diagnose root causes (policy, landing page, trust signals), fix them, and manage the appeal. Success rate is high for legitimate businesses.',
+    a: 'Yes. We review the suspension reason, account history, website, billing and relevant policy signals, correct issues that can be addressed, and prepare the account for a compliant appeal. Reinstatement is ultimately decided by Google, so no legitimate provider should guarantee a particular outcome.',
   },
   {
     q: 'How do you report results?',
-    a: 'Live dashboard access + monthly Loom walkthrough + written summary. You see rankings, spend, leads, conversions, ROI — everything. No vanity metrics.',
+    a: 'Reporting depends on the engagement. We can track agreed KPIs such as leads, conversions, rankings, qualified enquiries, ad spend and other business metrics relevant to the project.',
   },
   {
     q: 'Do you build websites from scratch?',
@@ -36,11 +36,11 @@ const faqs = [
   },
   {
     q: 'What\'s your typical response time?',
-    a: 'Founder reads every inbound. Reply within 4 business hours with either a booking link or an honest "not a fit" referral. WhatsApp is fastest.',
+    a: 'Inbound enquiries are reviewed directly by the business. Response time can vary by day and workload; WhatsApp is available for direct project enquiries.',
   },
   {
     q: 'Do you offer AI automation for small businesses?',
-    a: 'Yes — we scale AI automation to any size. Chatbots, WhatsApp automation, and lead qualification can start small and grow with you.',
+    a: 'Yes. AI automation can cover lead capture, qualification, routing, CRM updates, follow-up and repetitive internal workflows, with human handoff where appropriate.',
   },
   {
     q: 'How much do your services cost?',
@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: 'Can you help with Google Business Profile optimization?',
-    a: 'Yes — GMB optimization is a core service. We handle profile setup, review management, posts, citations, and local SEO for map pack domination.',
+    a: 'Yes. Google Business Profile management can include profile setup, categories, services, business information, review workflows, local content and supporting local SEO work.',
   },
   {
     q: 'What industries do you specialize in?',
