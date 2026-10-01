@@ -26,7 +26,7 @@ export default function PrivacyPage() {
                   1. Information We Collect
                 </h2>
                 <p>We collect information you provide directly: name, email, phone, company, and message content when you submit our contact form or message us on WhatsApp.</p>
-                <p>We also collect analytics data via GA4 and server logs: IP address, browser type, pages visited, referral source, and interaction events.</p>
+                <p>Where analytics or operational logs are enabled, we may collect technical information such as IP address, browser type, pages visited, referral source and interaction events.</p>
               </div>
 
               <div className="fade-in-up-delay-2">
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
                   2. How We Use Your Information
                 </h2>
                 <p>Contact form submissions: to respond to your inquiry, schedule audit calls, and send relevant service information.</p>
-                <p>Analytics: to improve our website, understand visitor behavior, and optimize marketing performance.</p>
+                <p>Analytics and operational data: to improve our website, understand visitor behaviour and evaluate marketing performance where those tools are enabled.</p>
                 <p>We do not sell your data. We do not use your data for unrelated marketing.</p>
               </div>
 
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                   3. Data Retention
                 </h2>
                 <p>Contact form data: retained for 24 months after last interaction, then deleted.</p>
-                <p>Analytics data: retained per GA4 defaults (14 months for user data, 26 months for event data).</p>
+                <p>Analytics and technical log retention varies by the service providing the data and the configuration in use.</p>
               </div>
 
               <div className="fade-in-up-delay-1">
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
 
               <div className="pt-8 border-t border-[var(--rkd-border)] fade-in-up-delay-3">
                 <p className="text-meta text-[var(--rkd-fg-subtle)]">
-                  Last updated: January 2026
+                  Last updated: October 2026
                 </p>
               </div>
             </div>
