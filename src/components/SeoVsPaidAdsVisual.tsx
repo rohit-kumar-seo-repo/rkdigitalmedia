@@ -64,12 +64,12 @@ export default function SeoVsPaidAdsVisual({kind}:VisualProps){
   if(kind==='combined') return <div className="rounded-2xl border border-[var(--rkd-border)] bg-[#101010] p-5 md:p-7 overflow-hidden">
     <Header label="// CONNECTED SYSTEM" sub="Two channels. One learning loop."/>
     <div className="grid items-center gap-3 md:grid-cols-[1fr_1.15fr_1fr]">
-      <Card x={0} y={0} w={100} h={80} title="PAID" body="Test demand" accent/>
+      <div className="rounded-xl border border-[var(--rkd-primary)]/60 bg-[var(--rkd-primary)]/5 p-5 text-center"><div className="font-montserrat font-extrabold text-base text-[var(--rkd-fg)]">PAID SEARCH</div><div className="mt-2 text-xs text-[var(--rkd-fg-muted)]">Test demand + capture intent</div></div>
       <div className="rounded-xl border border-[var(--rkd-primary)]/60 bg-[var(--rkd-primary)]/5 p-5 text-center">
         <div className="font-montserrat font-extrabold text-base text-[var(--rkd-fg)]">SEARCH INSIGHTS</div>
         <div className="mt-2 text-xs leading-5 text-[var(--rkd-fg-muted)]">Queries, topics, conversion signals and objections.</div>
       </div>
-      <Card x={0} y={0} w={100} h={80} title="SEO" body="Build visibility"/>
+      <div className="rounded-xl border border-[var(--rkd-border)] bg-[#141414] p-5 text-center"><div className="font-montserrat font-extrabold text-base text-[var(--rkd-fg)]">SEO</div><div className="mt-2 text-xs text-[var(--rkd-fg-muted)]">Build durable visibility</div></div>
     </div>
     <div className="mt-4 flex flex-col items-center gap-2 text-center text-[11px] font-mono uppercase tracking-widest text-[var(--rkd-fg-muted)] sm:flex-row sm:justify-center">
       <span>paid data can inform content</span><span className="text-[var(--rkd-primary)]">↔</span><span>organic demand can inform campaigns</span>
