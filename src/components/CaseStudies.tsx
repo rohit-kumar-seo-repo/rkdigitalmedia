@@ -12,12 +12,12 @@ const caseStudies = [
     status: 'LIVE',
     metrics: {
       attributed: '₹45L+',
-      roas: '12×',
+      roas: '—',
       leads: '2,800+',
       period: '12 months',
     },
     tags: ['SEO', 'GMB', 'Local Citations'],
-    description: 'A home services business with zero digital presence. We built their local SEO engine from scratch — GMB optimization, location pages, review generation, and citation building. Now dominating map pack for 50+ high-intent keywords across Noida & Greater Noida.',
+    description: 'A home-services business started with little digital visibility. The engagement focused on Google Business Profile optimisation, location pages, reviews and local citation work.',
     link: '/case-studies/local-seo-domination',
   },
   {
@@ -47,7 +47,7 @@ const caseStudies = [
       period: '18 months',
     },
     tags: ['SEO', 'Google Ads', 'LinkedIn Ads'],
-    description: 'Industrial B2B supplier needed qualified leads, not traffic. Combined technical SEO for high-intent keywords with LinkedIn Ads targeting decision-makers. Built a lead scoring system in their CRM. 1,200+ SQLs generated, ₹3.8Cr pipeline attributed.',
+    description: 'An industrial supplier needed more qualified sales opportunities. The engagement combined technical SEO, high-intent Google Ads, LinkedIn targeting and CRM lead scoring.',
     link: '/case-studies/b2b-lead-gen',
   },
   {
@@ -62,7 +62,7 @@ const caseStudies = [
       period: '10 months',
     },
     tags: ['GMB', 'Website', 'Google Ads', 'SEO'],
-    description: 'Dental & skin clinic with 3 locations, no unified digital strategy. Built location-specific landing pages, optimized all 3 GMB profiles, ran geo-targeted Google Ads. 3,500+ appointments booked, 9× ROAS across all locations.',
+    description: 'A three-location clinic needed one coherent local-search and paid-acquisition system. The engagement combined location landing pages, Google Business Profile management, geo-targeted Google Ads and conversion tracking.',
     link: '/case-studies/healthcare-clinic',
   },
 ];
@@ -84,7 +84,7 @@ export function CaseStudies() {
             Results that speak for themselves.
           </h2>
           <p className="section-subhead">
-            Campaigns, builds, and growth systems that moved real numbers — with the numbers still attached. Every metric verified, every client referenceable.
+            Selected project metrics from the corresponding case-study records. Each result is presented in the context of its individual engagement.
           </p>
         </motion.div>
 
@@ -97,7 +97,7 @@ export function CaseStudies() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="card-base text-center">
-            <div className="stat-value text-[var(--rkd-primary)]">₹5Cr+</div>
+            <div className="stat-value text-[var(--rkd-primary)]">₹6.3Cr+</div>
             <div className="stat-label">Total Attributed Revenue</div>
           </div>
           <div className="card-base text-center">
@@ -105,12 +105,12 @@ export function CaseStudies() {
             <div className="stat-label">Peak ROAS Achieved</div>
           </div>
           <div className="card-base text-center">
-            <div className="stat-value text-[var(--rkd-primary)]">22K+</div>
+            <div className="stat-value text-[var(--rkd-primary)]">22.5K+</div>
             <div className="stat-label">Leads Generated</div>
           </div>
           <div className="card-base text-center">
             <div className="stat-value text-[var(--rkd-primary)]">4</div>
-            <div className="stat-label">Core Service Verticals</div>
+            <div className="stat-label">Case Studies Shown</div>
           </div>
         </motion.div>
 
