@@ -3,7 +3,7 @@ import React from 'react';
 type Kind = 'local' | 'automation' | 'gbp' | 'expert' | 'campaigns' | 'suspension';
 type Variant = 1 | 2 | 3;
 
-const meta: Record<Kind, { label: string; titles: [string,string,string] }> = {
+const meta: Record<Kind, { label: string; titles: string[] }> = {
   local: { label: 'LOCAL SEARCH SYSTEM', titles: ['Local visibility stack', 'Map Pack signal model', 'Local SEO execution path'] },
   automation: { label: 'LEAD AUTOMATION SYSTEM', titles: ['Lead-to-CRM pipeline', 'Qualification decision tree', 'Follow-up + human handoff'] },
   gbp: { label: 'GOOGLE BUSINESS PROFILE', titles: ['Profile optimization anatomy', 'Reputation loop', 'Visibility → lead measurement'] },
