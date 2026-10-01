@@ -136,7 +136,7 @@ export function CaseStudies() {
                     <div className="grid grid-cols-2 gap-4">
                       {[
                         { label: 'Attributed Revenue', value: study.metrics.attributed, icon: TrendingUp },
-                        { label: 'Peak ROAS', value: study.metrics.roas, icon: Target },
+                        { label: 'Reported ROAS', value: study.metrics.roas, icon: Target },
                         { label: 'Leads Generated', value: study.metrics.leads, icon: Users },
                         { label: 'Campaign Period', value: study.metrics.period, icon: Zap },
                       ].map((metric) => (
