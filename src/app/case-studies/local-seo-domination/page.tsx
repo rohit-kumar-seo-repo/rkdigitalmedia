@@ -4,6 +4,9 @@ import { CaseStudyPage, type CaseStudy } from '@/components/CaseStudyPage';
 export const metadata: Metadata = {
   title: 'Local SEO Domination for Home Services | Case Study | R.K Digital Media',
   description: 'A local SEO case study covering Google Business Profile optimisation, location pages, reviews, citations and technical SEO for a home-services business.',
+,
+  alternates: { canonical: 'https://rkdigitalmedia.in/case-studies/local-seo-domination' },
+  openGraph: { title: Local SEO Domination for Home Services | Case Study | R.K Digital Media, description: A local SEO case study covering Google Business Profile optimisation, location pages, reviews, citations and technical SEO for a home-services business., type: 'article', url: 'https://rkdigitalmedia.in/case-studies/local-seo-domination', siteName: 'R.K Digital Media' },
 };
 
 const study: CaseStudy = {
