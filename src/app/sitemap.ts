@@ -1,48 +1,57 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 import { suspensionPolicies } from '@/data/suspension-policies';
+import { blogPosts } from '@/app/insights/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://rkdigitalmedia.in';
   const now = new Date();
 
+  const core = [
+    ['', 'weekly', 1],
+    ['/services', 'weekly', 0.9],
+    ['/services/google-ads', 'monthly', 0.8],
+    ['/services/seo', 'monthly', 0.8],
+    ['/services/gmb', 'monthly', 0.8],
+    ['/services/ai-automation', 'monthly', 0.8],
+    ['/services/web-development', 'monthly', 0.8],
+    ['/services/google-ads-suspension-recovery', 'monthly', 0.8],
+    ['/case-studies', 'weekly', 0.9],
+    ['/case-studies/local-seo-domination', 'monthly', 0.8],
+    ['/case-studies/google-ads-recovery', 'monthly', 0.8],
+    ['/case-studies/b2b-lead-gen', 'monthly', 0.8],
+    ['/case-studies/healthcare-clinic', 'monthly', 0.8],
+    ['/about', 'monthly', 0.7],
+    ['/process', 'monthly', 0.7],
+    ['/insights', 'weekly', 0.7],
+    ['/contact', 'monthly', 0.8],
+    ['/faq', 'monthly', 0.6],
+    ['/industries/healthcare', 'monthly', 0.7],
+    ['/industries/ecommerce', 'monthly', 0.7],
+    ['/industries/real-estate', 'monthly', 0.7],
+    ['/industries/education', 'monthly', 0.7],
+    ['/industries/hospitality', 'monthly', 0.7],
+    ['/privacy', 'yearly', 0.3],
+    ['/terms', 'yearly', 0.3],
+  ] as const;
+
   return [
-    { url: base, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    { url: `${base}/services`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/services/google-ads`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/services/seo`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/services/gmb`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/services/ai-automation`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/services/web-development`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/services/google-ads-suspension-recovery`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...core.map(([path, changeFrequency, priority]) => ({
+      url: `${base}${path}`,
+      lastModified: now,
+      changeFrequency,
+      priority,
+    })),
     ...suspensionPolicies.map((policy) => ({
       url: `${base}/services/google-ads-suspension-recovery/policies/${policy.slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     })),
-    { url: `${base}/case-studies`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/case-studies/local-seo-domination`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/case-studies/google-ads-recovery`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/case-studies/b2b-lead-gen`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/case-studies/healthcare-clinic`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/process`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/insights`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${base}/industries/healthcare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/industries/ecommerce`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/industries/real-estate`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/industries/education`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/industries/hospitality`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${base}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    // Blog
-    { url: `${base}/insights`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${base}/insights/seo-vs-paid-ads-2025-which-wins`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/google-ads-suspension-recovery-complete-guide`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/gmb-optimization-map-pack-checklist-50-steps`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/ai-automation-lead-generation-5-workflows`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${base}/insights/local-seo-strategy-greater-noida`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...blogPosts.map((post) => ({
+      url: `${base}/insights/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
   ];
 }
