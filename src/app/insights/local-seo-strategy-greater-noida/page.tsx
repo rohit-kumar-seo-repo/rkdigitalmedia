@@ -157,7 +157,7 @@ export default function PostPage() {
                   <h2 className={h2Class} style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.15' }}>Why Local SEO Matters in Greater Noida</h2>
                   <p className={pClass}>Greater Noida is not one uniform search market. Businesses compete across sectors, societies, commercial clusters and nearby areas such as Gaur City, Techzone, Knowledge Park, Pari Chowk and Noida Extension.</p>
                   <p className={pClass}>A useful strategy therefore connects a service with the locations that are commercially relevant to the business. The objective is not to create a page for every possible locality. It is to make the business genuinely useful and discoverable for the searches its customers make.</p>
-                  <InsightVisual kind="local" />
+                  <InsightVisual kind="local" variant={1} />
                 </section>
 
                 <section className={sectionClass} id="google-business-profile">
@@ -198,7 +198,7 @@ export default function PostPage() {
                   <h2 className={h2Class} style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.15' }}>Build Map Pack Relevance and Prominence</h2>
                   <p className={pClass}>Google's local results consider factors including relevance, distance and prominence. You cannot optimize a business into every location, particularly where physical proximity is a constraint.</p>
                   <p className={pClass}>Focus on the signals you can control: accurate profile information, relevant services, a useful website, genuine customer feedback, consistent local references and legitimate business prominence.</p>
-                  <InsightVisual kind="local" />
+                  <InsightVisual kind="local" variant={2} />
                 </section>
 
                 <section className={sectionClass} id="reviews">
@@ -234,7 +234,7 @@ export default function PostPage() {
                   <p className="section-label mb-3">// 09 — MEASUREMENT</p>
                   <h2 className={h2Class} style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.15' }}>Track Rankings, Calls and Leads</h2>
                   <p className={pClass}>Do not judge local SEO only by one keyword position. Track priority queries across the locations that matter alongside organic traffic, Google Business Profile interactions, calls, direction requests, enquiries and booked leads.</p>
-                  <InsightVisual kind="local" />
+                  <InsightVisual kind="local" variant={3} />
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 my-7">
                     {['Visibility', 'Traffic', 'Enquiries', 'Revenue'].map((item, i) => (
                       <div key={item} className="border border-[var(--rkd-border)] bg-[var(--rkd-card)] rounded-xl p-4 text-center">
