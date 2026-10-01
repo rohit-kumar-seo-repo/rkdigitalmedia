@@ -32,7 +32,7 @@ export default function TermsPage() {
                 <h2 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)', lineHeight: '1.3' }}>
                   2. Services
                 </h2>
-                <p>R.K Digital Media provides digital marketing services including SEO, Google Ads management, GMB optimization, web development, AI automation, creative services, and CRM implementation.</p>
+                <p>R.K Digital Media provides Google Ads services, website development, Google Ads suspension recovery, SEO, Google Business Profile management and AI automation services.</p>
                 <p>Specific deliverables, timelines, and pricing are defined in individual proposals and service agreements.</p>
               </div>
 
@@ -84,7 +84,7 @@ export default function TermsPage() {
 
               <div className="pt-8 border-t border-[var(--rkd-border)] fade-in-up-delay-3">
                 <p className="text-meta text-[var(--rkd-fg-subtle)]">
-                  Last updated: January 2026
+                  Last updated: October 2026
                 </p>
               </div>
             </div>
