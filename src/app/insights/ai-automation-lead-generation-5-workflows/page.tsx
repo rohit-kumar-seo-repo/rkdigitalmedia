@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
+import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
   title: "AI Automation for Lead Generation: 5 Workflows Worth Automating | R.K Digital Media",
