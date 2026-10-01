@@ -59,6 +59,19 @@ const organizationSchema = {
   ],
 };
 
+const founderSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://rkdigitalmedia.in/#rohit-kumar',
+  name: 'Rohit Kumar',
+  jobTitle: 'Founder & Digital Marketing Consultant',
+  description: 'Founder of R.K Digital Media and a Google Ads Certified digital marketing consultant based in Greater Noida, India.',
+  url: 'https://rkdigitalmedia.in/about',
+  worksFor: { '@id': 'https://rkdigitalmedia.in/#organization' },
+  sameAs: ['https://www.linkedin.com/company/rohit-kumar-seo/'],
+  knowsAbout: ['Google Ads', 'SEO', 'Local SEO', 'Google Business Profile', 'Website Development', 'Google Ads Suspension Recovery', 'AI Automation'],
+};
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -209,6 +222,10 @@ export default function RootLayout({
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
         />
         <Script
           type="application/ld+json"
