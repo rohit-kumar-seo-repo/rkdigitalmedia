@@ -91,7 +91,7 @@ export function Hero() {
         <div className="mb-8 md:mb-12 flex flex-wrap items-center justify-between gap-4 md:gap-8">
           <div className="flex items-center gap-2 text-xs font-montserrat tracking-widest uppercase text-[var(--rkd-primary)]">
             <span className="w-8 h-px bg-[var(--rkd-primary)]" />
-            Scaling Businesses Worldwide, Daily.
+            GREATER NOIDA / NCR / INDIA
             <span className="w-8 h-px bg-[var(--rkd-primary)]" />
           </div>
           <div className="flex items-center gap-2 text-xs text-[var(--rkd-fg-muted)] font-montserrat tracking-widest">
@@ -106,9 +106,8 @@ export function Hero() {
             className="font-montserrat font-black text-[var(--rkd-fg)] leading-[1.0] tracking-tight text-center w-full"
             style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)' }}
           >
-            AI-Powered Marketing &<br />
-            <span style={{ color: '#e8282b', fontStyle: 'italic' }}>Automation</span>{' '}
-            Agency
+            Digital growth built around<br />
+            <span style={{ color: '#e8282b', fontStyle: 'italic' }}>business outcomes</span>
           </h1>
         </div>
 
@@ -116,8 +115,7 @@ export function Hero() {
         <div className="mb-10 max-w-2xl mx-auto text-center">
           <p className="font-outfit text-[var(--rkd-fg-muted)] leading-relaxed"
             style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)' }}>
-            One partner for digital marketing. Full growth stack. AI automation at every layer.
-            Systems that compound over time.
+            Google Ads, SEO, Google Business Profile management, websites, suspension recovery and automation — connected around the problem your business actually needs to solve.
           </p>
         </div>
 
@@ -138,14 +136,14 @@ export function Hero() {
           <div className="inline-flex items-center gap-4 px-6 py-3 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-full">
             <span className="inline-flex items-center gap-1.5 text-[var(--rkd-primary)]">
               <span className="w-2 h-2 rounded-full bg-[var(--rkd-primary)]" aria-hidden="true" />
-              FEATURED CASE
+              SELECTED WORK
             </span>
             <span className="text-[var(--rkd-fg-muted)]">|</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">500+ Projects</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">6 Core Services</span>
             <span className="text-[var(--rkd-fg-muted)]">·</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">98% Retention</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">4 Case Studies</span>
             <span className="text-[var(--rkd-fg-muted)]">·</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">8+ Years</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">10+ Years Experience</span>
           </div>
         </div>
 
@@ -167,12 +165,12 @@ export function Hero() {
           <div className="flex animate-marquee whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex items-center shrink-0">
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ PERFORMANCE MARKETING</span>
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ SEO & CONTENT</span>
+                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ GOOGLE ADS SERVICES</span>
+                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ SEO SERVICES</span>
+                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ GOOGLE BUSINESS PROFILE</span>
+                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ WEBSITE DEVELOPMENT</span>
+                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ SUSPENSION RECOVERY</span>
                 <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ AI AUTOMATION</span>
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ WEB DEVELOPMENT</span>
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ CRM & GROWTH</span>
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ CREATIVE & BRANDING</span>
               </span>
             ))}
           </div>
@@ -183,13 +181,13 @@ export function Hero() {
           <div className="flex animate-marquee-reverse whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex items-center shrink-0">
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">500+ PROJECTS DELIVERED</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">4 DOCUMENTED CASE STUDIES</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">12× PEAK ROAS</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">12× PEAK REPORTED ROAS</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">/ PERFECT 5.0 ON GOOGLE</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">22.5K+ REPORTED LEADS ACROSS CASES</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">200% AVG TRAFFIC GROWTH</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">GREATER NOIDA & NCR</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
                 <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">GREATER NOIDA & NCR</span>
               </span>
