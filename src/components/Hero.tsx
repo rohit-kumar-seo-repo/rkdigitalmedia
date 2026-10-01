@@ -11,7 +11,10 @@ export function Hero() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d')!;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     let animId: number;
     let t = 0;
 
@@ -50,6 +53,7 @@ export function Hero() {
     };
 
     const animate = () => {
+      if (document.hidden) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const mx = mouse.current.x;
       const my = mouse.current.y;
@@ -62,10 +66,15 @@ export function Hero() {
       t += 0.01;
       animId = requestAnimationFrame(animate);
     };
+    const onVisibilityChange = () => {
+      if (!document.hidden) animate();
+    };
+    document.addEventListener('visibilitychange', onVisibilityChange);
     animate();
 
     return () => {
       cancelAnimationFrame(animId);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMouseMove);
     };
