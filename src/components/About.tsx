@@ -54,6 +54,39 @@ export function About() {
         </div>
       </section>
 
+      <section className="py-20 md:py-28 border-b border-[var(--rkd-border)] bg-[var(--rkd-card)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-[0.72fr_1.28fr] gap-10 lg:gap-20 items-center">
+            <div className="relative">
+              <div className="aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-[14px] border border-[var(--rkd-border)] bg-[radial-gradient(circle_at_50%_35%,rgba(232,40,43,0.24),transparent_38%),linear-gradient(145deg,#181818,#0d0d0d)] overflow-hidden flex items-end justify-center">
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_45%,rgba(232,40,43,0.08))]" />
+                <div className="relative pb-10 text-center">
+                  <div className="font-montserrat font-black text-7xl md:text-8xl tracking-[-0.08em] text-[var(--rkd-fg)]">RK</div>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.28em] text-[var(--rkd-fg-muted)] mt-3">Founder · R.K Digital Media</p>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-2 md:right-4 bg-[var(--rkd-primary)] text-white px-4 py-3 rounded-lg shadow-[0_10px_40px_rgba(232,40,43,0.25)]">
+                <div className="font-mono text-[9px] uppercase tracking-widest">Credential</div>
+                <div className="font-montserrat font-bold text-sm mt-1">Google Ads Certified</div>
+              </div>
+            </div>
+            <div>
+              <p className="section-label mb-4">// 01A. THE FOUNDER</p>
+              <h2 className="section-heading section-heading-h2 mb-6">Built by <span className="text-red-italic">Rohit Kumar.</span></h2>
+              <div className="space-y-5 text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl">
+                <p>Rohit Kumar is the founder of R.K Digital Media and works directly with business owners on SEO, Google Ads, Google Business Profile optimisation, website development and advertising recovery.</p>
+                <p>He is a Google Ads Certified digital marketing consultant with more than a decade of hands-on experience across search, paid acquisition and local visibility. The business also works with clients outside India, while its primary local market remains Greater Noida, Noida and Delhi NCR.</p>
+                <p>The working model is deliberately direct: understand the business first, identify the constraint, execute the relevant work and measure what changed. No service is recommended simply because it is on a package list.</p>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-3 mt-8">
+                {[['10+','Years experience'],['100K+','Leads generated'],['10+','Countries served']].map(([value,label]) => <div key={label} className="border border-[var(--rkd-border)] rounded-lg p-4"><div className="font-montserrat font-black text-xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
+              </div>
+              <p className="text-xs text-[var(--rkd-fg-muted)] mt-6 leading-relaxed">Credentials and experience claims are based on the founder's published professional profile and business website.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-[var(--rkd-border)] bg-[var(--rkd-card)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
           {[
