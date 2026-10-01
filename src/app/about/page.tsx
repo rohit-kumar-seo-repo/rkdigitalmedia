@@ -3,7 +3,7 @@ import About from '@/components/About';
 
 export const metadata: Metadata = {
   title: 'About Us | R.K Digital Media',
-  description: 'Greater Noida-based growth agency built to replace fragmented vendors with one system that ships — SEO, Google Ads, GMB, and web development engineered as a single revenue engine.',
+  description: 'Learn how R.K Digital Media approaches Google Ads, SEO, Google Business Profile management, website development, suspension recovery and AI automation from Greater Noida.',
 };
 
 export default function AboutPage() {
