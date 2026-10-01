@@ -183,7 +183,7 @@ export function CaseStudies() {
                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                     </a>
                     <p className="mt-6 text-body-sm text-[var(--rkd-fg-subtle)] text-right max-w-xs">
-                      Want receipts like these on your account? Book a 30-minute audit call. We'll pull your current numbers, show you where the leaks are, and tell you honestly whether we can move them.
+                      Want to discuss a similar problem? Share your current situation and we’ll explain what we would investigate first.
                     </p>
                   </div>
                 </div>
@@ -203,14 +203,14 @@ export function CaseStudies() {
           <div className="card-base inline-block max-w-2xl">
             <p className="section-label mb-4">// NEXT STEP</p>
             <h3 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.25' }}>
-              Want Receipts Like These On Your Account?
+              Have a problem worth solving?
             </h3>
             <p className="text-body-lg text-[var(--rkd-fg-muted)] mb-8" style={{ lineHeight: '1.7' }}>
-              Book a 30-minute strategy audit. We'll analyze your current digital presence, identify the leaks, and show you exactly how we'd move the needle.
+              Tell us what is currently limiting your acquisition, visibility or recovery. We’ll review the context before recommending a larger engagement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="btn-primary group">
-                Book Free Audit
+                Start a Conversation
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </a>
               <a
@@ -228,7 +228,7 @@ export function CaseStudies() {
             <div className="mt-6 grid grid-cols-3 gap-4 text-center text-body-sm text-[var(--rkd-fg-subtle)]">
               <div className="flex items-center justify-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[var(--rkd-primary)]" aria-hidden="true" />
-                <span>30 Min Free Audit</span>
+                <span>Direct Review</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <CheckCircle className="w-4 h-4 text-[var(--rkd-primary)]" aria-hidden="true" />
