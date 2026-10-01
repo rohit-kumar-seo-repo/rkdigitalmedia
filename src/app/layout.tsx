@@ -27,6 +27,7 @@ const organizationSchema = {
   '@id': 'https://rkdigitalmedia.in/#organization',
   name: 'R.K Digital Media',
   alternateName: 'RK Digital Media',
+  description: 'Digital marketing agency providing Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation.',
   url: 'https://rkdigitalmedia.in',
   logo: 'https://rkdigitalmedia.in/icon.svg',
   sameAs: [
@@ -51,6 +52,7 @@ const organizationSchema = {
     addressCountry: 'IN',
   },
   foundingDate: '2016',
+  knowsAbout: ['Google Ads', 'Google Ads suspension recovery', 'SEO', 'Local SEO', 'Google Business Profile management', 'Website development', 'AI automation'],
   areaServed: [
     'Greater Noida', 'Noida', 'Delhi', 'Ghaziabad', 'Faridabad', 'Gurugram',
     'India', 'Worldwide'
@@ -74,11 +76,6 @@ const localBusinessSchema = {
     postalCode: '201016',
     addressCountry: 'IN',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 28.5675,
-    longitude: 77.3210,
-  },
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -87,18 +84,8 @@ const localBusinessSchema = {
       closes: '18:00',
     },
   ],
-  priceRange: '$$$',
   currenciesAccepted: 'INR',
-  paymentAccepted: 'Cash, Credit Card, Bank Transfer, UPI',
-  areaServed: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: 28.5675,
-      longitude: 77.3210,
-    },
-    geoRadius: '50000',
-  },
+  areaServed: ['Greater Noida', 'Noida', 'Delhi', 'Ghaziabad', 'Faridabad', 'Gurugram', 'India', 'Worldwide'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Digital Marketing Services',
@@ -121,6 +108,7 @@ const webSiteSchema = {
   name: 'R.K Digital Media',
   description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   publisher: { '@id': 'https://rkdigitalmedia.in/#organization' },
+  potentialAction: { '@type': 'SearchAction', target: 'https://rkdigitalmedia.in/insights?search={search_term_string}', 'query-input': 'required name=search_term_string' },
 
   inLanguage: 'en-IN',
 };
