@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import TextBlockAnimation from '@/components/ui/text-block-animation';
 
 export function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -111,13 +112,21 @@ export function Hero() {
 
         {/* H1 */}
         <div className="mb-8 md:mb-12 max-w-5xl mx-auto text-center">
-          <h1
-            className="font-montserrat font-black text-[var(--rkd-fg)] leading-[1.0] tracking-tight text-center w-full"
-            style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)' }}
+          <TextBlockAnimation
+            animateOnScroll={false}
+            delay={0.15}
+            blockColor="#e8282b"
+            stagger={0.12}
+            duration={0.7}
           >
-            Digital growth built around<br />
-            <span style={{ color: '#e8282b', fontStyle: 'italic' }}>business outcomes</span>
-          </h1>
+            <h1
+              className="font-montserrat font-black text-[var(--rkd-fg)] leading-[1.0] tracking-tight text-center w-full"
+              style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)' }}
+            >
+              Digital growth built around<br />
+              <span style={{ color: '#e8282b', fontStyle: 'italic' }}>business outcomes</span>
+            </h1>
+          </TextBlockAnimation>
         </div>
 
         {/* Subheadline */}
