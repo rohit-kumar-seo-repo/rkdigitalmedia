@@ -27,7 +27,7 @@ const organizationSchema = {
   name: 'R.K Digital Media',
   alternateName: 'RK Digital Media',
   url: 'https://rkdigitalmedia.in',
-  logo: 'https://rkdigitalmedia.in/logo.png',
+  logo: 'https://rkdigitalmedia.in/icon.svg',
   sameAs: [
     'https://facebook.com/rkdigitalmedia',
     'https://instagram.com/rkdigitalmedia',
@@ -118,16 +118,9 @@ const webSiteSchema = {
   '@id': 'https://rkdigitalmedia.in/#website',
   url: 'https://rkdigitalmedia.in',
   name: 'R.K Digital Media',
-  description: 'Leading digital marketing agency in Greater Noida offering SEO, Google Ads, GMB optimization, website development, and AI automation.',
+  description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   publisher: { '@id': 'https://rkdigitalmedia.in/#organization' },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://rkdigitalmedia.in/search?q={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
+
   inLanguage: 'en-IN',
 };
 
@@ -200,14 +193,8 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
     creator: '@rkdigitalmedia',
   },
-  verification: {
-  },
   alternates: {
     canonical: 'https://rkdigitalmedia.in',
-    languages: {
-      'en-IN': 'https://rkdigitalmedia.in',
-      'hi-IN': 'https://rkdigitalmedia.in/hi',
-    },
   },
 };
 
