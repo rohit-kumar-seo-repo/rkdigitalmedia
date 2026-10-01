@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import TextBlockAnimation from '@/components/ui/text-block-animation';
+import BackgroundPaths from '@/components/ui/background-paths';
 
 export function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -89,6 +90,9 @@ export function Hero() {
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
       />
+
+      {/* Branded animated path field */}
+      <BackgroundPaths />
 
       {/* Corner brackets like reference site */}
       <span className="absolute top-8 left-8 w-6 h-6 border-t-2 border-l-2 border-[var(--rkd-primary)] opacity-60" style={{zIndex:1}} />
