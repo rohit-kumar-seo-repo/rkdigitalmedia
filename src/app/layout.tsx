@@ -234,7 +234,7 @@ export default function RootLayout({
       <body className="bg-[var(--rkd-bg)] text-[var(--rkd-fg)] font-outfit antialiased">
         <CustomCursor />
         <Header />
-        <main id="main-content">{children}</main>
+        <div id="main-content">{children}</div>
         <Footer />
         <WhatsAppFloat />
         <Script
