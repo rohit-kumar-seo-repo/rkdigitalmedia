@@ -81,7 +81,23 @@ export function About() {
               <div className="grid sm:grid-cols-3 gap-3 mt-8">
                 {[['10+','Years experience'],['100K+','Leads generated'],['10+','Countries served']].map(([value,label]) => <div key={label} className="border border-[var(--rkd-border)] rounded-lg p-4"><div className="font-montserrat font-black text-xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
               </div>
-              <p className="text-xs text-[var(--rkd-fg-muted)] mt-6 leading-relaxed">Credentials and experience claims are based on the founder's published professional profile and business website.</p>
+              <div className="mt-8">
+                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--rkd-fg-muted)] mb-3">// PROFESSIONAL CREDENTIALS</p>
+                <div className="grid sm:grid-cols-3 gap-3">
+                  {[
+                    ['Google', 'Google Ads Certifications', 'Issued 2026'],
+                    ['Google', 'AI-Powered Performance Ads', 'Issued 2026'],
+                    ['Meta', 'Media Planning Professional', 'Issued 2023'],
+                  ].map(([issuer,title,date]) => (
+                    <div key={title} className="border border-[var(--rkd-border)] rounded-lg p-4 bg-[var(--rkd-bg)]">
+                      <div className="font-montserrat font-bold text-sm text-[var(--rkd-fg)]">{issuer}</div>
+                      <div className="text-xs text-[var(--rkd-fg-muted)] leading-relaxed mt-2">{title}</div>
+                      <div className="font-mono text-[8px] uppercase tracking-widest text-[var(--rkd-primary)] mt-3">{date}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <p className="text-xs text-[var(--rkd-fg-muted)] mt-5 leading-relaxed">Credential details are based on the founder's published LinkedIn profile and business website.</p>
             </div>
           </div>
         </div>
