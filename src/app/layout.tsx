@@ -24,6 +24,7 @@ const outfit = Outfit({
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://rkdigitalmedia.in/#organization',
   name: 'R.K Digital Media',
   alternateName: 'RK Digital Media',
   url: 'https://rkdigitalmedia.in',
