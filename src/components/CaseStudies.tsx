@@ -97,16 +97,16 @@ export function CaseStudies() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="card-base text-center">
-            <div className="stat-value text-[var(--rkd-primary)]">₹6.3Cr+</div>
-            <div className="stat-label">Total Attributed Revenue</div>
+            <div className="stat-value text-[var(--rkd-primary)]">6</div>
+            <div className="stat-label">Core Services</div>
           </div>
           <div className="card-base text-center">
             <div className="stat-value text-[var(--rkd-primary)]">12×</div>
-            <div className="stat-label">Peak ROAS Achieved</div>
+            <div className="stat-label">Peak Reported ROAS</div>
           </div>
           <div className="card-base text-center">
             <div className="stat-value text-[var(--rkd-primary)]">22.5K+</div>
-            <div className="stat-label">Leads Generated</div>
+            <div className="stat-label">Reported Leads Across Cases</div>
           </div>
           <div className="card-base text-center">
             <div className="stat-value text-[var(--rkd-primary)]">4</div>
