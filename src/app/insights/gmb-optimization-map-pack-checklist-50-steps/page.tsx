@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
+import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
   title: "Google Business Profile Optimization Checklist: What Actually Matters | R.K Digital Media",
