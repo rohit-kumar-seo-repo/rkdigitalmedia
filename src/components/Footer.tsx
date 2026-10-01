@@ -6,14 +6,12 @@ import { cn } from '@/lib/utils';
 
 const footerNav = {
   Services: [
-    { label: 'Performance Marketing', href: '/services/performance-marketing' },
-    { label: 'Google Ads', href: '/services/google-ads' },
-    { label: 'SEO & Search Growth', href: '/services/seo' },
-    { label: 'Google My Business', href: '/services/gmb' },
-    { label: 'AI Automation', href: '/services/ai-automation' },
-    { label: 'Web & Conversion', href: '/services/web-development' },
-    { label: 'Creative & Content', href: '/services/creative' },
-    { label: 'CRM & Growth Systems', href: '/services/crm' },
+    { label: 'Google Ads Services', href: '/services/google-ads' },
+    { label: 'Website Development', href: '/services/web-development' },
+    { label: 'Google Ads Suspension Recovery', href: '/services/google-ads-suspension-recovery' },
+    { label: 'SEO Services', href: '/services/seo' },
+    { label: 'Google Business Profile Management', href: '/services/gmb' },
+    { label: 'AI Automation Services', href: '/services/ai-automation' },
   ],
   Company: [
     { label: 'About Us', href: '/about' },
@@ -126,7 +124,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <a href="tel:+919871530594" className="hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a>
+                <a href="tel:+918287533237" className="hover:text-[var(--rkd-primary)] transition-colors">+91 82875 33237</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
