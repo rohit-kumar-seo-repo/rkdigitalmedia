@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
+import SeoVsPaidAdsVisual from '@/components/SeoVsPaidAdsVisual';
 
 export const metadata: Metadata = {
   title: "SEO vs Paid Ads for Greater Noida Businesses: How to Choose | R.K Digital Media",
