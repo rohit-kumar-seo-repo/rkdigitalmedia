@@ -153,7 +153,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://wa.me/919871530594"
+              href="https://wa.me/918287533237"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary hidden sm:inline-flex"
@@ -231,7 +231,7 @@ export function Header() {
                 ))}
                 <div className="pt-4 border-t border-[var(--rkd-border)] flex flex-col gap-3">
                   <a
-                    href="https://wa.me/919871530594"
+                    href="https://wa.me/918287533237"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary justify-center"
