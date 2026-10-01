@@ -68,7 +68,7 @@ const founderSchema = {
   description: 'Founder of R.K Digital Media and a Google Ads Certified digital marketing consultant based in Greater Noida, India.',
   url: 'https://rkdigitalmedia.in/about',
   worksFor: { '@id': 'https://rkdigitalmedia.in/#organization' },
-  sameAs: ['https://www.linkedin.com/company/rohit-kumar-seo/'],
+  sameAs: ['https://in.linkedin.com/in/rohitkumarseo'],
   knowsAbout: ['Google Ads', 'SEO', 'Local SEO', 'Google Business Profile', 'Website Development', 'Google Ads Suspension Recovery', 'AI Automation'],
 };
 
