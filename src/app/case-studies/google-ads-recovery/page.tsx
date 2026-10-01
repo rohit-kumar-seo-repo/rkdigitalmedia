@@ -4,9 +4,14 @@ import { CaseStudyPage, type CaseStudy } from '@/components/CaseStudyPage';
 export const metadata: Metadata = {
   title: 'Google Ads Suspension Recovery & Scale | Case Study | R.K Digital Media',
   description: 'A documented Google Ads suspension recovery and campaign rebuild case study covering policy diagnosis, landing-page corrections and campaign scaling.',
-,
   alternates: { canonical: 'https://rkdigitalmedia.in/case-studies/google-ads-recovery' },
-  openGraph: { title: Google Ads Suspension Recovery & Scale | Case Study | R.K Digital Media, description: A documented Google Ads suspension recovery and campaign rebuild case study covering policy diagnosis, landing-page corrections and campaign scaling., type: 'article', url: 'https://rkdigitalmedia.in/case-studies/google-ads-recovery', siteName: 'R.K Digital Media' },
+  openGraph: {
+    title: 'Google Ads Suspension Recovery & Scale | Case Study | R.K Digital Media',
+    description: 'A documented Google Ads suspension recovery and campaign rebuild case study covering policy diagnosis, landing-page corrections and campaign scaling.',
+    type: 'article',
+    url: 'https://rkdigitalmedia.in/case-studies/google-ads-recovery',
+    siteName: 'R.K Digital Media',
+  },
 };
 
 const study: CaseStudy = {
