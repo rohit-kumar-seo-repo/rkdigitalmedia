@@ -2,6 +2,7 @@
 
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const capabilities = [
@@ -60,10 +61,14 @@ export function About() {
             <div className="relative">
               <div className="aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-[14px] border border-[var(--rkd-border)] bg-[radial-gradient(circle_at_50%_35%,rgba(232,40,43,0.24),transparent_38%),linear-gradient(145deg,#181818,#0d0d0d)] overflow-hidden flex items-end justify-center">
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent_45%,rgba(232,40,43,0.08))]" />
-                <div className="relative pb-10 text-center">
-                  <div className="font-montserrat font-black text-7xl md:text-8xl tracking-[-0.08em] text-[var(--rkd-fg)]">RK</div>
-                  <p className="font-mono text-[9px] uppercase tracking-[0.28em] text-[var(--rkd-fg-muted)] mt-3">Founder · R.K Digital Media</p>
-                </div>
+                <Image
+                  src="/images/founder-rohit-kumar.webp"
+                  alt="Rohit Kumar, Founder of R.K Digital Media"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 80vw, 420px"
+                  className="object-contain p-3 md:p-5"
+                />
               </div>
               <div className="absolute -bottom-4 -right-2 md:right-4 bg-[var(--rkd-primary)] text-white px-4 py-3 rounded-lg shadow-[0_10px_40px_rgba(232,40,43,0.25)]">
                 <div className="font-mono text-[9px] uppercase tracking-widest">Credential</div>
