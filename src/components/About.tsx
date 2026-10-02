@@ -153,7 +153,7 @@ export function About() {
       <section className="border-b border-[var(--rkd-border)] bg-[var(--rkd-card)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
           {[
-            ['10+', 'Years experience'],
+            ['8+', 'Years experience'],
             ['1,200+', 'Clients'],
             ['500+', 'Projects'],
             ['98%', 'Client retention'],
