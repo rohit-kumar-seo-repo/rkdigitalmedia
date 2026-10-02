@@ -58,7 +58,7 @@ export default function PrivacyPage() {
                 <h2 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)', lineHeight: '1.3' }}>
                   5. Contact
                 </h2>
-                <p>R.K Digital Media<br />5th Ave, Gaur City 1, Sector 4<br />Greater Noida, Ghaziabad, UP 201016<br />info@rkdigitalmedia.in</p>
+                <p>R.K Digital Media<br />5th Ave, Gaur City 1, Sector 4<br />Greater Noida, Ghaziabad, Uttar Pradesh 201016<br />info@rkdigitalmedia.in</p>
               </div>
 
               <div className="pt-8 border-t border-[var(--rkd-border)] fade-in-up-delay-3">
