@@ -21,6 +21,30 @@ const principles = [
   ['Useful work first', 'We prioritise changes that improve visibility, acquisition, conversion or operational efficiency.'],
 ];
 
+const googleCredentials = [
+  {
+    title: 'AI-Powered Performance Ads Certification',
+    issue: 'September 8, 2026',
+    expiry: 'September 8, 2027',
+    id: '193520213',
+    image: '/images/google-ads-ai-performance.webp',
+  },
+  {
+    title: 'Google Ads Display Certification',
+    issue: 'September 26, 2026',
+    expiry: 'September 26, 2027',
+    id: '195278798',
+    image: '/images/google-ads-display.webp',
+  },
+  {
+    title: 'Google Ads Search Certification',
+    issue: 'August 28, 2026',
+    expiry: 'August 28, 2027',
+    id: '192649932',
+    image: '/images/google-ads-search.webp',
+  },
+];
+
 const process = [
   ['01', 'Diagnose', 'Understand the business, market, existing assets and the actual constraint before recommending work.'],
   ['02', 'Prioritise', 'Separate high-impact fixes from nice-to-have activity and define what success will be measured against.'],
@@ -80,29 +104,47 @@ export function About() {
               <h2 className="section-heading section-heading-h2 mb-6">Built by <span className="text-red-italic">Rohit Kumar.</span></h2>
               <div className="space-y-5 text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl">
                 <p>Rohit Kumar is the founder of R.K Digital Media and works directly with business owners on SEO, Google Ads, Google Business Profile optimisation, website development and advertising recovery.</p>
-                <p>He is a Google Ads Certified digital marketing consultant with more than a decade of hands-on experience across search, paid acquisition and local visibility. The business also works with clients outside India, while its primary local market remains Greater Noida, Noida and Delhi NCR.</p>
+                <p>He is a Google-certified digital marketing professional and consultant with current Google Ads certifications and more than a decade of hands-on experience across search, paid acquisition and local visibility. The business also works with clients outside India, while its primary local market remains Greater Noida, Noida and Delhi NCR.</p>
                 <p>The working model is deliberately direct: understand the business first, identify the constraint, execute the relevant work and measure what changed. No service is recommended simply because it is on a package list.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-3 mt-8">
                 {[['10+','Years experience'],['100K+','Leads generated'],['10+','Countries served']].map(([value,label]) => <div key={label} className="border border-[var(--rkd-border)] rounded-lg p-4"><div className="font-montserrat font-black text-xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
               </div>
               <div className="mt-8">
-                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--rkd-fg-muted)] mb-3">// PROFESSIONAL CREDENTIALS</p>
-                <div className="grid sm:grid-cols-3 gap-3">
-                  {[
-                    ['Google', 'Google Ads Certifications', 'Issued 2026'],
-                    ['Google', 'AI-Powered Performance Ads', 'Issued 2026'],
-                    ['Meta', 'Media Planning Professional', 'Issued 2023'],
-                  ].map(([issuer,title,date]) => (
-                    <div key={title} className="border border-[var(--rkd-border)] rounded-lg p-4 bg-[var(--rkd-bg)]">
-                      <div className="font-montserrat font-bold text-sm text-[var(--rkd-fg)]">{issuer}</div>
-                      <div className="text-xs text-[var(--rkd-fg-muted)] leading-relaxed mt-2">{title}</div>
-                      <div className="font-mono text-[8px] uppercase tracking-widest text-[var(--rkd-primary)] mt-3">{date}</div>
-                    </div>
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
+                  <div>
+                    <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--rkd-fg-muted)] mb-2">// GOOGLE CERTIFICATIONS</p>
+                    <h3 className="font-montserrat font-bold text-lg text-[var(--rkd-fg)]">Google-certified professional.</h3>
+                    <p className="text-sm text-[var(--rkd-fg-muted)] mt-2 max-w-xl">Current Google Ads certifications held by Rohit Kumar, with each credential linked to the Skillshop verification wallet.</p>
+                  </div>
+                  <a href="https://skillshop.credential.net/profile/rohitkumarseo848048/wallet" target="_blank" rel="noopener noreferrer" className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-primary)] hover:text-white transition-colors whitespace-nowrap">Verify all credentials ↗</a>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {googleCredentials.map((credential) => (
+                    <article key={credential.id} className="border border-[var(--rkd-border)] rounded-xl overflow-hidden bg-[var(--rkd-bg)] group">
+                      <div className="relative aspect-[4/3] bg-white overflow-hidden border-b border-[var(--rkd-border)]">
+                        <Image
+                          src={credential.image}
+                          alt={credential.title + ' certificate for Rohit Kumar'}
+                          fill
+                          sizes="(max-width: 768px) 92vw, (max-width: 1200px) 30vw, 380px"
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <div className="font-mono text-[8px] uppercase tracking-[0.18em] text-[var(--rkd-primary)]">Google Ads Certified</div>
+                        <h4 className="font-montserrat font-bold text-sm leading-snug text-[var(--rkd-fg)] mt-2">{credential.title}</h4>
+                        <div className="grid grid-cols-2 gap-3 mt-4">
+                          <div><div className="font-mono text-[8px] uppercase tracking-widest text-[var(--rkd-fg-muted)]">Issued</div><div className="text-[11px] text-[var(--rkd-fg)] mt-1">{credential.issue}</div></div>
+                          <div><div className="font-mono text-[8px] uppercase tracking-widest text-[var(--rkd-fg-muted)]">Expires</div><div className="text-[11px] text-[var(--rkd-fg)] mt-1">{credential.expiry}</div></div>
+                        </div>
+                        <div className="font-mono text-[8px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-4">Credential ID <span className="text-[var(--rkd-fg)]">{credential.id}</span></div>
+                        <a href="https://skillshop.credential.net/profile/rohitkumarseo848048/wallet" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">Verify Credential <ArrowUpRight className="w-3.5 h-3.5" /></a>
+                      </div>
+                    </article>
                   ))}
                 </div>
               </div>
-              <p className="text-xs text-[var(--rkd-fg-muted)] mt-5 leading-relaxed">Credential details are based on the founder's published LinkedIn profile and business website.</p>
             </div>
           </div>
         </div>
