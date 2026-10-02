@@ -1,6 +1,6 @@
 'use client';
 
-const WHATSAPP_URL = 'https://wa.me/918287533237?text=Hi%20R.K.%20Digital%20Media%2C%20I%27d%20like%20to%20discuss%20my%20business.';
+const WHATSAPP_URL = 'https://wa.me/919871530594?text=Hi%20R.K.%20Digital%20Media%2C%20I%27d%20like%20to%20discuss%20my%20business.';
 
 export default function WhatsAppFloat() {
   return (
