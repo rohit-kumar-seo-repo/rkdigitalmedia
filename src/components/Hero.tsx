@@ -161,7 +161,7 @@ export function Hero() {
             <span className="text-[var(--rkd-fg-muted)]">·</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">4 Case Studies</span>
             <span className="text-[var(--rkd-fg-muted)]">·</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">10+ Years Experience</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">8+ Years Experience</span>
           </div>
         </div>
 
