@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 import InsightVisual from '@/components/InsightVisual';
-import RelatedResources from '@/components/RelatedResources';
 
 export const metadata: Metadata = {
   title: "Google Ads Suspension Recovery: A Practical Account Review & Appeal Guide | R.K Digital Media",
