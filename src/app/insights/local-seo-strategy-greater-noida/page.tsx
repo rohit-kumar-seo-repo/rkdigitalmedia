@@ -281,7 +281,16 @@ export default function PostPage() {
 
                 <div className="relative overflow-hidden rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-7 md:p-10">
                   <div className="absolute top-0 right-0 h-40 w-40 rounded-full bg-[var(--primary)] opacity-[0.08] blur-3xl" />
-                  <p className="section-label mb-3">// NEED HELP?</p>
+                  <div className="mb-12">
+<p className="section-label mb-4">// RELATED RESOURCES</p>
+<div className="grid sm:grid-cols-2 gap-4">
+<Link href="/insights/gmb-optimization-map-pack-checklist-50-steps" className="group card-base p-5"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">Google Business Profile Optimization Checklist</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">A focused checklist for profile accuracy, categories, reviews and local relevance.</span></Link>
+<Link href="/insights/seo-vs-paid-ads-2025-which-wins" className="group card-base p-5"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">SEO vs Paid Ads for Greater Noida Businesses</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Compare organic and paid acquisition by intent, economics and time horizon.</span></Link>
+<Link href="/services/seo" className="group card-base p-5"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">Local SEO Services</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Connect local search strategy with technical SEO, content and measurement.</span></Link>
+<Link href="/case-studies/local-seo-domination" className="group card-base p-5"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">Local SEO Case Study</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Review a documented local SEO example from the portfolio.</span></Link>
+</div>
+</div>
+<p className="section-label mb-3">// NEED HELP?</p>
                   <h2 className="font-montserrat font-extrabold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.25rem)' }}>Want to improve your local visibility?</h2>
                   <p className="text-[14px] md:text-[15px] leading-7 text-[var(--rkd-fg-muted)] max-w-2xl">R.K Digital Media works on Google Business Profile optimization, Local SEO and search visibility for businesses in Greater Noida and Delhi NCR.</p>
                   <Link href="/contact" className="btn-primary inline-flex mt-6 group">
