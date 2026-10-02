@@ -45,7 +45,7 @@ const organizationSchema = {
   },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '5th Ave, Gaur City 1, Sector 4',
+    streetAddress: '5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad',
     addressLocality: 'Greater Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201016',
@@ -113,7 +113,7 @@ const localBusinessSchema = {
   email: 'info@rkdigitalmedia.in',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '5th Ave, Gaur City 1, Sector 4',
+    streetAddress: '5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad',
     addressLocality: 'Greater Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201016',
