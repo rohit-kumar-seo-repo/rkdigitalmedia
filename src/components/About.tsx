@@ -104,11 +104,11 @@ export function About() {
               <h2 className="section-heading section-heading-h2 mb-6">Built by <span className="text-red-italic">Rohit Kumar.</span></h2>
               <div className="space-y-5 text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl">
                 <p>Rohit Kumar is the founder of R.K Digital Media and works directly with business owners on SEO, Google Ads, Google Business Profile optimisation, website development and advertising recovery.</p>
-                <p>He is a Google-certified digital marketing professional and consultant with current Google Ads certifications and more than a decade of hands-on experience across search, paid acquisition and local visibility. The business also works with clients outside India, while its primary local market remains Greater Noida, Noida and Delhi NCR.</p>
+                <p>He is a Google-certified digital marketing professional and consultant with current Google Ads certifications and 8+ years of hands-on experience across search, paid acquisition and local visibility. The business also works with clients outside India, while its primary local market remains Greater Noida, Noida and Delhi NCR.</p>
                 <p>The working model is deliberately direct: understand the business first, identify the constraint, execute the relevant work and measure what changed. No service is recommended simply because it is on a package list.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-3 mt-8">
-                {[['10+','Years experience'],['100K+','Leads generated'],['10+','Countries served']].map(([value,label]) => <div key={label} className="border border-[var(--rkd-border)] rounded-lg p-4"><div className="font-montserrat font-black text-xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
+                {[['8+','Years experience'],['1,200+','Clients'],['500+','Projects'],['98%','Client retention']].map(([value,label]) => <div key={label} className="border border-[var(--rkd-border)] rounded-lg p-4"><div className="font-montserrat font-black text-xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
               </div>
               <div className="mt-8">
                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-5">
@@ -154,7 +154,9 @@ export function About() {
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
           {[
             ['10+', 'Years experience'],
-            ['6', 'Core services'],
+            ['1,200+', 'Clients'],
+            ['500+', 'Projects'],
+            ['98%', 'Client retention'],
             ['NCR', 'Primary local market'],
             ['FOUNDER-LED', 'Direct accountability'],
           ].map(([value,label],i)=><div key={label} className={`py-7 md:py-9 pr-5 md:pr-8 ${i<3?'md:border-r border-[var(--rkd-border)]':''}`}><div className="font-montserrat font-black text-2xl md:text-3xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
