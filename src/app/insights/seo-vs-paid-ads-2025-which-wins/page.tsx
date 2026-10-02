@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import InsightArticle from '@/components/InsightArticle';
 import SeoVsPaidAdsVisual from '@/components/SeoVsPaidAdsVisual';
 
@@ -30,7 +31,7 @@ export default function PostPage() {
       readTime="12 min"
       updated="October 1, 2026"
       toc={["The real difference","When paid search makes sense","When SEO makes sense","The economics to compare","Why the combination can work","A simple decision framework"]}
-      relatedLinks={[{label:'Google Ads Campaign Types',href:'/insights/google-ads-campaign-types',description:'Match paid campaign formats to search intent and the customer journey.'},{label:'Local SEO Strategy for Greater Noida',href:'/insights/local-seo-strategy-greater-noida',description:'Go deeper into local search, Maps visibility, reviews and location relevance.'},{label:'SEO Services',href:'/services/seo',description:'See the SEO service covering technical, content and local search.'},{label:'Google Ads Services',href:'/services/google-ads',description:'Explore campaign strategy, tracking and ongoing Google Ads management.'}]}  sections={[
+       sections={[
         {
           label:"FOUNDATION",
           title:"The real difference",
@@ -68,5 +69,6 @@ export default function PostPage() {
         }
       ]}
     />
+    <section className="bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6 py-12 md:py-16"><div className="max-w-[760px] mx-auto"><p className="section-label mb-4">// RELATED RESOURCES</p><div className="grid sm:grid-cols-2 gap-4"><Link href="/insights/google-ads-campaign-types" className="group card-base p-5 border border-[var(--rkd-border)] hover:border-[var(--rkd-primary)] transition-colors"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)] transition-colors">Google Ads Campaign Types</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Continue reading this related guide or service page.</span></Link><Link href="/insights/local-seo-strategy-greater-noida" className="group card-base p-5 border border-[var(--rkd-border)] hover:border-[var(--rkd-primary)] transition-colors"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)] transition-colors">Local SEO Strategy for Greater Noida</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Continue reading this related guide or service page.</span></Link><Link href="/services/seo" className="group card-base p-5 border border-[var(--rkd-border)] hover:border-[var(--rkd-primary)] transition-colors"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)] transition-colors">SEO Services</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Continue reading this related guide or service page.</span></Link><Link href="/services/google-ads" className="group card-base p-5 border border-[var(--rkd-border)] hover:border-[var(--rkd-primary)] transition-colors"><span className="block font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)] transition-colors">Google Ads Services</span><span className="block mt-2 text-[13px] leading-6 text-[var(--rkd-fg-muted)]">Continue reading this related guide or service page.</span></Link></div></div></div></section>
   </>;
 }
