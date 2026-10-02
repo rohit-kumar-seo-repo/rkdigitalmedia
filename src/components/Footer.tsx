@@ -48,7 +48,7 @@ export function Footer() {
               <span className="font-montserrat font-semibold tracking-wide">R.K DIGITAL MEDIA</span>
             </Link>
             <p className="text-body text-[var(--rkd-fg-muted)] leading-relaxed mb-6 max-w-xs">
-              Google Ads, SEO, Google Business Profile management, websites, suspension recovery and automation — built for Greater Noida, NCR and businesses beyond the region.
+              Google Ads, SEO, Google Business Profile management, websites, suspension recovery and automation — built for Greater Noida, NCR and businesses beyond the region. Founder Rohit Kumar is a Google-certified digital marketing professional.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
