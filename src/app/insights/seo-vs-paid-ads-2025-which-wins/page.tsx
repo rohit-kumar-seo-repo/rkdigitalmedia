@@ -30,7 +30,7 @@ export default function PostPage() {
       readTime="12 min"
       updated="October 1, 2026"
       toc={["The real difference","When paid search makes sense","When SEO makes sense","The economics to compare","Why the combination can work","A simple decision framework"]}
-      sections={[
+      relatedLinks={[{label:'Google Ads Campaign Types',href:'/insights/google-ads-campaign-types',description:'Match paid campaign formats to search intent and the customer journey.'},{label:'Local SEO Strategy for Greater Noida',href:'/insights/local-seo-strategy-greater-noida',description:'Go deeper into local search, Maps visibility, reviews and location relevance.'},{label:'SEO Services',href:'/services/seo',description:'See the SEO service covering technical, content and local search.'},{label:'Google Ads Services',href:'/services/google-ads',description:'Explore campaign strategy, tracking and ongoing Google Ads management.'}]}  sections={[
         {
           label:"FOUNDATION",
           title:"The real difference",
