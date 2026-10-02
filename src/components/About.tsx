@@ -27,21 +27,21 @@ const googleCredentials = [
     issue: 'September 8, 2026',
     expiry: 'September 8, 2027',
     id: '193520213',
-    image: '/images/google-ads-ai-performance.webp',
+    image: '/images/google-ads-ai-performance.svg',
   },
   {
     title: 'Google Ads Display Certification',
     issue: 'September 26, 2026',
     expiry: 'September 26, 2027',
     id: '195278798',
-    image: '/images/google-ads-display.webp',
+    image: '/images/google-ads-display.svg',
   },
   {
     title: 'Google Ads Search Certification',
     issue: 'August 28, 2026',
     expiry: 'August 28, 2027',
     id: '192649932',
-    image: '/images/google-ads-search.webp',
+    image: '/images/google-ads-search.svg',
   },
 ];
 
