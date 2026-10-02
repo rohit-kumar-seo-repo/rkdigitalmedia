@@ -120,7 +120,7 @@ export function Footer() {
             <address className="not-italic text-body-sm text-[var(--rkd-fg-muted)] space-y-2">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <span>5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, UP 201016</span>
+                <span>5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, Uttar Pradesh 201016</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
