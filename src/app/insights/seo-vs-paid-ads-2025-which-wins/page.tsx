@@ -35,19 +35,19 @@ export default function PostPage() {
         {
           label:"FOUNDATION",
           title:"The real difference",
-          paragraphs:["Paid search buys access to eligible ad placements while the campaign is active. SEO builds organic visibility through content, technical quality, relevance and authority over time. Neither is simply the better channel in every situation."],
+          paragraphs:[<>Paid search buys access to eligible ad placements while the campaign is active. <Link href="/services/seo" className="text-[var(--rkd-primary)] hover:underline">SEO</Link> builds organic visibility through content, technical quality, relevance and authority over time. Neither is simply the better channel in every situation.</>],
           visual:<SeoVsPaidAdsVisual kind="comparison" />
         },
         {
           label:"URGENCY",
           title:"When paid search makes sense",
-          paragraphs:["Ads can be useful when you need to test demand quickly, promote a high-intent service or enter a new market. The trade-off is that traffic generally stops when spend stops."],
+          paragraphs:[<>Ads can be useful when you need to test demand quickly, promote a high-intent service or enter a new market. The <Link href="/insights/google-ads-campaign-types" className="text-[var(--rkd-primary)] hover:underline">campaign format you choose</Link> should match the customer journey and the data you can provide. The trade-off is that traffic generally stops when spend stops.</>],
           visual:<SeoVsPaidAdsVisual kind="timeline" />
         },
         {
           label:"COMPOUNDING",
           title:"When SEO makes sense",
-          paragraphs:["SEO is useful when customers repeatedly research services, organic demand is meaningful and the business can invest in content and site quality over time. It normally requires patience and maintenance."]
+          paragraphs:[<>SEO is useful when customers repeatedly research services, organic demand is meaningful and the business can invest in content and site quality over time. For businesses serving defined areas, a <Link href="/insights/local-seo-strategy-greater-noida" className="text-[var(--rkd-primary)] hover:underline">local SEO strategy</Link> can connect that work to location-focused demand. It normally requires patience and maintenance.</>]
         },
         {
           label:"ECONOMICS",
@@ -58,7 +58,7 @@ export default function PostPage() {
         {
           label:"PORTFOLIO",
           title:"Why the combination can work",
-          paragraphs:["Paid search can provide immediate demand capture and testing data while SEO builds a longer-term acquisition asset. Search-query and conversion data can also reveal topics worth developing organically."],
+          paragraphs:[<>Paid search can provide immediate demand capture and testing data while SEO builds a longer-term acquisition asset. Search-query and conversion data can also reveal topics worth developing organically. The two channels can be managed as connected systems rather than isolated activities; see the <Link href="/services/google-ads" className="text-[var(--rkd-primary)] hover:underline">Google Ads service</Link> and <Link href="/services/seo" className="text-[var(--rkd-primary)] hover:underline">SEO service</Link> pages for how those workstreams are structured.</>],
           visual:<SeoVsPaidAdsVisual kind="combined" />
         },
         {
