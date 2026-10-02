@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import InsightArticle from '@/components/InsightArticle';
 import SeoVsPaidAdsVisual from '@/components/SeoVsPaidAdsVisual';
 
@@ -68,5 +69,6 @@ export default function PostPage() {
         }
       ]}
     />
+<section className="bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6 py-12 md:py-16"><div className="max-w-[760px] mx-auto"><p className="section-label mb-4">// RELATED RESOURCES</p><div className="grid sm:grid-cols-2 gap-4"><Link href="/insights/google-ads-campaign-types" className="group card-base p-5"><span className="font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">Google Ads Campaign Types</span></Link><Link href="/insights/local-seo-strategy-greater-noida" className="group card-base p-5"><span className="font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">Local SEO Strategy for Greater Noida</span></Link><Link href="/services/seo" className="group card-base p-5"><span className="font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">SEO Services</span></Link><Link href="/services/google-ads" className="group card-base p-5"><span className="font-montserrat font-bold text-sm text-[var(--rkd-fg)] group-hover:text-[var(--rkd-primary)]">Google Ads Services</span></Link></div></div></div></section>
   </>;
 }
