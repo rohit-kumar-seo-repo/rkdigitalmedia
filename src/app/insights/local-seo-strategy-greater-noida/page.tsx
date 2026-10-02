@@ -163,7 +163,7 @@ export default function PostPage() {
                 <section className={sectionClass} id="google-business-profile">
                   <p className="section-label mb-3">// 02 — GBP</p>
                   <h2 className={h2Class} style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: '1.15' }}>Build and Optimize Your Google Business Profile</h2>
-                  <p className={pClass}>For an eligible local business, the Google Business Profile is a core part of the local search presence. Start with accurate business information and the category that most closely represents the primary service.</p>
+                  <p className={pClass}>For an eligible local business, the <Link href="/services/gmb" className="text-[var(--rkd-primary)] underline underline-offset-4 hover:no-underline">Google Business Profile management service</Link> is a core part of the local search presence. Start with accurate business information and the category that most closely represents the primary service.</p>
                   <ul className={listClass + ' list-disc'}>
                     <li>Choose the most accurate primary category and relevant secondary categories.</li>
                     <li>Complete services, hours, contact details, website and applicable attributes.</li>
