@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 
-export type ArticleSection={label:string;title:string;paragraphs?:string[];bullets?:string[];callout?:{title:string;text:string};visual?:ReactNode};
+export type ArticleSection={label:string;title:string;paragraphs?:ReactNode[];bullets?:string[];callout?:{title:string;text:string};visual?:ReactNode};
 export type InsightArticleProps={category:string;location?:string;title:string;intro:string;readTime:string;updated:string;toc:string[];sections:ArticleSection[];ctaTitle?:string;ctaText?:string};
 
 export default function InsightArticle({category,location,title,intro,readTime,updated,toc,sections,ctaTitle='Want help putting this into practice?',ctaText='R.K Digital Media works on practical search, paid advertising and digital growth systems. Start with a conversation about your actual goals—not a generic package.'}:InsightArticleProps){
