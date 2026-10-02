@@ -70,6 +70,35 @@ const founderSchema = {
   image: 'https://rkdigitalmedia.in/images/founder-rohit-kumar.webp',
   worksFor: { '@id': 'https://rkdigitalmedia.in/#organization' },
   sameAs: ['https://in.linkedin.com/in/rohitkumarseo'],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'AI-Powered Performance Ads Certification',
+      credentialCategory: 'Google Ads Certification',
+      dateCreated: '2026-09-08',
+      validThrough: '2027-09-08',
+      identifier: '193520213',
+      url: 'https://skillshop.credential.net/profile/rohitkumarseo848048/wallet',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Google Ads Display Certification',
+      credentialCategory: 'Google Ads Certification',
+      dateCreated: '2026-09-26',
+      validThrough: '2027-09-26',
+      identifier: '195278798',
+      url: 'https://skillshop.credential.net/profile/rohitkumarseo848048/wallet',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Google Ads Search Certification',
+      credentialCategory: 'Google Ads Certification',
+      dateCreated: '2026-08-28',
+      validThrough: '2027-08-28',
+      identifier: '192649932',
+      url: 'https://skillshop.credential.net/profile/rohitkumarseo848048/wallet',
+    },
+  ],
   knowsAbout: ['Google Ads', 'SEO', 'Local SEO', 'Google Business Profile', 'Website Development', 'Google Ads Suspension Recovery', 'AI Automation'],
 };
 
