@@ -38,7 +38,7 @@ const organizationSchema = {
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+91-82875-33237',
+    telephone: '+91-98715-30594',
     contactType: 'customer service',
     availableLanguage: ['English', 'Hindi'],
     hoursAvailable: 'Mo-Fr 09:00-18:00',
@@ -109,7 +109,7 @@ const localBusinessSchema = {
   name: 'R.K Digital Media',
   description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   url: 'https://rkdigitalmedia.in',
-  telephone: '+91-82875-33237',
+  telephone: '+91-98715-30594',
   email: 'info@rkdigitalmedia.in',
   address: {
     '@type': 'PostalAddress',
