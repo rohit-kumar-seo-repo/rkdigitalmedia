@@ -60,7 +60,7 @@ export function Contact() {
             </div>
             <div>
               <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed">Give us the context, the current constraint and what you are trying to achieve. We’ll review the enquiry and tell you what we would investigate first.</p>
-              <a href="https://wa.me/918287533237?text=Hi%20R.K.%20Digital%20Media%2C%20I%27d%20like%20to%20discuss%20my%20business." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-7 font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-primary)] hover:text-[var(--rkd-fg)] transition-colors"><MessageCircle className="w-4 h-4" /> WhatsApp directly</a>
+              <a href="https://wa.me/919871530594?text=Hi%20R.K.%20Digital%20Media%2C%20I%27d%20like%20to%20discuss%20my%20business." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-7 font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-primary)] hover:text-[var(--rkd-fg)] transition-colors"><MessageCircle className="w-4 h-4" /> WhatsApp directly</a>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export function Contact() {
               <p className="section-label mb-4">// 01. START A PROJECT</p>
               <h2 className="section-heading section-heading-h2 mb-6">Give us the <span className="text-red-italic">details.</span></h2>
               <p className="text-[var(--rkd-fg-muted)] leading-relaxed max-w-md">The more useful the context, the less time we spend guessing. You do not need a polished brief.</p>
-              <div className="mt-8 p-5 border border-[var(--rkd-border)] bg-[var(--rkd-card)]"><p className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mb-2">DIRECT WHATSAPP</p><a href="https://wa.me/918287533237" target="_blank" rel="noopener noreferrer" className="font-montserrat font-bold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">+91 82875 33237</a></div>
+              <div className="mt-8 p-5 border border-[var(--rkd-border)] bg-[var(--rkd-card)]"><p className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mb-2">DIRECT WHATSAPP</p><a href="https://wa.me/919871530594" target="_blank" rel="noopener noreferrer" className="font-montserrat font-bold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a></div>
             </div>
 
             <div className="border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-6 md:p-10">
