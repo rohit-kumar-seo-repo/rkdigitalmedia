@@ -124,7 +124,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <a href="tel:+918287533237" className="hover:text-[var(--rkd-primary)] transition-colors">+91 82875 33237</a>
+                <a href="tel:+919871530594" className="hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
