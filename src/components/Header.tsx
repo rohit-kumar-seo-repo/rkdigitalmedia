@@ -78,8 +78,8 @@ export function Header() {
             className="flex items-center gap-3 text-[var(--rkd-fg)] hover:opacity-80 transition-opacity duration-300 z-10"
             aria-label="R.K Digital Media - Home"
           >
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-[var(--rkd-primary)]">
-              <span className="font-montserrat font-bold text-[var(--rkd-fg)] text-lg">RK</span>
+            <div className="flex items-center justify-center w-10 h-10 shrink-0">
+              <img src="/logo-mark.svg" alt="" className="w-full h-full object-contain" />
             </div>
             <span className="hidden sm:block font-montserrat font-semibold text-[10px] sm:text-body-sm tracking-[0.08em] sm:tracking-wide">
               R.K DIGITAL MEDIA
