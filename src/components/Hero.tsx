@@ -82,7 +82,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden hero-background">
+    <section className="relative min-h-[720px] md:min-h-screen flex items-center justify-center pt-16 overflow-hidden hero-background">
       {/* Animated wave canvas */}
       <canvas
         ref={canvasRef}
@@ -96,10 +96,10 @@ export function Hero() {
       <span className="absolute bottom-8 left-8 w-6 h-6 border-b-2 border-l-2 border-[var(--rkd-primary)] opacity-60" style={{zIndex:1}} />
       <span className="absolute bottom-8 right-8 w-6 h-6 border-b-2 border-r-2 border-[var(--rkd-primary)] opacity-60" style={{zIndex:1}} />
 
-      <div className="relative max-w-[80rem] mx-auto px-4 md:px-6 py-20 md:py-32 flex flex-col items-center justify-center min-h-[calc(100vh-120px)]" style={{zIndex:2}}>
+      <div className="relative max-w-[80rem] mx-auto px-4 md:px-6 py-14 pb-40 md:py-32 md:pb-32 flex flex-col items-center justify-center min-h-0 md:min-h-[calc(100vh-120px)]" style={{zIndex:2}}>
         {/* Status bar */}
-        <div className="mb-8 md:mb-12 flex flex-wrap items-center justify-between gap-4 md:gap-8">
-          <div className="flex items-center gap-2 text-xs font-montserrat tracking-widest uppercase text-[var(--rkd-primary)]">
+        <div className="mb-7 md:mb-12 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 md:gap-8 w-full">
+          <div className="flex items-center justify-center gap-2 text-[10px] sm:text-xs font-montserrat tracking-[0.16em] sm:tracking-widest uppercase text-[var(--rkd-primary)] text-center">
             <span className="w-8 h-px bg-[var(--rkd-primary)]" />
             GREATER NOIDA / NCR / INDIA
             <span className="w-8 h-px bg-[var(--rkd-primary)]" />
@@ -111,7 +111,7 @@ export function Hero() {
         </div>
 
         {/* H1 */}
-        <div className="mb-8 md:mb-12 max-w-5xl mx-auto text-center">
+        <div className="mb-7 md:mb-12 max-w-5xl mx-auto text-center px-1">
           <TextBlockAnimation
             animateOnScroll={false}
             delay={0.15}
@@ -121,7 +121,7 @@ export function Hero() {
           >
             <h1
               className="font-montserrat font-black text-[var(--rkd-fg)] leading-[1.0] tracking-tight text-center w-full"
-              style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.2rem)' }}
+              style={{ fontSize: 'clamp(1.75rem, 8vw, 3.2rem)' }}
             >
               Digital growth built around<br />
               <span style={{ color: '#e8282b', fontStyle: 'italic' }}>business outcomes</span>
@@ -130,7 +130,7 @@ export function Hero() {
         </div>
 
         {/* Subheadline */}
-        <div className="mb-10 max-w-2xl mx-auto text-center">
+        <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center px-1">
           <p className="font-outfit text-[var(--rkd-fg-muted)] leading-relaxed"
             style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)' }}>
             Google Ads, SEO, Google Business Profile management, websites, suspension recovery and automation — connected around the problem your business actually needs to solve.
@@ -138,27 +138,27 @@ export function Hero() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="/contact" className="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full font-montserrat font-bold text-white bg-[var(--rkd-primary)]">
+        <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+          <a href="/contact" className="btn-primary inline-flex w-full sm:w-auto justify-center items-center gap-2 px-8 py-4 rounded-full font-montserrat font-bold text-white bg-[var(--rkd-primary)]">
             Book a Strategy Call
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="/case-studies" className="inline-flex items-center gap-2 font-montserrat font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">
+          <a href="/case-studies" className="inline-flex w-full sm:w-auto justify-center items-center gap-2 font-montserrat font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">
             See Our Work
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
           </a>
         </div>
 
         {/* Featured Case Pill */}
-        <div className="mt-16 mb-6 hero-fade-up mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-4 px-6 py-3 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-full">
+        <div className="mt-10 md:mt-16 mb-6 hero-fade-up md:mb-20">
+          <div className="flex flex-col sm:inline-flex sm:flex-row items-center gap-2 sm:gap-4 px-5 sm:px-6 py-3 sm:py-3 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-2xl sm:rounded-full text-center">
             <span className="inline-flex items-center gap-1.5 text-[var(--rkd-primary)]">
               <span className="w-2 h-2 rounded-full bg-[var(--rkd-primary)]" aria-hidden="true" />
               SELECTED WORK
             </span>
-            <span className="text-[var(--rkd-fg-muted)]">|</span>
+            <span className="hidden sm:inline text-[var(--rkd-fg-muted)]">|</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">6 Core Services</span>
-            <span className="text-[var(--rkd-fg-muted)]">·</span>
+            <span className="hidden sm:inline text-[var(--rkd-fg-muted)]">·</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">4 Case Studies</span>
             <span className="text-[var(--rkd-fg-muted)]">·</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">8+ Years Experience</span>
@@ -179,12 +179,12 @@ export function Hero() {
       {/* Two-row marquee banner */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden" style={{zIndex: 2}}>
         {/* Row 1 — Red background, services */}
-        <div className="bg-[#e8282b] py-3 overflow-hidden">
+        <div className="bg-[#e8282b] py-2.5 md:py-3 overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex items-center shrink-0">
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ GOOGLE ADS SERVICES</span>
-                <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ SEO SERVICES</span>
+                <span className="font-montserrat font-black text-white text-[11px] md:text-base tracking-[0.12em] md:tracking-widest uppercase px-4 md:px-6">/ GOOGLE ADS SERVICES</span>
+                <span className="font-montserrat font-black text-white text-[11px] md:text-base tracking-[0.12em] md:tracking-widest uppercase px-4 md:px-6">/ SEO SERVICES</span>
                 <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ GOOGLE BUSINESS PROFILE</span>
                 <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ WEBSITE DEVELOPMENT</span>
                 <span className="font-montserrat font-black text-white text-sm md:text-base tracking-widest uppercase px-6">/ SUSPENSION RECOVERY</span>
@@ -195,7 +195,7 @@ export function Hero() {
         </div>
 
         {/* Row 2 — Dark background, results */}
-        <div className="bg-[#0d0d0d] border-t border-[#1f1f1f] py-3 overflow-hidden">
+        <div className="bg-[#0d0d0d] border-t border-[#1f1f1f] py-2.5 md:py-3 overflow-hidden">
           <div className="flex animate-marquee-reverse whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex items-center shrink-0">
