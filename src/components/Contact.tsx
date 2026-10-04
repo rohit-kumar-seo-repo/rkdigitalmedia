@@ -50,7 +50,7 @@ export function Contact() {
       <section className="relative overflow-hidden border-b border-[var(--rkd-border)]">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_76%_35%,rgba(232,40,43,0.13),transparent_34%)]" />
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 pt-20 md:pt-28 pb-16 md:pb-24 relative">
-          <div className="flex items-center justify-between gap-6 mb-14">
+          <div className="flex items-center justify-between gap-4 mb-8 md:mb-14">
             <p className="section-label">// CONTACT</p>
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-fg-muted)]">DIRECT ENQUIRIES</span>
           </div>
@@ -66,7 +66,7 @@ export function Contact() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 border-b border-[var(--rkd-border)]">
+      <section className="py-14 md:py-24 border-b border-[var(--rkd-border)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid lg:grid-cols-[0.7fr_1.3fr] gap-12 lg:gap-20">
           <div>
             <p className="section-label mb-4">// BEFORE YOU SEND</p>
@@ -78,7 +78,7 @@ export function Contact() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)]">
+      <section id="contact" className="py-16 md:py-28 bg-[var(--rkd-bg-secondary)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-12 lg:gap-20">
             <div className="lg:sticky lg:top-28 self-start">
@@ -88,7 +88,7 @@ export function Contact() {
               <div className="mt-8 p-5 border border-[var(--rkd-border)] bg-[var(--rkd-card)]"><p className="font-mono text-[9px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mb-2">DIRECT WHATSAPP</p><a href="https://wa.me/919871530594" target="_blank" rel="noopener noreferrer" className="font-montserrat font-bold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a></div>
             </div>
 
-            <div className="border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-6 md:p-10">
+            <div className="border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-5 md:p-10">
               {status === 'sent' ? (
                 <div className="py-16 text-center">
                   <div className="w-14 h-14 rounded-full border border-[var(--rkd-primary)] mx-auto flex items-center justify-center mb-6"><Check className="w-6 h-6 text-[var(--rkd-primary)]" /></div>
@@ -97,11 +97,11 @@ export function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                     <Field label="Full Name" name="name" placeholder="Your name" required />
                     <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                     <Field label="Phone" name="phone" placeholder="+91 98765 43210" />
                     <Field label="Company / Business" name="company" placeholder="Your business" />
                   </div>
