@@ -81,7 +81,7 @@ export function Header() {
             <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-[var(--rkd-primary)]">
               <span className="font-montserrat font-bold text-[var(--rkd-fg)] text-lg">RK</span>
             </div>
-            <span className="hidden sm:block font-montserrat font-semibold text-body-sm tracking-wide">
+            <span className="hidden xs:block sm:block font-montserrat font-semibold text-[10px] sm:text-body-sm tracking-[0.08em] sm:tracking-wide">
               R.K DIGITAL MEDIA
             </span>
           </Link>
@@ -153,7 +153,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://wa.me/918287533237"
+              href="https://wa.me/919871530594"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary hidden sm:inline-flex"
