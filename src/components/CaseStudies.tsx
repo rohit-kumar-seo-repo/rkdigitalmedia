@@ -69,11 +69,11 @@ const caseStudies = [
 
 export function CaseStudies() {
   return (
-    <section id="case-studies" className="relative py-20 md:py-32 lg:py-36 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)] noise-overlay">
+    <section id="case-studies" className="relative py-16 md:py-32 lg:py-36 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)] noise-overlay">
       <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="mb-16 md:mb-24 max-w-3xl"
+          className="mb-10 md:mb-24 max-w-3xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
@@ -90,13 +90,13 @@ export function CaseStudies() {
 
         {/* Portfolio Metrics Summary */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="card-base text-center">
+          <div className="card-base text-center p-4 md:p-8">
             <div className="stat-value text-[var(--rkd-primary)]">6</div>
             <div className="stat-label">Core Services</div>
           </div>
@@ -115,7 +115,7 @@ export function CaseStudies() {
         </motion.div>
 
         {/* Case Studies Grid */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {caseStudies.map((study, index) => (
             <motion.article
               key={study.id}
@@ -124,8 +124,8 @@ export function CaseStudies() {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="card-base relative overflow-hidden group">
-                <div className="grid lg:grid-cols-3 gap-8 items-start">
+              <div className="card-base relative overflow-hidden group p-5 md:p-8">
+                <div className="grid lg:grid-cols-3 gap-6 md:gap-8 items-start">
                   {/* Left: Metrics */}
                   <div className="lg:col-span-1 space-y-6">
                     <div className="flex items-center gap-2">
@@ -133,14 +133,14 @@ export function CaseStudies() {
                       <span className="font-mono text-meta text-[var(--rkd-fg-subtle)]">{study.sector}</span>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-3 md:gap-4">
                       {[
                         { label: 'Attributed Revenue', value: study.metrics.attributed, icon: TrendingUp },
                         { label: 'Reported ROAS', value: study.metrics.roas, icon: Target },
                         { label: 'Leads Generated', value: study.metrics.leads, icon: Users },
                         { label: 'Campaign Period', value: study.metrics.period, icon: Zap },
                       ].map((metric) => (
-                        <div key={metric.label} className="text-center p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
+                        <div key={metric.label} className="text-center p-3 md:p-4 bg-[var(--rkd-bg-secondary)] rounded-xl">
                           <metric.icon className="w-5 h-5 text-[var(--rkd-primary)] mx-auto mb-2" aria-hidden="true" />
                           <div className="font-montserrat font-bold text-[var(--rkd-fg)]" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', lineHeight: '1.2' }}>
                             {metric.value}
