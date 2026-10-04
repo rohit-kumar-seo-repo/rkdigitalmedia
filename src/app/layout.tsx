@@ -29,7 +29,7 @@ const organizationSchema = {
   alternateName: 'RK Digital Media',
   description: 'Digital marketing agency providing Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation.',
   url: 'https://rkdigitalmedia.in',
-  logo: 'https://rkdigitalmedia.in/icon.svg',
+  logo: 'https://rkdigitalmedia.in/logo.svg',
   sameAs: [
     'https://facebook.com/rkdigitalmedia',
     'https://instagram.com/rkdigitalmedia',
