@@ -38,6 +38,7 @@
   body {
     background-color: #0d0d0d;
     color: #f0eeee;
+    overflow-x: clip;
   }
 
   /* Custom scrollbar */
@@ -539,6 +540,6 @@
   transform: translateX(0);
 }
 @media (max-width: 640px) {
-  .whatsapp-float { right: 16px; bottom: 16px; width: 54px; height: 54px; }
+  .whatsapp-float { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); width: 54px; height: 54px; }
   .whatsapp-float-label { display: none; }
 }
