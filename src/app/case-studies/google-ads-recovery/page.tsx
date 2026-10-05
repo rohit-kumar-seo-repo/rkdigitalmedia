@@ -45,7 +45,7 @@ const study: CaseStudy = {
   stack:['Google Ads','Policy Compliance','Performance Max','Shopping Ads','Next.js','GA4 / GTM'],
   ctaTitle:'Facing a Google Ads suspension?',
   ctaText:'Start with the account, website and policy context rather than submitting repeated appeals. We can review what is visible and explain what should be investigated first.',
-  ctaHref:'/services/google-ads-suspension-recovery'
+  ctaHref:'https://adssuspensionrecovery.com/'
 };
 
 export default function GoogleAdsRecoveryPage(){ return <CaseStudyPage study={study}/>; }
