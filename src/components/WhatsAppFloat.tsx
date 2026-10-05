@@ -1,5 +1,7 @@
 'use client';
 
+import { trackEvent } from '@/lib/analytics';
+
 const WHATSAPP_URL = 'https://wa.me/919871530594?text=Hi%20R.K.%20Digital%20Media%2C%20I%27d%20like%20to%20discuss%20my%20business.';
 
 export default function WhatsAppFloat() {
@@ -10,6 +12,7 @@ export default function WhatsAppFloat() {
       rel="noopener noreferrer"
       aria-label="Chat with R.K Digital Media on WhatsApp"
       className="whatsapp-float"
+      onClick={() => trackEvent('whatsapp_click', { location: 'floating_button' })}
     >
       <span className="whatsapp-float-label">Chat on WhatsApp</span>
       <svg viewBox="0 0 32 32" aria-hidden="true" className="whatsapp-float-icon" fill="none">
