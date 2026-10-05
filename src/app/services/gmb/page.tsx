@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Management Services | Noida | R.K Digital Media",
-  description: "Google Business Profile management for local businesses covering categories, services, reviews, profile updates and local search visibility in Noida and Delhi NCR.",
+  title: "Google Business Profile Management in Noida | R.K Digital Media",
+  description: "Google Business Profile management and optimisation in Noida covering categories, services, reviews, profile updates and local search visibility for businesses in Noida, Greater Noida and Delhi NCR.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/gmb" },
   openGraph: {
-    title: "Google Business Profile Management Services | Noida | R.K Digital Media",
-    description: "Google Business Profile management for local businesses covering categories, services, reviews, profile updates and local search visibility in Noida and Delhi NCR.",
+    title: "Google Business Profile Management in Noida | R.K Digital Media",
+    description: "Google Business Profile management and optimisation in Noida covering categories, services, reviews, profile updates and local search visibility for businesses in Noida, Greater Noida and Delhi NCR.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/gmb",
     siteName: 'R.K Digital Media',
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 const data: ServicePillarData = {
   "number": "05",
   "label": "GOOGLE BUSINESS PROFILE MANAGEMENT",
-  "title": "Google Business Profile Management for stronger local visibility",
-  "intro": "Structured Google Business Profile optimisation and ongoing management for businesses that depend on Google Maps, local discovery, calls, directions and enquiries.",
-  "intent": "A Google Business Profile is one part of local search, but an important one. It needs accurate information, appropriate categories, useful services, legitimate reviews and alignment with the website and real-world business.",
+  "title": "Google Business Profile Management in Noida for Stronger Local Visibility",
+  "intro": "Google Business Profile optimisation and ongoing management for businesses in Noida, Greater Noida and Delhi NCR that depend on Google Maps, local discovery, calls, directions and enquiries.",
+  "intent": "Google Business Profile management is one part of local SEO, but an important one. A strong profile needs accurate information, appropriate categories, useful services, legitimate reviews and alignment with the website and real-world business.",
   "outcomes": [
     "A more complete and accurately positioned Business Profile.",
     "Better alignment between categories, services, website content and the actual business.",
@@ -29,7 +29,7 @@ const data: ServicePillarData = {
   "capabilities": [
     [
       "Profile setup & optimisation",
-      "Configure or improve core business information, categories, description, services and available profile fields."
+      "Configure or improve core business information, categories, description, services and available profile fields for the local market."
     ],
     [
       "Category strategy",
@@ -49,7 +49,7 @@ const data: ServicePillarData = {
     ],
     [
       "Local SEO alignment",
-      "Connect GBP work with location pages, on-page signals, citations and broader local SEO foundations."
+      "Connect GBP work with location pages, on-page signals, citations and broader local SEO foundations so the profile and website support the same local search intent."
     ]
   ],
   "process": [
@@ -116,7 +116,7 @@ const data: ServicePillarData = {
       "We can establish a legitimate review-request process and manage responses. We do not recommend buying, fabricating or manipulating reviews."
     ],
     [
-      "Do you work outside Noida?",
+      "Do you provide Google Business Profile management outside Noida?",
       "Yes. The service can be delivered remotely, while Noida, Greater Noida and Delhi NCR are important local markets."
     ],
     [
@@ -138,9 +138,9 @@ const serviceSchema = {
     {'@type':'BreadcrumbList','itemListElement':[
       {'@type':'ListItem','position':1,'name':'Home','item':'https://rkdigitalmedia.in/'},
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
-      {'@type':'ListItem','position':3,'name':"Google Business Profile Management for stronger local visibility",'item':"https://rkdigitalmedia.in/services/gmb"}
+      {'@type':'ListItem','position':3,'name':"Google Business Profile Management in Noida for Stronger Local Visibility",'item':"https://rkdigitalmedia.in/services/gmb"}
     ]},
-    {'@type':'Service','name':"Google Business Profile Management for stronger local visibility",'serviceType':"Google Business Profile Management for stronger local visibility",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/gmb"}
+    {'@type':'Service','name':"Google Business Profile Management for stronger local visibility",'serviceType':"Google Business Profile Management",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/gmb"}
   ]
 };
 
