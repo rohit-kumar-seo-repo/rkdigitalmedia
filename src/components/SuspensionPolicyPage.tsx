@@ -13,7 +13,8 @@ export function SuspensionPolicyPage({ policy }: { policy: SuspensionPolicy }) {
             <h1 className="hero-headline text-[var(--rkd-fg)] mb-7">{policy.h1}</h1>
             <p className="hero-subheadline max-w-3xl">{policy.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4 mt-9">
-              <Link href="/contact" className="btn-primary group">Get Your Suspension Reviewed <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+              <Link href="/services/google-ads-suspension-recovery" className="btn-primary group">Google Ads Suspension Recovery Service <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+              <Link href="/contact" className="btn-secondary">Request a Policy Review</Link>
               <a href={policy.googleUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">Read Google Policy <ArrowUpRight className="w-4 h-4" /></a>
             </div>
           </div>
@@ -81,7 +82,14 @@ export function SuspensionPolicyPage({ policy }: { policy: SuspensionPolicy }) {
       </section>
 
       <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
-        <div className="max-w-[80rem] mx-auto px-4 md:px-6"><p className="section-label mb-4">// 06. GOOGLE'S DOCUMENTATION</p><div className="grid lg:grid-cols-[1fr_0.7fr] gap-12"><div><h2 className="section-heading section-heading-h2 mb-5">Use Google's policy as the <span className="text-red-italic">source of truth.</span></h2><p className="text-[var(--rkd-fg-muted)] leading-relaxed">Policy language and enforcement requirements can change. We use the current Google documentation when reviewing a case and do not treat old appeal templates or third-party summaries as the controlling policy.</p></div><div className="card-base p-7"><p className="section-label mb-4">// OFFICIAL SOURCE</p><h3 className="section-heading section-heading-h3 mb-5">{policy.googleSourceName}</h3><a href={policy.googleUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex">Open Google documentation <ArrowUpRight className="w-4 h-4"/></a></div></div></div>
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <div className="card-base p-6 md:p-7 mb-12 border-l-2 border-l-[var(--rkd-primary)]">
+            <p className="section-label mb-3">// RECOVERY HUB</p>
+            <h2 className="section-heading section-heading-h3 mb-3">Part of the Google Ads Suspension Recovery framework</h2>
+            <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed max-w-3xl mb-5">This policy page is one part of the broader suspension-review process. Use the main service page for the complete recovery workflow, account review scope and next steps.</p>
+            <Link href="/services/google-ads-suspension-recovery" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">View the main recovery service <ArrowRight className="w-4 h-4"/></Link>
+          </div>
+          <p className="section-label mb-4">// 06. GOOGLE'S DOCUMENTATION</p><div className="grid lg:grid-cols-[1fr_0.7fr] gap-12"><div><h2 className="section-heading section-heading-h2 mb-5">Use Google's policy as the <span className="text-red-italic">source of truth.</span></h2><p className="text-[var(--rkd-fg-muted)] leading-relaxed">Policy language and enforcement requirements can change. We use the current Google documentation when reviewing a case and do not treat old appeal templates or third-party summaries as the controlling policy.</p></div><div className="card-base p-7"><p className="section-label mb-4">// OFFICIAL SOURCE</p><h3 className="section-heading section-heading-h3 mb-5">{policy.googleSourceName}</h3><a href={policy.googleUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex">Open Google documentation <ArrowUpRight className="w-4 h-4"/></a></div></div></div>
       </section>
 
       <section className="py-20 md:py-28 bg-[var(--rkd-bg)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6"><p className="section-label mb-4">// 07. FAQ</p><div className="max-w-4xl">{policy.faqs.map(([q,a])=><details key={q} className="border-t border-[var(--rkd-border)] py-6"><summary className="cursor-pointer list-none font-semibold text-[var(--rkd-fg)]">{q}</summary><p className="mt-4 text-sm text-[var(--rkd-fg-muted)] leading-relaxed max-w-3xl">{a}</p></details>)}</div></div></section>
