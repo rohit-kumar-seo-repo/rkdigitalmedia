@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { suspensionPolicies } from '@/data/suspension-policies';
 import { blogPosts } from '@/app/insights/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/services/gmb', 'monthly', 0.8],
     ['/services/ai-automation', 'monthly', 0.8],
     ['/services/web-development', 'monthly', 0.8],
-    ['/services/google-ads-suspension-recovery', 'monthly', 0.8],
     ['/case-studies', 'weekly', 0.9],
     ['/case-studies/local-seo-domination', 'monthly', 0.8],
     ['/case-studies/google-ads-recovery', 'monthly', 0.8],
@@ -38,11 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}${path}`,
       changeFrequency,
       priority,
-    })),
-    ...suspensionPolicies.map((policy) => ({
-      url: `${base}/services/google-ads-suspension-recovery/policies/${policy.slug}`,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
     })),
     ...blogPosts.map((post) => ({
       url: `${base}/insights/${post.slug}`,
