@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube, ArrowRight, ArrowUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { trackEvent } from '@/lib/analytics';
 
 const footerNav = {
   Services: [
@@ -124,11 +125,11 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <a href="tel:+919871530594" className="hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a>
+                <a href="tel:+919871530594" onClick={() => trackEvent('phone_click', { location: 'footer' })} className="hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <a href="mailto:info@rkdigitalmedia.in" className="hover:text-[var(--rkd-primary)] transition-colors">info@rkdigitalmedia.in</a>
+                <a href="mailto:info@rkdigitalmedia.in" onClick={() => trackEvent('email_click', { location: 'footer' })} className="hover:text-[var(--rkd-primary)] transition-colors">info@rkdigitalmedia.in</a>
               </div>
             </address>
           </div>
