@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MessageSquare, ChevronDown, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { trackEvent } from '@/lib/analytics';
 
 const navItems = [
   { href: '/services', label: 'Services', hasDropdown: true },
@@ -157,6 +158,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary hidden sm:inline-flex"
+              onClick={() => trackEvent('whatsapp_click', { location: 'header_desktop' })}
             >
               <MessageSquare className="w-4 h-4" aria-hidden="true" />
               WhatsApp
@@ -235,6 +237,7 @@ export function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary justify-center"
+                    onClick={() => trackEvent('whatsapp_click', { location: 'header_mobile' })}
                     onClick={() => setIsOpen(false)}
                   >
                     <MessageSquare className="w-4 h-4" aria-hidden="true" />
