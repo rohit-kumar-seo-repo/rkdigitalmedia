@@ -145,9 +145,9 @@ const serviceSchema = {
     {'@type':'BreadcrumbList','itemListElement':[
       {'@type':'ListItem','position':1,'name':'Home','item':'https://rkdigitalmedia.in/'},
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
-      {'@type':'ListItem','position':3,'name':"Google Ads Services for measurable customer acquisition",'item':"https://rkdigitalmedia.in/services/google-ads"}
+      {'@type':'ListItem','position':3,'name':"Google Ads Services in Noida",'item':"https://rkdigitalmedia.in/services/google-ads"}
     ]},
-    {'@type':'Service','name':"Google Ads Services for measurable customer acquisition",'serviceType':"Google Ads Services for measurable customer acquisition",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/google-ads"}
+    {'@type':'Service','name':"Google Ads Services in Noida",'serviceType':"Google Ads Management Services",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/google-ads"}
   ]
 };
 
