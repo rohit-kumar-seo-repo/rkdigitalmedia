@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/ui/CustomCursor';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Script from 'next/script';
 import './globals.css';
 
@@ -267,6 +268,7 @@ export default function RootLayout({
         <link rel="robots" href="/robots.txt" />
       </head>
       <body className="bg-[var(--rkd-bg)] text-[var(--rkd-fg)] font-outfit antialiased">
+        <GoogleAnalytics />
         <CustomCursor />
         <Header />
         <div id="main-content">{children}</div>
