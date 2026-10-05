@@ -12,7 +12,7 @@ export async function generateMetadata({params}:PageProps):Promise<Metadata>{
   const policy=getSuspensionPolicy(slug);
   if(!policy)return {};
   const url=`https://rkdigitalmedia.in/services/google-ads-suspension-recovery/policies/${policy.slug}`;
-  return {title:`${policy.h1} | R.K Digital Media`,description:policy.intro,alternates:{canonical:url},openGraph:{title:`${policy.h1} | R.K Digital Media`,description:policy.intro,type:'website',url,siteName:'R.K Digital Media'}};
+  return {title:`${policy.h1} | R.K Digital Media`,description:policy.intro,robots:{index:false,follow:true},alternates:{canonical:url},openGraph:{title:`${policy.h1} | R.K Digital Media`,description:policy.intro,type:'website',url,siteName:'R.K Digital Media'}};
 }
 
 export default async function Page({params}:PageProps){
