@@ -18,6 +18,7 @@ export type CaseStudy = {
   stack: string[];
   ctaTitle: string;
   ctaText: string;
+  ctaHref?: string;
 };
 
 export function CaseStudyPage({ study }: { study: CaseStudy }) {
@@ -113,7 +114,7 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
             <h2 className="section-heading section-heading-h2 mb-6">{study.ctaTitle}</h2>
             <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl mb-8">{study.ctaText}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary group">Start a Conversation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+              <Link href={study.ctaHref ?? "/contact"} className="btn-primary group">Explore Recovery Service <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
               <Link href="/case-studies" className="btn-secondary">All Case Studies <ArrowUpRight className="w-4 h-4" /></Link>
             </div>
           </div>
