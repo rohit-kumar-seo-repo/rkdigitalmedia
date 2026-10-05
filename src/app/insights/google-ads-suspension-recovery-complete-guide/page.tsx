@@ -5,6 +5,7 @@ import InsightVisual from '@/components/InsightVisual';
 export const metadata: Metadata = {
   title: "Google Ads Suspension Recovery: A Practical Account Review & Appeal Guide | R.K Digital Media",
   description: "What to check before appealing a suspended Google Ads account—and what to fix so you are not simply asking Google to review the same problem again.",
+  robots: { index: false, follow: true },
   openGraph: { title: "Google Ads Suspension Recovery: A Practical Account Review & Appeal Guide", description: "What to check before appealing a suspended Google Ads account—and what to fix so you are not simply asking Google to review the same problem again.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/google-ads-suspension-recovery-complete-guide", siteName: 'R.K Digital Media' },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/google-ads-suspension-recovery-complete-guide" },
 };
