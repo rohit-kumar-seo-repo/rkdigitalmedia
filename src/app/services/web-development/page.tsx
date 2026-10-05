@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Website Development Services in Noida | R.K Digital Media",
-  description: "Conversion-focused website development for businesses in Noida and Delhi NCR with responsive UX, technical SEO foundations, analytics and clear enquiry paths.",
+  title: "Website Development Company in Noida | R.K Digital Media",
+  description: "Website development company in Noida building responsive business websites, landing pages and SEO-ready web experiences for businesses in Noida, Greater Noida and Delhi NCR.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/web-development" },
   openGraph: {
-    title: "Website Development Services in Noida | R.K Digital Media",
-    description: "Conversion-focused website development for businesses in Noida and Delhi NCR with responsive UX, technical SEO foundations, analytics and clear enquiry paths.",
+    title: "Website Development Company in Noida | R.K Digital Media",
+    description: "Website development company in Noida building responsive business websites, landing pages and SEO-ready web experiences for businesses in Noida, Greater Noida and Delhi NCR.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/web-development",
     siteName: 'R.K Digital Media',
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 const data: ServicePillarData = {
   "number": "02",
   "label": "WEBSITE DEVELOPMENT SERVICES",
-  "title": "Website Development Services built for search, trust and conversion",
-  "intro": "Business websites and landing pages designed to explain the offer clearly, load well, support SEO and make the next action obvious.",
-  "intent": "A website is where search traffic, paid traffic, referrals and direct visitors decide whether to trust the business and act. Development therefore connects design, information architecture, technical SEO, analytics and conversion paths.",
+  "title": "Website Development Company in Noida for Search, Trust and Conversion",
+  "intro": "Website development in Noida for businesses that need a credible, responsive website with clean architecture, technical SEO foundations and clear enquiry paths.",
+  "intent": "A business website is where search traffic, paid traffic, referrals and direct visitors decide whether to trust the company and take action. Our website development services in Noida connect design, information architecture, technical SEO, analytics and conversion paths so the site supports both acquisition and enquiries.",
   "outcomes": [
     "Clearer information architecture for visitors and search engines.",
     "Responsive pages that remain usable across mobile, tablet and desktop.",
@@ -29,11 +29,11 @@ const data: ServicePillarData = {
   "capabilities": [
     [
       "Business website development",
-      "Build service-led websites that explain what the business does, who it serves and why visitors should continue."
+      "Build service-led websites for businesses in Noida and Delhi NCR that explain the offer clearly, support search visibility and guide visitors toward enquiry or booking."
     ],
     [
       "Landing pages",
-      "Create focused pages for paid campaigns, local services, offers or specific search intent."
+      "Create focused landing pages for Google Ads, local services, offers and specific commercial search intent."
     ],
     [
       "Next.js & modern builds",
@@ -41,7 +41,7 @@ const data: ServicePillarData = {
     ],
     [
       "Technical SEO foundations",
-      "Set up clean URLs, metadata, headings, internal linking, canonicalisation and crawl-friendly structures."
+      "Set up clean URLs, metadata, headings, internal linking, canonicalisation and crawl-friendly structures from the start."
     ],
     [
       "Analytics & conversion tracking",
@@ -108,8 +108,8 @@ const data: ServicePillarData = {
   ],
   "faqs": [
     [
-      "Do you build websites for SEO?",
-      "Yes. URLs, headings, metadata, internal links, crawlability and page structure are considered during architecture and development. Rankings still depend on the broader SEO system."
+      "Do you build SEO-ready websites in Noida?",
+      "Yes. URLs, headings, metadata, internal links, crawlability and page structure are considered during architecture and development. Rankings still depend on the broader SEO system and ongoing content and authority work."
     ],
     [
       "Can you rebuild an existing website?",
@@ -138,9 +138,9 @@ const serviceSchema = {
     {'@type':'BreadcrumbList','itemListElement':[
       {'@type':'ListItem','position':1,'name':'Home','item':'https://rkdigitalmedia.in/'},
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
-      {'@type':'ListItem','position':3,'name':"Website Development Services built for search, trust and conversion",'item':"https://rkdigitalmedia.in/services/web-development"}
+      {'@type':'ListItem','position':3,'name':"Website Development Company in Noida for Search, Trust and Conversion",'item':"https://rkdigitalmedia.in/services/web-development"}
     ]},
-    {'@type':'Service','name':"Website Development Services built for search, trust and conversion",'serviceType':"Website Development Services built for search, trust and conversion",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/web-development"}
+    {'@type':'Service','name':"Website Development Company in Noida for Search, Trust and Conversion",'serviceType':"Website Development Company in Noida for Search, Trust and Conversion",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/web-development"}
   ]
 };
 
