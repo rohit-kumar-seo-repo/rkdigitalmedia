@@ -124,6 +124,13 @@ const data: ServicePillarData = {
       "Yes. Landing-page recommendations are included where the experience materially affects paid traffic performance. Full development can be scoped separately."
     ]
   ],
+  "relatedService": {
+    "eyebrow": "ACCOUNT SUSPENSION SUPPORT",
+    "title": "Already dealing with a Google Ads suspension?",
+    "text": "The standard Google Ads service is for campaign management. If the account has been suspended or restricted, start with the dedicated recovery workflow instead.",
+    "href": "/services/google-ads-suspension-recovery",
+    "label": "Explore Suspension Recovery"
+  },
   "caseStudy": {
     "eyebrow": "Google Ads / documented project",
     "title": "Google Ads Suspension Recovery & Scale",
