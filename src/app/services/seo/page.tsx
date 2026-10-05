@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 const data: ServicePillarData = {
   "number": "04",
   "label": "SEO SERVICES",
-  "title": "SEO Services built around search intent and useful pages",
-  "intro": "Technical SEO, on-page optimisation, content strategy and local search work designed to earn visibility for searches that can matter to the business.",
-  "intent": "SEO connects technical accessibility, search intent, useful content, internal linking, local relevance and authority. The starting point is understanding what people search for and whether the site gives them a strong answer.",
+  "title": "SEO Company in Noida for Search Growth and Local Visibility",
+  "intro": "SEO services in Noida covering technical SEO, on-page optimisation, content strategy and local search work designed to earn visibility for searches that can matter to the business.",
+  "intent": "SEO connects technical accessibility, search intent, useful content, internal linking, local relevance and authority. We build that system for businesses in Noida, Greater Noida and Delhi NCR, starting with what customers search for and whether the site gives them a strong answer.",
   "outcomes": [
     "Cleaner technical foundations for crawling and indexing.",
     "Pages mapped to distinct search intent instead of overlapping each other.",
@@ -116,8 +116,8 @@ const data: ServicePillarData = {
       "No. Search results are dynamic and influenced by competition, algorithms, location and many other factors. We measure visibility, qualified traffic and business actions."
     ],
     [
-      "Do you focus on local SEO?",
-      "Yes. Local SEO is important for businesses whose customers search by city, area or proximity. It can include website pages, GBP and local relevance signals."
+      "Do you provide local SEO services in Noida?",
+      "Yes. Local SEO is important for businesses in Noida and nearby areas whose customers search by city, area or proximity. It can include service pages, location relevance, GBP alignment and internal linking."
     ],
     [
       "Can you work with an existing SEO team?",
@@ -140,7 +140,7 @@ const serviceSchema = {
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
       {'@type':'ListItem','position':3,'name':"SEO Services built around search intent and useful pages",'item':"https://rkdigitalmedia.in/services/seo"}
     ]},
-    {'@type':'Service','name':"SEO Services built around search intent and useful pages",'serviceType':"SEO Services built around search intent and useful pages",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/seo"}
+    {'@type':'Service','name':"SEO Company in Noida",'serviceType':"SEO Services",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/seo"}
   ]
 };
 
