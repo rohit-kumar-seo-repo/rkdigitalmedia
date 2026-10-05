@@ -237,8 +237,10 @@ export function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary justify-center"
-                    onClick={() => trackEvent('whatsapp_click', { location: 'header_mobile' })}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      trackEvent('whatsapp_click', { location: 'header_mobile' });
+                      setIsOpen(false);
+                    }}
                   >
                     <MessageSquare className="w-4 h-4" aria-hidden="true" />
                     WhatsApp
