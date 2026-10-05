@@ -33,6 +33,31 @@ export type ServicePillarData = {
   };
 };
 
+const defaultRelatedService = (label: string): ServicePillarData['relatedService'] => {
+  if (label.includes('SEO')) return {
+    eyebrow: 'LOCAL SEARCH SUPPORT',
+    title: 'Need Google Maps visibility too?',
+    text: 'SEO and Google Business Profile work are stronger when the website, local profile and search intent are aligned. Explore the dedicated GBP management service.',
+    href: '/services/gmb',
+    label: 'Explore GBP Management'
+  };
+  if (label.includes('GOOGLE BUSINESS PROFILE')) return {
+    eyebrow: 'WEBSITE SEO SUPPORT',
+    title: 'Want local visibility beyond your profile?',
+    text: 'GBP is one part of local search. A stronger website and location-page structure can support broader organic visibility alongside your profile.',
+    href: '/services/seo',
+    label: 'Explore SEO Services'
+  };
+  if (label.includes('WEBSITE DEVELOPMENT')) return {
+    eyebrow: 'SEARCH VISIBILITY SUPPORT',
+    title: 'Need the new website to rank too?',
+    text: 'Development creates the foundation; SEO turns that foundation into a search strategy. See how the two services fit together.',
+    href: '/services/seo',
+    label: 'Explore SEO Services'
+  };
+  return undefined;
+};
+
 export function ServicePillarPage({ data }: { data: ServicePillarData }) {
   return (
     <main id="top">
@@ -177,17 +202,17 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
         </div>
       </section>
 
-      {data.relatedService && (
+      {(data.relatedService ?? defaultRelatedService(data.label)) && (
         <section className="py-16 md:py-20 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6">
             <div className="card-base p-7 md:p-9 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
               <div className="max-w-3xl">
-                <p className="section-label mb-3">// {data.relatedService.eyebrow}</p>
-                <h2 className="section-heading section-heading-h3 mb-3">{data.relatedService.title}</h2>
-                <p className="text-sm md:text-base text-[var(--rkd-fg-muted)] leading-relaxed">{data.relatedService.text}</p>
+                <p className="section-label mb-3">// {(data.relatedService ?? defaultRelatedService(data.label))!.eyebrow}</p>
+                <h2 className="section-heading section-heading-h3 mb-3">{(data.relatedService ?? defaultRelatedService(data.label))!.title}</h2>
+                <p className="text-sm md:text-base text-[var(--rkd-fg-muted)] leading-relaxed">{(data.relatedService ?? defaultRelatedService(data.label))!.text}</p>
               </div>
-              <Link href={data.relatedService.href} className="btn-secondary whitespace-nowrap">
-                {data.relatedService.label} <ArrowRight className="w-4 h-4" />
+              <Link href={(data.relatedService ?? defaultRelatedService(data.label))!.href} className="btn-secondary whitespace-nowrap">
+                {(data.relatedService ?? defaultRelatedService(data.label))!.label} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
