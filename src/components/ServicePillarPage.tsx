@@ -16,6 +16,7 @@ export type ServicePillarData = {
   included: string[];
   faqs: [string, string][];
   caseStudy?: { eyebrow: string; title: string; text: string; href: string };
+  relatedService?: { eyebrow: string; title: string; text: string; href: string; label: string };
   policyHub?: {
     title: string;
     intro: string;
@@ -175,6 +176,23 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           </div>
         </div>
       </section>
+
+      {data.relatedService && (
+        <section className="py-16 md:py-20 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
+          <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+            <div className="card-base p-7 md:p-9 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+              <div className="max-w-3xl">
+                <p className="section-label mb-3">// {data.relatedService.eyebrow}</p>
+                <h2 className="section-heading section-heading-h3 mb-3">{data.relatedService.title}</h2>
+                <p className="text-sm md:text-base text-[var(--rkd-fg-muted)] leading-relaxed">{data.relatedService.text}</p>
+              </div>
+              <Link href={data.relatedService.href} className="btn-secondary whitespace-nowrap">
+                {data.relatedService.label} <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {data.policyHub && (
         <section className="py-20 md:py-28 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
