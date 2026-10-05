@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "SEO Services in Noida & Greater Noida | R.K Digital Media",
-  description: "SEO services covering technical SEO, search-intent mapping, on-page optimisation, content and local SEO for businesses in Noida, Greater Noida and Delhi NCR.",
+  title: "SEO Company in Noida | SEO Services & Local SEO | R.K Digital Media",
+  description: "SEO company in Noida providing SEO services, local SEO, technical SEO, on-page optimisation and content strategy for businesses in Noida, Greater Noida and Delhi NCR.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/seo" },
   openGraph: {
-    title: "SEO Services in Noida & Greater Noida | R.K Digital Media",
-    description: "SEO services covering technical SEO, search-intent mapping, on-page optimisation, content and local SEO for businesses in Noida, Greater Noida and Delhi NCR.",
+    title: "SEO Company in Noida | SEO Services & Local SEO | R.K Digital Media",
+    description: "SEO company in Noida providing SEO services, local SEO, technical SEO, on-page optimisation and content strategy for businesses in Noida, Greater Noida and Delhi NCR.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/seo",
     siteName: 'R.K Digital Media',
