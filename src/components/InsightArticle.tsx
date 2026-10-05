@@ -64,8 +64,48 @@ function getRelatedResources(category:string,title:string){
   if(category==='AI AUTOMATION'){
     return [
       ['/services/ai-automation','AI Automation Services'],
+      ['/insights/ai-automation-lead-generation-5-workflows','AI Automation for Lead Generation'],
       ['/process','Our Process'],
       ['/contact','Contact R.K Digital Media'],
+    ];
+  }
+  if(category==='SEO' || category==='SEO STRATEGY'){
+    return [
+      ['/services/seo','SEO Services'],
+      ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
+      ['/insights/seo-vs-paid-ads-2025-which-wins','SEO vs Google Ads'],
+      ['/insights/gmb-optimization-map-pack-checklist-50-steps','Google Business Profile Optimization Checklist'],
+    ];
+  }
+  if(category==='GOOGLE ADS'){
+    return [
+      ['/services/google-ads','Google Ads Services'],
+      ['/insights/google-ads-campaign-types','Google Ads Campaign Types'],
+      ['/insights/google-ads-expert-noida','Google Ads Expert in Noida'],
+      ['/insights/google-ads-expert-delhi','Google Ads Expert in Delhi'],
+      ['/insights/google-ads-expert-greater-noida','Google Ads Expert in Greater Noida'],
+    ].filter(([href])=>!normalized.includes(href.split('/').pop()!.replace(/-/g,' '))).slice(0,4);
+  }
+  if(category==='WEBSITE DEVELOPMENT' || normalized.includes('website development') || normalized.includes('web development')){
+    return [
+      ['/services/web-development','Website Development Services'],
+      ['/services','Digital Marketing Services'],
+      ['/contact','Contact R.K Digital Media'],
+    ];
+  }
+  if(category==='SUSPENSION RECOVERY' || normalized.includes('suspension') || normalized.includes('circumventing') || normalized.includes('suspicious payment')){
+    return [
+      ['/services/google-ads-suspension-recovery','Google Ads Suspension Recovery'],
+      ['/insights/google-ads-suspension-recovery-complete-guide','Google Ads Suspension Recovery Guide'],
+      ['/case-studies/google-ads-recovery','Google Ads Recovery Case Study'],
+    ];
+  }
+  if(category==='LOCAL SEO'){
+    return [
+      ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
+      ['/insights/gmb-optimization-map-pack-checklist-50-steps','Google Business Profile Optimization Checklist'],
+      ['/services/seo','Local SEO Services'],
+      ['/services/gmb','Google Business Profile Management'],
     ];
   }
   return [];
