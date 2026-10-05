@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Google Ads Services in Noida & Delhi NCR | R.K Digital Media",
-  description: "Google Ads management for Search, Shopping, Performance Max and YouTube campaigns with conversion tracking, optimisation and transparent reporting.",
+  title: "Google Ads Services in Noida | Google Ads Management | R.K Digital Media",
+  description: "Google Ads services and management in Noida for Search, Shopping, Performance Max and YouTube campaigns, with conversion tracking, search-term optimisation and landing-page alignment.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/google-ads" },
   openGraph: {
-    title: "Google Ads Services in Noida & Delhi NCR | R.K Digital Media",
+    title: "Google Ads Services in Noida | Google Ads Management | R.K Digital Media",
     description: "Google Ads management for Search, Shopping, Performance Max and YouTube campaigns with conversion tracking, optimisation and transparent reporting.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/google-ads",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 const data: ServicePillarData = {
   "number": "01",
   "label": "GOOGLE ADS SERVICES",
-  "title": "Google Ads Services for measurable customer acquisition",
-  "intro": "Search, Shopping, Performance Max and YouTube campaigns built around qualified demand, conversion tracking and disciplined optimisation — not simply higher click volume.",
-  "intent": "Google Ads works best when account structure, search intent, offer, landing page and conversion tracking are treated as one system. We focus on the parts that influence profitable acquisition.",
+  "title": "Google Ads Services in Noida for measurable customer acquisition",
+  "intro": "Google Ads management in Noida for Search, Shopping, Performance Max and YouTube campaigns, built around qualified demand, conversion tracking and disciplined optimisation — not simply higher click volume.",
+  "intent": "Google Ads services work best when account structure, search intent, offer, landing page and conversion tracking are treated as one system. We manage the paid-search journey from keyword and query selection through landing-page alignment and conversion measurement for businesses in Noida, Greater Noida and Delhi NCR.",
   "outcomes": [
     "Clearer separation between high-intent and exploratory traffic.",
     "Better visibility into which campaigns, queries and landing pages generate meaningful conversions.",
