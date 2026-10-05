@@ -4,7 +4,6 @@ import { blogPosts } from '@/app/insights/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://rkdigitalmedia.in';
-  const now = new Date();
 
   const core = [
     ['', 'weekly', 1],
@@ -37,13 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...core.map(([path, changeFrequency, priority]) => ({
       url: `${base}${path}`,
-      lastModified: now,
       changeFrequency,
       priority,
     })),
     ...suspensionPolicies.map((policy) => ({
       url: `${base}/services/google-ads-suspension-recovery/policies/${policy.slug}`,
-      lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     })),
