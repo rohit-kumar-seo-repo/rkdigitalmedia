@@ -5,8 +5,9 @@ export const metadata: Metadata = {
   title: "Google Ads Suspension Recovery in Noida | R.K Digital Media",
   description: "Google Ads suspension recovery in Noida covering account, website, billing, policy review, corrective actions and appeal preparation for suspended advertisers.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/google-ads-suspension-recovery" },
+  robots: { index: false, follow: true },
   openGraph: {
-    title: "Google Ads Suspension Recovery in Noida | R.K Digital Media",
+    title: "Google Ads Suspension Support | R.K Digital Media",
     description: "Structured Google Ads suspension recovery covering account, website, billing, ad and policy review, corrective actions and appeal preparation.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/google-ads-suspension-recovery",
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
 const data: ServicePillarData = {
   "number": "03",
   "label": "GOOGLE ADS SUSPENSION RECOVERY",
-  "title": "Google Ads Suspension Recovery in Noida, built around diagnosis first",
-  "intro": "Google Ads suspension recovery in Noida with a structured review of the account, website, billing, ads, assets and relevant business systems before preparing a clearer appeal.",
-  "intent": "A suspension is not normally solved by repeatedly submitting the same appeal. We diagnose the notice, inspect relevant parts of the advertising ecosystem, correct genuine issues and document what changed for advertisers in Noida, Greater Noida, Delhi NCR and beyond.",
+  "title": "Google Ads Suspension Support for R.K Digital Media Clients",
+  "intro": "If your Google Ads account has been suspended, R.K Digital Media can help identify the advertising, website or business issues that need investigation before you take another appeal step.",
+  "intent": "Dedicated suspension recovery is handled through our specialist platform, AdsSuspensionRecovery.com. This page remains a supporting resource for R.K Digital Media clients who need to understand when suspension work should be separated from normal campaign management.",
   "outcomes": [
     "A clearer picture of the policy or trust issue described by the suspension notice.",
     "A documented list of website, account, billing or advertising issues that need attention.",
@@ -125,10 +126,10 @@ const data: ServicePillarData = {
     ]
   ],
   "caseStudy": {
-    "eyebrow": "Google Ads / documented project",
-    "title": "Google Ads Suspension Recovery & Scale",
-    "text": "The documented project covers policy review, landing-page work, product-feed cleanup, appeal preparation and campaign rebuilding after reinstatement.",
-    "href": "/case-studies/google-ads-recovery"
+    "eyebrow": "SPECIALIST RECOVERY PLATFORM",
+    "title": "Need dedicated Google Ads suspension recovery?",
+    "text": "For suspension diagnosis, policy-specific recovery guidance, website compliance review and appeal preparation, use our specialist platform rather than treating suspension work as a normal campaign-management engagement.",
+    "href": "https://adssuspensionrecovery.com/"
   },
   "policyHub": {
     "title": "Google Ads policies we investigate during a suspension review",
@@ -300,7 +301,7 @@ const serviceSchema = {
     {'@type':'BreadcrumbList','itemListElement':[
       {'@type':'ListItem','position':1,'name':'Home','item':'https://rkdigitalmedia.in/'},
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
-      {'@type':'ListItem','position':3,'name':"Google Ads Suspension Recovery Services built around diagnosis first",'item':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
+      {'@type':'ListItem','position':3,'name':"Google Ads Suspension Support",'item':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
     ]},
     {'@type':'Service','name':"Google Ads Suspension Recovery in Noida",'serviceType':"Google Ads Suspension Recovery Services",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
   ]
