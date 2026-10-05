@@ -159,7 +159,7 @@ export function Hero() {
             <span className="hidden sm:inline text-[var(--rkd-fg-muted)]">|</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">6 Core Services</span>
             <span className="hidden sm:inline text-[var(--rkd-fg-muted)]">·</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">4 Case Studies</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">100+ Case Studies</span>
             <span className="text-[var(--rkd-fg-muted)]">·</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">8+ Years Experience</span>
           </div>
@@ -199,7 +199,7 @@ export function Hero() {
           <div className="flex animate-marquee-reverse whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex items-center shrink-0">
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">4 DOCUMENTED CASE STUDIES</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">100+ CASE STUDIES</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
                 <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">12× PEAK REPORTED ROAS</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
