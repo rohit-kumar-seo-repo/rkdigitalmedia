@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
+// Suspension-recovery search intent is intentionally delegated to AdsSuspensionRecovery.com.
 const data: ServicePillarData = {
   "number": "03",
   "label": "GOOGLE ADS SUSPENSION RECOVERY",
