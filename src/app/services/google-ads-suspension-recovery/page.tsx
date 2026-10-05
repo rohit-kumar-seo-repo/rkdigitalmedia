@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Google Ads Suspension Recovery Services | R.K Digital Media",
-  description: "Structured Google Ads suspension recovery covering account, website, billing, ad and policy review, corrective actions and appeal preparation.",
+  title: "Google Ads Suspension Recovery in Noida | R.K Digital Media",
+  description: "Google Ads suspension recovery in Noida covering account, website, billing, policy review, corrective actions and appeal preparation for suspended advertisers.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/google-ads-suspension-recovery" },
   openGraph: {
-    title: "Google Ads Suspension Recovery Services | R.K Digital Media",
+    title: "Google Ads Suspension Recovery in Noida | R.K Digital Media",
     description: "Structured Google Ads suspension recovery covering account, website, billing, ad and policy review, corrective actions and appeal preparation.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/google-ads-suspension-recovery",
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 const data: ServicePillarData = {
   "number": "03",
   "label": "GOOGLE ADS SUSPENSION RECOVERY",
-  "title": "Google Ads Suspension Recovery Services built around diagnosis first",
-  "intro": "A structured review of the account, website, billing, ads, assets and relevant business systems to identify policy risks before preparing a clearer appeal.",
-  "intent": "A suspension is not normally solved by repeatedly submitting the same appeal. The useful first step is diagnosis: understand the notice, inspect relevant parts of the advertising ecosystem, correct genuine issues and document what changed.",
+  "title": "Google Ads Suspension Recovery in Noida, built around diagnosis first",
+  "intro": "Google Ads suspension recovery in Noida with a structured review of the account, website, billing, ads, assets and relevant business systems before preparing a clearer appeal.",
+  "intent": "A suspension is not normally solved by repeatedly submitting the same appeal. We diagnose the notice, inspect relevant parts of the advertising ecosystem, correct genuine issues and document what changed for advertisers in Noida, Greater Noida, Delhi NCR and beyond.",
   "outcomes": [
     "A clearer picture of the policy or trust issue described by the suspension notice.",
     "A documented list of website, account, billing or advertising issues that need attention.",
@@ -302,7 +302,7 @@ const serviceSchema = {
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
       {'@type':'ListItem','position':3,'name':"Google Ads Suspension Recovery Services built around diagnosis first",'item':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
     ]},
-    {'@type':'Service','name':"Google Ads Suspension Recovery Services built around diagnosis first",'serviceType':"Google Ads Suspension Recovery Services built around diagnosis first",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
+    {'@type':'Service','name':"Google Ads Suspension Recovery in Noida",'serviceType':"Google Ads Suspension Recovery Services",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/google-ads-suspension-recovery"}
   ]
 };
 
