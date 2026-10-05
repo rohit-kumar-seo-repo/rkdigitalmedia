@@ -36,6 +36,14 @@ function getServiceHref(category:string,title:string){
 
 function getRelatedResources(category:string,title:string){
   const normalized=title.toLowerCase();
+  if(category==='GOOGLE ADS' && (normalized.includes('suspension') || normalized.includes('circumventing') || normalized.includes('suspicious payment'))){
+    return [
+      ['/services/google-ads-suspension-recovery','Google Ads Suspension Recovery'],
+      ['/insights/google-ads-suspension-recovery-complete-guide','Google Ads Suspension Recovery Guide'],
+      ['/case-studies/google-ads-recovery','Google Ads Recovery Case Study'],
+      ['/services/google-ads','Google Ads Services'],
+    ];
+  }
   if(category==='GOOGLE ADS'){
     const items=[
       ['/insights/google-ads-campaign-types','Google Ads Campaign Types'],
