@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, ShoppingCart, Package, CreditCard, Truck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'E-commerce Digital Marketing | R.K Digital Media',
+  title: 'E-commerce Digital Marketing',
   description: 'D2C brands and online stores. Shopping Ads, PMax, SEO for product pages, CRO, and retention systems. Scale profitably.',
 };
 
