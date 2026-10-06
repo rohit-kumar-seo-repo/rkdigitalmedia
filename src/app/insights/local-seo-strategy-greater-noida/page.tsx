@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Clock, MapPin } from 'lucide-react';
 import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
-  title: 'Local SEO Strategy for Greater Noida: Complete Guide',
+  title: 'Local SEO Strategy for Greater Noida: Complete Guide | R.K Digital Media',
   description: 'A practical Local SEO strategy for Greater Noida businesses covering Google Business Profile, local keywords, Map Pack visibility, reviews, citations, content, links and lead tracking.',
   keywords: [
     'local SEO strategy Greater Noida',
