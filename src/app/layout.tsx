@@ -107,7 +107,7 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://rkdigitalmedia.in/#localbusiness',
   name: 'R.K Digital Media',
-  description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
+  description: 'R.K Digital Media is a digital marketing agency in Noida providing Google Ads, SEO, Google Business Profile management, website development and practical automation for businesses in Noida, Greater Noida and Delhi NCR.',
   url: 'https://rkdigitalmedia.in',
   telephone: '+91-98715-30594',
   email: 'info@rkdigitalmedia.in',
@@ -169,7 +169,7 @@ const breadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
 export const metadata: Metadata = {
   metadataBase: new URL('https://rkdigitalmedia.in'),
   title: {
-    default: 'R.K Digital Media | Digital Marketing Agency in Greater Noida',
+    default: 'R.K Digital Media | Digital Marketing Agency in Noida',
     template: '%s',
   },
   description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
@@ -206,7 +206,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://rkdigitalmedia.in',
     siteName: 'R.K Digital Media',
-    title: 'R.K Digital Media | Digital Marketing Agency in Greater Noida',
+    title: 'R.K Digital Media | Digital Marketing Agency in Noida',
     description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
     images: [
       {
