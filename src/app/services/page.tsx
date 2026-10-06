@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { GoogleReviews } from '@/components/GoogleReviews';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Services in Noida & Greater Noida',
+  title: 'Digital Marketing Services in Noida | R.K Digital Media',
   description:
     'Explore Google Ads, website development, Google Ads suspension recovery, SEO, Google Business Profile management, and AI automation services for businesses in Noida, Greater Noida and Delhi NCR.',
   alternates: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Services in Noida & Greater Noida',
+    title: 'Digital Marketing Services in Noida | R.K Digital Media',
     description:
       'Google Ads, SEO, website development, Google Business Profile management, suspension recovery and AI automation.',
     images: ['/og-image.jpg'],
