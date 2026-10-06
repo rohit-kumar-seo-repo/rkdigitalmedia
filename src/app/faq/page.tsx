@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/ui/CustomCursor';
 
 export const metadata: Metadata = {
-  title: 'FAQ | R.K Digital Media',
+  title: 'FAQ',
   description: 'Frequently asked questions about our services, process, pricing, and how we work. Get quick answers before you reach out.',
   openGraph: {
     title: 'FAQ | R.K Digital Media',
