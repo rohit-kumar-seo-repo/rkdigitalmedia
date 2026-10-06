@@ -124,6 +124,29 @@ const data: ServicePillarData = {
       "Yes. Relevant analytics, conversion events and campaign landing pages can be incorporated into the build."
     ]
   ],
+  "relatedResources": [
+    {
+      "eyebrow": "SEARCH FOUNDATION",
+      "title": "SEO Services in Noida",
+      "text": "A new website needs a search strategy as well as a technical foundation. See how the ongoing SEO service fits after development.",
+      "href": "/services/seo",
+      "label": "Explore SEO Services"
+    },
+    {
+      "eyebrow": "PAID ACQUISITION",
+      "title": "Google Ads Services in Noida",
+      "text": "For campaign landing pages and paid acquisition, the website and advertising strategy need to work together.",
+      "href": "/services/google-ads",
+      "label": "Explore Google Ads"
+    },
+    {
+      "eyebrow": "LOCAL SEARCH",
+      "title": "Google Business Profile Management",
+      "text": "Local businesses can connect website structure and local profile management to create a more consistent customer journey.",
+      "href": "/services/gmb",
+      "label": "Explore GBP Management"
+    }
+  ],
   "caseStudy": {
     "eyebrow": "Website + acquisition",
     "title": "See the documented case-study library",
