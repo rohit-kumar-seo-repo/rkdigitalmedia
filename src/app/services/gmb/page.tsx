@@ -124,6 +124,29 @@ const data: ServicePillarData = {
       "Not always. Competitive local searches may also require website, location pages, reviews, citations and broader local relevance."
     ]
   ],
+  "relatedResources": [
+    {
+      "eyebrow": "LOCAL SEO",
+      "title": "Local SEO Strategy for Greater Noida",
+      "text": "See how website structure, location relevance and local search signals work together beyond the Business Profile itself.",
+      "href": "/insights/local-seo-strategy-greater-noida",
+      "label": "Read the guide"
+    },
+    {
+      "eyebrow": "GBP CHECKLIST",
+      "title": "50-Step Map Pack Checklist",
+      "text": "A practical reference for categories, services, reviews, profile completeness and broader local-search alignment.",
+      "href": "/insights/gmb-optimization-map-pack-checklist-50-steps",
+      "label": "Read the checklist"
+    },
+    {
+      "eyebrow": "SEO SUPPORT",
+      "title": "SEO Services in Noida",
+      "text": "When local visibility depends on more than the profile, connect GBP work with the wider SEO system.",
+      "href": "/services/seo",
+      "label": "Explore SEO Services"
+    }
+  ],
   "caseStudy": {
     "eyebrow": "Local SEO / documented project",
     "title": "Local SEO for a Home Services Business",
