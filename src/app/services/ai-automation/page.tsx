@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "AI Automation Services for Lead Generation | R.K Digital Media",
+  title: "AI Automation Services for Lead Generation",
   description: "Practical AI and workflow automation for lead capture, qualification, routing, CRM updates, follow-up and repetitive business processes.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/ai-automation" },
   openGraph: {
