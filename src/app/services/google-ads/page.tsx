@@ -124,12 +124,35 @@ const data: ServicePillarData = {
       "Yes. Landing-page recommendations are included where the experience materially affects paid traffic performance. Full development can be scoped separately."
     ]
   ],
+  "relatedResources": [
+    {
+      "eyebrow": "GOOGLE ADS GUIDE",
+      "title": "Google Ads Campaign Types",
+      "text": "Understand how Search, Shopping, Performance Max and other campaign types fit different acquisition goals.",
+      "href": "/insights/google-ads-campaign-types",
+      "label": "Read the guide"
+    },
+    {
+      "eyebrow": "NOIDA SEARCH",
+      "title": "Google Ads Expert in Noida",
+      "text": "See the local commercial considerations behind choosing and working with a Google Ads specialist in Noida.",
+      "href": "/insights/google-ads-expert-noida",
+      "label": "Read the guide"
+    },
+    {
+      "eyebrow": "SUSPENSION SUPPORT",
+      "title": "Need dedicated suspension recovery?",
+      "text": "Account suspension and policy-recovery intent is handled by the specialist recovery site rather than this general Google Ads service.",
+      "href": "https://adssuspensionrecovery.com/",
+      "label": "Visit specialist site"
+    }
+  ],
   "relatedService": {
-    "eyebrow": "ACCOUNT SUSPENSION SUPPORT",
-    "title": "Already dealing with a Google Ads suspension?",
-    "text": "The standard Google Ads service is for campaign management. If the account has been suspended or restricted, start with the dedicated recovery workflow instead.",
-    "href": "/services/google-ads-suspension-recovery",
-    "label": "Explore Suspension Recovery"
+    "eyebrow": "PAID ACQUISITION SUPPORT",
+    "title": "Need the website and landing pages aligned with your campaigns?",
+    "text": "Paid traffic performs better when the destination is clear, fast and aligned with the search intent. Explore the website development service.",
+    "href": "/services/web-development",
+    "label": "Explore Website Development"
   },
   "caseStudy": {
     "eyebrow": "Google Ads / documented project",
