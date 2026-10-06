@@ -233,7 +233,7 @@ export default function ServicesPage() {
         </div>
         <div className="border-y border-[var(--rkd-border)] bg-[var(--rkd-card)]">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
-            {[['06','Core services'],['10+','Years experience'],['NCR','Primary market'],['7','Published reviews']].map(([value,label]) => (
+            {[['06','Core services'],['8+','Years experience'],['NCR','Primary market'],['7','Published reviews']].map(([value,label]) => (
               <div key={label} className="p-6 md:p-8 border-r border-[var(--rkd-border)] last:border-r-0">
                 <div className="stat-value text-3xl md:text-4xl">{value}</div>
                 <div className="stat-label mt-2">{label}</div>
