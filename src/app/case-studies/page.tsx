@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Case Studies | R.K Digital Media',
+  title: 'Case Studies',
   description: 'Selected case studies covering Google Ads, SEO, Google Business Profile, suspension recovery and digital growth work by R.K Digital Media.',
   openGraph: { title: 'Case Studies | R.K Digital Media', description: 'Selected case studies covering Google Ads, SEO, Google Business Profile, suspension recovery and digital growth work by R.K Digital Media.', type: 'website', url: 'https://rkdigitalmedia.in/case-studies' },
   alternates: { canonical: 'https://rkdigitalmedia.in/case-studies' },
