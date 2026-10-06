@@ -170,7 +170,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rkdigitalmedia.in'),
   title: {
     default: 'R.K Digital Media | Digital Marketing Agency in Greater Noida',
-    template: '%s | R.K Digital Media',
+    template: '%s',
   },
   description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   keywords: [
