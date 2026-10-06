@@ -52,7 +52,6 @@ const organizationSchema = {
     postalCode: '201016',
     addressCountry: 'IN',
   },
-  foundingDate: '2016',
   knowsAbout: ['Google Ads', 'Google Ads suspension recovery', 'SEO', 'Local SEO', 'Google Business Profile management', 'Website development', 'AI automation'],
   areaServed: [
     'Greater Noida', 'Noida', 'Delhi', 'Ghaziabad', 'Faridabad', 'Gurugram',
@@ -136,7 +135,7 @@ const localBusinessSchema = {
     itemListElement: [
       { '@type': 'Offer', name: 'Google Ads Services', url: 'https://rkdigitalmedia.in/services/google-ads' },
       { '@type': 'Offer', name: 'Website Development Services', url: 'https://rkdigitalmedia.in/services/web-development' },
-      { '@type': 'Offer', name: 'Google Ads Suspension Recovery', url: 'https://rkdigitalmedia.in/services/google-ads-suspension-recovery' },
+      { '@type': 'Offer', name: 'Google Ads Suspension Support', url: 'https://adssuspensionrecovery.com/' },
       { '@type': 'Offer', name: 'SEO Services', url: 'https://rkdigitalmedia.in/services/seo' },
       { '@type': 'Offer', name: 'Google Business Profile Management Services', url: 'https://rkdigitalmedia.in/services/gmb' },
       { '@type': 'Offer', name: 'AI Automation Services', url: 'https://rkdigitalmedia.in/services/ai-automation' },
@@ -152,7 +151,6 @@ const webSiteSchema = {
   name: 'R.K Digital Media',
   description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
   publisher: { '@id': 'https://rkdigitalmedia.in/#organization' },
-  potentialAction: { '@type': 'SearchAction', target: 'https://rkdigitalmedia.in/insights?search={search_term_string}', 'query-input': 'required name=search_term_string' },
 
   inLanguage: 'en-IN',
 };
