@@ -123,7 +123,7 @@ export function Hero() {
               className="font-montserrat font-black text-[var(--rkd-fg)] leading-[1.0] tracking-tight text-center w-full"
               style={{ fontSize: 'clamp(1.75rem, 8vw, 3.2rem)' }}
             >
-              Digital growth built around<br />
+              Digital Marketing Agency in Noida built around<br />
               <span style={{ color: '#e8282b', fontStyle: 'italic' }}>business outcomes</span>
             </h1>
           </TextBlockAnimation>
