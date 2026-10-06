@@ -149,7 +149,7 @@ const webSiteSchema = {
   '@id': 'https://rkdigitalmedia.in/#website',
   url: 'https://rkdigitalmedia.in',
   name: 'R.K Digital Media',
-  description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
+  description: 'R.K Digital Media is a digital marketing agency in Noida providing Google Ads, SEO, Google Business Profile management, website development and practical automation for businesses in Noida, Greater Noida and Delhi NCR.',
   publisher: { '@id': 'https://rkdigitalmedia.in/#organization' },
 
   inLanguage: 'en-IN',
@@ -172,7 +172,7 @@ export const metadata: Metadata = {
     default: 'R.K Digital Media | Digital Marketing Agency in Noida',
     template: '%s',
   },
-  description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
+  description: 'R.K Digital Media is a digital marketing agency in Noida providing Google Ads, SEO, Google Business Profile management, website development and practical automation for businesses in Noida, Greater Noida and Delhi NCR.',
   keywords: [
     'digital marketing agency',
     'SEO services',
@@ -207,7 +207,7 @@ export const metadata: Metadata = {
     url: 'https://rkdigitalmedia.in',
     siteName: 'R.K Digital Media',
     title: 'R.K Digital Media | Digital Marketing Agency in Noida',
-    description: 'R.K Digital Media provides Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
+    description: 'R.K Digital Media is a digital marketing agency in Noida providing Google Ads, SEO, Google Business Profile management, website development and practical automation for businesses in Noida, Greater Noida and Delhi NCR.',
     images: [
       {
         url: '/og-image.jpg',
@@ -219,7 +219,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'R.K Digital Media | Digital Marketing Agency in Greater Noida',
+    title: 'R.K Digital Media | Digital Marketing Agency in Noida',
     description: 'Google Ads, SEO, Google Business Profile management, website development, Google Ads suspension recovery and AI automation for businesses in Noida, Greater Noida and Delhi NCR.',
     images: ['/og-image.jpg'],
     creator: '@rkdigitalmedia',
