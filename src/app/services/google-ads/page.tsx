@@ -156,9 +156,9 @@ const data: ServicePillarData = {
   },
   "caseStudy": {
     "eyebrow": "Google Ads / documented project",
-    "title": "Google Ads Suspension Recovery & Scale",
-    "text": "The existing case study documents a suspension-review and recovery project followed by campaign rebuilding. It shows how policy, website and paid acquisition work can connect.",
-    "href": "/case-studies/google-ads-recovery"
+    "title": "B2B Lead Generation for an Industrial Supplier",
+    "text": "The documented project combines high-intent Google Ads, technical SEO, LinkedIn targeting and CRM qualification to connect paid acquisition with qualified pipeline.",
+    "href": "/case-studies/b2b-lead-gen"
   }
 };
 
