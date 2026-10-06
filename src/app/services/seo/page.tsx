@@ -19,12 +19,14 @@ const data: ServicePillarData = {
   "label": "SEO SERVICES",
   "title": "SEO Company in Noida for Search Growth and Local Visibility",
   "intro": "SEO services in Noida covering technical SEO, on-page optimisation, content strategy and local search work designed to earn visibility for searches that can matter to the business.",
-  "intent": "SEO connects technical accessibility, search intent, useful content, internal linking, local relevance and authority. We build that system for businesses in Noida, Greater Noida and Delhi NCR, starting with what customers search for and whether the site gives them a strong answer.",
+  "intent": "SEO connects technical accessibility, search intent, useful content, internal linking, local relevance and authority. For businesses in Noida, Greater Noida and Delhi NCR, the work also needs clear service and location architecture so important commercial pages can earn visibility without competing with one another. We start with what customers search for, which page should satisfy each intent and what is preventing that page from performing.",
   "outcomes": [
     "Cleaner technical foundations for crawling and indexing.",
     "Pages mapped to distinct search intent instead of overlapping each other.",
     "More useful service, location and informational content.",
-    "A clearer internal-linking and content structure supporting important pages."
+    "A clearer internal-linking and content structure supporting important commercial pages.",
+    "Better alignment between service pages, local intent and supporting informational content.",
+    "A measurable optimisation cycle using Search Console, analytics and page-level evidence."
   ],
   "capabilities": [
     [
@@ -104,7 +106,10 @@ const data: ServicePillarData = {
     "Content opportunity mapping",
     "Local SEO support where relevant",
     "Search Console and analytics review",
-    "Ongoing prioritised SEO recommendations"
+    "Ongoing prioritised SEO recommendations",
+    "Commercial service-page and location-page optimisation",
+    "Content-cluster and internal-linking planning",
+    "Search Console and analytics-led iteration"
   ],
   "faqs": [
     [
@@ -124,6 +129,36 @@ const data: ServicePillarData = {
       "Yes. Technical audits, content mapping and specific workstreams can be scoped independently."
     ]
   ],
+  "relatedResources": [
+    {
+      "eyebrow": "LOCAL SEO",
+      "title": "Local SEO Strategy for Greater Noida",
+      "text": "A practical local-search framework covering location relevance, website structure and Google Business Profile alignment.",
+      "href": "/insights/local-seo-strategy-greater-noida",
+      "label": "Read the guide"
+    },
+    {
+      "eyebrow": "GBP + LOCAL SEARCH",
+      "title": "Google Business Profile Map Pack Checklist",
+      "text": "Use the GBP checklist alongside website and local SEO work when Google Maps visibility is part of the acquisition path.",
+      "href": "/insights/gmb-optimization-map-pack-checklist-50-steps",
+      "label": "Read the checklist"
+    },
+    {
+      "eyebrow": "SEARCH STRATEGY",
+      "title": "SEO vs Paid Ads",
+      "text": "Compare organic and paid acquisition based on intent, timeline, measurement and the role each channel can play.",
+      "href": "/insights/seo-vs-paid-ads-2025-which-wins",
+      "label": "Read the comparison"
+    }
+  ],
+  "relatedService": {
+    "eyebrow": "LOCAL SEARCH SUPPORT",
+    "title": "Need stronger Google Maps visibility too?",
+    "text": "SEO and Google Business Profile work are stronger when the website, local profile and search intent are aligned.",
+    "href": "/services/gmb",
+    "label": "Explore GBP Management"
+  },
   "caseStudy": {
     "eyebrow": "Local SEO / documented project",
     "title": "Local SEO for a Home Services Business",
