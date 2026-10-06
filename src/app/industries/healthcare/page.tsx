@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, Stethoscope, HeartPulse, Pill, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Digital Marketing | R.K Digital Media',
+  title: 'Healthcare Digital Marketing',
   description: 'Specialized digital marketing for clinics, hospitals, and healthcare providers. Local SEO, Google Ads, GMB optimization, and patient acquisition systems. Compliant, ethical, effective.',
 };
 
