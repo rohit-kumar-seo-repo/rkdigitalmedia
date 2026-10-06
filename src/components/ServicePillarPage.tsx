@@ -16,6 +16,7 @@ export type ServicePillarData = {
   included: string[];
   faqs: [string, string][];
   caseStudy?: { eyebrow: string; title: string; text: string; href: string };
+  relatedResources?: Array<{ eyebrow: string; title: string; text: string; href: string; label: string }>;
   relatedService?: { eyebrow: string; title: string; text: string; href: string; label: string };
   policyHub?: {
     title: string;
@@ -201,6 +202,26 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           </div>
         </div>
       </section>
+
+      {data.relatedResources && data.relatedResources.length > 0 && (
+        <section className="py-16 md:py-20 bg-[var(--rkd-bg)]">
+          <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+            <p className="section-label mb-4">// RELATED RESOURCES</p>
+            <div className="grid md:grid-cols-3 gap-5">
+              {data.relatedResources.map((resource) => (
+                <article key={resource.href} className="card-base p-7">
+                  <p className="section-label mb-3">{resource.eyebrow}</p>
+                  <h2 className="section-heading section-heading-h3 mb-3">{resource.title}</h2>
+                  <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed mb-5">{resource.text}</p>
+                  <Link href={resource.href} className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">
+                    {resource.label} <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {(data.relatedService ?? defaultRelatedService(data.label)) && (
         <section className="py-16 md:py-20 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
