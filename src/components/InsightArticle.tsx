@@ -52,6 +52,8 @@ function getRelatedResources(category:string,title:string){
       ['/services/google-ads','Google Ads Services'],
       ['/insights/google-ads-campaign-types','Google Ads Campaign Types'],
       ['/insights/google-ads-management-cost-india','Google Ads Management Cost in India'],
+      ['/insights/google-ads-for-small-businesses','Google Ads for Small Businesses'],
+      ['/insights/ppc-services-india','PPC Services in India'],
       ['/insights/google-ads-expert-noida','Google Ads Expert in Noida'],
       ['/insights/google-ads-expert-delhi','Google Ads Expert in Delhi'],
     ];
@@ -73,6 +75,7 @@ function getRelatedResources(category:string,title:string){
     return [
       ['/services/seo','SEO Services'],
       ['/insights/seo-services-cost-noida','SEO Services Cost in Noida'],
+      ['/insights/seo-company-noida-how-to-choose','How to Choose an SEO Company in Noida'],
       ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
       ['/insights/seo-vs-paid-ads-2025-which-wins','SEO vs Paid Ads for Greater Noida Businesses'],
     ].filter(([href])=>!normalized.includes(href.split('/').pop()!.replace(/-/g,' '))).slice(0,4);
@@ -93,6 +96,7 @@ function getRelatedResources(category:string,title:string){
       ['/insights/how-to-choose-website-development-company-noida','How to Choose a Website Development Company in Noida'],
       ['/insights/website-development-cost-noida','Website Development Cost in Noida'],
       ['/services/seo','SEO Services'],
+      ['/services/google-ads','Google Ads Services'],
     ];
   }
 
