@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
-import { Reveal, Stagger, StaggerItem, MotionHover } from '@/components/motion/MotionReveal';
+import { Reveal } from '@/components/motion/MotionReveal';
 
 export type CaseStudyMetric = { value: string; label: string };
 export type CaseStudy = {
@@ -47,7 +47,7 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
       </section>
 
       <section className="bg-[var(--rkd-card)] border-b border-[var(--rkd-border)]">
-        <Stagger className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 lg:grid-cols-4">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 lg:grid-cols-4">
           {study.metrics.map((metric, i) => (
             <div key={metric.label} className={`py-8 md:py-10 pr-5 md:pr-10 ${i < study.metrics.length - 1 ? 'lg:border-r border-[var(--rkd-border)]' : ''} ${i > 1 ? 'border-t lg:border-t-0 border-[var(--rkd-border)]' : ''}`}>
               <div className="font-montserrat font-black text-4xl md:text-5xl text-[var(--rkd-primary)] tracking-tight">{metric.value}</div>
