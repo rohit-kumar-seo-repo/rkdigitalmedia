@@ -39,6 +39,7 @@ export default function CaseStudiesPage() {
       </div>
     </section>
 
+    <div className="max-w-[80rem] mx-auto px-4 md:px-6 py-12"><VisualFramework kind="case-studies" /></div>
     <section className="border-b border-[var(--rkd-border)] bg-[var(--rkd-card)]">
       <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
         {[['04','Featured projects'],['06','Core disciplines'],['—','Results vary by project'],['LIVE','Selected work archive']].map(([value,label],i)=><div key={label} className={`p-6 md:p-8 ${i<3?'border-r border-[var(--rkd-border)]':''}`}><div className="font-montserrat font-black text-2xl md:text-3xl text-[var(--rkd-fg)]">{value}</div><div className="font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-fg-muted)] mt-2">{label}</div></div>)}
