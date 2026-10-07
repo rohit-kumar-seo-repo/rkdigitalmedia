@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/ui/CustomCursor';
 import Link from 'next/link';
+import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Stethoscope, HeartPulse, Pill, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -27,6 +28,8 @@ export default function HealthcareIndustryPage() {
             </p>
           </div>
         </section>
+
+        <section className="py-10 md:py-14 bg-[var(--rkd-bg)]"><div className="max-w-[80rem] mx-auto px-4 md:px-6"><VisualFramework kind="industry" /></div></section>
 
         <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6">
