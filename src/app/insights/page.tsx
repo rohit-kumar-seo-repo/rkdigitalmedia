@@ -42,6 +42,16 @@ export const metadata: Metadata = {
   },
 };
 
+
+function getInsightCardImage(category: string) {
+  const normalized = category.toLowerCase();
+  if (normalized.includes('google ads')) return { src: '/images/insight-google-ads.svg', alt: 'Google Ads visual framework' };
+  if (normalized.includes('local seo')) return { src: '/images/insight-local-seo.svg', alt: 'Local SEO visual framework' };
+  if (normalized.includes('website')) return { src: '/images/insight-web-development.svg', alt: 'Website development visual framework' };
+  if (normalized.includes('automation')) return { src: '/images/insight-ai-automation.svg', alt: 'Automation workflow visual framework' };
+  return { src: '/images/insight-marketing.svg', alt: 'Digital marketing visual framework' };
+}
+
 const blogSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
@@ -103,6 +113,9 @@ export default function InsightsPage() {
                 className="card-interactive group block"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="mb-5 overflow-hidden rounded-lg border border-[var(--rkd-border)] bg-[var(--rkd-card)]">
+                  <img src={getInsightCardImage(post.category).src} alt={getInsightCardImage(post.category).alt} width="1600" height="900" loading="lazy" className="block w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+                </div>
                 <div className="flex items-center gap-2 text-meta font-mono uppercase tracking-wider text-[var(--rkd-primary)] mb-4">
                   {post.category}
                 </div>
