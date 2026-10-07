@@ -31,13 +31,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/terms', 'yearly', 0.3],
   ] as const;
 
+  // Suspension recovery is intentionally noindex on this site because
+  // AdsSuspensionRecovery.com is the specialist authority for that topic.
+  const indexableBlogPosts = blogPosts.filter(
+    (post) => post.slug !== 'google-ads-suspension-recovery-complete-guide'
+  );
+
   return [
     ...core.map(([path, changeFrequency, priority]) => ({
       url: `${base}${path}`,
       changeFrequency,
       priority,
     })),
-    ...blogPosts.map((post) => ({
+    ...indexableBlogPosts.map((post) => ({
       url: `${base}/insights/${post.slug}`,
       lastModified: new Date(post.date),
       changeFrequency: 'monthly' as const,
