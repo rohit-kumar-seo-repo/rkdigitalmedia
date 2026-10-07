@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
-import { Reveal, Stagger, StaggerItem } from '@/components/motion/MotionReveal';
+import { Reveal } from '@/components/motion/MotionReveal';
 
 export type ArticleSection={label:string;title:string;paragraphs?:string[];bullets?:string[];subsections?:{title:string;paragraphs?:string[];bullets?:string[]}[];callout?:{title:string;text:string};visual?:ReactNode};
 export type InsightArticleProps={category:string;location?:string;title:string;intro:string;readTime:string;updated:string;toc:string[];sections:ArticleSection[];ctaTitle?:string;ctaText?:string};
