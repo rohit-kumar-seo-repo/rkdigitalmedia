@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
-import { Reveal, Stagger, StaggerItem } from '@/components/motion/MotionReveal';
+import { Reveal } from '@/components/motion/MotionReveal';
 
 export type ServicePillarData = {
   number: string;
