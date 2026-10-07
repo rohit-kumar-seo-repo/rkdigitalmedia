@@ -168,6 +168,34 @@ const blogPosts = [
   },
 
   {
+    slug: 'google-ads-for-lead-generation',
+    title: 'Google Ads for Lead Generation: A Practical Framework | R.K Digital Media',
+    excerpt: 'Learn how to structure Google Ads for lead generation with focused campaigns, conversion tracking, landing pages, bidding and lead-quality measurement.',
+    category: 'Google Ads',
+    readTime: '12 min',
+    date: '2026-10-07',
+    keywords: ['Google Ads for lead generation', 'Google Ads lead generation', 'lead generation PPC', 'Google Ads lead generation India'],
+  },
+  {
+    slug: 'google-ads-agency-noida',
+    title: 'Google Ads Agency in Noida: How to Choose the Right Partner | R.K Digital Media',
+    excerpt: 'Compare Google Ads agencies in Noida using campaign strategy, conversion tracking, landing pages, reporting, lead quality and account ownership.',
+    category: 'Google Ads',
+    readTime: '11 min',
+    date: '2026-10-07',
+    keywords: ['Google Ads agency in Noida', 'Google Ads agency Noida', 'PPC agency Noida', 'Google Ads management Noida'],
+  },
+  {
+    slug: 'google-ads-management-services',
+    title: 'Google Ads Management Services: What Is Actually Included? | R.K Digital Media',
+    excerpt: 'Understand what Google Ads management services should include: strategy, campaign setup, keyword management, ads, conversion tracking, optimisation and reporting.',
+    category: 'Google Ads',
+    readTime: '12 min',
+    date: '2026-10-07',
+    keywords: ['Google Ads management services', 'Google Ads management', 'PPC management services', 'Google Ads agency services'],
+  },
+
+  {
     slug: 'google-ads-campaign-types',
     title: 'Google Ads Campaign Types: Which Format Fits Your Business Goal? | R.K Digital Media',
     excerpt: 'A practical breakdown of Search, Display, Shopping, Video and Performance Max campaigns and the business goals each format can support.',
