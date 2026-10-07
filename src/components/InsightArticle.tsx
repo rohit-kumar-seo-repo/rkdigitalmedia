@@ -66,8 +66,11 @@ function getRelatedResources(category:string,title:string){
     return [
       ['/services/gmb','Google Business Profile Management'],
       ['/services/seo','SEO Services'],
-      ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
       ['/insights/gmb-optimization-map-pack-checklist-50-steps','Google Business Profile Optimization Checklist'],
+      ['/insights/google-business-profile-management-services','Google Business Profile Management Services'],
+      ['/insights/google-business-profile-optimization-services','Google Business Profile Optimization Services'],
+      ['/insights/google-business-profile-cost-india','Google Business Profile Management Cost in India'],
+      ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
     ].filter(([href])=>!normalized.includes(href.split('/').pop()!.replace(/-/g,' '))).slice(0,4);
   }
 
