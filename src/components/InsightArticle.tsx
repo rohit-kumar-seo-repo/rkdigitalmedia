@@ -35,7 +35,7 @@ function getServiceHref(category:string,title:string){
 }
 
 function getInsightVisual(category:string,title:string){
-  const normalized=\`\${category} \${title}\`.toLowerCase();
+  const normalized=(category+' '+title).toLowerCase();
   if(normalized.includes('google ads') || normalized.includes('ppc')) return {src:'/images/insight-google-ads.svg',alt:'Google Ads visual showing the path from search intent to ad, landing page and lead.'};
   if(normalized.includes('google business profile') || normalized.includes('gmb') || normalized.includes('local seo')) return {src:'/images/insight-local-seo.svg',alt:'Local SEO visual showing Google Business Profile, website relevance, reviews and local authority working together.'};
   if(normalized.includes('website') || normalized.includes('web development')) return {src:'/images/insight-web-development.svg',alt:'Website development visual showing structure, performance, SEO and conversion as one system.'};
