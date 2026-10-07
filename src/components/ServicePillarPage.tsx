@@ -34,6 +34,16 @@ export type ServicePillarData = {
   };
 };
 
+
+const serviceVisual = (label: string) => {
+  const value = label.toLowerCase();
+  if (value.includes('google ads')) return { src: '/images/insight-google-ads.svg', alt: 'Google Ads funnel from search intent to qualified lead.' };
+  if (value.includes('seo') || value.includes('google business profile')) return { src: '/images/insight-local-seo.svg', alt: 'Local search system connecting profile, website relevance, reviews and local authority.' };
+  if (value.includes('website')) return { src: '/images/insight-web-development.svg', alt: 'Website growth system connecting structure, performance, SEO and conversion.' };
+  if (value.includes('automation')) return { src: '/images/insight-ai-automation.svg', alt: 'Lead automation workflow from trigger through qualification, CRM, follow-up and human handoff.' };
+  return { src: '/images/service-system.svg', alt: 'R.K Digital Media service system connecting business growth capabilities to measurable outcomes.' };
+};
+
 const defaultRelatedService = (label: string): ServicePillarData['relatedService'] => {
   if (label.includes('SEO')) return {
     eyebrow: 'LOCAL SEARCH SUPPORT',
@@ -96,6 +106,15 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
               <div className="stat-label mt-2">How engagements are structured</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-10 md:py-14 bg-[var(--rkd-bg)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <figure className="overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
+            <img src={serviceVisual(data.label).src} alt={serviceVisual(data.label).alt} width="1600" height="900" loading="lazy" className="block w-full h-auto" />
+            <figcaption className="px-4 py-3 border-t border-[var(--rkd-border)] font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--rkd-fg-muted)]">Service framework · R.K Digital Media</figcaption>
+          </figure>
         </div>
       </section>
 
