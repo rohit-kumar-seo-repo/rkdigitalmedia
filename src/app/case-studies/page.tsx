@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import VisualFramework from '@/components/VisualFramework';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
