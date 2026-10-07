@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { Reveal, Stagger, StaggerItem } from '@/components/motion/MotionReveal';
 
 export type ServicePillarData = {
   number: string;
@@ -111,10 +112,10 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
 
       <section className="py-10 md:py-14 bg-[var(--rkd-bg)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
-          <figure className="overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
+          <Reveal y={30} className="overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
             <img src={serviceVisual(data.label).src} alt={serviceVisual(data.label).alt} width="1600" height="900" loading="lazy" className="block w-full h-auto" />
             <figcaption className="px-4 py-3 border-t border-[var(--rkd-border)] font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--rkd-fg-muted)]">Service framework · R.K Digital Media</figcaption>
-          </figure>
+          </Reveal>
         </div>
       </section>
 
