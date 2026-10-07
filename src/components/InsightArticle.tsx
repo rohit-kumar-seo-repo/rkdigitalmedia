@@ -24,7 +24,7 @@ function renderContextualParagraph(text:string, category:string, usedLinks:Set<s
 }
 
 function getServiceHref(category:string,title:string){
-  const normalized=`${category} ${title}`.toLowerCase();
+  const normalized=(category+' '+title).toLowerCase();
   if(normalized.includes('suspension') || normalized.includes('circumventing') || normalized.includes('suspicious payment')) return 'https://adssuspensionrecovery.com/';
   if(normalized.includes('google business profile') || normalized.includes('gmb') || normalized.includes('map pack')) return '/services/gmb';
   if(category==='AI AUTOMATION' || normalized.includes('automation')) return '/services/ai-automation';
