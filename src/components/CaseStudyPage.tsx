@@ -56,6 +56,15 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
         </div>
       </section>
 
+      <section className="py-10 md:py-14 bg-[var(--rkd-bg)]">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <figure className="overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
+            <img src="/images/case-study-proof.svg" alt="Case study evidence framework showing problem, intervention and documented outcome." width="1600" height="760" loading="lazy" className="block w-full h-auto" />
+            <figcaption className="px-4 py-3 border-t border-[var(--rkd-border)] font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--rkd-fg-muted)]">Evidence framework · R.K Digital Media</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[var(--rkd-bg)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-[0.7fr_1.3fr] gap-12 lg:gap-24">
