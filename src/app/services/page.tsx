@@ -232,6 +232,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6 pb-14 md:pb-20"><VisualFramework kind="services" /></div>
         <div className="border-y border-[var(--rkd-border)] bg-[var(--rkd-card)]">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6 grid grid-cols-2 md:grid-cols-4">
             {[['06','Core services'],['8+','Years experience'],['NCR','Primary market'],['7','Published reviews']].map(([value,label]) => (
