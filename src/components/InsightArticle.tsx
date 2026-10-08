@@ -130,15 +130,14 @@ return <><section className="relative overflow-hidden bg-[var(--rkd-bg)] hero-ba
 </Reveal>
 {title === 'Google Ads for Lead Generation: A Practical Framework' && (
   <Reveal y={24} delay={0.08} className="mt-8 max-w-5xl overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
-    <div className="relative aspect-video w-full bg-black/5">
-      <iframe
-        src="https://www.canva.com/design/Xi_YzgAuK8jBYtk/view?embed"
-        title="Google Ads lead generation campaign mockup by R.K Digital Media"
-        loading="lazy"
-        className="absolute inset-0 h-full w-full border-0"
-        allowFullScreen
-      />
-    </div>
+    <img
+      src="/images/google-ads-lead-generation-mockup.svg"
+      alt="Google Ads lead generation campaign mockup showing Search, Ad, Landing Page and Lead"
+      width="1600"
+      height="900"
+      loading="lazy"
+      className="block w-full h-auto"
+    />
     <figcaption className="px-4 py-3 text-[10px] font-mono uppercase tracking-[0.12em] text-[var(--rkd-fg-subtle)] border-t border-[var(--rkd-border)]">
       Campaign mockup · R.K Digital Media
     </figcaption>
