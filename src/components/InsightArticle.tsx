@@ -128,7 +128,7 @@ return <><section className="relative overflow-hidden bg-[var(--rkd-bg)] hero-ba
   <img src={insightVisual.src} alt={insightVisual.alt} width="1600" height="900" loading="eager" className="block w-full h-auto" />
   <figcaption className="px-4 py-3 text-[10px] font-mono uppercase tracking-[0.12em] text-[var(--rkd-fg-subtle)] border-t border-[var(--rkd-border)]">Visual framework · R.K Digital Media</figcaption>
 </Reveal>
-{title === 'Google Ads for Lead Generation: How to Build Campaigns That Actually Generate Leads' && (
+{title === 'Google Ads for Lead Generation: A Practical Framework' && (
   <Reveal y={24} delay={0.08} className="mt-8 max-w-5xl overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
     <div className="relative aspect-video w-full bg-black/5">
       <iframe
