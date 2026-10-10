@@ -17,6 +17,12 @@ const nextConfig = {
       { source: '/insights/seo-vs-paid-ads-greater-noida', destination: '/insights/seo-vs-paid-ads-2025-which-wins', permanent: true },
       { source: '/insights/google-ads-suspension-recovery-guide', destination: '/insights/google-ads-suspension-recovery-complete-guide', permanent: true },
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
+      // These legacy suspension pages now belong to the dedicated recovery site.
+      { source: '/google-ads-suspended-for-suspicious-payments', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      { source: '/google-ads-suspended-for-unacceptable-business-practices', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      { source: '/google-ads-account-suspension-recovery-specialist', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      { source: '/google-ads-suspended-circumventing-systems', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      { source: '/google-ads-suspended', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
     ];
   },
 };
