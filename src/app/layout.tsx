@@ -224,9 +224,6 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
     creator: '@rkdigitalmedia',
   },
-  alternates: {
-    canonical: 'https://rkdigitalmedia.in',
-  },
 };
 
 export const viewport: Viewport = {
