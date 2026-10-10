@@ -165,3 +165,32 @@ For completed work, provide a short summary of:
 
 Do not claim a deployment is live unless there is evidence that the deployment succeeded.
 
+
+
+## Project-Specific Context and Working Memory
+
+Read `PROJECT_CONTEXT.md` before substantive website, blog, SEO, AEO, GEO, design, or audit work. It records the known site architecture, brand system, previous implementation work, credentials workflow, and previously reported audit findings. Treat it as a working reference, not proof of current production state.
+
+### Priority checks
+- Verify current production and deployment status before reporting issues as current or fixes as live.
+- Standardise business identity/contact details and validate evidence for every numerical claim (experience, client counts, case studies, ROAS, leads, retention, etc.). Do not copy claims to other pages until they are reconciled and substantiated.
+- Audit canonical tags, legacy URL redirects, sitemap/indexability, structured data, and the reported `/insights` logo reference when conducting SEO audits.
+- Map primary keyword intent to URLs before rewriting content. Resolve cannibalisation only after reviewing query intent, content, and available performance data.
+- Improve contextual internal links between relevant blog posts, service pages, location pages, and case studies.
+- Treat the audit notes in `PROJECT_CONTEXT.md` as reported findings that need revalidation. Do not imply they are all still present or already fixed without evidence.
+
+### Brand and responsive UI
+- Existing visual direction: near-black backgrounds, dark cards, red accent `#e8282b`, Montserrat headings, Outfit body text. Preserve it unless a redesign is requested.
+- Homepage composition: Hero, Services, Case Studies, Process, About, Google Reviews, Contact.
+- For homepage hero work, test at approximately 375px, 390px, 430px, tablet, and desktop widths. Check H1 line breaks, CTA sizing/alignment, marquee overlap, horizontal overflow, accessibility, and reduced-motion behaviour.
+- Prefer accessible, responsive native HTML/SVG over heavy embeds where the same result can be achieved without sacrificing useful content.
+
+### Credentials and visual assets
+- The user provided this public Skillshop credential wallet for certificate verification: https://skillshop.credential.net/profile/rohitkumarseo848048/wallet
+- Verify individual certificate names, validity, and public verification URLs before displaying them as confirmed credentials.
+- The user has asked to use Canva and mockups to improve blog/page presentation. Use connected Canva capabilities when appropriate, but never claim a design was edited or shipped unless confirmed by the tool and checked in the actual site.
+
+### Reporting discipline
+- Clearly distinguish source-code observations, live-site verification, historical audit notes, and hypotheses.
+- Never fabricate analytics, Search Console metrics, Lighthouse scores, rankings, backlink data, certificate status, or business results.
+- For each meaningful task, report changed files, actual validation performed, commit, and deployment state. A commit or a deployment in a building state is not proof of successful production release.
