@@ -82,7 +82,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[720px] md:min-h-screen flex items-center justify-center pt-16 overflow-hidden hero-background">
+    <section className="relative min-h-[680px] sm:min-h-[720px] md:min-h-screen flex items-center justify-center pt-16 overflow-hidden hero-background">
       {/* Animated wave canvas */}
       <canvas
         ref={canvasRef}
@@ -96,7 +96,7 @@ export function Hero() {
       <span className="absolute bottom-8 left-8 w-6 h-6 border-b-2 border-l-2 border-[var(--rkd-primary)] opacity-60" style={{zIndex:1}} />
       <span className="absolute bottom-8 right-8 w-6 h-6 border-b-2 border-r-2 border-[var(--rkd-primary)] opacity-60" style={{zIndex:1}} />
 
-      <div className="relative max-w-[80rem] mx-auto px-4 md:px-6 py-14 pb-40 md:py-32 md:pb-32 flex flex-col items-center justify-center min-h-0 md:min-h-[calc(100vh-120px)]" style={{zIndex:2}}>
+      <div className="relative w-full max-w-[80rem] mx-auto px-5 sm:px-6 py-16 sm:py-20 pb-36 sm:pb-40 md:py-32 md:pb-32 flex flex-col items-center justify-center min-h-0 md:min-h-[calc(100vh-120px)]" style={{zIndex:2}}>
         {/* Status bar */}
         <div className="mb-7 md:mb-12 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 md:gap-8 w-full">
           <div className="flex items-center justify-center gap-2 text-[10px] sm:text-xs font-montserrat tracking-[0.16em] sm:tracking-widest uppercase text-[var(--rkd-primary)] text-center">
@@ -111,7 +111,7 @@ export function Hero() {
         </div>
 
         {/* H1 */}
-        <div className="mb-7 md:mb-12 max-w-5xl mx-auto text-center px-1">
+        <div className="mb-7 sm:mb-9 md:mb-12 w-full max-w-5xl mx-auto text-center px-0 sm:px-1">
           <TextBlockAnimation
             animateOnScroll={false}
             delay={0.15}
@@ -120,25 +120,25 @@ export function Hero() {
             duration={0.7}
           >
             <h1
-              className="font-montserrat font-black text-[var(--rkd-fg)] leading-[1.0] tracking-tight text-center w-full"
-              style={{ fontSize: 'clamp(1.75rem, 8vw, 3.2rem)' }}
+              className="font-montserrat font-black text-[var(--rkd-fg)] text-balance leading-[1.08] tracking-[-0.045em] text-center w-full"
+              style={{ fontSize: 'clamp(2rem, 5.4vw, 4.25rem)' }}
             >
-              Digital Marketing Agency in Noida built around<br />
+              Digital Marketing Agency in Noida built around<br className="hidden sm:block" />
               <span style={{ color: '#e8282b', fontStyle: 'italic' }}>business outcomes</span>
             </h1>
           </TextBlockAnimation>
         </div>
 
         {/* Subheadline */}
-        <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center px-1">
+        <div className="mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto text-center px-1">
           <p className="font-outfit text-[var(--rkd-fg-muted)] leading-relaxed"
-            style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)' }}>
+            style={{ fontSize: 'clamp(1rem, 1.8vw, 1.2rem)' }}>
             Google Ads, SEO, Google Business Profile management, websites, suspension recovery and automation — connected around the problem your business actually needs to solve.
           </p>
         </div>
 
         {/* CTA Buttons */}
-        <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+        <div className="mt-5 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto max-w-md sm:max-w-none">
           <a href="/contact" className="btn-primary inline-flex w-full sm:w-auto justify-center items-center gap-2 px-8 py-4 rounded-full font-montserrat font-bold text-white bg-[var(--rkd-primary)]">
             Book a Strategy Call
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -150,8 +150,8 @@ export function Hero() {
         </div>
 
         {/* Featured Case Pill */}
-        <div className="mt-10 md:mt-16 mb-6 hero-fade-up md:mb-20">
-          <div className="flex flex-col sm:inline-flex sm:flex-row items-center gap-2 sm:gap-4 px-5 sm:px-6 py-3 sm:py-3 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-2xl sm:rounded-full text-center">
+        <div className="mt-8 sm:mt-10 md:mt-16 mb-4 sm:mb-6 hero-fade-up md:mb-20 max-w-full">
+          <div className="flex flex-col sm:inline-flex sm:flex-row items-center gap-2 sm:gap-4 px-5 sm:px-6 py-3 sm:py-3 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-2xl sm:rounded-full text-center max-w-full">
             <span className="inline-flex items-center gap-1.5 text-[var(--rkd-primary)]">
               <span className="w-2 h-2 rounded-full bg-[var(--rkd-primary)]" aria-hidden="true" />
               SELECTED WORK
