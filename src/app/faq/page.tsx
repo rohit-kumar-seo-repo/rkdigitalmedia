@@ -4,12 +4,15 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/ui/CustomCursor';
 
 export const metadata: Metadata = {
-  title: 'FAQ',
-  description: 'Frequently asked questions about our services, process, pricing, and how we work. Get quick answers before you reach out.',
+  title: 'Frequently Asked Questions | R.K Digital Media',
+  description: 'Answers about R.K Digital Media services, project process, pricing, Google Ads suspension reviews, SEO, websites and AI automation.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/faq' },
   openGraph: {
-    title: 'FAQ | R.K Digital Media',
-    description: 'Frequently asked questions about our services, process, pricing, and how we work.',
+    title: 'Frequently Asked Questions | R.K Digital Media',
+    description: 'Answers about our services, process, pricing, Google Ads suspension reviews, SEO, websites and AI automation.',
     type: 'website',
+    url: 'https://rkdigitalmedia.in/faq',
+    siteName: 'R.K Digital Media',
   },
 };
 
