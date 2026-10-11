@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'Google Business Profile Optimization Services | Complete Guide | R.K Digital Media',
   description: 'A practical guide to Google Business Profile optimization services covering categories, services, business information, reviews, photos, local relevance and measurement.',
   keywords: ['Google Business Profile optimization services','Google Business Profile optimization','GBP optimization services','GMB optimization services'],
+  openGraph: { title: "Google Business Profile Optimization Services | Complete Guide | R.K Digital Media", description: "A practical guide to Google Business Profile optimization services covering categories, services, business information, reviews, photos, local relevance and measurement.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-optimization-services", siteName: 'R.K Digital Media' },
+  
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-optimization-services' },
 };
 
