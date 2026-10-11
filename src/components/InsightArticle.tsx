@@ -42,7 +42,12 @@ const contextualLinkRules:Record<string,ContextualLinkRule[]> = {
 function renderContextualParagraph(text:string, category:string, usedLinks:Set<string>, title:string){
   if(title.toLowerCase().includes('suspension') || title.toLowerCase().includes('circumventing') || title.toLowerCase().includes('suspicious payment')) return text;
   const rules=contextualLinkRules[category] || [];
-  const rule=rules.find(item=>!usedLinks.has(item.href) && text.toLowerCase().includes(item.phrase.toLowerCase()));
+  const normalizedTitle=title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+  const rule=rules.find(item=>{
+    const targetSlug=item.href.split('/').pop() || '';
+    const isSelfLink=item.href.startsWith('/insights/') && normalizedTitle.includes(targetSlug);
+    return !isSelfLink && !usedLinks.has(item.href) && text.toLowerCase().includes(item.phrase.toLowerCase());
+  });
   if(!rule) return text;
   const index=text.toLowerCase().indexOf(rule.phrase.toLowerCase());
   if(index<0) return text;
