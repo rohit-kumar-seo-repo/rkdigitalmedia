@@ -60,7 +60,7 @@ const articleSchema = {
     '@type': 'Organization',
     name: 'R.K Digital Media',
     url: 'https://rkdigitalmedia.in',
-    logo: { '@type': 'ImageObject', url: 'https://rkdigitalmedia.in/logo.png' },
+    logo: { '@type': 'ImageObject', url: 'https://rkdigitalmedia.in/logo.svg' },
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://rkdigitalmedia.in/insights/local-seo-strategy-greater-noida' },
 };
