@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import CustomCursor from '@/components/ui/CustomCursor';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | R.K Digital Media',
@@ -76,8 +73,6 @@ export default function FAQPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <CustomCursor />
-      <Header />
       <main id="top" className="pt-16">
         <section className="relative min-h-[60vh] flex items-center justify-center pt-16 overflow-hidden" style={{
           backgroundImage: 'linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px)',
@@ -143,7 +138,6 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <Footer />
       </main>
     </>
   );
