@@ -9,6 +9,14 @@ import { ArrowRight, Utensils, Hotel, Coffee, Waves } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Hospitality Digital Marketing | R.K Digital Media',
   description: 'Restaurants, cafes, cloud kitchens, and hotels. Local discovery, Google Maps domination, online ordering, and review management.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/industries/hospitality' },
+  openGraph: {
+    title: 'Hospitality Digital Marketing | R.K Digital Media',
+    description: 'Restaurants, cafes, cloud kitchens, and hotels. Local discovery, Google Maps domination, online ordering, and review management.',
+    type: 'website',
+    url: 'https://rkdigitalmedia.in/industries/hospitality',
+    siteName: 'R.K Digital Media',
+  },
 };
 
 export default function HospitalityIndustryPage() {
