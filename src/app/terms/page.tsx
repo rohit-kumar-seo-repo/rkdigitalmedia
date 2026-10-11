@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service | R.K Digital Media',
   description: 'Terms of service for R.K Digital Media. Governing use of our website and services.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/terms' },
 };
 
 export default function TermsPage() {
