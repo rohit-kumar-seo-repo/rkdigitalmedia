@@ -9,6 +9,14 @@ import { ArrowRight, Building, Home, Key, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Real Estate Digital Marketing | R.K Digital Media',
   description: 'Builders, developers, and brokers. Lead generation for residential & commercial projects. Local SEO, Google Ads, portal optimization, and CRM.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/industries/real-estate' },
+  openGraph: {
+    title: 'Real Estate Digital Marketing | R.K Digital Media',
+    description: 'Builders, developers, and brokers. Lead generation for residential & commercial projects. Local SEO, Google Ads, portal optimization, and CRM.',
+    type: 'website',
+    url: 'https://rkdigitalmedia.in/industries/real-estate',
+    siteName: 'R.K Digital Media',
+  },
 };
 
 export default function RealEstateIndustryPage() {
