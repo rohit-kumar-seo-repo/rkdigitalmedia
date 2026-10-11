@@ -9,6 +9,14 @@ import { ArrowRight, ShoppingCart, Package, CreditCard, Truck } from 'lucide-rea
 export const metadata: Metadata = {
   title: 'E-commerce Digital Marketing',
   description: 'D2C brands and online stores. Shopping Ads, PMax, SEO for product pages, CRO, and retention systems. Scale profitably.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/industries/ecommerce' },
+  openGraph: {
+    title: 'E-commerce Digital Marketing',
+    description: 'D2C brands and online stores. Shopping Ads, PMax, SEO for product pages, CRO, and retention systems. Scale profitably.',
+    type: 'website',
+    url: 'https://rkdigitalmedia.in/industries/ecommerce',
+    siteName: 'R.K Digital Media',
+  },
 };
 
 export default function EcommerceIndustryPage() {
