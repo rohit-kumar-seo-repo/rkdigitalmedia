@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'Google Business Profile Management Services | R.K Digital Media',
   description: 'What Google Business Profile management services should include: profile optimisation, categories, services, reviews, photos, local relevance, monitoring and reporting.',
   keywords: ['Google Business Profile management services','Google Business Profile management','GBP management services','GMB management services'],
+  openGraph: { title: "Google Business Profile Management Services | R.K Digital Media", description: "What Google Business Profile management services should include: profile optimisation, categories, services, reviews, photos, local relevance, monitoring and reporting.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-management-services", siteName: 'R.K Digital Media' },
+  
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-management-services' },
 };
 
