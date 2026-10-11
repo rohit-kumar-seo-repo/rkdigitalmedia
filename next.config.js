@@ -15,7 +15,7 @@ const nextConfig = {
       { source: '/services/crm', destination: '/services/ai-automation', permanent: true },
       { source: '/insights/ai-automation-lead-generation', destination: '/insights/ai-automation-lead-generation-5-workflows', permanent: true },
       { source: '/insights/seo-vs-paid-ads-greater-noida', destination: '/insights/seo-vs-paid-ads-2025-which-wins', permanent: true },
-      { source: '/insights/google-ads-suspension-recovery-guide', destination: '/insights/google-ads-suspension-recovery-complete-guide', permanent: true },
+      { source: '/insights/google-ads-suspension-recovery-guide', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
       { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
       // Redirect legacy URLs with historical Search Console impressions to the closest current equivalent.
       { source: '/blog', destination: '/insights', permanent: true },
