@@ -52,6 +52,10 @@ function getInsightCardImage(category: string) {
   return { src: '/images/insight-marketing.svg', alt: 'Digital marketing visual framework' };
 }
 
+const indexableBlogPosts = blogPosts.filter(
+  (post) => post.slug !== 'google-ads-suspension-recovery-complete-guide'
+);
+
 const blogSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
@@ -63,10 +67,10 @@ const blogSchema = {
     name: 'R.K Digital Media',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://rkdigitalmedia.in/logo.png',
+      url: 'https://rkdigitalmedia.in/logo.svg',
     },
   },
-  blogPosts: blogPosts.map(post => ({
+  blogPosts: indexableBlogPosts.map(post => ({
     '@type': 'BlogPosting',
     headline: post.title,
     url: `https://rkdigitalmedia.in/insights/${post.slug}`,
@@ -106,7 +110,7 @@ export default function InsightsPage() {
       <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post, index) => (
+            {indexableBlogPosts.map((post, index) => (
               <Link
                 key={post.slug}
                 href={`/insights/${post.slug}`}
