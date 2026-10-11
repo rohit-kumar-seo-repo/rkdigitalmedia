@@ -7,8 +7,16 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Stethoscope, HeartPulse, Pill, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Digital Marketing',
-  description: 'Specialized digital marketing for clinics, hospitals, and healthcare providers. Local SEO, Google Ads, GMB optimization, and patient acquisition systems. Compliant, ethical, effective.',
+  title: 'Healthcare Digital Marketing | R.K Digital Media',
+  description: 'Digital marketing for clinics, hospitals and healthcare providers, including local SEO, Google Ads, website optimisation and measurable patient enquiry workflows.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/industries/healthcare' },
+  openGraph: {
+    title: 'Healthcare Digital Marketing | R.K Digital Media',
+    description: 'Digital marketing for clinics, hospitals and healthcare providers, including local SEO, Google Ads, website optimisation and measurable patient enquiry workflows.',
+    type: 'website',
+    url: 'https://rkdigitalmedia.in/industries/healthcare',
+    siteName: 'R.K Digital Media',
+  },
 };
 
 export default function HealthcareIndustryPage() {
