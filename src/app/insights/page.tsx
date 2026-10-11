@@ -70,7 +70,7 @@ const blogSchema = {
       url: 'https://rkdigitalmedia.in/logo.svg',
     },
   },
-  blogPosts: indexableBlogPosts.map(post => ({
+  blogPost: indexableBlogPosts.map(post => ({
     '@type': 'BlogPosting',
     headline: post.title,
     url: `https://rkdigitalmedia.in/insights/${post.slug}`,
