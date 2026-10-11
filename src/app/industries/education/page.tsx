@@ -9,6 +9,14 @@ import { ArrowRight, GraduationCap, School, BookOpen, Users } from 'lucide-react
 export const metadata: Metadata = {
   title: 'Education Digital Marketing | R.K Digital Media',
   description: 'Coaching centers, ed-tech, schools, and colleges. Student acquisition, local SEO, Google Ads, and admission funnel automation.',
+  alternates: { canonical: 'https://rkdigitalmedia.in/industries/education' },
+  openGraph: {
+    title: 'Education Digital Marketing | R.K Digital Media',
+    description: 'Coaching centers, ed-tech, schools, and colleges. Student acquisition, local SEO, Google Ads, and admission funnel automation.',
+    type: 'website',
+    url: 'https://rkdigitalmedia.in/industries/education',
+    siteName: 'R.K Digital Media',
+  },
 };
 
 export default function EducationIndustryPage() {
