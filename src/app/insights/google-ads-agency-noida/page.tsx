@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Google Ads Agency in Noida: How to Choose One | R.K Digital Media',
   description: 'Compare Google Ads agencies in Noida using campaign strategy, conversion tracking, landing pages, reporting, lead quality and account ownership.',
   keywords: ['Google Ads agency in Noida','Google Ads agency Noida','PPC agency Noida','Google Ads management Noida'],
-  alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-ads-agency-noida' },
+  openGraph:{title:"Google Ads Agency in Noida: How to Choose One | R.K Digital Media",description:"Compare Google Ads agencies in Noida using campaign strategy, conversion tracking, landing pages, reporting, lead quality and account ownership.",type:'article',url:"https://rkdigitalmedia.in/insights/google-ads-agency-noida",siteName:'R.K Digital Media'},alternates:{canonical: 'https://rkdigitalmedia.in/insights/google-ads-agency-noida' },
 };
 
 const schema = {'@context':'https://schema.org','@type':'Article',headline:'Google Ads Agency in Noida: How to Choose the Right Partner',description:'A practical framework for evaluating Google Ads agencies in Noida.',url:'https://rkdigitalmedia.in/insights/google-ads-agency-noida',datePublished:'2026-10-07',dateModified:'2026-10-07',author:{'@type':'Person',name:'Rohit Kumar'},publisher:{'@type':'Organization',name:'R.K Digital Media',url:'https://rkdigitalmedia.in'}};
