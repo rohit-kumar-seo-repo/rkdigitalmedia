@@ -29,7 +29,6 @@ const contextualLinkRules:Record<string,ContextualLinkRule[]> = {
   ],
   'AI AUTOMATION': [
     {phrase:'AI automation',href:'/services/ai-automation'},
-    {phrase:'lead generation',href:'/insights/ai-automation-lead-generation-5-workflows'},
     {phrase:'workflow',href:'/process'},
   ],
   'WEBSITE DEVELOPMENT': [
