@@ -17,7 +17,7 @@ export async function middleware(request: NextRequest) {
     if (expiry && signature && !extra && Number.isFinite(expiryNumber) && expiryNumber > Date.now()) {
       try {
         const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["verify"]);
-        const valid = await crypto.subtle.verify("HMAC", key, decodeBase64Url(signature), new TextEncoder().encode(expiry));
+        const valid = await crypto.subtle.verify("HMAC", key, decodeBase64Url(signature).buffer as ArrayBuffer, new TextEncoder().encode(expiry).buffer as ArrayBuffer);
         if (valid) return NextResponse.next();
       } catch { /* Invalid or malformed session fails closed. */ }
     }
