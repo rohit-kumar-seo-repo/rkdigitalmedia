@@ -88,6 +88,7 @@ export function About() {
                 <Image
                   src="/images/founder-rohit-kumar.webp"
                   alt="Rohit Kumar, Founder of R.K Digital Media"
+                  unoptimized
                   fill
                   priority
                   sizes="(max-width: 1024px) 80vw, 420px"
@@ -126,6 +127,7 @@ export function About() {
                         <Image
                           src={credential.image}
                           alt={credential.title + ' certificate for Rohit Kumar'}
+                          unoptimized
                           fill
                           sizes="(max-width: 768px) 92vw, (max-width: 1200px) 30vw, 380px"
                           className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
