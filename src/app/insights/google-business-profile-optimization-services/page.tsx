@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Business Profile Optimization Services | Complete Guide | R.K Digital Media',
-  description: 'A practical guide to Google Business Profile optimization services covering categories, services, business information, reviews, photos, local relevance and measurement.',
+  title: 'Google Business Profile Optimization Checklist for Local SEO | R.K Digital Media',
+  description: 'A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.',
   keywords: ['Google Business Profile optimization services','Google Business Profile optimization','GBP optimization services','GMB optimization services'],
-  openGraph: { title: "Google Business Profile Optimization Services | Complete Guide | R.K Digital Media", description: "A practical guide to Google Business Profile optimization services covering categories, services, business information, reviews, photos, local relevance and measurement.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-optimization-services", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Business Profile Optimization Checklist for Local SEO | R.K Digital Media", description: "A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-optimization-services", siteName: 'R.K Digital Media' },
   
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-optimization-services' },
 };
 
 const schema = {
   '@context':'https://schema.org','@type':'Article',
-  headline:'Google Business Profile Optimization Services: Complete Guide',
-  description:'A practical guide to optimising a Google Business Profile for local search visibility and customer actions.',
+  headline:'Google Business Profile Optimization Checklist for Local SEO',
+  description:'A step-by-step checklist for improving Google Business Profile completeness and local-search readiness.',
   url:'https://rkdigitalmedia.in/insights/google-business-profile-optimization-services',
   datePublished:'2026-10-07',dateModified:'2026-10-07',
   author:{'@type':'Person',name:'Rohit Kumar'},
