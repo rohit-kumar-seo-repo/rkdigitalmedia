@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: "Digital marketing for schools, colleges, coaching centres and education businesses, including student lead generation, Google Ads, local SEO and admission-funnel automation.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/education' },
   openGraph: {
-    title: 'Education Digital Marketing | R.K Digital Media',
-    description: 'Coaching centers, ed-tech, schools, and colleges. Student acquisition, local SEO, Google Ads, and admission funnel automation.',
+    title: 'Education Digital Marketing & Student Lead Generation | R.K Digital Media',
+    description: 'Digital marketing for schools, colleges and coaching centres: student lead generation, Google Ads, local SEO and admission-funnel automation.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/education',
     siteName: 'R.K Digital Media',
