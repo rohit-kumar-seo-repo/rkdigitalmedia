@@ -7,8 +7,8 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Utensils, Hotel, Coffee, Waves } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Hospitality Digital Marketing | R.K Digital Media',
-  description: 'Restaurants, cafes, cloud kitchens, and hotels. Local discovery, Google Maps domination, online ordering, and review management.',
+  title: "Hospitality Digital Marketing for Hotels & Restaurants | R.K Digital Media",
+  description: "Digital marketing for hotels, restaurants, cafes and cloud kitchens, covering Google Business Profile optimisation, local SEO, paid campaigns, review workflows and booking enquiries.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/hospitality' },
   openGraph: {
     title: 'Hospitality Digital Marketing | R.K Digital Media',
