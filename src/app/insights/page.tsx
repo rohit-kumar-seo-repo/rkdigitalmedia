@@ -4,8 +4,8 @@ import { ArrowRight, FileText, Clock, TrendingUp, ArrowLeft } from 'lucide-react
 import { blogPosts } from './blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Insights & Blog | R.K Digital Media Greater Noida',
-  description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.',
+  title: "Digital Marketing Blog: SEO, Google Ads & Local SEO | R.K Digital Media",
+  description: "Practical guides on SEO services, Google Ads management, Google Business Profile optimisation, website development and AI automation for businesses in Noida, Greater Noida and India.",
   keywords: [
     'digital marketing blog Greater Noida',
     'SEO blog India',
