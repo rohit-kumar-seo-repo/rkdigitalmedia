@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: "Digital marketing for real estate builders, developers and brokers, with Google Ads lead generation, local SEO, landing pages, conversion tracking and CRM follow-up.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/real-estate' },
   openGraph: {
-    title: 'Real Estate Digital Marketing | R.K Digital Media',
-    description: 'Builders, developers, and brokers. Lead generation for residential & commercial projects. Local SEO, Google Ads, portal optimization, and CRM.',
+    title: 'Real Estate Digital Marketing & Lead Generation | R.K Digital Media',
+    description: 'Digital marketing for real estate builders, developers and brokers: Google Ads lead generation, local SEO, landing pages and CRM follow-up.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/real-estate',
     siteName: 'R.K Digital Media',
