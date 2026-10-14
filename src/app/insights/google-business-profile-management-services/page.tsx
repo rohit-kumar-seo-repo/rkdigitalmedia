@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Business Profile Management Services | R.K Digital Media',
-  description: 'What Google Business Profile management services should include: profile optimisation, categories, services, reviews, photos, local relevance, monitoring and reporting.',
+  title: 'Google Business Profile Management: Ongoing Tasks & Reporting | R.K Digital Media',
+  description: 'Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.',
   keywords: ['Google Business Profile management services','Google Business Profile management','GBP management services','GMB management services'],
-  openGraph: { title: "Google Business Profile Management Services | R.K Digital Media", description: "What Google Business Profile management services should include: profile optimisation, categories, services, reviews, photos, local relevance, monitoring and reporting.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-management-services", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Business Profile Management: Ongoing Tasks & Reporting | R.K Digital Media", description: "Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-management-services", siteName: 'R.K Digital Media' },
   
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-management-services' },
 };
 
 const schema = {
   '@context':'https://schema.org','@type':'Article',
-  headline:'Google Business Profile Management Services: What Should Be Included?',
-  description:'A practical guide to what ongoing Google Business Profile management should cover.',
+  headline:'Google Business Profile Management: Ongoing Tasks and Reporting',
+  description:'A practical guide to ongoing Google Business Profile updates, monitoring and reporting.',
   url:'https://rkdigitalmedia.in/insights/google-business-profile-management-services',
   datePublished:'2026-10-07',dateModified:'2026-10-07',
   author:{'@type':'Person',name:'Rohit Kumar'},
