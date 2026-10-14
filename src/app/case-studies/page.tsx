@@ -4,8 +4,8 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import VisualFramework from '@/components/VisualFramework';
 
 export const metadata: Metadata = {
-  title: 'Case Studies',
-  description: 'Selected case studies covering Google Ads, SEO, Google Business Profile, suspension recovery and digital growth work by R.K Digital Media.',
+  title: "Digital Marketing Case Studies: SEO, Google Ads & Lead Generation | R.K Digital Media",
+  description: "Explore digital marketing case studies covering local SEO, Google Ads, B2B lead generation, Google Business Profile and healthcare marketing, with the strategy and work behind each project.",
   openGraph: { title: 'Case Studies | R.K Digital Media', description: 'Selected case studies covering Google Ads, SEO, Google Business Profile, suspension recovery and digital growth work by R.K Digital Media.', type: 'website', url: 'https://rkdigitalmedia.in/case-studies' },
   alternates: { canonical: 'https://rkdigitalmedia.in/case-studies' },
 };
