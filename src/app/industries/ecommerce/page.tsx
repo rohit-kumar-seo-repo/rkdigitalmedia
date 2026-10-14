@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: "E-commerce marketing for online stores and D2C brands, combining Google Shopping Ads, Performance Max, product-page SEO, conversion optimisation and retention workflows.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/ecommerce' },
   openGraph: {
-    title: 'E-commerce Digital Marketing',
-    description: 'D2C brands and online stores. Shopping Ads, PMax, SEO for product pages, CRO, and retention systems. Scale profitably.',
+    title: 'E-commerce Digital Marketing & Shopping Ads | R.K Digital Media',
+    description: 'E-commerce marketing for online stores and D2C brands: Shopping Ads, Performance Max, product SEO, conversion optimisation and retention.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/ecommerce',
     siteName: 'R.K Digital Media',
