@@ -74,6 +74,19 @@ export default function EducationIndustryPage() {
             </a>
           </div>
         </section>
+      <section className="py-16 md:py-20 bg-[var(--rkd-bg)] border-t border-[var(--rkd-border)]" aria-labelledby="related-services-heading">
+        <div className="max-w-[80rem] mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// RELATED RESOURCES</p>
+          <h2 id="related-services-heading" className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-8" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', lineHeight: '1.25' }}>Explore relevant services and guides</h2>
+          <nav aria-label="Related services and guides" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <Link href="/services/google-ads" className="rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-4 text-sm font-medium text-[var(--rkd-fg)] hover:border-[var(--rkd-primary)] hover:text-[var(--rkd-primary)] transition-colors">Google Ads for Admissions<ArrowRight className="inline-block ml-2 h-4 w-4" aria-hidden="true" /></Link>
+              <Link href="/services/seo" className="rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-4 text-sm font-medium text-[var(--rkd-fg)] hover:border-[var(--rkd-primary)] hover:text-[var(--rkd-primary)] transition-colors">SEO and Local Search<ArrowRight className="inline-block ml-2 h-4 w-4" aria-hidden="true" /></Link>
+              <Link href="/services/ai-automation" className="rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-4 text-sm font-medium text-[var(--rkd-fg)] hover:border-[var(--rkd-primary)] hover:text-[var(--rkd-primary)] transition-colors">Admissions Lead Follow-up Automation<ArrowRight className="inline-block ml-2 h-4 w-4" aria-hidden="true" /></Link>
+              <Link href="/insights/google-ads-for-lead-generation" className="rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-4 text-sm font-medium text-[var(--rkd-fg)] hover:border-[var(--rkd-primary)] hover:text-[var(--rkd-primary)] transition-colors">Google Ads Lead Generation Guide<ArrowRight className="inline-block ml-2 h-4 w-4" aria-hidden="true" /></Link>
+              <Link href="/contact" className="rounded-xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] p-4 text-sm font-medium text-[var(--rkd-fg)] hover:border-[var(--rkd-primary)] hover:text-[var(--rkd-primary)] transition-colors">Discuss Student Lead Generation<ArrowRight className="inline-block ml-2 h-4 w-4" aria-hidden="true" /></Link>
+          </nav>
+        </div>
+      </section>
       </main>
       <Footer />
     </>
