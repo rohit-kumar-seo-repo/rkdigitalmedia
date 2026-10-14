@@ -7,8 +7,8 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Stethoscope, HeartPulse, Pill, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Digital Marketing | R.K Digital Media',
-  description: 'Digital marketing for clinics, hospitals and healthcare providers, including local SEO, Google Ads, website optimisation and measurable patient enquiry workflows.',
+  title: "Healthcare Digital Marketing for Clinics in Noida | R.K Digital Media",
+  description: "Digital marketing for clinics, hospitals and healthcare providers in Noida and Delhi NCR, including local SEO, Google Ads, website optimisation and patient enquiry tracking.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/healthcare' },
   openGraph: {
     title: 'Healthcare Digital Marketing | R.K Digital Media',
