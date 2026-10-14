@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     'marketing agency blog',
   ],
   openGraph: {
-    title: 'Insights & Blog | R.K Digital Media Greater Noida',
-    description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization. Real frameworks, real numbers, no fluff.',
+    title: 'Digital Marketing Blog: SEO, Google Ads & Local SEO | R.K Digital Media',
+    description: 'Practical guides on SEO, Google Ads, Google Business Profile, website development and AI automation for businesses in Noida, Greater Noida and India.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://rkdigitalmedia.in/insights',
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Insights & Blog | R.K Digital Media',
+        alt: 'Digital Marketing Blog | R.K Digital Media',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Insights & Blog | R.K Digital Media Greater Noida',
-    description: 'Deep dives on SEO, Google Ads, AI automation, local search, and conversion optimization.',
+    description: 'Practical guides on SEO, Google Ads, Google Business Profile, website development and AI automation for businesses in Noida, Greater Noida and India.',
     images: ['/og-image.jpg'],
   },
   alternates: {
