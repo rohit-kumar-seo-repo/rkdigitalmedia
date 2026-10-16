@@ -45,7 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...indexableBlogPosts.map((post) => ({
       url: `${base}/insights/${post.slug}`,
-      lastModified: new Date(post.date),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
