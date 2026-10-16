@@ -206,8 +206,6 @@ export function Hero() {
                 <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">MEASUREMENT-LED EXECUTION</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
                 <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">GREATER NOIDA & NCR</span>
-                <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">GREATER NOIDA & NCR</span>
               </span>
             ))}
           </div>
