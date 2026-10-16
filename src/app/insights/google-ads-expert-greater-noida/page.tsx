@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Google Ads Expert in Greater Noida: A Practical Guide to Better Campaign Management | R.K Digital Media",
   description: "What effective Google Ads management looks like for local and regional businesses—from search intent and geography to lead quality and landing-page experience.",
   openGraph: { title: "Google Ads Expert in Greater Noida: A Practical Guide to Better Campaign Management", description: "What effective Google Ads management looks like for local and regional businesses—from search intent and geography to lead quality and landing-page experience.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/google-ads-expert-greater-noida", siteName: 'R.K Digital Media' },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Google Ads Expert in Greater Noida: A Practical Guide to Better Campaign Management",
+    description: "What effective Google Ads management looks like for local and regional businesses—from search intent and geography to lead quality and landing-page experience.",
+    images: ['/og-image.jpg'],
+    creator: '@rkdigitalmedia',
+  },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/google-ads-expert-greater-noida" },
 };
 const articleSchema = {
