@@ -159,9 +159,9 @@ export function Hero() {
             <span className="hidden sm:inline text-[var(--rkd-fg-muted)]">|</span>
             <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">6 Core Services</span>
             <span className="hidden sm:inline text-[var(--rkd-fg-muted)]">·</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">100+ Case Studies</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">Selected Case Studies</span>
             <span className="text-[var(--rkd-fg-muted)]">·</span>
-            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">8+ Years Experience</span>
+            <span className="text-[var(--rkd-fg)] font-outfit font-medium text-sm">Strategy & Execution</span>
           </div>
         </div>
 
