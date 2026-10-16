@@ -199,11 +199,11 @@ export function Hero() {
           <div className="flex animate-marquee-reverse whitespace-nowrap">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="flex items-center shrink-0">
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">100+ CASE STUDIES</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">SELECTED CASE STUDIES</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">12× PEAK REPORTED ROAS</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">REPORTED CAMPAIGN OUTCOMES</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
-                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">22.5K+ REPORTED LEADS ACROSS CASES</span>
+                <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">MEASUREMENT-LED EXECUTION</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
                 <span className="font-montserrat font-bold text-white text-sm md:text-base tracking-widest uppercase px-6">GREATER NOIDA & NCR</span>
                 <span className="font-montserrat font-bold text-[var(--rkd-primary)] px-2">·</span>
