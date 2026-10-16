@@ -15,10 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function ProcessPage() {
-  return (
-    <main>
-      <h1 className="sr-only">Our Digital Marketing Process: Audit, Strategy, Build and Optimization</h1>
-      <Process />
-    </main>
-  );
+  return <Process />;
 }
