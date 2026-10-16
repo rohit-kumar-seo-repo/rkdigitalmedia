@@ -42,7 +42,6 @@ const organizationSchema = {
     telephone: '+91-98715-30594',
     contactType: 'customer service',
     availableLanguage: ['English', 'Hindi'],
-    hoursAvailable: 'Mo-Fr 09:00-18:00',
   },
   address: {
     '@type': 'PostalAddress',
