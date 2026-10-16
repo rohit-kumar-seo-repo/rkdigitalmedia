@@ -173,7 +173,7 @@ const serviceSchema = {
     {'@type':'BreadcrumbList','itemListElement':[
       {'@type':'ListItem','position':1,'name':'Home','item':'https://rkdigitalmedia.in/'},
       {'@type':'ListItem','position':2,'name':'Services','item':'https://rkdigitalmedia.in/services'},
-      {'@type':'ListItem','position':3,'name':"SEO Services built around search intent and useful pages",'item':"https://rkdigitalmedia.in/services/seo"}
+      {'@type':'ListItem','position':3,'name':"SEO Company in Noida for Search Growth and Local Visibility",'item':"https://rkdigitalmedia.in/services/seo"}
     ]},
     {'@type':'Service','name':"SEO Company in Noida",'serviceType':"SEO Services",'provider':{'@type':'LocalBusiness','name':'R.K Digital Media','url':'https://rkdigitalmedia.in/'},'areaServed':[{'@type':'City','name':'Noida'},{'@type':'City','name':'Greater Noida'},{'@type':'City','name':'Ghaziabad'},{'@type':'City','name':'Delhi'}],'url':"https://rkdigitalmedia.in/services/seo"}
   ]
