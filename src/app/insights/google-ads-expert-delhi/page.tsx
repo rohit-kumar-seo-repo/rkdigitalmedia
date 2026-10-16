@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Google Ads Expert in Delhi: How to Evaluate a PPC Service Before Hiring | R.K Digital Media",
   description: "A practical buyer's guide to evaluating Google Ads management: strategy, tracking, search terms, landing pages, communication and the numbers that matter.",
   openGraph: { title: "Google Ads Expert in Delhi: How to Evaluate a PPC Service Before Hiring", description: "A practical buyer's guide to evaluating Google Ads management: strategy, tracking, search terms, landing pages, communication and the numbers that matter.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/google-ads-expert-delhi", siteName: 'R.K Digital Media' },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Google Ads Expert in Delhi: How to Evaluate a PPC Service Before Hiring",
+    description: "A practical buyer's guide to evaluating Google Ads management: strategy, tracking, search terms, landing pages, communication and the numbers that matter.",
+    images: ['/og-image.jpg'],
+    creator: '@rkdigitalmedia',
+  },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/google-ads-expert-delhi" },
 };
 const articleSchema = {
