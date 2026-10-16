@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Google Ads Expert in Noida: What a Good PPC Partner Should Actually Do | R.K Digital Media",
   description: "Hiring a Google Ads specialist is less about knowing the interface and more about connecting search intent, economics, tracking and landing-page experience.",
   openGraph: { title: "Google Ads Expert in Noida: What a Good PPC Partner Should Actually Do", description: "Hiring a Google Ads specialist is less about knowing the interface and more about connecting search intent, economics, tracking and landing-page experience.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/google-ads-expert-noida", siteName: 'R.K Digital Media' },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Google Ads Expert in Noida: What a Good PPC Partner Should Actually Do",
+    description: "Hiring a Google Ads specialist is less about knowing the interface and more about connecting search intent, economics, tracking and landing-page experience.",
+    images: ['/og-image.jpg'],
+    creator: '@rkdigitalmedia',
+  },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/google-ads-expert-noida" },
 };
 const articleSchema = {
