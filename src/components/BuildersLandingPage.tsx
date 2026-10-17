@@ -1,6 +1,7 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import Link from 'next/link';
 
 const WHATSAPP_NUMBER = '919871530594';
@@ -58,16 +59,16 @@ function BuildingArtwork() {
         {Array.from({ length: 7 }).map((_, i) => <circle key={i} cx={75 + i * 75} cy={397 - i * 4} r="2.3" fill="#d9bc88" />)}
       </svg>
       <div className="relative z-10 flex items-start justify-between gap-4">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#d6bd91]/30 bg-black/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.2em] text-[#e5d2ae]"><span className="h-1.5 w-1.5 rounded-full bg-[#d6bd91]" /> Property acquisition</span>
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#E8282B]/30 bg-black/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.2em] text-[#e5d2ae]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]" /> Property acquisition</span>
         <span className="text-right font-mono text-[10px] uppercase tracking-[.16em] text-white/45">Campaign framework<br/>01 / 04</span>
       </div>
       <div className="absolute bottom-5 left-5 right-5 z-10 flex items-end justify-between gap-4 sm:bottom-7 sm:left-7 sm:right-7">
         <div>
-          <p className="mb-1 text-[10px] uppercase tracking-[.2em] text-[#d6bd91]">From search to site visit</p>
+          <p className="mb-1 text-[10px] uppercase tracking-[.2em] text-[#E8282B]">From search to site visit</p>
           <p className="max-w-xs text-xl font-semibold leading-tight text-white sm:text-2xl">A more considered path to buyer enquiries.</p>
         </div>
         <div className="hidden rounded-xl border border-white/15 bg-black/30 p-3 backdrop-blur-sm sm:block">
-          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="18" stroke="#d6bd91" strokeOpacity=".35"/><path d="M11 25l7-7 5 4 8-10" stroke="#e5d2ae" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M25 12h6v6" stroke="#e5d2ae" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="18" stroke="#E8282B" strokeOpacity=".35"/><path d="M11 25l7-7 5 4 8-10" stroke="#e5d2ae" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M25 12h6v6" stroke="#e5d2ae" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </div>
       </div>
     </div>
@@ -78,8 +79,8 @@ function Blueprint() {
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111313] shadow-2xl shadow-black/30">
       <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-        <div><p className="text-[10px] uppercase tracking-[.2em] text-[#c9ad7d]">Illustrative deliverable</p><p className="mt-1 text-sm font-semibold text-white">Project launch campaign blueprint</p></div>
-        <span className="rounded-full border border-[#c9ad7d]/30 px-2.5 py-1 text-[9px] uppercase tracking-widest text-[#c9ad7d]">Sample</span>
+        <div><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Illustrative deliverable</p><p className="mt-1 text-sm font-semibold text-white">Project launch campaign blueprint</p></div>
+        <span className="rounded-full border border-[#E8282B]/30 px-2.5 py-1 text-[9px] uppercase tracking-widest text-[#E8282B]">Sample</span>
       </div>
       <div className="grid gap-px bg-white/10 sm:grid-cols-2">
         {[
@@ -87,7 +88,7 @@ function Blueprint() {
           ['02', 'Campaign structure', 'Separate priorities, budgets and landing-page destinations'],
           ['03', 'Lead qualification', 'Project fit, budget band, location and buyer requirements'],
           ['04', 'Measurement plan', 'Enquiries, qualified conversations and sales feedback'],
-        ].map((item) => <div key={item[0]} className="bg-[#151818] p-5"><span className="font-mono text-xs text-[#c9ad7d]">{item[0]}</span><h3 className="mt-3 text-sm font-semibold text-white">{item[1]}</h3><p className="mt-2 text-xs leading-relaxed text-white/55">{item[2]}</p></div>)}
+        ].map((item) => <div key={item[0]} className="bg-[#151818] p-5"><span className="font-mono text-xs text-[#E8282B]">{item[0]}</span><h3 className="mt-3 text-sm font-semibold text-white">{item[1]}</h3><p className="mt-2 text-xs leading-relaxed text-white/55">{item[2]}</p></div>)}
       </div>
       <div className="border-t border-white/10 px-5 py-4 text-[11px] leading-relaxed text-white/40">A framework preview, not a client report or a claim of campaign results. The final plan is scoped around the actual project.</div>
     </div>
@@ -132,15 +133,15 @@ export default function BuildersLandingPage() {
   const sectionLink = 'inline-flex items-center gap-2 text-sm font-semibold text-[#e6cfaa] transition hover:text-white';
 
   return (
-    <main className="builders-page bg-[#0b0d0d] text-[#f4f2ed]">
+    <main className="builders-page bg-[#0D0D0D] text-[#f4f2ed]">
       <div className="border-b border-white/[.08] bg-[#101313]">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2.5" aria-label="R.K Digital Media home">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#d6bd91] text-sm font-black tracking-tight text-[#101313]">RK</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8282B] text-sm font-black tracking-tight text-[#101313]">RK</span>
             <span><span className="block text-sm font-semibold tracking-wide">R.K DIGITAL MEDIA</span><span className="block text-[9px] uppercase tracking-[.2em] text-white/45">Performance marketing</span></span>
           </Link>
-          <div className="hidden items-center gap-5 text-xs text-white/55 md:flex"><span>Google Ads for property projects</span><span className="h-1 w-1 rounded-full bg-[#d6bd91]"/><span>Delhi NCR · India</span></div>
-          <a href={waHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold transition hover:border-[#d6bd91]/60 hover:bg-white/5"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> WhatsApp</a>
+          <div className="hidden items-center gap-5 text-xs text-white/55 md:flex"><span>Google Ads for property projects</span><span className="h-1 w-1 rounded-full bg-[#E8282B]"/><span>Delhi NCR · India</span></div>
+          <a href={waHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold transition hover:border-[#E8282B]/60 hover:bg-white/5"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> WhatsApp</a>
         </div>
       </div>
 
@@ -148,17 +149,17 @@ export default function BuildersLandingPage() {
         <div className="pointer-events-none absolute -right-48 -top-36 h-[34rem] w-[34rem] rounded-full bg-[#a8895a]/[.08] blur-3xl"/>
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:grid-cols-[1.05fr_.95fr] lg:gap-14 lg:px-8 lg:pb-24 lg:pt-20">
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d6bd91]/25 bg-[#d6bd91]/[.06] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#e5d2ae]"><span className="h-1.5 w-1.5 rounded-full bg-[#d6bd91]"/> For builders & real estate developers</div>
-            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.07] tracking-[-.045em] sm:text-5xl lg:text-[3.7rem]">Turn property searches into <span className="font-serif italic text-[#d6bd91]">better buyer conversations.</span></h1>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E8282B]/25 bg-[#E8282B]/[.06] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#e5d2ae]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]"/> For builders & real estate developers</div>
+            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.07] tracking-[-.045em] sm:text-5xl lg:text-[3.7rem]">Turn property searches into <span className="font-serif italic text-[#E8282B]">better buyer conversations.</span></h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg sm:leading-8">Google Ads strategy for residential and commercial projects—built around buyer intent, project location, clear enquiry tracking and a landing page that gives prospects a reason to take the next step.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#project-enquiry" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#d6bd91] px-6 py-4 text-sm font-bold text-[#111514] transition hover:bg-[#ead8b7]">Discuss your project <Arrow className="h-4 w-4"/></a>
+              <a href="#project-enquiry" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225]">Discuss your project <Arrow className="h-4 w-4"/></a>
               <a href="#how-it-works" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/[.04]">See how it works</a>
             </div>
             <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-xs text-white/50">
-              <span className="flex items-center gap-2"><span className="text-[#d6bd91]">✓</span> Project-specific campaign planning</span>
-              <span className="flex items-center gap-2"><span className="text-[#d6bd91]">✓</span> Conversion measurement</span>
-              <span className="flex items-center gap-2"><span className="text-[#d6bd91]">✓</span> No guaranteed-results claims</span>
+              <span className="flex items-center gap-2"><span className="text-[#E8282B]">✓</span> Project-specific campaign planning</span>
+              <span className="flex items-center gap-2"><span className="text-[#E8282B]">✓</span> Conversion measurement</span>
+              <span className="flex items-center gap-2"><span className="text-[#E8282B]">✓</span> No guaranteed-results claims</span>
             </div>
           </div>
           <BuildingArtwork />
@@ -167,83 +168,83 @@ export default function BuildersLandingPage() {
 
       <section className="border-b border-white/[.08] bg-[#101313]">
         <div className="mx-auto grid max-w-7xl gap-0 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
-          {[['01 / RELEVANCE','Reach searches that match your project'],['02 / CLARITY','Give buyers a clear next step'],['03 / MEASUREMENT','Understand enquiries beyond click volume']].map((item, i) => <div key={item[0]} className={'py-6 md:px-6 lg:py-8 ' + (i !== 2 ? 'border-b border-white/10 md:border-b-0 md:border-r' : '')}><p className="text-[9px] font-semibold uppercase tracking-[.2em] text-[#c9ad7d]">{item[0]}</p><p className="mt-2 text-sm font-medium text-white/85">{item[1]}</p></div>)}
+          {[['01 / RELEVANCE','Reach searches that match your project'],['02 / CLARITY','Give buyers a clear next step'],['03 / MEASUREMENT','Understand enquiries beyond click volume']].map((item, i) => <div key={item[0]} className={'py-6 md:px-6 lg:py-8 ' + (i !== 2 ? 'border-b border-white/10 md:border-b-0 md:border-r' : '')}><p className="text-[9px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">{item[0]}</p><p className="mt-2 text-sm font-medium text-white/85">{item[1]}</p></div>)}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
-          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">The commercial reality</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">A property campaign needs more than clicks.</h2><p className="mt-5 leading-7 text-white/55">A launch has a location, price segment, inventory, timeline and sales team. The campaign and the enquiry journey should reflect those realities—not simply optimise for the largest possible number of form submissions.</p></div>
+          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">The commercial reality</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">A property campaign needs more than clicks.</h2><p className="mt-5 leading-7 text-white/55">A launch has a location, price segment, inventory, timeline and sales team. The campaign and the enquiry journey should reflect those realities—not simply optimise for the largest possible number of form submissions.</p></div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {[['Clicks without context','Traffic is useful only when the search intent fits the project and offer.'],['Unclear lead quality','Lead volume alone does not tell you whether a prospect is relevant or ready to talk.'],['Launch and location complexity','Different projects and catchment areas can require different search themes and messages.'],['The follow-up gap','Tracking the enquiry is only the start; sales feedback helps explain which leads matter.']].map((item,i)=><article key={item[0]} className="rounded-2xl border border-white/10 bg-[#111414] p-6"><span className="font-mono text-xs text-[#c9ad7d]">0{i+1}</span><h3 className="mt-4 text-base font-semibold">{item[0]}</h3><p className="mt-2 text-sm leading-6 text-white/55">{item[1]}</p></article>)}
+            {[['Clicks without context','Traffic is useful only when the search intent fits the project and offer.'],['Unclear lead quality','Lead volume alone does not tell you whether a prospect is relevant or ready to talk.'],['Launch and location complexity','Different projects and catchment areas can require different search themes and messages.'],['The follow-up gap','Tracking the enquiry is only the start; sales feedback helps explain which leads matter.']].map((item,i)=><article key={item[0]} className="rounded-2xl border border-white/10 bg-[#141414] p-6"><span className="font-mono text-xs text-[#E8282B]">0{i+1}</span><h3 className="mt-4 text-base font-semibold">{item[0]}</h3><p className="mt-2 text-sm leading-6 text-white/55">{item[1]}</p></article>)}
           </div>
         </div>
       </section>
 
       <section className="border-y border-white/[.08] bg-[#101313]">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-          <div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">What the work covers</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">A connected acquisition system.</h2><p className="mt-4 leading-7 text-white/55">Campaign setup, the page buyers land on and the measurement after they enquire should work together.</p></div>
+          <div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">What the work covers</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">A connected acquisition system.</h2><p className="mt-4 leading-7 text-white/55">Campaign setup, the page buyers land on and the measurement after they enquire should work together.</p></div>
           <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">
-            {services.map((item)=><article key={item.n} className="bg-[#101313] p-7 sm:p-9"><span className="font-mono text-xs text-[#c9ad7d]">{item.n} / CAPABILITY</span><h3 className="mt-5 text-xl font-semibold">{item.title}</h3><p className="mt-3 max-w-lg text-sm leading-7 text-white/55">{item.text}</p></article>)}
+            {services.map((item)=><article key={item.n} className="bg-[#101313] p-7 sm:p-9"><span className="font-mono text-xs text-[#E8282B]">{item.n} / CAPABILITY</span><h3 className="mt-5 text-xl font-semibold">{item.title}</h3><p className="mt-3 max-w-lg text-sm leading-7 text-white/55">{item.text}</p></article>)}
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28" id="sample">
         <div className="grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
-          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">See the thinking</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">A plan you can inspect before a campaign begins.</h2><p className="mt-5 leading-7 text-white/60">The first conversation should establish whether the project, buyer market, budget and sales process make sense for paid search. A campaign blueprint can then map the approach before decisions are made.</p><ul className="mt-6 space-y-3 text-sm text-white/70">{['Search-intent and keyword themes','Campaign and landing-page structure','Lead qualification and tracking plan','Reporting that separates enquiries from business outcomes'].map(t=><li key={t} className="flex gap-3"><span className="text-[#d6bd91]">✓</span><span>{t}</span></li>)}</ul><p className="mt-5 text-xs leading-5 text-white/35">The blueprint shown here is illustrative. It contains no claimed client performance figures.</p></div>
+          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">See the thinking</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">A plan you can inspect before a campaign begins.</h2><p className="mt-5 leading-7 text-white/60">The first conversation should establish whether the project, buyer market, budget and sales process make sense for paid search. A campaign blueprint can then map the approach before decisions are made.</p><ul className="mt-6 space-y-3 text-sm text-white/70">{['Search-intent and keyword themes','Campaign and landing-page structure','Lead qualification and tracking plan','Reporting that separates enquiries from business outcomes'].map(t=><li key={t} className="flex gap-3"><span className="text-[#E8282B]">✓</span><span>{t}</span></li>)}</ul><p className="mt-5 text-xs leading-5 text-white/35">The blueprint shown here is illustrative. It contains no claimed client performance figures.</p></div>
           <Blueprint />
         </div>
       </section>
 
       <section id="how-it-works" className="border-y border-white/[.08] bg-[#101313]">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-          <div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">The process</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">From project context to measured learning.</h2></div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{process.map(item=><article key={item.n} className="border-t border-[#c9ad7d]/50 pt-5"><span className="font-mono text-xs text-[#c9ad7d]">{item.n}</span><h3 className="mt-4 text-lg font-semibold">{item.title}</h3><p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p></article>)}</div>
+          <div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">The process</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">From project context to measured learning.</h2></div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{process.map(item=><article key={item.n} className="border-t border-[#E8282B]/50 pt-5"><span className="font-mono text-xs text-[#E8282B]">{item.n}</span><h3 className="mt-4 text-lg font-semibold">{item.title}</h3><p className="mt-3 text-sm leading-6 text-white/55">{item.text}</p></article>)}</div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
-          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">Trust, without the hype</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Clear scope. Verifiable credentials. Honest reporting.</h2><p className="mt-5 leading-7 text-white/55">R.K Digital Media works across Google Ads strategy, conversion tracking, search-term optimisation and landing-page alignment. We start with the actual project and its constraints rather than promise a result before seeing the numbers.</p><a className={sectionLink + ' mt-6'} href="https://skillshop.credential.net/profile/rohitkumarseo848048/wallet" target="_blank" rel="noreferrer">View Google Ads credentials <Arrow className="h-4 w-4"/></a><div className="mt-8 rounded-xl border border-white/10 bg-[#111414] p-5"><p className="text-sm font-semibold">What you can expect</p><ul className="mt-3 space-y-2 text-sm leading-6 text-white/55"><li>• Clear discussion of campaign scope and fees</li><li>• Advertising spend distinguished from management fees</li><li>• Conversion tracking reviewed before performance claims</li><li>• No guaranteed lead counts or sales ratios</li></ul></div></div>
+          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Trust, without the hype</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Clear scope. Verifiable credentials. Honest reporting.</h2><p className="mt-5 leading-7 text-white/55">R.K Digital Media works across Google Ads strategy, conversion tracking, search-term optimisation and landing-page alignment. We start with the actual project and its constraints rather than promise a result before seeing the numbers.</p><a className={sectionLink + ' mt-6'} href="https://skillshop.credential.net/profile/rohitkumarseo848048/wallet" target="_blank" rel="noreferrer">View Google Ads credentials <Arrow className="h-4 w-4"/></a><div className="mt-8 rounded-xl border border-white/10 bg-[#141414] p-5"><p className="text-sm font-semibold">What you can expect</p><ul className="mt-3 space-y-2 text-sm leading-6 text-white/55"><li>• Clear discussion of campaign scope and fees</li><li>• Advertising spend distinguished from management fees</li><li>• Conversion tracking reviewed before performance claims</li><li>• No guaranteed lead counts or sales ratios</li></ul></div></div>
           <div className="space-y-4">
-            <article className="rounded-2xl border border-white/10 bg-[#111414] p-6 sm:p-8"><p className="text-[10px] uppercase tracking-[.2em] text-[#c9ad7d]">Relevant adjacent experience</p><h3 className="mt-3 text-xl font-semibold">B2B lead generation case study</h3><p className="mt-3 text-sm leading-7 text-white/55">Review a documented lead-generation project to understand the broader approach to paid acquisition and qualification. It is not presented as a real estate case study.</p><Link href="/case-studies/b2b-lead-gen" className={sectionLink + ' mt-5'}>View documented case study <Arrow className="h-4 w-4"/></Link></article>
-            <article className="rounded-2xl border border-white/10 bg-[#111414] p-6 sm:p-8"><p className="text-[10px] uppercase tracking-[.2em] text-[#c9ad7d]">Existing Google Ads service</p><h3 className="mt-3 text-xl font-semibold">A measurement-first approach</h3><p className="mt-3 text-sm leading-7 text-white/55">See the wider Google Ads service scope, including search campaigns, conversion tracking, search-term optimisation and landing-page alignment.</p><Link href="/services/google-ads" className={sectionLink + ' mt-5'}>Explore Google Ads services <Arrow className="h-4 w-4"/></Link></article>
+            <article className="rounded-2xl border border-white/10 bg-[#141414] p-6 sm:p-8"><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Relevant adjacent experience</p><h3 className="mt-3 text-xl font-semibold">B2B lead generation case study</h3><p className="mt-3 text-sm leading-7 text-white/55">Review a documented lead-generation project to understand the broader approach to paid acquisition and qualification. It is not presented as a real estate case study.</p><Link href="/case-studies/b2b-lead-gen" className={sectionLink + ' mt-5'}>View documented case study <Arrow className="h-4 w-4"/></Link></article>
+            <article className="rounded-2xl border border-white/10 bg-[#141414] p-6 sm:p-8"><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Existing Google Ads service</p><h3 className="mt-3 text-xl font-semibold">A measurement-first approach</h3><p className="mt-3 text-sm leading-7 text-white/55">See the wider Google Ads service scope, including search campaigns, conversion tracking, search-term optimisation and landing-page alignment.</p><Link href="/services/google-ads" className={sectionLink + ' mt-5'}>Explore Google Ads services <Arrow className="h-4 w-4"/></Link></article>
           </div>
         </div>
       </section>
 
       <section className="border-y border-white/[.08] bg-[#101313]">
         <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-          <div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">Common questions</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Before we discuss your project.</h2></div>
-          <div className="mt-8 divide-y divide-white/10">{faqs.map(item=><details key={item.q} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-medium text-white/90 marker:content-none"><span>{item.q}</span><span className="text-xl text-[#c9ad7d] transition group-open:rotate-45">+</span></summary><p className="max-w-3xl pt-4 text-sm leading-7 text-white/55">{item.a}</p></details>)}</div>
+          <div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Common questions</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Before we discuss your project.</h2></div>
+          <div className="mt-8 divide-y divide-white/10">{faqs.map(item=><details key={item.q} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-medium text-white/90 marker:content-none"><span>{item.q}</span><span className="text-xl text-[#E8282B] transition group-open:rotate-45">+</span></summary><p className="max-w-3xl pt-4 text-sm leading-7 text-white/55">{item.a}</p></details>)}</div>
         </div>
       </section>
 
       <section id="project-enquiry" className="relative overflow-hidden">
         <div className="pointer-events-none absolute -left-48 top-10 h-96 w-96 rounded-full bg-[#b69868]/[.08] blur-3xl"/>
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8 lg:py-28">
-          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#c9ad7d]">Start with the project</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Let’s see whether Google Ads fits your next launch.</h2><p className="mt-5 leading-7 text-white/55">Share a few details. We can discuss the project, target market, current campaigns and what needs to be measured before proposing a plan.</p><div className="mt-8 space-y-4 text-sm text-white/65"><div className="flex gap-3"><span className="text-[#d6bd91]">01</span><span>Short, project-focused first conversation</span></div><div className="flex gap-3"><span className="text-[#d6bd91]">02</span><span>Discuss goals, readiness, budget and tracking</span></div><div className="flex gap-3"><span className="text-[#d6bd91]">03</span><span>Decide whether a campaign plan is the right next step</span></div></div><a href={waHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#52c878]/30 bg-[#52c878]/[.08] px-5 py-3 text-sm font-semibold text-[#a4edb8] transition hover:bg-[#52c878]/[.14]"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> Start on WhatsApp <Arrow className="h-4 w-4"/></a></div>
-          <form onSubmit={submitLead} className="rounded-2xl border border-white/10 bg-[#111414] p-5 sm:p-8">
+          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Start with the project</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Let’s see whether Google Ads fits your next launch.</h2><p className="mt-5 leading-7 text-white/55">Share a few details. We can discuss the project, target market, current campaigns and what needs to be measured before proposing a plan.</p><div className="mt-8 space-y-4 text-sm text-white/65"><div className="flex gap-3"><span className="text-[#E8282B]">01</span><span>Short, project-focused first conversation</span></div><div className="flex gap-3"><span className="text-[#E8282B]">02</span><span>Discuss goals, readiness, budget and tracking</span></div><div className="flex gap-3"><span className="text-[#E8282B]">03</span><span>Decide whether a campaign plan is the right next step</span></div></div><a href={waHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#52c878]/30 bg-[#52c878]/[.08] px-5 py-3 text-sm font-semibold text-[#a4edb8] transition hover:bg-[#52c878]/[.14]"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> Start on WhatsApp <Arrow className="h-4 w-4"/></a></div>
+          <form onSubmit={submitLead} className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-8">
             <div className="mb-6"><h3 className="text-xl font-semibold">Tell us about your project</h3><p className="mt-2 text-xs leading-5 text-white/45">Required fields are marked *. Submitting opens WhatsApp with your details so you can review and send the enquiry.</p></div>
             <div className="grid gap-5 sm:grid-cols-2">
-              <label className="block text-xs font-medium text-white/65">Full name *<input required autoComplete="name" value={name} onChange={e=>setName(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#c9ad7d]/70" placeholder="Your name"/></label>
-              <label className="block text-xs font-medium text-white/65">Company / builder *<input required autoComplete="organization" value={company} onChange={e=>setCompany(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#c9ad7d]/70" placeholder="Company name"/></label>
-              <label className="block text-xs font-medium text-white/65 sm:col-span-2">Project name or type *<input required value={project} onChange={e=>setProject(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#c9ad7d]/70" placeholder="Residential, commercial, plotted development..."/></label>
-              <label className="block text-xs font-medium text-white/65">Project city *<input required autoComplete="address-level2" value={city} onChange={e=>setCity(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#c9ad7d]/70" placeholder="City / market"/></label>
-              <label className="block text-xs font-medium text-white/65">WhatsApp / phone *<input required type="tel" autoComplete="tel" value={phone} onChange={e=>setPhone(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#c9ad7d]/70" placeholder="+91 ..."/></label>
-              <label className="block text-xs font-medium text-white/65">Project stage<select value={stage} onChange={e=>setStage(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none focus:border-[#c9ad7d]/70"><option>Planning a launch</option><option>Launching soon</option><option>Already selling</option><option>Existing campaigns need improvement</option></select></label>
-              <label className="block text-xs font-medium text-white/65">Indicative monthly ad budget<select value={budget} onChange={e=>setBudget(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0d0d] px-4 py-3.5 text-sm text-white outline-none focus:border-[#c9ad7d]/70"><option>Need guidance</option><option>₹50,000–₹1 lakh</option><option>₹1–₹3 lakh</option><option>₹3 lakh+</option></select><span className="mt-1 block text-[10px] text-white/35">Indicative ad spend, not the management fee.</span></label>
+              <label className="block text-xs font-medium text-white/65">Full name *<input required autoComplete="name" value={name} onChange={e=>setName(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#E8282B]/70" placeholder="Your name"/></label>
+              <label className="block text-xs font-medium text-white/65">Company / builder *<input required autoComplete="organization" value={company} onChange={e=>setCompany(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#E8282B]/70" placeholder="Company name"/></label>
+              <label className="block text-xs font-medium text-white/65 sm:col-span-2">Project name or type *<input required value={project} onChange={e=>setProject(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#E8282B]/70" placeholder="Residential, commercial, plotted development..."/></label>
+              <label className="block text-xs font-medium text-white/65">Project city *<input required autoComplete="address-level2" value={city} onChange={e=>setCity(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#E8282B]/70" placeholder="City / market"/></label>
+              <label className="block text-xs font-medium text-white/65">WhatsApp / phone *<input required type="tel" autoComplete="tel" value={phone} onChange={e=>setPhone(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#E8282B]/70" placeholder="+91 ..."/></label>
+              <label className="block text-xs font-medium text-white/65">Project stage<select value={stage} onChange={e=>setStage(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none focus:border-[#E8282B]/70"><option>Planning a launch</option><option>Launching soon</option><option>Already selling</option><option>Existing campaigns need improvement</option></select></label>
+              <label className="block text-xs font-medium text-white/65">Indicative monthly ad budget<select value={budget} onChange={e=>setBudget(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none focus:border-[#E8282B]/70"><option>Need guidance</option><option>₹50,000–₹1 lakh</option><option>₹1–₹3 lakh</option><option>₹3 lakh+</option></select><span className="mt-1 block text-[10px] text-white/35">Indicative ad spend, not the management fee.</span></label>
             </div>
-            <label className="mt-6 flex cursor-pointer items-start gap-3 text-xs leading-5 text-white/50"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)} className="mt-1 h-4 w-4 accent-[#d6bd91]"/><span>I agree that R.K Digital Media may contact me about this enquiry. My details will be included in the WhatsApp message only when I choose to send it.</span></label>
+            <label className="mt-6 flex cursor-pointer items-start gap-3 text-xs leading-5 text-white/50"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)} className="mt-1 h-4 w-4 accent-[#E8282B]"/><span>I agree that R.K Digital Media may contact me about this enquiry. My details will be included in the WhatsApp message only when I choose to send it.</span></label>
             {error && <p role="alert" className="mt-3 text-xs text-red-300">{error}</p>}
-            <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#d6bd91] px-6 py-4 text-sm font-bold text-[#111514] transition hover:bg-[#ead8b7] sm:w-auto">Continue to WhatsApp <Arrow className="h-4 w-4"/></button>
+            <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225] sm:w-auto">Continue to WhatsApp <Arrow className="h-4 w-4"/></button>
             <p className="mt-4 text-[10px] leading-5 text-white/35">No enquiry is sent automatically to a database by this form. You review the pre-filled WhatsApp message and send it yourself.</p>
           </form>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#080a0a]">
+      <footer className="border-t border-white/10 bg-[#0D0D0D]">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} R.K Digital Media. Google Ads for real estate builders and developers.</p>
           <div className="flex flex-wrap gap-5"><Link href="/privacy-policy" className="transition hover:text-white/70">Privacy</Link><Link href="/services/google-ads" className="transition hover:text-white/70">Google Ads services</Link><Link href="/contact" className="transition hover:text-white/70">Contact</Link></div>
