@@ -57,7 +57,7 @@ function LeakSection() {
 function MapPreview() {
   return <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#141414] shadow-2xl shadow-black/30">
     <div className="flex items-center justify-between border-b border-white/10 px-5 py-4"><div><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Sample layout</p><p className="mt-1 text-sm font-semibold text-white">Buyer-search map</p></div><span className="rounded-full border border-white/15 px-2.5 py-1 text-[9px] uppercase tracking-widest text-white/55">Preview</span></div>
-    <div className="p-4 sm:p-6"><img src="/images/builders-buyer-search-map.webp" alt="Sample layout of a one-page buyer-search map, with project and location, buyer intent, exclusions, landing-page message and enquiry tracking sections" width="1200" height="800" loading="lazy" decoding="async" className="h-auto w-full rounded-lg border border-white/10"/></div>
+    <div className="p-4 sm:p-6"><img src="https://design.canva.ai/o6m4mYLEQEuYCp0" alt="Sample layout of a one-page buyer-search map, with project and location, buyer intent, exclusions, landing-page message and enquiry tracking sections" width="1200" height="800" loading="lazy" decoding="async" className="h-auto w-full rounded-lg border border-white/10"/></div>
     <div className="grid gap-px bg-white/10 sm:grid-cols-2">
       {[['Project & location','Define the property, market and relevant catchment.'],['Buyer intent','Group searches by property type, location and buying need.'],['Search exclusions','Identify rental, broker or other mismatched intent where relevant.'],['Enquiry path','Connect the search, page message and enquiry measurement.']].map(([title, text])=><div key={title} className="bg-[#141414] p-4"><h3 className="text-sm font-semibold text-white">{title}</h3><p className="mt-2 text-xs leading-5 text-white/50">{text}</p></div>)}
     </div>
@@ -140,7 +140,7 @@ export default function BuildersLandingPage() {
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(result.error || 'We could not submit your request. Please use WhatsApp instead.');
       trackEvent('builders_form_submit', { location: 'project_enquiry', kind: 'buyer_map_request' });
-      window.location.assign('/google-ads-for-builders/thanks');
+      window.location.assign('/google-ads-for-builders/thanks' + (ref ? '?l=' + encodeURIComponent(ref) + '&city=' + encodeURIComponent(landingCity) : '?city=' + encodeURIComponent(landingCity)));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please use WhatsApp as a fallback.');
     } finally {
