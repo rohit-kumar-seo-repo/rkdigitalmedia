@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import BuildersLandingPage from '@/components/BuildersLandingPage';
 
-const pageTitle = 'Google Ads for Real Estate Builders & Developers | R.K Digital Media';
-const pageDescription = 'A measurement-led Google Ads approach for real estate builders and developers: project-launch campaigns, buyer-intent search targeting, enquiry tracking and landing-page alignment.';
+const pageTitle = 'Google Ads for Builders & Developers | R.K Digital Media';
+const pageDescription = 'Google Ads for builders and developers: buyer-intent search campaigns, project-focused landing pages and enquiry tracking. No invented claims, no guaranteed outcomes.';
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     siteName: 'R.K Digital Media',
     title: pageTitle,
     description: pageDescription,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Google Ads for real estate builders and developers' }],
+    images: [{ url: '/images/builders-og.webp', width: 1200, height: 630, alt: 'Google Ads for builders and developers' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: ['/og-image.jpg'],
+    images: ['/images/builders-og.webp'],
   },
 };
 
