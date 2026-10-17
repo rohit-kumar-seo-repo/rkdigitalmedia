@@ -40,10 +40,7 @@ const schema = {
       name: 'Google Ads for Real Estate Builders and Developers',
       serviceType: 'Google Ads campaign strategy, management and conversion measurement',
       provider: { '@type': 'Organization', name: 'R.K Digital Media', url: 'https://rkdigitalmedia.in/' },
-      areaServed: [
-        { '@type': 'AdministrativeArea', name: 'Delhi NCR' },
-        { '@type': 'Country', name: 'India' },
-      ],
+      areaServed: { '@type': 'Country', name: 'India' },
       url: 'https://rkdigitalmedia.in/google-ads-for-builders',
       description: pageDescription,
     },
