@@ -86,61 +86,148 @@ interface BuilderSample {
   };
 }
 
+type BuilderCitySlug = 'mumbai' | 'delhi-ncr' | 'pune' | 'bengaluru' | 'hyderabad' | 'chennai' | 'ahmedabad';
+
+const BUILDER_CITIES: Array<{ label: string; slug: BuilderCitySlug }> = [
+  { label: 'Mumbai', slug: 'mumbai' },
+  { label: 'Delhi NCR', slug: 'delhi-ncr' },
+  { label: 'Pune', slug: 'pune' },
+  { label: 'Bengaluru', slug: 'bengaluru' },
+  { label: 'Hyderabad', slug: 'hyderabad' },
+  { label: 'Chennai', slug: 'chennai' },
+  { label: 'Ahmedabad', slug: 'ahmedabad' },
+];
+
+const CITY_ALIASES: Record<string, BuilderCitySlug> = {
+  mumbai: 'mumbai',
+  'navi mumbai': 'mumbai',
+  thane: 'mumbai',
+  mmr: 'mumbai',
+  'mumbai/mmr': 'mumbai',
+  delhi: 'delhi-ncr',
+  'delhi ncr': 'delhi-ncr',
+  ncr: 'delhi-ncr',
+  gurgaon: 'delhi-ncr',
+  gurugram: 'delhi-ncr',
+  noida: 'delhi-ncr',
+  'greater noida': 'delhi-ncr',
+  ghaziabad: 'delhi-ncr',
+  faridabad: 'delhi-ncr',
+  bangalore: 'bengaluru',
+  bengaluru: 'bengaluru',
+  pune: 'pune',
+  hyderabad: 'hyderabad',
+  chennai: 'chennai',
+  ahmedabad: 'ahmedabad',
+};
+
+const builderSampleCache = new Map<BuilderCitySlug, BuilderSample>();
+
+function citySlugFromParam(city: string | null): BuilderCitySlug {
+  return CITY_ALIASES[(city || '').trim().toLowerCase()] || 'mumbai';
+}
+
 function BuyerSearchDataSection() {
   const [data, setData] = useState<BuilderSample | null>(null);
+  const [activeCity, setActiveCity] = useState<BuilderCitySlug>('mumbai');
+  const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
+    const initialSlug = citySlugFromParam(new URLSearchParams(window.location.search).get('city'));
+    setActiveCity(initialSlug);
+    const cached = builderSampleCache.get(initialSlug);
+    if (cached) {
+      setData(cached);
+      setLoading(false);
+      setLoadError(false);
+      return;
+    }
+
     let active = true;
-    fetch('/builders-sample.json', { cache: 'force-cache' })
+    setLoading(true);
+    setLoadError(false);
+    fetch('/builders-sample-' + initialSlug + '.json?v=20261018', { cache: 'no-store' })
       .then(response => {
         if (!response.ok) throw new Error('Could not load the keyword sample.');
         return response.json();
       })
-      .then((value: BuilderSample) => { if (active) setData(value); })
-      .catch(() => { if (active) setLoadError(true); });
+      .then((value: BuilderSample) => {
+        if (!active) return;
+        builderSampleCache.set(initialSlug, value);
+        setData(value);
+        setLoading(false);
+      })
+      .catch(() => {
+        if (!active) return;
+        setLoadError(true);
+        setLoading(false);
+      });
     return () => { active = false; };
   }, []);
 
-  if (!data) {
-    return <section id="mumbai-search-sample" className="border-b border-white/[.08] bg-[#0D0D0D]" aria-labelledby="sample-data-title">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Worked example</p>
-        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What a buyer-search map shows</h2>
-        <p role={loadError ? 'status' : undefined} className="mt-4 text-sm text-white/50">{loadError ? 'The keyword sample could not be loaded right now.' : 'Loading the Google Keyword Planner sample…'}</p>
-      </div>
-    </section>;
+  async function selectCity(slug: BuilderCitySlug) {
+    setActiveCity(slug);
+    setLoadError(false);
+    const cached = builderSampleCache.get(slug);
+    if (cached) {
+      setData(cached);
+      setLoading(false);
+      return;
+    }
+
+    setData(null);
+    setLoading(true);
+    try {
+      const response = await fetch('/builders-sample-' + slug + '.json?v=20261018', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Could not load the keyword sample.');
+      const value: BuilderSample = await response.json();
+      builderSampleCache.set(slug, value);
+      setData(value);
+    } catch {
+      setLoadError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
-  const columns = [
+  const columns = data ? [
     { title: 'Buyer-leaning', description: 'Buyer-signalling searches and searches for a named project.', queries: [...data.groups.buyer_leaning.topQueries, ...data.groups.project_name.topQueries] },
     { title: 'Could be either', description: 'Searches where the query alone does not make buying or renting intent clear.', queries: data.groups.mixed.topQueries },
     { title: 'Not a buyer', description: 'Rental searches and resale, broker or portal intent.', queries: [...data.groups.rental.topQueries, ...data.groups.resale_broker_portal.topQueries] },
-  ];
+  ].map(column => ({ ...column, queries: column.queries })) : [];
 
   return <section id="mumbai-search-sample" className="border-b border-white/[.08] bg-[#0D0D0D]" aria-labelledby="sample-data-title">
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       <div className="max-w-3xl">
-        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Worked example · {data.city}</p>
-        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What a buyer-search map shows, using {data.city} as one example</h2>
+        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">{data ? 'Worked example · ' + data.city : 'Worked example'}</p>
+        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What a buyer-search map shows{data ? ', using ' + data.city + ' as one example' : ''}</h2>
         <p className="mt-4 text-sm leading-6 text-white/60">We build the same map for your city, locality and project: residential, commercial, plotted or township.</p>
-        <p className="mt-4 text-xs leading-6 text-white/45">Source: {data.source}.</p>
+        <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Choose a worked-example city">
+          {BUILDER_CITIES.map(city => <button key={city.slug} type="button" aria-pressed={activeCity === city.slug} onClick={() => { void selectCity(city.slug); }} className={'rounded-full border px-4 py-2 text-xs font-semibold transition ' + (activeCity === city.slug ? 'border-[#E8282B] bg-[#E8282B] text-white' : 'border-white/15 bg-white/[.03] text-white/65 hover:border-white/35 hover:text-white')}>{city.label}</button>)}
+        </div>
+        <p className="mt-3 text-xs text-white/45">Your city not listed? Request the map for it below.</p>
+        {data && <p className="mt-5 text-xs leading-6 text-white/45">Source: {data.source}.</p>}
       </div>
-      <div className="mt-8 grid items-start gap-4 lg:grid-cols-3">
-        {columns.map((column, index) => <section key={column.title} className="overflow-hidden rounded-2xl border border-white/10 bg-[#141414]" aria-labelledby={'sample-column-' + index}>
-          <div className="border-b border-white/10 p-5">
-            <h3 id={'sample-column-' + index} className="text-lg font-semibold text-white">{column.title}</h3>
-            <p className="mt-2 text-xs leading-5 text-white/45">{column.description}</p>
-          </div>
-          <ul className="divide-y divide-white/[.07]">
-            {column.queries.map((item, queryIndex) => <li key={`${item.query}-${queryIndex}`} className="flex items-start justify-between gap-4 px-5 py-3.5">
-              <span className="min-w-0 text-sm leading-5 text-white/80">{item.query}</span>
-              <span className="shrink-0 whitespace-nowrap text-xs font-semibold tabular-nums text-white">{item.monthly.toLocaleString('en-IN')}<span className="ml-1 font-normal text-white/40">/mo</span></span>
-            </li>)}
-          </ul>
-        </section>)}
-      </div>
-      <p className="mt-5 max-w-4xl text-xs leading-6 text-white/45">{data.howToRead}</p>
+      {loading && <p role="status" className="mt-8 text-sm text-white/50">Loading the {BUILDER_CITIES.find(city => city.slug === activeCity)?.label || 'selected city'} keyword sample…</p>}
+      {loadError && <p role="alert" className="mt-8 text-sm text-red-200">The keyword sample could not be loaded. Please select the city again to retry.</p>}
+      {data && !loading && <>
+        <div className="mt-8 grid items-start gap-4 lg:grid-cols-3">
+          {columns.map((column, index) => column.queries.length === 0 ? null : <section key={column.title} className="overflow-hidden rounded-2xl border border-white/10 bg-[#141414]" aria-labelledby={'sample-column-' + index}>
+            <div className="border-b border-white/10 p-5">
+              <h3 id={'sample-column-' + index} className="text-lg font-semibold text-white">{column.title}</h3>
+              <p className="mt-2 text-xs leading-5 text-white/45">{column.description}</p>
+            </div>
+            <ul className="divide-y divide-white/[.07]">
+              {column.queries.map((item, queryIndex) => <li key={item.query + '-' + queryIndex} className="flex items-start justify-between gap-4 px-5 py-3.5">
+                <span className="min-w-0 text-sm leading-5 text-white/80">{item.query}</span>
+                <span className="shrink-0 whitespace-nowrap text-xs font-semibold tabular-nums text-white">{item.monthly.toLocaleString('en-IN')}<span className="ml-1 font-normal text-white/40">/mo</span></span>
+              </li>)}
+            </ul>
+          </section>)}
+        </div>
+        <p className="mt-5 max-w-4xl text-xs leading-6 text-white/45">{data.howToRead}</p>
+      </>}
     </div>
   </section>;
 }
