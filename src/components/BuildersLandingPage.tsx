@@ -133,7 +133,7 @@ function BuyerSearchDataSection() {
             <p className="mt-2 text-xs leading-5 text-white/45">{column.description}</p>
           </div>
           <ul className="divide-y divide-white/[.07]">
-            {column.queries.map((item, queryIndex) => <li key={item.cls + '-' + item.query + '-' + queryIndex} className="flex items-start justify-between gap-4 px-5 py-3.5">
+            {column.queries.map((item, queryIndex) => <li key={`${item.query}-${queryIndex}`} className="flex items-start justify-between gap-4 px-5 py-3.5">
               <span className="min-w-0 text-sm leading-5 text-white/80">{item.query}</span>
               <span className="shrink-0 whitespace-nowrap text-xs font-semibold tabular-nums text-white">{item.monthly.toLocaleString('en-IN')}<span className="ml-1 font-normal text-white/40">/mo</span></span>
             </li>)}
