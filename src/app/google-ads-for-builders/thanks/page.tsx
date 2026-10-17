@@ -6,12 +6,10 @@ import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
 
 const WHATSAPP_NUMBER = '919871530594';
-const STAGES = ['Planning a launch', 'Launching soon', 'Already selling', 'Existing campaigns need improvement'];
 const BUDGETS = ['Need guidance', '₹50,000–₹1 lakh', '₹1–₹3 lakh', '₹3 lakh+'];
 
 export default function BuildersThanksPage() {
   const [ref, setRef] = useState('');
-  const [landingCity, setLandingCity] = useState('your city');
   const [stage, setStage] = useState(STAGES[0]);
   const [budget, setBudget] = useState(BUDGETS[0]);
   const [consent, setConsent] = useState(false);
@@ -22,7 +20,6 @@ export default function BuildersThanksPage() {
     if (typeof window !== 'undefined') {
       const p = new URLSearchParams(window.location.search);
       setRef((p.get('l') || '').slice(0, 200));
-      setLandingCity((p.get('city') || 'your city').slice(0, 120));
     }
   }, []);
 
