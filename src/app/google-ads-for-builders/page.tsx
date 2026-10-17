@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import BuildersLandingPage from '@/components/BuildersLandingPage';
 
 const pageTitle = 'Google Ads for Builders & Developers | R.K Digital Media';
-const pageDescription = 'Google Ads for builders and developers: buyer-intent search campaigns, project-focused landing pages and enquiry tracking. No invented claims, no guaranteed outcomes.';
+const pageDescription = 'Google Ads for builders: buyer-intent campaigns, project-focused landing pages and enquiry tracking for developers. No invented claims or guaranteed outcomes.';
 
 export const metadata: Metadata = {
   title: pageTitle,
