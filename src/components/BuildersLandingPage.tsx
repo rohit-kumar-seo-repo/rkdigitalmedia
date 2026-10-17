@@ -56,13 +56,86 @@ function LeakSection() {
 
 function MapPreview() {
   return <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#141414] shadow-2xl shadow-black/30">
-    <div className="flex items-center justify-between border-b border-white/10 px-5 py-4"><div><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Sample layout</p><p className="mt-1 text-sm font-semibold text-white">Buyer-search map</p></div><span className="rounded-full border border-white/15 px-2.5 py-1 text-[9px] uppercase tracking-widest text-white/55">Preview</span></div>
+    <div className="flex items-center justify-between border-b border-white/10 px-5 py-4"><div><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Buyer-search map preview</p><p className="mt-1 text-sm font-semibold text-white">Buyer-search map</p></div><span className="rounded-full border border-white/15 px-2.5 py-1 text-[9px] uppercase tracking-widest text-white/55">Preview</span></div>
     <div className="p-4 sm:p-6"><img src="/images/builders-map-preview.svg" alt="Sample layout of a one-page buyer-search map, with project and location, buyer intent, exclusions, landing-page message and enquiry tracking sections" width="1200" height="675" loading="lazy" decoding="async" className="h-auto w-full rounded-lg border border-white/10"/></div>
     <div className="grid gap-px bg-white/10 sm:grid-cols-2">
       {[['Project & location','Define the property, market and relevant catchment.'],['Buyer intent','Group searches by property type, location and buying need.'],['Search exclusions','Identify rental, broker or other mismatched intent where relevant.'],['Enquiry path','Connect the search, page message and enquiry measurement.']].map(([title, text])=><div key={title} className="bg-[#141414] p-4"><h3 className="text-sm font-semibold text-white">{title}</h3><p className="mt-2 text-xs leading-5 text-white/50">{text}</p></div>)}
     </div>
     <p className="border-t border-white/10 px-5 py-4 text-[11px] leading-relaxed text-white/40">A sample layout to show the format—not a client report or a performance claim.</p>
   </div>;
+}
+
+type SampleQuery = { query: string; monthly: number; cls: string };
+type SampleData = {
+  city: string;
+  generatedOn: string;
+  source: string;
+  howToRead: string;
+  groups: {
+    buyer_leaning: { topQueries: SampleQuery[] };
+    project_name: { topQueries: SampleQuery[] };
+    mixed: { topQueries: SampleQuery[] };
+    rental: { topQueries: SampleQuery[] };
+    resale_broker_portal: { topQueries: SampleQuery[] };
+  };
+};
+
+function BuyerSearchDataSection() {
+  const [data, setData] = useState<SampleData | null>(null);
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    fetch('/builders-sample.json', { cache: 'force-cache' })
+      .then(response => {
+        if (!response.ok) throw new Error('Could not load the keyword sample.');
+        return response.json();
+      })
+      .then((value: SampleData) => { if (active) setData(value); })
+      .catch(() => { if (active) setLoadError(true); });
+    return () => { active = false; };
+  }, []);
+
+  if (!data) {
+    return <section id="mumbai-search-sample" className="border-b border-white/[.08] bg-[#0D0D0D]" aria-labelledby="sample-data-title">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Mumbai search sample</p>
+        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What property searches look like.</h2>
+        <p role={loadError ? 'status' : undefined} className="mt-4 text-sm text-white/50">{loadError ? 'The keyword sample could not be loaded right now.' : 'Loading the Google Keyword Planner sample…'}</p>
+      </div>
+    </section>;
+  }
+
+  const columns = [
+    { title: 'Buyer-leaning', description: 'Buyer-signalling searches and searches for a named project.', queries: [...data.groups.buyer_leaning.topQueries, ...data.groups.project_name.topQueries] },
+    { title: 'Could be either', description: 'Searches where the query alone does not make buying or renting intent clear.', queries: data.groups.mixed.topQueries },
+    { title: 'Not a buyer', description: 'Rental searches and resale, broker or portal intent.', queries: [...data.groups.rental.topQueries, ...data.groups.resale_broker_portal.topQueries] },
+  ];
+
+  return <section id="mumbai-search-sample" className="border-b border-white/[.08] bg-[#0D0D0D]" aria-labelledby="sample-data-title">
+    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div className="max-w-3xl">
+        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">{data.city} · Google Keyword Planner</p>
+        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">The same property market, different search intent.</h2>
+        <p className="mt-4 text-xs leading-6 text-white/45">Source: {data.source}.</p>
+      </div>
+      <div className="mt-8 grid items-start gap-4 lg:grid-cols-3">
+        {columns.map((column, index) => <section key={column.title} className="overflow-hidden rounded-2xl border border-white/10 bg-[#141414]" aria-labelledby={'sample-column-' + index}>
+          <div className="border-b border-white/10 p-5">
+            <h3 id={'sample-column-' + index} className="text-lg font-semibold text-white">{column.title}</h3>
+            <p className="mt-2 text-xs leading-5 text-white/45">{column.description}</p>
+          </div>
+          <ul className="divide-y divide-white/[.07]">
+            {column.queries.map((item, queryIndex) => <li key={item.cls + '-' + item.query + '-' + queryIndex} className="flex items-start justify-between gap-4 px-5 py-3.5">
+              <span className="min-w-0 text-sm leading-5 text-white/80">{item.query}</span>
+              <span className="shrink-0 whitespace-nowrap text-xs font-semibold tabular-nums text-white">{item.monthly.toLocaleString('en-IN')}<span className="ml-1 font-normal text-white/40">/mo</span></span>
+            </li>)}
+          </ul>
+        </section>)}
+      </div>
+      <p className="mt-5 max-w-4xl text-xs leading-6 text-white/45">{data.howToRead}</p>
+    </div>
+  </section>;
 }
 
 function ProcessTimeline() {
@@ -185,6 +258,7 @@ export default function BuildersLandingPage() {
     <section className="border-y border-white/[.08] bg-[#101313]"><div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24"><div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">What the work covers</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">A connected acquisition system.</h2><p className="mt-4 leading-7 text-white/55">Campaign setup, the page buyers land on and the measurement after they enquire should work together.</p></div><div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">{[['01','Project-launch search strategy','Map high-intent searches to the right project, location, property type and buyer question before spending on clicks.'],['02','Campaigns built around intent','Separate relevant search themes, write clear ads, align each ad with its landing page and build a considered negative-keyword process.'],['03','Enquiry tracking that means something','Measure calls and form enquiries, then work toward distinguishing genuine buyer conversations from raw lead volume.'],['04','Optimisation with sales context','Review search terms, location performance, lead feedback and conversion signals to decide what to refine next.']].map(item=><article key={item[0]} className="bg-[#101313] p-7 sm:p-9"><span className="font-mono text-xs text-[#E8282B]">{item[0]} / CAPABILITY</span><h3 className="mt-5 text-xl font-semibold">{item[1]}</h3><p className="mt-3 max-w-lg text-sm leading-7 text-white/55">{item[2]}</p></article>)}</div></div></section>
 
     <section id="sample" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"><div className="grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-16"><div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">See the format</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Get a useful map before you decide on a campaign.</h2><p className="mt-5 leading-7 text-white/60">The one-page buyer-search map helps frame the project, the searches that may signal purchase intent, terms that may not fit and the path from ad to enquiry.</p><ul className="mt-6 space-y-3 text-sm text-white/70">{['Project and location context','Buyer-intent search themes','Potential exclusions to review','Landing-page message and enquiry tracking'].map(t=><li key={t} className="flex gap-3"><span className="text-[#E8282B]">✓</span><span>{t}</span></li>)}</ul><p className="mt-5 text-xs leading-5 text-white/35">Free, one page, yours to keep. No call needed. The sample is a layout preview, not a client result.</p></div><MapPreview/></div></section>
+    <BuyerSearchDataSection />
 
     <section id="how-it-works" className="border-y border-white/[.08] bg-[#101313]"><div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24"><div className="max-w-2xl"><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">The process</p><h2 className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">From project context to measured learning.</h2></div><ProcessTimeline/></div></section>
 
