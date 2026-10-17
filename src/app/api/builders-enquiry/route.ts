@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 
 export const runtime = 'nodejs';
 
-const CITY_OPTIONS = new Set(['Mumbai/MMR', 'Pune', 'Bengaluru', 'Hyderabad', 'Delhi NCR', 'Chennai', 'Ahmedabad', 'Other']);
 const clean = (value: unknown, max = 500) => typeof value === 'string' ? value.trim().slice(0, max) : '';
 const rawString = (value: unknown) => typeof value === 'string' ? value : '';
 const validPhone = (value: string) => {
@@ -47,7 +46,7 @@ export async function POST(request: Request) {
   if (!company) errors.push('company');
   if (!whatsapp || !validPhone(whatsapp)) errors.push('whatsapp');
   if (step === 'initial') {
-    if (!CITY_OPTIONS.has(city)) errors.push('city');
+    if (!city) errors.push('city');
     if (!consent) errors.push('consent');
   } else {
     if (!stage) errors.push('stage');
