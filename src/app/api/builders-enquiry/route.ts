@@ -62,12 +62,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'The request form is temporarily unavailable. Please use WhatsApp instead.' }, { status: 500 });
   }
 
-  const payload = {
-    name, company, whatsapp, city: step === 'initial' ? city : '',
-    consent: step === 'initial' ? consent : false,
-    project, email, stage, budget, message, ref,
+  const commonPayload = {
+    name, company, whatsapp, project, email, stage, budget, message, ref,
     utm_source, utm_medium, utm_campaign, page, hp: '', step,
   };
+  const payload = step === 'initial'
+    ? { ...commonPayload, city, consent }
+    : commonPayload;
 
   try {
     const destination = new URL(webhookUrl);
