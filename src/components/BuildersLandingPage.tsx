@@ -99,7 +99,7 @@ export default function BuildersLandingPage() {
     const params = new URLSearchParams(window.location.search);
     const cityParam = (params.get('city') || '').trim();
     setLandingCity(cityParam || 'your city');
-    setRef((params.get('l') || '').slice(0, 200));
+    setRef(params.get('l') || '');
     setUtmSource((params.get('utm_source') || '').slice(0, 120));
     setUtmMedium((params.get('utm_medium') || '').slice(0, 120));
     setUtmCampaign((params.get('utm_campaign') || '').slice(0, 160));
@@ -135,12 +135,12 @@ export default function BuildersLandingPage() {
     if (!consent) { setError('Please confirm that R.K Digital Media may contact you about this enquiry.'); return; }
     setSubmitting(true);
     try {
-      const payload = { kind: 'buyer_map_request', name: name.trim(), company: company.trim(), city, whatsapp: whatsapp.trim(), consent, ref, landingCity, utm_source: utmSource, utm_medium: utmMedium, utm_campaign: utmCampaign, pageUrl, website: (event.currentTarget.elements.namedItem('website') as HTMLInputElement)?.value || '' };
+      const payload = { name: name.trim(), company: company.trim(), whatsapp: whatsapp.trim(), city, consent, project: company.trim(), email: '', stage: '', budget: '', message: '', ref, utm_source: utmSource, utm_medium: utmMedium, utm_campaign: utmCampaign, page: pageUrl, hp: (event.currentTarget.elements.namedItem('hp') as HTMLInputElement)?.value || '', step: 'initial' };
       const response = await fetch('/api/builders-enquiry', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(result.error || 'We could not submit your request. Please use WhatsApp instead.');
-      trackEvent('builders_form_submit', { location: 'project_enquiry', kind: 'buyer_map_request' });
-      window.location.assign('/google-ads-for-builders/thanks' + (ref ? '?l=' + encodeURIComponent(ref) + '&city=' + encodeURIComponent(landingCity) : '?city=' + encodeURIComponent(landingCity)));
+      if (!response.ok || result.ok !== true || typeof result.id !== 'string') { const fields = Array.isArray(result.errors) ? result.errors.join(', ') : ''; throw new Error(fields ? 'Please check these fields: ' + fields + '.' : (result.error || 'We could not save your request. Please use WhatsApp instead.')); }
+      trackEvent('builders_form_submit', { location: 'project_enquiry', step: 'initial' });
+      window.location.assign('/google-ads-for-builders/thanks?' + new URLSearchParams({ l: ref, city: landingCity, id: result.id }).toString());
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please use WhatsApp as a fallback.');
     } finally {
@@ -204,7 +204,7 @@ export default function BuildersLandingPage() {
           <Field label="City *"><select required name="city" value={city} onChange={e=>setCity(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none focus:border-[#E8282B]/70"><option value="">Select a city</option>{CITY_OPTIONS.map(option=><option key={option} value={option}>{option}</option>)}</select></Field>
           <Field label="WhatsApp *"><input required name="whatsapp" type="tel" autoComplete="tel" maxLength={40} value={whatsapp} onChange={e=>setWhatsapp(e.target.value)} className="mt-2 w-full rounded-xl border border-white/10 bg-[#0D0D0D] px-4 py-3.5 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-[#E8282B]/70" placeholder="+91 …"/></Field>
         </div>
-        <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true"><label>Leave this field empty<input tabIndex={-1} autoComplete="off" name="website" value={undefined} onChange={()=>{}}/></label></div>
+        <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true"><label>Leave this field empty<input tabIndex={-1} autoComplete="off" name="hp" value={undefined} onChange={()=>{}}/></label></div>
         <label className="mt-6 flex cursor-pointer items-start gap-3 text-xs leading-5 text-white/50"><input required type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)} className="mt-1 h-4 w-4 accent-[#E8282B]"/><span>I agree that R.K Digital Media may contact me about this buyer-search map request.</span></label>
         {error && <div role="alert" className="mt-4 rounded-xl border border-red-500/25 bg-red-500/[.06] p-4"><p className="text-sm text-red-200">{error}</p><a href={waHref} onClick={()=>trackWhatsApp('form_error_fallback')} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white underline underline-offset-4">Continue on WhatsApp <Arrow className="h-4 w-4"/></a></div>}
         <button type="submit" disabled={submitting} className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225] disabled:cursor-wait disabled:opacity-60 sm:w-auto">{submitting?'Sending request…':'Get my buyer-search map'}<Arrow className="h-4 w-4"/></button>
