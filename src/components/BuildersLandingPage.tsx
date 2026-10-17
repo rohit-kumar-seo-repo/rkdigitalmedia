@@ -34,32 +34,32 @@ function Arrow({ className = '' }: { className?: string }) {
 
 function BuildingArtwork() {
   return (
-    <div className="relative min-h-[390px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#111a1c] p-4 sm:p-6">
-      <div className="absolute inset-0 opacity-70" style={{ background: 'radial-gradient(circle at 72% 18%, rgba(205,164,105,.25), transparent 34%), linear-gradient(145deg, #17282a 0%, #101718 58%, #1c2020 100%)' }} />
+    <div className="relative min-h-[390px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#141414] p-4 sm:p-6">
+      <div className="absolute inset-0 opacity-70" style={{ background: 'radial-gradient(circle at 72% 18%, rgba(232,40,43,.16), transparent 34%), linear-gradient(145deg, #1B1B1B 0%, #0D0D0D 58%, #141414 100%)' }} />
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px)', backgroundSize: '34px 34px' }} />
       <svg className="absolute inset-x-0 bottom-0 h-[82%] w-full" viewBox="0 0 620 440" role="img" aria-label="Architectural illustration of premium residential towers" preserveAspectRatio="xMidYMax meet">
         <defs>
-          <linearGradient id="towerA" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#c7b79b"/><stop offset="1" stopColor="#655f55"/></linearGradient>
-          <linearGradient id="towerB" x1="0" y1="0" x2="0.9" y2="1"><stop stopColor="#71817d"/><stop offset="1" stopColor="#2a3836"/></linearGradient>
-          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#d8c7a6" stopOpacity=".8"/><stop offset="1" stopColor="#5d6a64" stopOpacity=".45"/></linearGradient>
+          <linearGradient id="towerA" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#B8B8B8"/><stop offset="1" stopColor="#444444"/></linearGradient>
+          <linearGradient id="towerB" x1="0" y1="0" x2="0.9" y2="1"><stop stopColor="#737373"/><stop offset="1" stopColor="#292929"/></linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#A6A6A6" stopOpacity=".8"/><stop offset="1" stopColor="#3A3A3A" stopOpacity=".45"/></linearGradient>
         </defs>
-        <path d="M0 385 L620 345 L620 440 L0 440Z" fill="#242b28"/>
-        <path d="M42 386 L42 124 L158 94 L158 377Z" fill="url(#towerB)" stroke="#a7b3a7" strokeOpacity=".38"/>
-        <path d="M158 94 L188 111 L188 371 L158 377Z" fill="#25332f"/>
-        <path d="M58 135 L145 112 M58 160 L145 137 M58 185 L145 162 M58 210 L145 187 M58 235 L145 212 M58 260 L145 237 M58 285 L145 262 M58 310 L145 287 M58 335 L145 312 M58 360 L145 337" stroke="#d8c7a6" strokeOpacity=".62" strokeWidth="3"/>
-        <path d="M211 402 L211 53 L366 21 L366 390Z" fill="url(#towerA)" stroke="#e2d2b6" strokeOpacity=".45"/>
-        <path d="M366 21 L396 42 L396 382 L366 390Z" fill="#55574f"/>
-        <path d="M231 83 L350 59 M231 112 L350 88 M231 141 L350 117 M231 170 L350 146 M231 199 L350 175 M231 228 L350 204 M231 257 L350 233 M231 286 L350 262 M231 315 L350 291 M231 344 L350 320 M231 373 L350 349" stroke="#514f46" strokeOpacity=".75" strokeWidth="4"/>
+        <path d="M0 385 L620 345 L620 440 L0 440Z" fill="#1F1F1F"/>
+        <path d="M42 386 L42 124 L158 94 L158 377Z" fill="url(#towerB)" stroke="#8A8A8A" strokeOpacity=".38"/>
+        <path d="M158 94 L188 111 L188 371 L158 377Z" fill="#292929"/>
+        <path d="M58 135 L145 112 M58 160 L145 137 M58 185 L145 162 M58 210 L145 187 M58 235 L145 212 M58 260 L145 237 M58 285 L145 262 M58 310 L145 287 M58 335 L145 312 M58 360 L145 337" stroke="#A6A6A6" strokeOpacity=".62" strokeWidth="3"/>
+        <path d="M211 402 L211 53 L366 21 L366 390Z" fill="url(#towerA)" stroke="#B0B0B0" strokeOpacity=".45"/>
+        <path d="M366 21 L396 42 L396 382 L366 390Z" fill="#343434"/>
+        <path d="M231 83 L350 59 M231 112 L350 88 M231 141 L350 117 M231 170 L350 146 M231 199 L350 175 M231 228 L350 204 M231 257 L350 233 M231 286 L350 262 M231 315 L350 291 M231 344 L350 320 M231 373 L350 349" stroke="#454545" strokeOpacity=".75" strokeWidth="4"/>
         <path d="M245 79 L245 371 M278 72 L278 364 M311 65 L311 357 M340 59 L340 351" stroke="url(#glass)" strokeWidth="8" strokeOpacity=".9"/>
-        <path d="M411 393 L411 153 L516 130 L516 379Z" fill="#3d4d49" stroke="#a7b3a7" strokeOpacity=".5"/>
-        <path d="M516 130 L541 146 L541 373 L516 379Z" fill="#263633"/>
-        <path d="M425 176 L503 158 M425 203 L503 185 M425 230 L503 212 M425 257 L503 239 M425 284 L503 266 M425 311 L503 293 M425 338 L503 320 M425 365 L503 347" stroke="#b6c2b2" strokeOpacity=".65" strokeWidth="3"/>
-        <path d="M0 401 L620 367" stroke="#bba47e" strokeOpacity=".7" strokeWidth="2"/>
-        <path d="M34 414 L584 383" stroke="#e4d0a7" strokeOpacity=".24" strokeWidth="1"/>
-        {Array.from({ length: 7 }).map((_, i) => <circle key={i} cx={75 + i * 75} cy={397 - i * 4} r="2.3" fill="#d9bc88" />)}
+        <path d="M411 393 L411 153 L516 130 L516 379Z" fill="#3A3A3A" stroke="#8A8A8A" strokeOpacity=".5"/>
+        <path d="M516 130 L541 146 L541 373 L516 379Z" fill="#252525"/>
+        <path d="M425 176 L503 158 M425 203 L503 185 M425 230 L503 212 M425 257 L503 239 M425 284 L503 266 M425 311 L503 293 M425 338 L503 320 M425 365 L503 347" stroke="#8A8A8A" strokeOpacity=".65" strokeWidth="3"/>
+        <path d="M0 401 L620 367" stroke="#E8282B" strokeOpacity=".7" strokeWidth="2"/>
+        <path d="M34 414 L584 383" stroke="#E8282B" strokeOpacity=".24" strokeWidth="1"/>
+        {Array.from({ length: 7 }).map((_, i) => <circle key={i} cx={75 + i * 75} cy={397 - i * 4} r="2.3" fill="#E8282B" />)}
       </svg>
       <div className="relative z-10 flex items-start justify-between gap-4">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#E8282B]/30 bg-black/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.2em] text-[#e5d2ae]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]" /> Property acquisition</span>
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#E8282B]/30 bg-black/30 px-3 py-2 text-[10px] font-semibold uppercase tracking-[.2em] text-[#F0EEEE]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]" /> Property acquisition</span>
         <span className="text-right font-mono text-[10px] uppercase tracking-[.16em] text-white/45">Campaign framework<br/>01 / 04</span>
       </div>
       <div className="absolute bottom-5 left-5 right-5 z-10 flex items-end justify-between gap-4 sm:bottom-7 sm:left-7 sm:right-7">
@@ -68,7 +68,7 @@ function BuildingArtwork() {
           <p className="max-w-xs text-xl font-semibold leading-tight text-white sm:text-2xl">A more considered path to buyer enquiries.</p>
         </div>
         <div className="hidden rounded-xl border border-white/15 bg-black/30 p-3 backdrop-blur-sm sm:block">
-          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="18" stroke="#E8282B" strokeOpacity=".35"/><path d="M11 25l7-7 5 4 8-10" stroke="#e5d2ae" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M25 12h6v6" stroke="#e5d2ae" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="18" stroke="#E8282B" strokeOpacity=".35"/><path d="M11 25l7-7 5 4 8-10" stroke="#F0EEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M25 12h6v6" stroke="#F0EEEE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@ function BuildingArtwork() {
 
 function Blueprint() {
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111313] shadow-2xl shadow-black/30">
+    <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#141414] shadow-2xl shadow-black/30">
       <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
         <div><p className="text-[10px] uppercase tracking-[.2em] text-[#E8282B]">Illustrative deliverable</p><p className="mt-1 text-sm font-semibold text-white">Project launch campaign blueprint</p></div>
         <span className="rounded-full border border-[#E8282B]/30 px-2.5 py-1 text-[9px] uppercase tracking-widest text-[#E8282B]">Sample</span>
@@ -88,7 +88,7 @@ function Blueprint() {
           ['02', 'Campaign structure', 'Separate priorities, budgets and landing-page destinations'],
           ['03', 'Lead qualification', 'Project fit, budget band, location and buyer requirements'],
           ['04', 'Measurement plan', 'Enquiries, qualified conversations and sales feedback'],
-        ].map((item) => <div key={item[0]} className="bg-[#151818] p-5"><span className="font-mono text-xs text-[#E8282B]">{item[0]}</span><h3 className="mt-3 text-sm font-semibold text-white">{item[1]}</h3><p className="mt-2 text-xs leading-relaxed text-white/55">{item[2]}</p></div>)}
+        ].map((item) => <div key={item[0]} className="bg-[#141414] p-5"><span className="font-mono text-xs text-[#E8282B]">{item[0]}</span><h3 className="mt-3 text-sm font-semibold text-white">{item[1]}</h3><p className="mt-2 text-xs leading-relaxed text-white/55">{item[2]}</p></div>)}
       </div>
       <div className="border-t border-white/10 px-5 py-4 text-[11px] leading-relaxed text-white/40">A framework preview, not a client report or a claim of campaign results. The final plan is scoped around the actual project.</div>
     </div>
@@ -130,26 +130,26 @@ export default function BuildersLandingPage() {
   }
 
   const waHref = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Hello, I would like to discuss Google Ads for a real estate project.');
-  const sectionLink = 'inline-flex items-center gap-2 text-sm font-semibold text-[#e6cfaa] transition hover:text-white';
+  const sectionLink = 'inline-flex items-center gap-2 text-sm font-semibold text-[#E8282B] transition hover:text-white';
 
   return (
-    <main className="builders-page bg-[#0D0D0D] text-[#f4f2ed]">
+    <main className="builders-page bg-[#0D0D0D] text-[#F0EEEE]">
       <div className="border-b border-white/[.08] bg-[#101313]">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2.5" aria-label="R.K Digital Media home">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8282B] text-sm font-black tracking-tight text-[#101313]">RK</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8282B] text-sm font-black tracking-tight text-white">RK</span>
             <span><span className="block text-sm font-semibold tracking-wide">R.K DIGITAL MEDIA</span><span className="block text-[9px] uppercase tracking-[.2em] text-white/45">Performance marketing</span></span>
           </Link>
           <div className="hidden items-center gap-5 text-xs text-white/55 md:flex"><span>Google Ads for property projects</span><span className="h-1 w-1 rounded-full bg-[#E8282B]"/><span>Delhi NCR · India</span></div>
-          <a href={waHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold transition hover:border-[#E8282B]/60 hover:bg-white/5"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> WhatsApp</a>
+          <a href={waHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold transition hover:border-[#E8282B]/60 hover:bg-white/5"><span className="h-2 w-2 rounded-full bg-[#E8282B]"/> WhatsApp</a>
         </div>
       </div>
 
       <section className="relative overflow-hidden border-b border-white/[.08]">
-        <div className="pointer-events-none absolute -right-48 -top-36 h-[34rem] w-[34rem] rounded-full bg-[#a8895a]/[.08] blur-3xl"/>
+        <div className="pointer-events-none absolute -right-48 -top-36 h-[34rem] w-[34rem] rounded-full bg-[#E8282B]/[.08] blur-3xl"/>
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:grid-cols-[1.05fr_.95fr] lg:gap-14 lg:px-8 lg:pb-24 lg:pt-20">
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E8282B]/25 bg-[#E8282B]/[.06] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#e5d2ae]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]"/> For builders & real estate developers</div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E8282B]/25 bg-[#E8282B]/[.06] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#F0EEEE]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]"/> For builders & real estate developers</div>
             <h1 className="max-w-3xl text-4xl font-semibold leading-[1.07] tracking-[-.045em] sm:text-5xl lg:text-[3.7rem]">Turn property searches into <span className="font-serif italic text-[#E8282B]">better buyer conversations.</span></h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg sm:leading-8">Google Ads strategy for residential and commercial projects—built around buyer intent, project location, clear enquiry tracking and a landing page that gives prospects a reason to take the next step.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -222,9 +222,9 @@ export default function BuildersLandingPage() {
       </section>
 
       <section id="project-enquiry" className="relative overflow-hidden">
-        <div className="pointer-events-none absolute -left-48 top-10 h-96 w-96 rounded-full bg-[#b69868]/[.08] blur-3xl"/>
+        <div className="pointer-events-none absolute -left-48 top-10 h-96 w-96 rounded-full bg-[#E8282B]/[.08] blur-3xl"/>
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[.8fr_1.2fr] lg:px-8 lg:py-28">
-          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Start with the project</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Let’s see whether Google Ads fits your next launch.</h2><p className="mt-5 leading-7 text-white/55">Share a few details. We can discuss the project, target market, current campaigns and what needs to be measured before proposing a plan.</p><div className="mt-8 space-y-4 text-sm text-white/65"><div className="flex gap-3"><span className="text-[#E8282B]">01</span><span>Short, project-focused first conversation</span></div><div className="flex gap-3"><span className="text-[#E8282B]">02</span><span>Discuss goals, readiness, budget and tracking</span></div><div className="flex gap-3"><span className="text-[#E8282B]">03</span><span>Decide whether a campaign plan is the right next step</span></div></div><a href={waHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#52c878]/30 bg-[#52c878]/[.08] px-5 py-3 text-sm font-semibold text-[#a4edb8] transition hover:bg-[#52c878]/[.14]"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> Start on WhatsApp <Arrow className="h-4 w-4"/></a></div>
+          <div><p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Start with the project</p><h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Let’s see whether Google Ads fits your next launch.</h2><p className="mt-5 leading-7 text-white/55">Share a few details. We can discuss the project, target market, current campaigns and what needs to be measured before proposing a plan.</p><div className="mt-8 space-y-4 text-sm text-white/65"><div className="flex gap-3"><span className="text-[#E8282B]">01</span><span>Short, project-focused first conversation</span></div><div className="flex gap-3"><span className="text-[#E8282B]">02</span><span>Discuss goals, readiness, budget and tracking</span></div><div className="flex gap-3"><span className="text-[#E8282B]">03</span><span>Decide whether a campaign plan is the right next step</span></div></div><a href={waHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#E8282B]/[.08] px-5 py-3 text-sm font-semibold text-[#F0EEEE] transition hover:bg-[#E8282B]/[.14]"><span className="h-2 w-2 rounded-full bg-[#E8282B]"/> Start on WhatsApp <Arrow className="h-4 w-4"/></a></div>
           <form onSubmit={submitLead} className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-8">
             <div className="mb-6"><h3 className="text-xl font-semibold">Tell us about your project</h3><p className="mt-2 text-xs leading-5 text-white/45">Required fields are marked *. Submitting opens WhatsApp with your details so you can review and send the enquiry.</p></div>
             <div className="grid gap-5 sm:grid-cols-2">
@@ -250,7 +250,7 @@ export default function BuildersLandingPage() {
           <div className="flex flex-wrap gap-5"><Link href="/privacy-policy" className="transition hover:text-white/70">Privacy</Link><Link href="/services/google-ads" className="transition hover:text-white/70">Google Ads services</Link><Link href="/contact" className="transition hover:text-white/70">Contact</Link></div>
         </div>
       </footer>
-      <a href={waHref} target="_blank" rel="noreferrer" aria-label="Contact R.K Digital Media on WhatsApp" className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-[#52c878]/30 bg-[#14251a] px-4 py-3 text-xs font-semibold text-[#b5f0c4] shadow-xl shadow-black/40 transition hover:-translate-y-0.5 hover:bg-[#1a3322]"><span className="h-2 w-2 rounded-full bg-[#52c878]"/> WhatsApp</a>
+      <a href={waHref} target="_blank" rel="noreferrer" aria-label="Contact R.K Digital Media on WhatsApp" className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#141414] px-4 py-3 text-xs font-semibold text-white shadow-xl shadow-black/40 transition hover:-translate-y-0.5 hover:bg-[#D02225]"><span className="h-2 w-2 rounded-full bg-[#E8282B]"/> WhatsApp</a>
     </main>
   );
 }
