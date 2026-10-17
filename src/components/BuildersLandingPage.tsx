@@ -111,7 +111,7 @@ export default function BuildersLandingPage() {
     return () => observer.disconnect();
   }, []);
 
-  const buyerMapLabel = 'Get my ' + landingCity + ' buyer-search map';
+  const buyerMapLabel = landingCity === 'your city' ? 'Get my buyer-search map' : 'Get my ' + landingCity + ' buyer-search map';
   const waHref = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Hello R.K Digital Media, I would like my free buyer-search map for a real estate project.');
   const sectionLink = 'inline-flex items-center gap-2 text-sm font-semibold text-[#E8282B] transition hover:text-white';
 
@@ -164,7 +164,7 @@ export default function BuildersLandingPage() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#E8282B]/25 bg-[#E8282B]/[.06] px-3 py-2 text-[10px] font-semibold uppercase tracking-[.18em] text-[#F0EEEE]"><span className="h-1.5 w-1.5 rounded-full bg-[#E8282B]"/> For builders & real estate developers</div>
           <h1 className="max-w-3xl text-4xl font-semibold leading-[1.07] tracking-[-.045em] sm:text-5xl lg:text-[3.7rem]">Turn property searches into <span className="font-serif italic text-[#E8282B]">better buyer conversations.</span></h1>
           <p className="mt-6 max-w-xl text-base leading-7 text-white/65 sm:text-lg sm:leading-8">Google Ads strategy for residential and commercial projects—built around buyer intent, project location, clear enquiry tracking and a landing page that gives prospects a reason to take the next step.</p>
-          <p className="mt-3 text-sm font-medium text-white/75">{buyerMapLabel}</p>
+          <p className="mt-3 text-sm font-medium text-white/75">A buyer-search map tailored to {landingCity}.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button type="button" onClick={() => trackCta('hero')} className="inline-flex items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225]">{buyerMapLabel}<Arrow className="h-4 w-4"/></button>
             <a href={waHref} onClick={() => trackWhatsApp('hero')} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/[.04]">WhatsApp instead</a>
