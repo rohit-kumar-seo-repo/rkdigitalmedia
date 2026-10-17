@@ -65,23 +65,29 @@ function MapPreview() {
   </div>;
 }
 
-type SampleQuery = { query: string; monthly: number; cls: string };
-type SampleData = {
+type BuilderSampleQuery = { query: string; monthly: number };
+type BuilderSampleGroup = {
+  label: string;
+  meaning: string;
+  topQueries: BuilderSampleQuery[];
+};
+interface BuilderSample {
   city: string;
   generatedOn: string;
   source: string;
   howToRead: string;
+  queriesAnalysed: number;
   groups: {
-    buyer_leaning: { topQueries: SampleQuery[] };
-    project_name: { topQueries: SampleQuery[] };
-    mixed: { topQueries: SampleQuery[] };
-    rental: { topQueries: SampleQuery[] };
-    resale_broker_portal: { topQueries: SampleQuery[] };
+    buyer_leaning: BuilderSampleGroup;
+    project_name: BuilderSampleGroup;
+    mixed: BuilderSampleGroup;
+    rental: BuilderSampleGroup;
+    resale_broker_portal: BuilderSampleGroup;
   };
-};
+}
 
 function BuyerSearchDataSection() {
-  const [data, setData] = useState<SampleData | null>(null);
+  const [data, setData] = useState<BuilderSample | null>(null);
   const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
@@ -91,7 +97,7 @@ function BuyerSearchDataSection() {
         if (!response.ok) throw new Error('Could not load the keyword sample.');
         return response.json();
       })
-      .then((value: SampleData) => { if (active) setData(value); })
+      .then((value: BuilderSample) => { if (active) setData(value); })
       .catch(() => { if (active) setLoadError(true); });
     return () => { active = false; };
   }, []);
@@ -99,8 +105,8 @@ function BuyerSearchDataSection() {
   if (!data) {
     return <section id="mumbai-search-sample" className="border-b border-white/[.08] bg-[#0D0D0D]" aria-labelledby="sample-data-title">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Worked example · {data?.city || 'Mumbai'}</p>
-        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What a buyer-search map shows, using {data?.city || 'Mumbai'} as one example</h2>
+        <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">Worked example</p>
+        <h2 id="sample-data-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What a buyer-search map shows</h2>
         <p role={loadError ? 'status' : undefined} className="mt-4 text-sm text-white/50">{loadError ? 'The keyword sample could not be loaded right now.' : 'Loading the Google Keyword Planner sample…'}</p>
       </div>
     </section>;
