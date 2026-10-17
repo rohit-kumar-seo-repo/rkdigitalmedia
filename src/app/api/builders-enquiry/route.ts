@@ -49,7 +49,7 @@ export async function POST(request: Request) {
   } else if (kind === 'buyer_map_followup') {
     const stage = clean(body.stage, 100);
     const budget = clean(body.budget, 100);
-    if (!ref || !consent || !stage || !budget) {
+    if (!consent || !stage || !budget) {
       return NextResponse.json({ error: 'Please complete the optional project details and confirm consent.' }, { status: 400 });
     }
   } else {
