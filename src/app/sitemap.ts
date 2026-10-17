@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['', 'weekly', 1],
     ['/services', 'weekly', 0.9],
     ['/services/google-ads', 'monthly', 0.8],
+    ['/google-ads-for-builders', 'monthly', 0.8],
     ['/services/seo', 'monthly', 0.8],
     ['/services/gmb', 'monthly', 0.8],
     ['/services/ai-automation', 'monthly', 0.8],
