@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { FormEvent } from 'react';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
@@ -18,13 +18,13 @@ export default function BuildersThanksPage() {
   const [message, setMessage] = useState('');
   const [sending, setSending] = useState(false);
 
-  useState(() => {
+  useEffect(() => {
     if (typeof window !== 'undefined') {
       const p = new URLSearchParams(window.location.search);
       setRef((p.get('l') || '').slice(0, 200));
       setLandingCity((p.get('city') || 'your city').slice(0, 120));
     }
-  });
+  }, []);
 
   const waHref = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Hello R.K Digital Media, thanks. I requested the buyer-search map and have a project question.');
 
