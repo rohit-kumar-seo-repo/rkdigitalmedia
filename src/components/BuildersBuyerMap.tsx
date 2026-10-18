@@ -105,6 +105,7 @@ export default function BuildersBuyerMap({ data, landingCity }: { data: Record<s
         <p className="mt-3">{d.source}.</p>
         <p className="mt-2">{d.howToRead}</p>
         <p className="mt-2">{fmt(d.queriesAnalysed)} queries analysed for {d.city}. Data pulled on {d.generatedOn}.</p>
+        <p className="mt-2">Monthly search volumes are estimates, not unique people or guaranteed clicks. The intent groups are working classifications for this example, not official Google categories. A search can have mixed intent; exclusions should be checked against the specific project and campaign before being applied.</p>
       </details>
     </div>
   );
