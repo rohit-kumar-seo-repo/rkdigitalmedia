@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Montserrat, Outfit } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import CustomCursor from '@/components/ui/CustomCursor';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
+import { SiteHeaderChrome, SiteFooterChrome } from '@/components/SiteChrome';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Script from 'next/script';
 import './globals.css';
@@ -272,11 +269,9 @@ export default function RootLayout({
       </head>
       <body className="bg-[var(--rkd-bg)] text-[var(--rkd-fg)] font-outfit antialiased">
         <GoogleAnalytics />
-        <CustomCursor />
-        <Header />
+        <SiteHeaderChrome />
         <div id="main-content">{children}</div>
-        <Footer />
-        <WhatsAppFloat />
+        <SiteFooterChrome />
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
