@@ -9,7 +9,7 @@ const WHATSAPP_NUMBER = '919871530594';
 const STAGES = ['Planning a launch', 'Launching soon', 'Already selling', 'Existing campaigns need improvement'];
 const BUDGETS = ['Need guidance', '₹50,000–₹1 lakh', '₹1–₹3 lakh', '₹3 lakh+'];
 
-export default function BuildersThanksPage({ hasRequest, initialRef, initialCity }: { hasRequest: boolean; initialRef: string; initialCity: string }) {
+export default function BuildersThanksPage({ hasRequest, initialId, initialRef, initialCity }: { hasRequest: boolean; initialId: string; initialRef: string; initialCity: string }) {
   const ref = initialRef;
   const city = initialCity;
   const [name, setName] = useState('');
@@ -42,6 +42,7 @@ export default function BuildersThanksPage({ hasRequest, initialRef, initialCity
           budget,
           message: '',
           ref,
+          initial_enquiry_id: initialId,
           utm_source: '',
           utm_medium: '',
           utm_campaign: '',
