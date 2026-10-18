@@ -593,3 +593,46 @@
     will-change: auto;
   }
 }
+
+
+/* Builders landing page — visual hierarchy and card interactions (Phase 2) */
+.builders-page .builders-motion-card {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 240ms ease,
+    background-color 240ms ease,
+    box-shadow 240ms ease;
+}
+.builders-page .builders-motion-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 12% auto;
+  height: 1px;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, rgba(232, 40, 43, 0.75), transparent);
+  transition: opacity 240ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .builders-page .builders-motion-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(232, 40, 43, 0.34);
+    background-color: #171515;
+    box-shadow: 0 16px 36px -28px rgba(232, 40, 43, 0.45);
+  }
+  .builders-page .builders-motion-card:hover::before {
+    opacity: 1;
+  }
+}
+.builders-page .builders-motion-card:focus-within {
+  border-color: rgba(232, 40, 43, 0.55);
+}
+@media (prefers-reduced-motion: reduce) {
+  .builders-page .builders-motion-card,
+  .builders-page .builders-motion-card::before {
+    transition: none !important;
+    transform: none !important;
+  }
+}
