@@ -125,22 +125,33 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
             <a href="#buyer-map" onClick={() => trackCta('hero_numbers')} className={secondaryClass}>Explore the city search data<span aria-hidden="true">↓</span></a>
             {waCta('hero', 'Message Rohit on WhatsApp')}
           </div>
-          <div className="builders-visual-mockup relative mt-8 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-[#141414] shadow-2xl">
-            <div className="relative aspect-[16/9] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=85" alt="Contemporary apartment development in an Indian city" width="1400" height="788" loading="eager" fetchPriority="high" decoding="async" className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D]/80 via-[#0D0D0D]/25 to-transparent" />
-              <div className="absolute left-4 top-4 rounded-full border border-white/20 bg-[#0D0D0D]/70 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[.16em] text-white backdrop-blur sm:left-5 sm:top-5">Project-level search review</div>
-              <div className="absolute bottom-4 left-4 max-w-[55%] sm:bottom-5 sm:left-5">
-                <p className="text-lg font-semibold leading-tight text-white sm:text-2xl">Find the searches that fit your project.</p>
-                <p className="mt-2 text-xs leading-5 text-white/75 sm:text-sm">Buyer intent · Local catchment · Better measurement</p>
+          <div className="builders-visual-mockup relative mt-8 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-[#111515] shadow-2xl" aria-label="Illustrative Google Ads search-intent dashboard">
+            <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 sm:px-5">
+              <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8282B] text-[10px] font-black text-white">RK</span><div><p className="text-xs font-semibold text-white">Project search review</p><p className="text-[10px] text-white/45">Illustrative planning view</p></div></div>
+              <span className="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-wider text-emerald-200 sm:text-[10px]">Intent first</span>
+            </div>
+            <div className="grid gap-4 p-4 sm:grid-cols-[1fr_.9fr] sm:p-5">
+              <div className="min-w-0">
+                <p className="text-[10px] font-semibold uppercase tracking-[.16em] text-white/45">Search intent signals</p>
+                <p className="mt-2 text-lg font-semibold leading-tight tracking-tight text-white sm:text-xl">Are your clicks looking for a home to buy?</p>
+                <p className="mt-2 text-xs leading-5 text-white/55">Review keyword themes against the project, locality and price band before changing campaigns.</p>
+                <div className="mt-4 space-y-2.5">
+                  <div className="flex items-center gap-3 rounded-xl border border-emerald-300/15 bg-emerald-300/[.06] p-3"><span className="h-2 w-2 shrink-0 rounded-full bg-emerald-300"/><div className="min-w-0 flex-1"><p className="text-xs font-semibold text-white">Buyer-leaning</p><p className="mt-0.5 truncate text-[10px] text-white/45">buy flat · new project · BHK + locality</p></div><span className="text-[9px] text-emerald-200">REVIEW</span></div>
+                  <div className="flex items-center gap-3 rounded-xl border border-amber-200/15 bg-amber-200/[.04] p-3"><span className="h-2 w-2 shrink-0 rounded-full bg-amber-200"/><div className="min-w-0 flex-1"><p className="text-xs font-semibold text-white">Mixed intent</p><p className="mt-0.5 truncate text-[10px] text-white/45">flats in locality · apartment price</p></div><span className="text-[9px] text-amber-100">CHECK</span></div>
+                  <div className="flex items-center gap-3 rounded-xl border border-rose-300/15 bg-rose-300/[.04] p-3"><span className="h-2 w-2 shrink-0 rounded-full bg-rose-300"/><div className="min-w-0 flex-1"><p className="text-xs font-semibold text-white">Rental / resale</p><p className="mt-0.5 truncate text-[10px] text-white/45">rent · PG · resale · broker</p></div><span className="text-[9px] text-rose-200">ASSESS</span></div>
+                </div>
+              </div>
+              <div className="flex min-w-0 flex-col rounded-xl border border-white/10 bg-[#171b1b] p-3 sm:p-4">
+                <p className="text-[10px] font-semibold uppercase tracking-[.15em] text-white/45">Review workflow</p>
+                <div className="mt-4 flex flex-1 flex-col justify-between gap-3">
+                  <div><div className="flex items-center justify-between gap-2"><span className="text-xs text-white/70">Search terms</span><span className="text-[10px] text-white/40">01</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full w-[82%] rounded-full bg-[#E8282B]"/></div></div>
+                  <div><div className="flex items-center justify-between gap-2"><span className="text-xs text-white/70">Location fit</span><span className="text-[10px] text-white/40">02</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full w-[66%] rounded-full bg-[#E8282B]/70"/></div></div>
+                  <div><div className="flex items-center justify-between gap-2"><span className="text-xs text-white/70">Lead quality</span><span className="text-[10px] text-white/40">03</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full w-[48%] rounded-full bg-[#E8282B]/50"/></div></div>
+                  <div className="rounded-lg border border-white/10 bg-white/[.03] p-3"><p className="text-xs font-semibold text-white">Measure what matters</p><p className="mt-1 text-[10px] leading-4 text-white/45">Calls · forms · sales-team feedback</p></div>
+                </div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-px border-t border-white/10 bg-white/10">
-              <div className="bg-[#141414] p-3 sm:p-4"><p className="text-[9px] uppercase tracking-[.13em] text-emerald-300 sm:text-[10px]">Review</p><p className="mt-1 text-xs font-semibold text-white sm:text-sm">Buyer-leaning</p><p className="mt-1 text-[10px] text-white/45 sm:text-xs">BHK · locality · budget</p></div>
-              <div className="bg-[#141414] p-3 sm:p-4"><p className="text-[9px] uppercase tracking-[.13em] text-amber-200 sm:text-[10px]">Compare</p><p className="mt-1 text-xs font-semibold text-white sm:text-sm">Mixed intent</p><p className="mt-1 text-[10px] text-white/45 sm:text-xs">Check before excluding</p></div>
-              <div className="bg-[#141414] p-3 sm:p-4"><p className="text-[9px] uppercase tracking-[.13em] text-rose-300 sm:text-[10px]">Measure</p><p className="mt-1 text-xs font-semibold text-white sm:text-sm">Lead quality</p><p className="mt-1 text-[10px] text-white/45 sm:text-xs">Calls · forms · feedback</p></div>
-            </div>
-            <p className="border-t border-white/[.08] px-4 py-2 text-[10px] text-white/40">Visual concept · search categories are illustrative, not campaign performance data.</p>
+            <p className="border-t border-white/[.08] px-4 py-2.5 text-[10px] leading-4 text-white/40">Concept mockup only. Bars are decorative, not campaign metrics or performance claims.</p>
           </div>
           <dl className="mt-10 grid max-w-2xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-6 text-xs text-white/55 sm:grid-cols-4">
             <div><dt className="font-semibold text-white/85">Certified</dt><dd className="mt-1">Google Skillshop: Search, Display, AI-Powered Performance Ads</dd></div>
