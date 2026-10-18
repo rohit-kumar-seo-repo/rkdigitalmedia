@@ -72,6 +72,15 @@ const founderSchema = {
   hasCredential: [
     {
       '@type': 'EducationalOccupationalCredential',
+      name: 'Google Ads Search Certification',
+      credentialCategory: 'Google Ads Certification',
+      dateCreated: '2026-10-07',
+      validThrough: '2027-10-07',
+      identifier: '196498973',
+      url: 'https://skillshop.credential.net/191d9a5e-2a34-4ce0-a519-aa1f326aa045',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
       name: 'AI-Powered Performance Ads Certification',
       credentialCategory: 'Google Ads Certification',
       dateCreated: '2026-09-08',
