@@ -38,6 +38,7 @@ export async function POST(request: Request) {
   const utm_medium = clean(body.utm_medium, 120);
   const utm_campaign = clean(body.utm_campaign, 160);
   const page = clean(body.page, 2000);
+  const initial_enquiry_id = clean(body.initial_enquiry_id, 120);
   const consent = body.consent === true;
   const city = clean(body.city, 80);
 
@@ -67,7 +68,7 @@ export async function POST(request: Request) {
   };
   const payload = step === 'initial'
     ? { ...commonPayload, city, consent }
-    : commonPayload;
+    : { ...commonPayload, initial_enquiry_id };
 
   try {
     const destination = new URL(webhookUrl);
