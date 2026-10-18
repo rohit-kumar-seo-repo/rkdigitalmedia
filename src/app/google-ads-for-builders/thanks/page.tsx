@@ -14,6 +14,7 @@ export default function BuildersThanksPage({ searchParams }: { searchParams: Sea
   return (
     <BuildersThanksClient
       hasRequest={Boolean(id)}
+      initialId={id}
       initialRef={ref}
       initialCity={city}
     />
