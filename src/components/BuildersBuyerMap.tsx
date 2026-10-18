@@ -69,7 +69,7 @@ export default function BuildersBuyerMap({ data, landingCity }: { data: Record<s
 
       {ratio > 1 && (
         <p className="mt-5 rounded-2xl border border-[#E8282B]/25 bg-[#E8282B]/[.06] p-4 text-sm leading-6 text-white/80 sm:p-5 sm:text-base">
-          In this {d.city} sample, the biggest rental search (“{topRenter.query}”, {fmt(topRenter.monthly)} a month) is searched about <strong className="text-white">{ratio.toFixed(1)}×</strong> as often as the biggest for-sale search (“{topBuyer.query}”, {fmt(topBuyer.monthly)} a month). A broad “flats in {d.city}” campaign can pay for both.
+          In this {d.city} sample, the biggest rental search (“{topRenter.query}”, {fmt(topRenter.monthly)} a month) is searched about <strong className="text-white">{ratio.toFixed(1)}×</strong> as often as the biggest for-sale search (“{topBuyer.query}”, {fmt(topBuyer.monthly)} a month). Broad “flats in {d.city}” searches may mix intent, so search-term review and campaign context matter.
         </p>
       )}
 
