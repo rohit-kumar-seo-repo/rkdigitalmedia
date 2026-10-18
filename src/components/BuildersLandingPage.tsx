@@ -100,7 +100,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
   const trackWa = (location: string) => trackEvent('builders_whatsapp_click', { location });
   const primaryClass = 'builders-motion-cta inline-flex items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225]';
   const secondaryClass = 'builders-motion-cta inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-4 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/[.04]';
-  const mapCta = (location: string, label?: string, cls = primaryClass) => <a href="#get-map" onClick={() => trackCta(location)} className={cls}>{label || 'Get the ' + cityLabel + ' map'}<Arrow className="h-4 w-4" /></a>;
+  const mapCta = (location: string, label?: string, cls = primaryClass) => <a href="#get-map" onClick={() => trackCta(location)} className={cls}>{label || (cityLabel === 'your city' ? 'Get my city’s buyer-search map' : 'Get the ' + cityLabel + ' buyer-search map')}<Arrow className="h-4 w-4" /></a>;
   const callCta = (location: string, label = 'Book a free strategy call', cls = secondaryClass) => <a href={CAL_URL} onClick={() => trackCta(location)} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
   const waCta = (location: string, label = 'Message Rohit on WhatsApp', cls = secondaryClass) => <a href={waHref} onClick={() => trackWa(location)} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
 
@@ -114,7 +114,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
         <div>
           <Eyebrow>Google Ads for builders and developers{landingCity !== 'your city' ? ' · ' + landingCity : ''}</Eyebrow>
           <h1 id="builders-hero-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-[3.4rem]">Your Google Ads should reach people who buy new homes, not people who rent a PG.</h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar. I run Google Ads for real-estate projects. For {landingCity === 'your city' ? 'your city' : landingCity} I pulled what home buyers type into Google before they enquire about a new project, and which searches only bring renters, straight from Google’s Keyword Planner.</p>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar. I help real-estate builders and developers plan and manage Google Ads around their project, location and buyer intent. I’ve also pulled Keyword Planner search estimates to show the difference between searches that suggest buying intent and searches for rentals or PGs.</p>
           <ul className="mt-7 max-w-2xl space-y-3 text-sm leading-6 text-white/80 sm:text-base">
             <li className="flex gap-3"><Tick /><span>Real search numbers for your city, not a generic pitch.</span></li>
             <li className="flex gap-3"><Tick /><span>Google Skillshop certified, with a verify link for every certificate.</span></li>
@@ -151,6 +151,34 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="max-w-3xl"><Eyebrow>Where the budget goes</Eyebrow><h2 id="leak-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Three ways a builder’s Google Ads budget leaks</h2></div>
         <div className="mt-9 grid gap-4 md:grid-cols-3">{LEAKS.map((x, i) => <article key={x.title} className="builders-motion-card rounded-2xl border border-white/10 bg-[#141414] p-6"><p className="text-2xl font-semibold text-[#E8282B]">0{i + 1}</p><h3 className="mt-4 text-base font-semibold">{x.title}</h3><p className="mt-2 text-sm leading-6 text-white/55">{x.body}</p></article>)}</div>
+      </div>
+    </section>
+
+    <section data-motion-reveal className="border-b border-white/[.08]" aria-labelledby="sample-audit-title">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="max-w-3xl">
+          <Eyebrow>How the data becomes campaign decisions</Eyebrow>
+          <h2 id="sample-audit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">A practical example of how I would review a property campaign</h2>
+          <p className="mt-4 leading-7 text-white/65">Illustrative example only—not a client case study or a claim about results. The actual decisions depend on the project, account data, conversion tracking and sales feedback.</p>
+        </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <article className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">01 · Inspect</p>
+            <h3 className="mt-3 text-lg font-semibold">Review search terms</h3>
+            <p className="mt-2 text-sm leading-6 text-white/60">Check whether clicks come from searches for buying a new property, rentals or PGs, resale listings, brokers, jobs, or other irrelevant intent.</p>
+          </article>
+          <article className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">02 · Decide</p>
+            <h3 className="mt-3 text-lg font-semibold">Make project-specific changes</h3>
+            <p className="mt-2 text-sm leading-6 text-white/60">Review negative keywords, match types, location settings, ad copy and landing-page relevance. Do not block a term without checking whether it could fit the project.</p>
+          </article>
+          <article className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">03 · Measure</p>
+            <h3 className="mt-3 text-lg font-semibold">Judge enquiry quality</h3>
+            <p className="mt-2 text-sm leading-6 text-white/60">Where tracking and sales feedback are available, distinguish genuine buyer enquiries from raw form fills and use those signals to guide optimisation.</p>
+          </article>
+        </div>
+        <p className="mt-5 max-w-3xl text-xs leading-6 text-white/40">I do not claim savings or lead improvements without evidence from the relevant account and time period. Search volume is a planning signal, not a forecast of clicks, qualified enquiries or sales.</p>
       </div>
     </section>
 
@@ -200,7 +228,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
     <section data-motion-reveal id="project-enquiry" className="relative scroll-mt-20 overflow-hidden" aria-labelledby="final-cta-title">
       <div className="pointer-events-none absolute -left-48 top-10 h-96 w-96 rounded-full bg-[#E8282B]/[.08] blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
-        <div className="max-w-3xl"><Eyebrow>Your next launch</Eyebrow><h2 id="final-cta-title" className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Get the map, or talk through your project</h2><p className="mt-4 leading-7 text-white/60">Choose the map, a strategy call, or both. There is no need to write a separate note.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{callCta('final_cta', 'Book a free strategy call', primaryClass)}{waCta('final_cta', 'Discuss your project on WhatsApp')}</div></div>
+        <div className="max-w-3xl"><Eyebrow>Your next launch</Eyebrow><h2 id="final-cta-title" className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">See the search opportunity for your project</h2><p className="mt-4 leading-7 text-white/60">Start with the free map, or book a short call if you would rather discuss the project directly. There is no obligation to proceed.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{callCta('final_cta', 'Book a free strategy call', primaryClass)}{waCta('final_cta', 'Discuss your project on WhatsApp')}</div></div>
         <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-14"><div><h3 className="text-xl font-semibold">Prefer to be contacted? Leave your details</h3><p className="mt-3 text-sm leading-6 text-white/55">Your details go to me directly, and I use them only to reply to this enquiry.</p></div><BuildersEnquiryForm variant="full" landingCity={landingCity} tracking={tracking} waHref={waHref} /></div>
       </div>
     </section>
