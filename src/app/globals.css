@@ -688,3 +688,57 @@
     width: 100%;
   }
 }
+
+
+/* Phase 4 — accessible FAQ and mobile conversion controls */
+.builders-page .builders-faq-item summary {
+  border-radius: .65rem;
+  outline-offset: 5px;
+  transition: color 180ms ease;
+}
+.builders-page .builders-faq-item summary:hover {
+  color: #fff;
+}
+.builders-page .builders-faq-item summary:focus-visible {
+  outline: 2px solid #E8282B;
+}
+.builders-page .builders-faq-item summary > span:last-child {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+.builders-page .builders-faq-item[open] summary > span:last-child {
+  border-color: rgba(232,40,43,.5);
+  background: rgba(232,40,43,.1);
+}
+.builders-page .builders-faq-item > p {
+  animation: builders-faq-answer-in 180ms ease both;
+}
+.builders-page .builders-mobile-cta {
+  padding-bottom: calc(.75rem + env(safe-area-inset-bottom, 0px));
+}
+.builders-page .builders-mobile-cta a:focus-visible,
+.builders-page form button[type="submit"]:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(232,40,43,.65);
+}
+@keyframes builders-faq-answer-in {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .builders-page .builders-faq-item > p {
+    animation: none !important;
+  }
+  .builders-page .builders-faq-item summary,
+  .builders-page .builders-faq-item summary > span:last-child {
+    transition: none !important;
+  }
+}
