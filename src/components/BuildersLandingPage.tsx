@@ -79,7 +79,7 @@ export default function BuildersLandingPage() {
       const result = await response.json().catch(() => ({}));
       if (!response.ok || result.ok !== true || typeof result.id !== 'string') { const fields = Array.isArray(result.errors) ? result.errors.join(', ') : ''; throw new Error(fields ? 'Please check these fields: ' + fields + '.' : (result.error || 'We could not save your request. Please use WhatsApp instead.')); }
       trackEvent('builders_form_submit', { location: 'project_enquiry', step: 'initial' });
-      window.location.assign('/google-ads-for-builders/thanks?' + new URLSearchParams({ l: ref, city: landingCity, id: result.id }).toString());
+      window.location.assign('/google-ads-for-builders/thanks?' + new URLSearchParams({ l: ref, city: city.trim().slice(0, 80), id: result.id }).toString());
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please use WhatsApp as a fallback.');
     } finally {
