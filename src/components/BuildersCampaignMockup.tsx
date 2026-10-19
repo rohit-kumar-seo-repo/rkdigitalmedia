@@ -49,10 +49,10 @@ function BuildingArt() {
         <path d="M210 105v108" stroke="#ffffff" strokeOpacity=".18" />
         {Array.from({ length: 5 }, (_, i) => (
           <g key={i}>
-            <path d={\`M164 \${92 + i * 22}h37v10h-37z\`} fill="#f2d7b0" fillOpacity=".78" />
-            <path d={\`M219 \${92 + i * 22}h37v10h-37z\`} fill="#f2d7b0" fillOpacity=".5" />
-            <path d={\`M164 \${108 + i * 22}h37v3h-37z\`} fill="#201e1e" />
-            <path d={\`M219 \${108 + i * 22}h37v3h-37z\`} fill="#201e1e" />
+            <path d={`M164 ${92 + i * 22}h37v10h-37z`} fill="#f2d7b0" fillOpacity=".78" />
+            <path d={`M219 ${92 + i * 22}h37v10h-37z`} fill="#f2d7b0" fillOpacity=".5" />
+            <path d={`M164 ${108 + i * 22}h37v3h-37z`} fill="#201e1e" />
+            <path d={`M219 ${108 + i * 22}h37v3h-37z`} fill="#201e1e" />
           </g>
         ))}
         <path d="M143 213h134l-15 10H158z" fill="#262323" />
@@ -100,7 +100,7 @@ function IntentBars({ city }: { city: CityData }) {
             <span className="tabular-nums text-white/50">{number(item.total)} <span className="text-white/30">sampled searches</span></span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-white/[.07]">
-            <div className="h-full rounded-full transition-[width] duration-500" style={{ width: \`\${Math.max(2, item.total / max * 100)}%\`, backgroundColor: item.color }} />
+            <div className="h-full rounded-full transition-[width] duration-500" style={{ width: `${Math.max(2, item.total / max * 100)}%`, backgroundColor: item.color }} />
           </div>
         </div>
       ))}
