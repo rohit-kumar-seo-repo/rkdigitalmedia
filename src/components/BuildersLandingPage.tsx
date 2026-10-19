@@ -54,11 +54,9 @@ const NOT_FIT = [
 ];
 
 const STEPS = [
-  ['Map', 'You request the buyer-search map for your city. It is free and you can keep it whether we ever talk or not.'],
-  ['Discovery', 'A short call about your project, location, inventory, buyers and sales process, only if you want one.'],
-  ['Assessment', 'Review current campaigns or map the initial setup, measurement and landing-page needs.'],
-  ['Plan', 'Agree priorities, responsibilities, scope, budget and tracking readiness before work begins.'],
-  ['Optimise and review', 'Once live, review search terms, spend and lead-quality signals, with clear reporting on what to do next.'],
+  ['Review', 'Start with the free city buyer-search map and check its relevance to your project location, inventory and buyer profile.'],
+  ['Agree scope', 'If the opportunity fits, agree responsibilities, tracking, management fee and ad budget before work begins.'],
+  ['Measure and improve', 'Once campaigns are live, review search terms, spend and qualified-enquiry signals with clear reporting.'],
 ];
 
 const FAQS = [
@@ -173,10 +171,6 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
 
     <section data-motion-reveal className="border-b border-white/[.08] bg-[#101313]" aria-labelledby="method-title">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-3xl border border-[#E8282B]/30 bg-[#E8282B]/[.05] p-6 sm:p-8"><p className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">Step 1 · Free</p><h2 id="method-title" className="mt-3 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">Get a project-specific search review</h2><p className="mt-4 text-sm leading-7 text-white/70">Request the city map, then share the project type and location. I’ll explain which search themes may deserve tighter targeting and which should be checked before excluding. This is a planning review, not a promise that every listed term should be blocked.</p><div className="mt-6">{mapCta('method_step1')}</div></article>
-          <article className="rounded-3xl border border-white/10 bg-[#141414] p-6 sm:p-8"><p className="text-[10px] font-semibold uppercase tracking-[.2em] text-white/50">Step 2 · If it makes sense</p><h2 className="mt-3 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">Campaign setup and management</h2><p className="mt-4 text-sm leading-7 text-white/70">Only after we have both looked at your project, locations, inventory, tracking and sales process. No fixed package is assumed beforehand, and the scope and fee are agreed before any work begins.</p><div className="mt-6">{callCta('method_step2', 'Book a free strategy call')}</div></article>
-        </div>
         <div className="mt-12 max-w-2xl"><Eyebrow>How I run a builder’s campaign</Eyebrow><h3 className="mt-4 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">What I do differently</h3></div>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{METHOD.map((x) => <article key={x.title} className="builders-motion-card rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6"><div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#E8282B]/30 bg-[#E8282B]/[.08] text-[#E8282B]"><FeatureIcon kind={x.icon} /></div><h3 className="mt-5 text-base font-semibold">{x.title}</h3><p className="mt-2 text-sm leading-6 text-white/55">{x.body}</p></article>)}</div>
       </div>
