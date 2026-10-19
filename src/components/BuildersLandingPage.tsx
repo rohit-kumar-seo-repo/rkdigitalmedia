@@ -124,7 +124,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
             <li className="flex gap-3"><Tick /><span>You retain account ownership; fees and ad budget are agreed separately before work starts.</span></li>
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            {mapCta('hero', undefined, primaryClass + ' lg:hidden')}
+            {mapCta('hero', undefined, primaryClass)}
             <a href="#buyer-map" onClick={() => trackCta('hero_numbers')} className={secondaryClass}>Preview the search data<span aria-hidden="true">↓</span></a>
             {waCta('hero', 'Message Rohit on WhatsApp')}
           </div>
@@ -137,7 +137,6 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
         </div>
         <div id="get-map" className="scroll-mt-6">
           <BuildersEnquiryForm variant="hero" landingCity={landingCity} tracking={tracking} waHref={waHref} />
-          <p className="mt-4 text-center text-xs text-white/45">Prefer to talk first? <a href={CAL_URL} onClick={() => trackCta('hero_call')} target="_blank" rel="noopener noreferrer" className="text-white/75 underline decoration-[#E8282B] underline-offset-4">Book 15 minutes</a></p>
         </div>
       </div>
     </section>
@@ -156,61 +155,19 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
     <section data-motion-reveal className="border-b border-white/[.08] bg-[#101313]" aria-labelledby="deliverable-title">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
-          <div className="max-w-xl">
-            <Eyebrow>What you actually get</Eyebrow>
-            <h2 id="deliverable-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Useful next steps for your project—not another generic agency pitch.</h2>
-            <p className="mt-4 leading-7 text-white/65">The city sample is a starting point, not a forecast. A project review adds the context search volume cannot tell you: exact location, price band, available inventory, buyer profile, landing page and what your sales team counts as a qualified enquiry.</p>
-            <div className="mt-6 rounded-2xl border border-white/10 bg-[#141414] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">Inside the review</p>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-white/75">
-                <li className="flex gap-3"><Tick /><span>Buyer-leaning, mixed, rental/PG and resale/broker search themes.</span></li>
-                <li className="flex gap-3"><Tick /><span>Questions to check against your location, price band and inventory.</span></li>
-                <li className="flex gap-3"><Tick /><span>Measurement gaps and practical next steps—without fabricated lead forecasts.</span></li>
-              </ul>
-            </div>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">01</p><h3 className="mt-2 font-semibold">Search-intent review</h3><p className="mt-2 text-sm leading-6 text-white/60">Separate buyer-leaning themes from mixed, rental/PG and resale/broker intent. Review before excluding anything.</p></article>
-            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">02</p><h3 className="mt-2 font-semibold">Project and location fit</h3><p className="mt-2 text-sm leading-6 text-white/60">Consider your exact project, catchment, price band and inventory before proposing campaign structure.</p></article>
-            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">03</p><h3 className="mt-2 font-semibold">Measurement checks</h3><p className="mt-2 text-sm leading-6 text-white/60">Check whether calls and forms are tracked and whether sales feedback can distinguish qualified enquiries from noise.</p></article>
-            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">04</p><h3 className="mt-2 font-semibold">Clear scope before spend</h3><p className="mt-2 text-sm leading-6 text-white/60">Agree responsibilities, management fee, ad budget and deliverables before any engagement starts.</p></article>
+          <div className="max-w-xl"><Eyebrow>What the review covers</Eyebrow><h2 id="deliverable-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">A practical review of your project’s search opportunity.</h2><p className="mt-4 leading-7 text-white/65">The city sample is a starting point, not a forecast. Recommendations depend on your project location, price band, inventory, landing page and what your sales team counts as a qualified enquiry.</p></div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">01</p><h3 className="mt-2 font-semibold">Search intent</h3><p className="mt-2 text-sm leading-6 text-white/60">Review buyer-leaning, mixed, rental/PG and resale/broker themes before deciding what to target or exclude.</p></article>
+            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">02</p><h3 className="mt-2 font-semibold">Project fit</h3><p className="mt-2 text-sm leading-6 text-white/60">Match search themes to the actual location, price band, inventory and buyer profile.</p></article>
+            <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">03</p><h3 className="mt-2 font-semibold">Measurement</h3><p className="mt-2 text-sm leading-6 text-white/60">Check call and form tracking, lead-quality feedback and practical next steps without invented forecasts.</p></article>
           </div>
         </div>
       </div>
     </section>
-
     <section data-motion-reveal className="border-b border-white/[.08]" aria-labelledby="leak-title">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="max-w-3xl"><Eyebrow>Where the budget goes</Eyebrow><h2 id="leak-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Three checks I make before recommending campaign changes</h2></div>
         <div className="mt-9 grid gap-4 md:grid-cols-3">{LEAKS.map((x, i) => <article key={x.title} className="builders-motion-card rounded-2xl border border-white/10 bg-[#141414] p-6"><p className="text-2xl font-semibold text-[#E8282B]">0{i + 1}</p><h3 className="mt-4 text-base font-semibold">{x.title}</h3><p className="mt-2 text-sm leading-6 text-white/55">{x.body}</p></article>)}</div>
-      </div>
-    </section>
-
-    <section data-motion-reveal className="border-b border-white/[.08]" aria-labelledby="sample-audit-title">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="max-w-3xl">
-          <Eyebrow>How the data becomes campaign decisions</Eyebrow>
-          <h2 id="sample-audit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">A practical example of how I would review a property campaign</h2>
-          <p className="mt-4 leading-7 text-white/65">Illustrative example only—not a client case study or a claim about results. The actual decisions depend on the project, account data, conversion tracking and sales feedback.</p>
-        </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <article className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6">
-            <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">01 · Inspect</p>
-            <h3 className="mt-3 text-lg font-semibold">Review search terms</h3>
-            <p className="mt-2 text-sm leading-6 text-white/60">Check whether clicks come from searches for buying a new property, rentals or PGs, resale listings, brokers, jobs, or other irrelevant intent.</p>
-          </article>
-          <article className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6">
-            <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">02 · Decide</p>
-            <h3 className="mt-3 text-lg font-semibold">Make project-specific changes</h3>
-            <p className="mt-2 text-sm leading-6 text-white/60">Review negative keywords, match types, location settings, ad copy and landing-page relevance. Do not block a term without checking whether it could fit the project.</p>
-          </article>
-          <article className="rounded-2xl border border-white/10 bg-[#141414] p-5 sm:p-6">
-            <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">03 · Measure</p>
-            <h3 className="mt-3 text-lg font-semibold">Judge enquiry quality</h3>
-            <p className="mt-2 text-sm leading-6 text-white/60">Where tracking and sales feedback are available, distinguish genuine buyer enquiries from raw form fills and use those signals to guide optimisation.</p>
-          </article>
-        </div>
-        <p className="mt-5 max-w-3xl text-xs leading-6 text-white/40">I do not claim savings or lead improvements without evidence from the relevant account and time period. Search volume is a planning signal, not a forecast of clicks, qualified enquiries or sales.</p>
       </div>
     </section>
 
