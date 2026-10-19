@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { CityData } from '@/components/BuildersBuyerMap';
 
 type View = 'intent' | 'location' | 'quality';
@@ -141,7 +141,9 @@ export default function BuildersCampaignMockup({ data, landingCity }: { data: Re
     return CITY_KEYS.includes(key) && data[key] ? key : '';
   }, [landingCity, data]);
 
-  const selectedKey = cityKey || (data[activeCity] ? activeCity : Object.keys(data)[0]);
+  useEffect(() => { if (cityKey) setActiveCity(cityKey); }, [cityKey]);
+
+  const selectedKey = data[activeCity] ? activeCity : (cityKey || Object.keys(data)[0]);
   const city = data[selectedKey];
   const buyer = city?.groups.buyer_leaning?.topQueries?.[0];
   const rental = city?.groups.rental?.topQueries?.[0];
