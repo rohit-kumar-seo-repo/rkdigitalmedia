@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
 import BuildersMotionSystem from '@/components/BuildersMotionSystem';
 import BuildersBuyerMap from '@/components/BuildersBuyerMap';
+import BuildersCampaignMockup from '@/components/BuildersCampaignMockup';
 import type { CityData } from '@/components/BuildersBuyerMap';
 import BuildersEnquiryForm from '@/components/BuildersEnquiryForm';
 
@@ -140,6 +141,8 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
         </div>
       </div>
     </section>
+
+    <BuildersCampaignMockup data={cityData} landingCity={landingCity} />
 
     <section data-motion-reveal id="buyer-map" className="scroll-mt-4 border-b border-white/[.08] bg-[#101313]" aria-labelledby="buyer-map-title">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
