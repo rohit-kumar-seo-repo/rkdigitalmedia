@@ -66,7 +66,9 @@ const FAQS = [
   ['How is your management fee decided?', 'The fee is customised to the actual scope: monthly ad spend, number of projects and locations, campaign complexity, tracking needs, reporting requirements and any additional landing-page or integration work. Google ad spend is paid to Google separately. I will confirm the scope and fee before any work begins.'],
   ['Who pays Google?', 'Your ad spend is paid to Google separately from the management fee. You should retain clear visibility into spend and account access.'],
   ['We already run ads or use an agency. Can you review it?', 'Yes. We can discuss an account review, subject to appropriate access and permission. I will distinguish confirmed findings from hypotheses and agree the scope before making changes.'],
-  ['Which cities do you work in?', 'Builders and developers across India. The campaign is built for your city, locality and project.'],
+  ['Which cities do you work in?', 'I work with builders and developers across India. The interactive sample currently covers Mumbai/MMR, Delhi NCR, Pune, Bengaluru, Hyderabad, Chennai and Ahmedabad. If your project is elsewhere, you can still request a review tailored to its location and buyer profile.'],
+  ['What will I receive after requesting the map?', 'A city-level search snapshot with buyer-leaning, mixed-intent, rental/PG and resale/broker themes, plus an explanation of the data limits. It is a planning aid, not a promise of clicks, qualified leads or sales.'],
+  ['What happens after I submit the form?', 'Your request should be received and reviewed so the next step can be agreed. If you prefer to talk immediately, you can use the WhatsApp or booking link on this page. No campaign starts until scope and fees are agreed.'],
   ['Do you work with plotted, township or commercial projects?', 'Yes, the approach is the same: separate the buyers from everyone else, then measure every enquiry.'],
 ];
 
@@ -112,17 +114,17 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="pointer-events-none absolute -right-40 -top-32 h-[32rem] w-[32rem] rounded-full bg-[#E8282B]/[.10] blur-3xl" />
       <div className="relative mx-auto grid max-w-7xl items-start gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_.85fr] lg:gap-14 lg:px-8 lg:py-20">
         <div>
-          <Eyebrow>Google Ads for builders and developers{landingCity !== 'your city' ? ' · ' + landingCity : ''}</Eyebrow>
-          <h1 id="builders-hero-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-[3.4rem]">Getting property enquiries from Google Ads? Make sure you’re paying for the right searches.</h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar. I help builders and developers plan, manage and measure Google Ads for individual projects. Start by comparing the searches people make when looking to buy with rental, PG, resale and broad-intent searches—then decide what deserves your budget.</p>
+          <Eyebrow>Google Ads for builders and developers across India{landingCity !== 'your city' ? ' · ' + landingCity : ''}</Eyebrow>
+          <h1 id="builders-hero-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-[3.4rem]">Reach the right property buyers with project-specific Google Ads.</h1>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar. I help builders and developers across India plan, manage and measure Google Ads around each project’s location, price band and buyer intent. Start with a free city buyer-search map, then see which search themes deserve a closer look before you commit to campaign management.</p>
           <ul className="mt-7 max-w-2xl space-y-3 text-sm leading-6 text-white/80 sm:text-base">
-            <li className="flex gap-3"><Tick /><span>City-level Keyword Planner estimates, with the source and limitations explained.</span></li>
-            <li className="flex gap-3"><Tick /><span>Google Skillshop credentials you can verify directly.</span></li>
-            <li className="flex gap-3"><Tick /><span>You retain account ownership, see the spend, and agree scope and fees before work starts.</span></li>
+            <li className="flex gap-3"><Tick /><span>A free city-level search snapshot with the source and limitations explained.</span></li>
+            <li className="flex gap-3"><Tick /><span>Project-specific planning for residential, plotted, township and commercial developments.</span></li>
+            <li className="flex gap-3"><Tick /><span>You retain account ownership; fees and ad budget are agreed separately before work starts.</span></li>
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {mapCta('hero', undefined, primaryClass + ' lg:hidden')}
-            <a href="#buyer-map" onClick={() => trackCta('hero_numbers')} className={secondaryClass}>Explore the city search data<span aria-hidden="true">↓</span></a>
+            <a href="#buyer-map" onClick={() => trackCta('hero_numbers')} className={secondaryClass}>Preview the search data<span aria-hidden="true">↓</span></a>
             {waCta('hero', 'Message Rohit on WhatsApp')}
           </div>
           <dl className="mt-10 grid max-w-2xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-6 text-xs text-white/55 sm:grid-cols-4">
@@ -143,7 +145,8 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="max-w-3xl"><Eyebrow>Real search data</Eyebrow><h2 id="buyer-map-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What home buyers type into Google before they enquire</h2><p className="mt-4 leading-7 text-white/65">Average monthly searches from Google’s Keyword Planner over the last 12 months. Choose a city to compare buyer-leaning, mixed-intent, rental/PG and resale/broker searches. These are planning estimates—not guaranteed clicks, leads or sales.</p></div>
         <div className="mt-8"><BuildersBuyerMap data={cityData} landingCity={landingCity} /></div>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"><p className="text-sm text-white/65 sm:mr-4">Want this cut by BHK, locality and budget for your project?</p>{mapCta('map_section')}</div>
+        <p className="mt-4 text-xs leading-6 text-white/45">City samples are currently available for Mumbai/MMR, Delhi NCR, Pune, Bengaluru, Hyderabad, Chennai and Ahmedabad. If your project is in another Indian city, you can still request a review; the available sample cities are examples, not a limit on service coverage.</p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"><p className="text-sm text-white/65 sm:mr-4">Want the search themes reviewed against your BHK mix, locality, price band and inventory?</p>{mapCta('map_section')}</div>
       </div>
     </section>
 
@@ -153,7 +156,15 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
           <div className="max-w-xl">
             <Eyebrow>What you actually get</Eyebrow>
             <h2 id="deliverable-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Useful next steps for your project—not another generic agency pitch.</h2>
-            <p className="mt-4 leading-7 text-white/65">The city sample helps you spot patterns. A project review adds the context that search volume alone cannot tell you: location, price band, inventory, buyer profile, landing page and what your sales team calls a qualified enquiry.</p>
+            <p className="mt-4 leading-7 text-white/65">The city sample is a starting point, not a forecast. A project review adds the context search volume cannot tell you: exact location, price band, available inventory, buyer profile, landing page and what your sales team counts as a qualified enquiry.</p>
+            <div className="mt-6 rounded-2xl border border-white/10 bg-[#141414] p-5">
+              <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">Inside the review</p>
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-white/75">
+                <li className="flex gap-3"><Tick /><span>Buyer-leaning, mixed, rental/PG and resale/broker search themes.</span></li>
+                <li className="flex gap-3"><Tick /><span>Questions to check against your location, price band and inventory.</span></li>
+                <li className="flex gap-3"><Tick /><span>Measurement gaps and practical next steps—without fabricated lead forecasts.</span></li>
+              </ul>
+            </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             <article className="rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#E8282B]">01</p><h3 className="mt-2 font-semibold">Search-intent review</h3><p className="mt-2 text-sm leading-6 text-white/60">Separate buyer-leaning themes from mixed, rental/PG and resale/broker intent. Review before excluding anything.</p></article>
@@ -225,7 +236,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-[.6fr_1.4fr] lg:items-center lg:gap-14">
           <div className="mx-auto flex w-full max-w-xs flex-col items-center text-center lg:mx-0"><div className="h-56 w-56 overflow-hidden rounded-full border border-white/10 bg-[#171717]"><img src="/images/founder-rohit-kumar.webp" width="640" height="760" loading="lazy" decoding="async" alt="Rohit Kumar, founder of R.K Digital Media" className="max-w-none" style={{ width: '145%', height: '145%', marginLeft: '-22.5%', marginTop: '-15.25%' }} /></div><p className="mt-4 font-semibold text-white">Rohit Kumar</p><p className="mt-1 text-xs text-white/55">Founder · R.K Digital Media</p></div>
-          <div className="max-w-3xl"><Eyebrow>Direct access, clear accountability</Eyebrow><h2 id="about-rohit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Work directly with the person responsible for your campaigns.</h2><p className="mt-5 leading-7 text-white/70">I’m Rohit Kumar, founder of R.K Digital Media in Greater Noida, Delhi NCR. I work directly with businesses on Google Ads strategy, setup, optimisation and measurement. For real-estate projects, the focus is matching campaign intent and location to the property being sold, then reviewing enquiry quality—not treating every form fill as a successful lead.</p>
+          <div className="max-w-3xl"><Eyebrow>Direct access, clear accountability</Eyebrow><h2 id="about-rohit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Work directly with the person responsible for your campaigns.</h2><p className="mt-5 leading-7 text-white/70">I’m Rohit Kumar, founder of R.K Digital Media in Greater Noida, Delhi NCR. I work directly with builders and developers across India on Google Ads strategy, setup, optimisation and measurement. For each real-estate project, the focus is matching search intent and location to the property being sold, then reviewing enquiry quality—not treating every form fill as a successful lead.</p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Google Skillshop certified</p><p className="mt-1 text-sm leading-6 text-white/55">Search, Display and AI-Powered Performance Ads credentials, each with a public verification link below.</p></article>
               <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Policy-aware campaign setup</p><p className="mt-1 text-sm leading-6 text-white/55">I also run <a href="https://adssuspensionrecovery.com" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-[#E8282B] underline-offset-4">Ads Suspension Recovery</a>, helping businesses address Google Ads suspension issues.</p></article>
@@ -247,7 +258,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="pointer-events-none absolute -left-48 top-10 h-96 w-96 rounded-full bg-[#E8282B]/[.08] blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
         <div className="max-w-3xl"><Eyebrow>Your next launch</Eyebrow><h2 id="final-cta-title" className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">See the search opportunity for your project</h2><p className="mt-4 leading-7 text-white/60">Start with the free map, or book a short call if you would rather discuss the project directly. There is no obligation to proceed.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{callCta('final_cta', 'Book a free strategy call', primaryClass)}{waCta('final_cta', 'Discuss your project on WhatsApp')}</div></div>
-        <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-14"><div><h3 className="text-xl font-semibold">Prefer to be contacted? Leave your details</h3><p className="mt-3 text-sm leading-6 text-white/55">Your details go to me directly, and I use them only to reply to this enquiry.</p></div><BuildersEnquiryForm variant="full" landingCity={landingCity} tracking={tracking} waHref={waHref} /></div>
+        <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-14"><div><h3 className="text-xl font-semibold">Prefer a project-specific conversation?</h3><p className="mt-3 text-sm leading-6 text-white/55">Share your project and city so I can understand the context. I’ll use your details to respond to this enquiry; you can also choose the free map or contact me directly on WhatsApp.</p></div><BuildersEnquiryForm variant="full" landingCity={landingCity} tracking={tracking} waHref={waHref} /></div>
       </div>
     </section>
     <footer className="border-t border-white/10 bg-[#0D0D0D]"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"><p>© {new Date().getFullYear()} R.K Digital Media. Google Ads for real estate builders and developers.</p><div className="flex flex-wrap gap-5"><Link href="/privacy-policy" className="transition hover:text-white/70">Privacy</Link><Link href="/services/google-ads" className="transition hover:text-white/70">Google Ads services</Link><Link href="/contact" className="transition hover:text-white/70">Contact</Link></div></div></footer>
