@@ -16,6 +16,13 @@ export const metadata: Metadata = {
 
 const data: ServicePillarData = {
   "number": "05",
+  "contactService": "Google Business Profile Management",
+  "analyticsService": "google_business_profile_management",
+  "visual": {
+    "src": "/images/google-business-profile-review.svg",
+    "alt": "Illustrative Google Business Profile review dashboard covering business details, categories, services, review handling and website alignment. No client data or results are shown.",
+    "caption": "Illustrative GBP review workflow · No client data or results shown"
+  },
   "label": "GOOGLE BUSINESS PROFILE MANAGEMENT",
   "title": "Google Business Profile Management in Noida for Stronger Local Visibility",
   "intro": "Google Business Profile optimisation and ongoing management for businesses in Noida, Greater Noida and Delhi NCR that depend on Google Maps, local discovery, calls, directions and enquiries.",

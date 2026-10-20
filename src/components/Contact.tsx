@@ -23,7 +23,8 @@ const reasons = [
   'Lead capture, CRM or workflow automation',
 ];
 
-export function Contact() {
+export function Contact({ initialService }: { initialService?: string } = {}) {
+  const selectedService = services.includes(initialService ?? '') ? initialService : services[0];
   const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle');
   const [errorDetails, setErrorDetails] = useState('');
 
@@ -114,7 +115,7 @@ export function Contact() {
                   </div>
                   <div>
                     <label className="block font-montserrat text-xs tracking-widest uppercase text-[var(--rkd-fg-muted)] mb-2">Service Interested In</label>
-                    <select name="service" className="contact-field appearance-none cursor-pointer">{services.map(s=><option key={s} value={s}>{s}</option>)}</select>
+                    <select name="service" defaultValue={selectedService} className="contact-field appearance-none cursor-pointer">{services.map(s=><option key={s} value={s}>{s}</option>)}</select>
                   </div>
                   <div>
                     <label className="block font-montserrat text-xs tracking-widest uppercase text-[var(--rkd-fg-muted)] mb-2">What is happening?</label>

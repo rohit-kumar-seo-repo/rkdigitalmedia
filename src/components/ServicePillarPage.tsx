@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { Reveal } from '@/components/motion/MotionReveal';
+import { trackEvent } from '@/lib/analytics';
 
 export type ServicePillarData = {
   number: string;
@@ -19,6 +20,9 @@ export type ServicePillarData = {
   caseStudy?: { eyebrow: string; title: string; text: string; href: string };
   relatedResources?: Array<{ eyebrow: string; title: string; text: string; href: string; label: string }>;
   relatedService?: { eyebrow: string; title: string; text: string; href: string; label: string };
+  contactService?: string;
+  analyticsService?: string;
+  visual?: { src: string; alt: string; caption: string };
   policyHub?: {
     title: string;
     intro: string;
@@ -71,6 +75,16 @@ const defaultRelatedService = (label: string): ServicePillarData['relatedService
 };
 
 export function ServicePillarPage({ data }: { data: ServicePillarData }) {
+  const contactHref = data.contactService
+    ? `/contact?service=${encodeURIComponent(data.contactService)}`
+    : '/contact';
+  const trackServiceCta = (location: string) => {
+    if (data.analyticsService) {
+      trackEvent('service_cta_click', { service: data.analyticsService, location });
+    }
+  };
+  const visual: { src: string; alt: string; caption?: string } = data.visual ?? serviceVisual(data.label);
+
   return (
     <main id="top">
       <section className="relative overflow-hidden bg-[var(--rkd-bg)] grid-pattern">
@@ -83,7 +97,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
             </h1>
             <p className="hero-subheadline max-w-3xl">{data.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4 mt-9">
-              <Link href="/contact" className="btn-primary group">
+              <Link href={contactHref} onClick={() => trackServiceCta('hero')} className="btn-primary group">
                 Discuss Your Requirements <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link href="/case-studies" className="btn-secondary">
@@ -113,8 +127,8 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
       <section className="py-10 md:py-14 bg-[var(--rkd-bg)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6">
           <Reveal y={30} className="overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl">
-            <img src={serviceVisual(data.label).src} alt={serviceVisual(data.label).alt} width="1600" height="900" loading="lazy" className="block w-full h-auto" />
-            <figcaption className="px-4 py-3 border-t border-[var(--rkd-border)] font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--rkd-fg-muted)]">Service framework · R.K Digital Media</figcaption>
+            <img src={visual.src} alt={visual.alt} width="1600" height="900" loading="lazy" className="block w-full h-auto" />
+            {visual.caption && <figcaption className="px-4 py-3 border-t border-[var(--rkd-border)] font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--rkd-fg-muted)]">{visual.caption}</figcaption>}
           </Reveal>
         </div>
       </section>
@@ -383,7 +397,7 @@ export function ServicePillarPage({ data }: { data: ServicePillarData }) {
           <p className="text-[var(--rkd-fg-muted)] leading-relaxed mb-8">
             Share your current website, account or growth challenge. We’ll identify the relevant work, what should happen first and what can wait.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <Link href={contactHref} onClick={() => trackServiceCta('final')} className="btn-primary">
             Book a Strategy Call <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

@@ -20,6 +20,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
-  return <Contact />;
+export default function ContactPage({ searchParams }: { searchParams?: { service?: string } }) {
+  return <Contact initialService={searchParams?.service} />;
 }
