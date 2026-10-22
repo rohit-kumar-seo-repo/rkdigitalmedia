@@ -742,3 +742,12 @@
     transition: none !important;
   }
 }
+.builders-page .builders-cert-marquee:hover .builders-cert-marquee__track,
+.builders-page .builders-cert-marquee:focus-within .builders-cert-marquee__track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .builders-page .builders-cert-marquee { overflow-x: auto; }
+  .builders-page .builders-cert-marquee__track { animation: none !important; transform: none !important; }
+  .builders-page .builders-cert-marquee__track > [aria-hidden="true"] { display: none; }
+}

@@ -300,25 +300,32 @@ function CertificationsSection() {
           <h2 id="certifications-title" className="text-3xl font-semibold leading-tight tracking-[-.035em] text-white sm:text-4xl">Verify My Google Ads Certifications</h2>
           <p className="mt-4 text-sm leading-7 text-white/60 sm:text-base">I’m Rohit Kumar. I’ve listed each credential with its issue date, validity date and a direct verification link so you can check the details yourself before booking a call.</p>
         </header>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          {certs.map((cert) => (
-            <article key={cert.id} className="builders-motion-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white text-[#202124] shadow-[0_8px_28px_rgba(0,0,0,.18)] transition duration-200 hover:-translate-y-1 hover:border-[#E8282B]/50 hover:shadow-[0_14px_36px_rgba(0,0,0,.28)]">
-              <a href={cert.url} onClick={() => verify('certification_image')} target="_blank" rel="noopener noreferrer" aria-label={'Open verification for ' + cert.name} className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border-b border-[#E5E7EB] bg-white p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#E8282B]">
-                <img src={cert.image} width={cert.width} height={cert.height} alt={cert.alt} loading="lazy" decoding="async" className="h-full w-full object-contain" />
-                <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full border border-[#D1FAE5] bg-[#ECFDF5] px-2.5 py-1 text-[11px] font-semibold text-[#047857]"><span aria-hidden="true">✓</span> Verification link</span>
-              </a>
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="text-base font-bold leading-snug">{cert.name}</h3>
-                <dl className="mt-4 space-y-2 text-xs leading-5 text-[#4B5563]">
-                  <div className="flex gap-2"><dt className="shrink-0 font-semibold text-[#374151]">Issued</dt><dd>{cert.issued}</dd></div>
-                  <div className="flex gap-2"><dt className="shrink-0 font-semibold text-[#374151]">Valid to</dt><dd>{cert.validTo}</dd></div>
-                  <div className="flex flex-col gap-0.5 border-t border-[#E5E7EB] pt-2"><dt className="font-semibold text-[#374151]">Credential ID</dt><dd className="break-all font-mono text-[11px]">{cert.id}</dd></div>
-                </dl>
-                <a href={cert.url} onClick={() => verify('certification_verify_link')} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#E8282B] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#C91F23] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E8282B]">Verify this certificate <span aria-hidden="true">↗</span></a>
+        <div className="builders-cert-marquee overflow-hidden" role="region" aria-roledescription="carousel" aria-labelledby="certifications-title" tabIndex={0}>
+          <div className="builders-cert-marquee__track flex w-max animate-marquee" style={{animationDuration:'50s'}}>
+            {[0, 1, 2].map((copy) => (
+              <div key={copy} className="flex shrink-0 gap-5 pr-5" aria-hidden={copy > 0}>
+                {certs.map((cert) => (
+                  <article key={`${copy}-${cert.id}`} className="builders-motion-card group flex w-[min(82vw,320px)] shrink-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white text-[#202124] shadow-[0_8px_28px_rgba(0,0,0,.18)] transition duration-200 hover:-translate-y-1 hover:border-[#E8282B]/50 hover:shadow-[0_14px_36px_rgba(0,0,0,.28)] sm:w-[300px] xl:w-[280px]">
+                    <a href={cert.url} tabIndex={copy > 0 ? -1 : undefined} onClick={() => verify('certification_image')} target="_blank" rel="noopener noreferrer" aria-label={'Open verification for ' + cert.name} className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border-b border-[#E5E7EB] bg-white p-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#E8282B]">
+                      <img src={cert.image} width={cert.width} height={cert.height} alt={cert.alt} loading="lazy" decoding="async" className="h-full w-full object-contain" />
+                      <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full border border-[#D1FAE5] bg-[#ECFDF5] px-2.5 py-1 text-[11px] font-semibold text-[#047857]"><span aria-hidden="true">✓</span> Verification link</span>
+                    </a>
+                    <div className="flex flex-1 flex-col p-5">
+                      <h3 className="text-base font-bold leading-snug">{cert.name}</h3>
+                      <dl className="mt-4 space-y-2 text-xs leading-5 text-[#4B5563]">
+                        <div className="flex gap-2"><dt className="shrink-0 font-semibold text-[#374151]">Issued</dt><dd>{cert.issued}</dd></div>
+                        <div className="flex gap-2"><dt className="shrink-0 font-semibold text-[#374151]">Valid to</dt><dd>{cert.validTo}</dd></div>
+                        <div className="flex flex-col gap-0.5 border-t border-[#E5E7EB] pt-2"><dt className="font-semibold text-[#374151]">Credential ID</dt><dd className="break-all font-mono text-[11px]">{cert.id}</dd></div>
+                      </dl>
+                      <a href={cert.url} tabIndex={copy > 0 ? -1 : undefined} onClick={() => verify('certification_verify_link')} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#E8282B] px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-[#C91F23] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E8282B]">Verify this certificate <span aria-hidden="true">↗</span></a>
+                    </div>
+                  </article>
+                ))}
               </div>
-            </article>
-          ))}
+            ))}
+          </div>
         </div>
+        <p className="mt-3 text-center text-xs text-white/45">Auto-scroll pauses on hover or focus. Reduced-motion settings show a static, scrollable row.</p>
         <div className="mt-8 flex flex-col items-center gap-3 text-center sm:mt-10">
           <p className="text-sm text-white/55">Want to review the full credential wallet?</p>
           <a href="https://skillshop.credential.net/profile/rohitkumarseo848048/wallet" onClick={() => verify('certifications_all_credentials')} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:border-[#E8282B] hover:bg-white/[.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E8282B]">View all credentials on Google Skillshop <span className="ml-2" aria-hidden="true">↗</span></a>
