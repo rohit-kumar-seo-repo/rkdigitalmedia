@@ -44,7 +44,7 @@ const GOOD_FIT = [
   'You run a named residential, commercial, plotted or township project and want better-qualified enquiries.',
   'Your sales team can tell a genuine enquiry from a wrong one, and can share that feedback.',
   'You want clean tracking and a weekly report you can read in two minutes.',
-  'You want to own your Google Ads account and see where every rupee of ad spend goes.',
+  'You want to own your Google Ads account and see where every unit of ad spend goes.',
 ];
 const NOT_FIT = [
   'You need a guaranteed number of leads or site visits. I will not promise that.',
@@ -54,7 +54,8 @@ const NOT_FIT = [
 ];
 
 const STEPS = [
-  ['Map', 'You request the buyer-search map for your city. It is free and you can keep it whether we ever talk or not.'],
+  ['Project review', 'Share the development and market you want to reach; get a clear first discussion about campaign fit, tracking and sales follow-up.'],
+
   ['Discovery', 'A short call about your project, location, inventory, buyers and sales process, only if you want one.'],
   ['Assessment', 'Review current campaigns or map the initial setup, measurement and landing-page needs.'],
   ['Plan', 'Agree priorities, responsibilities, scope, budget and tracking readiness before work begins.'],
@@ -62,13 +63,16 @@ const STEPS = [
 ];
 
 const FAQS = [
-  ['Is the buyer-search map really free?', 'Yes. It is one page for your city, and it is yours to keep whether or not we ever work together. Your name, company or project, city and WhatsApp number are enough to request it.'],
+  ['Is the buyer-search map really free?', 'Yes. The India city-search sample is free for covered cities and is yours to keep whether or not we work together. It is planning data, not a forecast of clicks, qualified enquiries or sales.'],
+
   ['Can you guarantee a number of leads?', 'No honest advertiser can promise that. I commit to clean tracking, blocking wasted clicks, and a weekly report you can read in two minutes.'],
   ['How is your management fee decided?', 'The fee is customised to the actual scope: monthly ad spend, number of projects and locations, campaign complexity, tracking needs, reporting requirements and any additional landing-page or integration work. Google ad spend is paid to Google separately. I will confirm the scope and fee before any work begins.'],
   ['Who pays Google?', 'Your ad spend is paid to Google separately from the management fee. You should retain clear visibility into spend and account access.'],
   ['We already run ads or use an agency. Can you review it?', 'Yes. We can discuss an account review, subject to appropriate access and permission. I will distinguish confirmed findings from hypotheses and agree the scope before making changes.'],
-  ['Which cities do you work in?', 'I work with builders and developers across India. The interactive sample currently covers Mumbai/MMR, Delhi NCR, Pune, Bengaluru, Hyderabad, Chennai and Ahmedabad. If your project is elsewhere, you can still request a review tailored to its location and buyer profile.'],
-  ['What will I receive after requesting the map?', 'A city-level search snapshot with buyer-leaning, mixed-intent, rental/PG and resale/broker themes, plus an explanation of the data limits. It is a planning aid, not a promise of clicks, qualified leads or sales.'],
+  ['Which markets do you work in?', 'I’m based in India and currently support projects across India. For projects in other countries, we first confirm market fit, local ad-policy requirements and measurement needs before agreeing scope. The interactive search sample uses Indian city data only.'],
+
+  ['What will I receive after requesting the map?', 'For a covered Indian sample city, a one-page snapshot of buyer-leaning, mixed-intent, rental/PG and resale/broker themes, with the data limits explained. Other markets need a project-specific review.'],
+
   ['What happens after I submit the form?', 'Your request should be received and reviewed so the next step can be agreed. If you prefer to talk immediately, you can use the WhatsApp or booking link on this page. No campaign starts until scope and fees are agreed.'],
   ['Do you work with plotted, township or commercial projects?', 'Yes, the approach is the same: separate the buyers from everyone else, then measure every enquiry.'],
 ];
@@ -103,28 +107,28 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
   const trackWa = (location: string) => trackEvent('builders_whatsapp_click', { location });
   const primaryClass = 'builders-motion-cta inline-flex items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225]';
   const secondaryClass = 'builders-motion-cta inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-4 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/[.04]';
-  const mapCta = (location: string, label?: string, cls = primaryClass) => <a href="#get-map" onClick={() => trackCta(location)} className={cls}>{label || (cityLabel === 'your city' ? 'Get my city’s buyer-search map' : 'Get the ' + cityLabel + ' buyer-search map')}<Arrow className="h-4 w-4" /></a>;
+  const projectReviewCta = (location: string, label = 'Request a project campaign review', cls = primaryClass) => <a href="#project-review" onClick={() => trackCta(location)} className={cls}>{label}<Arrow className="h-4 w-4" /></a>;
   const callCta = (location: string, label = 'Book a free strategy call', cls = secondaryClass) => <a href={CAL_URL} onClick={() => trackCta(location)} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
   const waCta = (location: string, label = 'Message Rohit on WhatsApp', cls = secondaryClass) => <a href={waHref} onClick={() => trackWa(location)} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
 
   return <main className="builders-page bg-[#0D0D0D] text-[#F0EEEE] pb-24 sm:pb-0">
     <BuildersMotionSystem />
-    <header className="border-b border-white/[.08] bg-[#101313]"><div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"><Link href="/" className="flex items-center gap-2.5" aria-label="R.K Digital Media home"><span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8282B] text-sm font-black text-white">RK</span><span className="text-sm font-semibold tracking-wide">R.K DIGITAL MEDIA</span></Link><a href="#get-map" onClick={() => trackCta('header')} className="text-xs font-semibold text-white/70 underline decoration-[#E8282B] underline-offset-4">Get the free map</a></div></header>
+    <header className="border-b border-white/[.08] bg-[#101313]"><div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"><Link href="/" className="flex items-center gap-2.5" aria-label="R.K Digital Media home"><span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E8282B] text-sm font-black text-white">RK</span><span className="text-sm font-semibold tracking-wide">R.K DIGITAL MEDIA</span></Link><a href="#project-review" onClick={() => trackCta('header')} className="text-xs font-semibold text-white/70 underline decoration-[#E8282B] underline-offset-4">Project campaign review</a></div></header>
 
     <section ref={heroRef} className="relative overflow-hidden border-b border-white/[.08]" aria-labelledby="builders-hero-title">
       <div className="pointer-events-none absolute -right-40 -top-32 h-[32rem] w-[32rem] rounded-full bg-[#E8282B]/[.10] blur-3xl" />
       <div className="relative mx-auto grid max-w-7xl items-start gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.15fr_.85fr] lg:gap-14 lg:px-8 lg:py-20">
         <div>
-          <Eyebrow>Google Ads for builders and developers across India{landingCity !== 'your city' ? ' · ' + landingCity : ''}</Eyebrow>
+          <Eyebrow>Google Ads for builders and developers · based in India{landingCity !== 'your city' ? ' · ' + landingCity : ''}</Eyebrow>
           <h1 id="builders-hero-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-[3.4rem]">Reach the right property buyers with project-specific Google Ads.</h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar. I help builders and developers across India plan, manage and measure Google Ads around each project’s location, price band and buyer intent. Start with a free city buyer-search map, then see which search themes deserve a closer look before you commit to campaign management.</p>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar, based in India. I plan and manage Google Ads for developer projects around their location, price range, available inventory and buyer intent. We define what counts as a qualified enquiry, check how calls and forms are measured, and use sales feedback where available to guide campaign decisions. For projects in other countries, market fit and policy requirements are confirmed before scope is agreed.</p>
           <ul className="mt-7 max-w-2xl space-y-3 text-sm leading-6 text-white/80 sm:text-base">
-            <li className="flex gap-3"><Tick /><span>A free city-level search snapshot with the source and limitations explained.</span></li>
-            <li className="flex gap-3"><Tick /><span>Project-specific planning for residential, plotted, township and commercial developments.</span></li>
+            <li className="flex gap-3"><Tick /><span>A project-level campaign plan shaped around location, price range and available inventory.</span></li>
+            <li className="flex gap-3"><Tick /><span>Lead qualification and tracking connected to the questions your sales team needs answered.</span></li>
             <li className="flex gap-3"><Tick /><span>You retain account ownership; fees and ad budget are agreed separately before work starts.</span></li>
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            {mapCta('hero', undefined, primaryClass + ' lg:hidden')}
+            {projectReviewCta('hero', 'Request a project review', primaryClass + ' lg:hidden')}
             <a href="#buyer-map" onClick={() => trackCta('hero_numbers')} className={secondaryClass}>Preview the search data<span aria-hidden="true">↓</span></a>
             {waCta('hero', 'Message Rohit on WhatsApp')}
           </div>
@@ -135,7 +139,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
             <div><dt className="font-semibold text-white/85">Ad spend</dt><dd className="mt-1">Paid to Google, not to me</dd></div>
           </dl>
         </div>
-        <div id="get-map" className="scroll-mt-6">
+        <div id="project-review" className="scroll-mt-6">
           <BuildersEnquiryForm variant="hero" landingCity={landingCity} tracking={tracking} waHref={waHref} />
           <p className="mt-4 text-center text-xs text-white/45">Prefer to talk first? <a href={CAL_URL} onClick={() => trackCta('hero_call')} target="_blank" rel="noopener noreferrer" className="text-white/75 underline decoration-[#E8282B] underline-offset-4">Book 15 minutes</a></p>
         </div>
@@ -148,8 +152,8 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="max-w-3xl"><Eyebrow>Real search data</Eyebrow><h2 id="buyer-map-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What home buyers type into Google before they enquire</h2><p className="mt-4 leading-7 text-white/65">Average monthly searches from Google’s Keyword Planner over the last 12 months. Choose a city to compare buyer-leaning, mixed-intent, rental/PG and resale/broker searches. These are planning estimates—not guaranteed clicks, leads or sales.</p></div>
         <div className="mt-8"><BuildersBuyerMap data={cityData} landingCity={landingCity} /></div>
-        <p className="mt-4 text-xs leading-6 text-white/45">City samples are currently available for Mumbai/MMR, Delhi NCR, Pune, Bengaluru, Hyderabad, Chennai and Ahmedabad. If your project is in another Indian city, you can still request a review; the available sample cities are examples, not a limit on service coverage.</p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"><p className="text-sm text-white/65 sm:mr-4">Want the search themes reviewed against your BHK mix, locality, price band and inventory?</p>{mapCta('map_section')}</div>
+        <p className="mt-4 text-xs leading-6 text-white/45">The interactive search sample uses Indian city data for Mumbai/MMR, Delhi NCR, Pune, Bengaluru, Hyderabad, Chennai and Ahmedabad. Other Indian or international markets need a project-specific review; these samples are not forecasts.</p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"><p className="text-sm text-white/65 sm:mr-4">Want the search themes reviewed against your BHK mix, locality, price band and inventory?</p>{projectReviewCta('map_section', 'Discuss my project')}</div>
       </div>
     </section>
 
@@ -217,7 +221,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
     <section data-motion-reveal className="border-b border-white/[.08] bg-[#101313]" aria-labelledby="method-title">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-6 lg:grid-cols-2">
-          <article className="rounded-3xl border border-[#E8282B]/30 bg-[#E8282B]/[.05] p-6 sm:p-8"><p className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">Step 1 · Free</p><h2 id="method-title" className="mt-3 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">Get a project-specific search review</h2><p className="mt-4 text-sm leading-7 text-white/70">Request the city map, then share the project type and location. I’ll explain which search themes may deserve tighter targeting and which should be checked before excluding. This is a planning review, not a promise that every listed term should be blocked.</p><div className="mt-6">{mapCta('method_step1')}</div></article>
+          <article className="rounded-3xl border border-[#E8282B]/30 bg-[#E8282B]/[.05] p-6 sm:p-8"><p className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">Step 1 · Free</p><h2 id="method-title" className="mt-3 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">Start with a project campaign review</h2><p className="mt-4 text-sm leading-7 text-white/70">Share the project, market and current sales setup. I’ll review the campaign opportunity, lead qualification and measurement needs, then outline a practical next step. Search estimates inform planning; they do not predict enquiries or sales.</p><div className="mt-6">{projectReviewCta('method_step1')}</div></article>
           <article className="rounded-3xl border border-white/10 bg-[#141414] p-6 sm:p-8"><p className="text-[10px] font-semibold uppercase tracking-[.2em] text-white/50">Step 2 · If it makes sense</p><h2 className="mt-3 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">Campaign setup and management</h2><p className="mt-4 text-sm leading-7 text-white/70">Only after we have both looked at your project, locations, inventory, tracking and sales process. No fixed package is assumed beforehand, and the scope and fee are agreed before any work begins.</p><div className="mt-6">{callCta('method_step2', 'Book a free strategy call')}</div></article>
         </div>
         <div className="mt-12 max-w-2xl"><Eyebrow>How I run a builder’s campaign</Eyebrow><h3 className="mt-4 text-2xl font-semibold tracking-[-.03em] sm:text-3xl">What I do differently</h3></div>
@@ -260,12 +264,12 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
     <section data-motion-reveal id="project-enquiry" className="relative scroll-mt-20 overflow-hidden" aria-labelledby="final-cta-title">
       <div className="pointer-events-none absolute -left-48 top-10 h-96 w-96 rounded-full bg-[#E8282B]/[.08] blur-3xl" />
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
-        <div className="max-w-3xl"><Eyebrow>Your next launch</Eyebrow><h2 id="final-cta-title" className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">See the search opportunity for your project</h2><p className="mt-4 leading-7 text-white/60">Start with the free map, or book a short call if you would rather discuss the project directly. There is no obligation to proceed.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{callCta('final_cta', 'Book a free strategy call', primaryClass)}{waCta('final_cta', 'Discuss your project on WhatsApp')}</div></div>
-        <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-14"><div><h3 className="text-xl font-semibold">Prefer a project-specific conversation?</h3><p className="mt-3 text-sm leading-6 text-white/55">Share your project and city so I can understand the context. I’ll use your details to respond to this enquiry; you can also choose the free map or contact me directly on WhatsApp.</p></div><BuildersEnquiryForm variant="full" landingCity={landingCity} tracking={tracking} waHref={waHref} /></div>
+        <div className="max-w-3xl"><Eyebrow>Your next launch</Eyebrow><h2 id="final-cta-title" className="mt-4 text-3xl font-semibold leading-tight tracking-[-.035em] sm:text-4xl">Talk through Google Ads for your next project</h2><p className="mt-4 leading-7 text-white/60">Share your project and target market for a focused review of campaign fit, enquiry quality and measurement. There is no obligation to proceed.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">{callCta('final_cta', 'Book a free strategy call', primaryClass)}{waCta('final_cta', 'Discuss your project on WhatsApp')}</div></div>
+        <div className="mt-10 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-14"><div><h3 className="text-xl font-semibold">Prefer a project-specific conversation?</h3><p className="mt-3 text-sm leading-6 text-white/55">Share your project and city so I can understand the context. I’ll use your details to respond to this enquiry; you can also request the free India city-search sample for a covered city or contact me directly on WhatsApp.</p></div><BuildersEnquiryForm variant="full" landingCity={landingCity} tracking={tracking} waHref={waHref} /></div>
       </div>
     </section>
     <footer className="border-t border-white/10 bg-[#0D0D0D]"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"><p>© {new Date().getFullYear()} R.K Digital Media. Google Ads for real estate builders and developers.</p><div className="flex flex-wrap gap-5"><Link href="/privacy-policy" className="transition hover:text-white/70">Privacy</Link><Link href="/services/google-ads" className="transition hover:text-white/70">Google Ads services</Link><Link href="/contact" className="transition hover:text-white/70">Contact</Link></div></div></footer>
-    {stickyVisible && <div role="region" aria-label="Quick contact options" className="builders-mobile-cta fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-[#0D0D0D]/95 p-3 shadow-2xl backdrop-blur sm:hidden"><div className="mx-auto flex max-w-lg gap-2"><a href="#get-map" onClick={() => trackCta('sticky_mobile')} className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#E8282B] px-4 py-3 text-sm font-bold text-white">Get the map</a>{waCta('sticky_mobile', 'WhatsApp', 'inline-flex items-center justify-center rounded-full border border-white/20 px-4 py-3 text-sm font-semibold text-white')}</div></div>}
+    {stickyVisible && <div role="region" aria-label="Quick contact options" className="builders-mobile-cta fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-[#0D0D0D]/95 p-3 shadow-2xl backdrop-blur sm:hidden"><div className="mx-auto flex max-w-lg gap-2"><a href="#project-review" onClick={() => trackCta('sticky_mobile')} className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#E8282B] px-4 py-3 text-sm font-bold text-white">Project review</a>{waCta('sticky_mobile', 'WhatsApp', 'inline-flex items-center justify-center rounded-full border border-white/20 px-4 py-3 text-sm font-semibold text-white')}</div></div>}
   </main>;
 }
 
