@@ -10,6 +10,7 @@ export default function BuildersThanksPage({ searchParams }: { searchParams: Sea
   const id = readParam(searchParams.id);
   const ref = readParam(searchParams.l);
   const city = readParam(searchParams.city);
+  const request = ['map', 'call', 'both'].includes(readParam(searchParams.request)) ? readParam(searchParams.request) : 'call';
 
   return (
     <BuildersThanksClient
@@ -17,6 +18,7 @@ export default function BuildersThanksPage({ searchParams }: { searchParams: Sea
       initialId={id}
       initialRef={ref}
       initialCity={city}
+      initialRequest={request}
     />
   );
 }
