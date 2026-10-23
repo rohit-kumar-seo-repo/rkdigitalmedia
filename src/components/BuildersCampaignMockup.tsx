@@ -132,13 +132,31 @@ function LocationIllustration() {
 }
 
 function PhoneSearchPreview() {
+  const journey = [
+    { step: '01', title: 'Start with the search', detail: '“buy 3 BHK in [location]”' },
+    { step: '02', title: 'Match the project', detail: 'Show [Your Property Name] with a clear, relevant message.' },
+    { step: '03', title: 'Make the next step clear', detail: 'Send visitors to project details and a simple enquiry route.' },
+  ];
+
   return (
     <div className="mt-6 grid gap-6 overflow-hidden rounded-2xl border border-white/10 bg-[#111313] p-5 sm:p-7 lg:grid-cols-[1fr_.8fr] lg:items-center lg:p-8">
       <div className="max-w-xl">
-        <p className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">Illustrative search ad · sample copy</p>
-        <h3 className="mt-3 text-xl font-semibold leading-snug text-white sm:text-2xl">Show the right project when a buyer searches.</h3>
-        <p className="mt-3 text-sm leading-6 text-white/55">A search such as “buy 3 BHK in [your location]” could lead to an ad for [Your Property Name] and its own project page. The example is illustrative—not a live ad, client result or Google placement.</p>
-        <p className="mt-4 text-xs leading-5 text-white/40">Replace the sample location, project name, offer and website with details approved for your project.</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">A buyer journey · illustrative example</p>
+        <h3 className="mt-3 text-xl font-semibold leading-snug text-white sm:text-2xl">Show buyers what to do next.</h3>
+        <p className="mt-3 text-sm leading-6 text-white/65">A search is only the start. The ad and project page should connect the buyer’s intent to clear, current details about the property and a way to enquire.</p>
+        <ol className="mt-5 grid gap-2 md:grid-cols-3 lg:grid-cols-1">
+          {journey.map((item) => (
+            <li key={item.step} className="flex gap-3 rounded-xl border border-white/[.08] bg-white/[.025] p-3">
+              <span aria-hidden="true" className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#E8282B]/10 text-[10px] font-bold text-[#ff7779]">{item.step}</span>
+              <div>
+                <p className="text-xs font-semibold text-white">{item.title}</p>
+                <p className="mt-1 text-xs leading-5 text-white/55">{item.detail}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-4 border-l-2 border-[#E8282B]/70 pl-3 text-xs leading-5 text-white/45">For your campaign, we confirm project facts, target areas, enquiry handling and tracking with your team. This mockup is a concept—not a live Google ad or a promise of results.</p>
+        <a href="#project-review" className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full bg-[#E8282B] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#d02225] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Plan a campaign for my project <span aria-hidden="true">↗</span></a>
       </div>
       <figure className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-2xl bg-[#111827]">
         <Image src="/images/builders-phone-search.jpg" alt="A hand holding a smartphone in front of a residential development at dusk" fill unoptimized sizes="(max-width: 1024px) 100vw, 34vw" className="object-cover object-[75%_center]" />
@@ -147,16 +165,15 @@ function PhoneSearchPreview() {
           <div className="mt-[8%] text-[6px] leading-none text-[#5f6368]">Sponsored · sample</div>
           <div className="mt-1 rounded-md border border-[#e8eaed] bg-white/95 p-[5%]">
             <div className="text-[7px] font-semibold leading-tight text-[#1a0dab]">3 BHK homes at [Your Property Name]</div>
-            <p className="mt-1 text-[6px] leading-[1.35] text-[#4d5156]">Explore plans, pricing and availability for your next home.</p>
+            <p className="mt-1 text-[6px] leading-[1.35] text-[#4d5156]">See project details, plans and enquiry options.</p>
             <div className="mt-1 text-[6px] leading-tight text-[#188038]">yourwebsite.com/[your-project]</div>
           </div>
-          <div className="mt-1 rounded-md bg-[#f1f3f4]/95 px-1.5 py-1 text-[6px] leading-tight text-[#5f6368]">Your project page · plans · location · enquiry</div>
+          <div className="mt-1 rounded-md bg-[#f1f3f4]/95 px-1.5 py-1 text-[6px] leading-tight text-[#5f6368]">Project details · location · enquiry</div>
         </div>
       </figure>
     </div>
   );
 }
-
 export default function BuildersCampaignMockup({ data, landingCity }: { data: Record<string, CityData>; landingCity: string }) {
   const [activeCity, setActiveCity] = useState('mumbai');
   const [view, setView] = useState<View>('intent');
