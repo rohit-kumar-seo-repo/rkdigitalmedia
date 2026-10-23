@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import type { CityData } from '@/components/BuildersBuyerMap';
 
 type View = 'intent' | 'location' | 'quality';
@@ -139,29 +140,19 @@ function PhoneSearchPreview() {
         <p className="mt-3 text-sm leading-6 text-white/55">A search such as “buy 3 BHK in [your location]” could lead to an ad for [Your Property Name] and its own project page. The example is illustrative—not a live ad, client result or Google placement.</p>
         <p className="mt-4 text-xs leading-5 text-white/40">Replace the sample location, project name, offer and website with details approved for your project.</p>
       </div>
-      <div className="relative mx-auto aspect-[4/5] w-full max-w-[340px]" role="img" aria-label="Illustration of a hand holding a phone with a sample property search result and project website">
-        <div className="pointer-events-none absolute inset-0 rounded-full bg-[#E8282B]/10 blur-3xl" aria-hidden="true" />
-        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 360 450" fill="none" aria-hidden="true">
-          <defs><linearGradient id="phone-hand" x1="84" y1="238" x2="315" y2="430" gradientUnits="userSpaceOnUse"><stop stopColor="#D9A17E"/><stop offset="1" stopColor="#A9674D"/></linearGradient></defs>
-          <path d="M260 450c-5-28-6-53-4-76l-3-79c-.4-12 7-21 17-21 9 0 15 7 16 18l4 41 3-97c.4-12 7-19 16-18 10 1 15 8 14 20l-1 96 7-63c1-11 8-17 17-16 10 1 14 8 12 20l-6 85c-2 33-12 60-28 90H260Z" fill="url(#phone-hand)"/>
-          <path d="M24 450c15-42 23-76 25-107l7-91c1-13 9-22 20-21 10 1 16 9 15 22l-6 56 14-117c2-14 11-21 22-19 11 2 16 11 14 24l-13 113 21-78c4-12 13-17 23-14 10 4 13 13 9 25l-21 89c-7 29-20 61-40 97H24Z" fill="url(#phone-hand)"/>
-          <path d="M67 340c10-9 20-12 30-9m-48 29c10-7 18-9 27-7m-14 28c8-5 15-6 22-4" stroke="#F1C5A5" strokeWidth="4" strokeLinecap="round" opacity=".75"/>
-          <path d="M282 346c8-6 16-7 24-4m7 23c8-4 15-4 22-1" stroke="#F1C5A5" strokeWidth="4" strokeLinecap="round" opacity=".65"/>
-        </svg>
-        <div className="absolute left-[27%] top-[6%] h-[77%] w-[46%] rounded-[2rem] border-[5px] border-[#303333] bg-[#050606] p-1.5 shadow-[0_28px_70px_-28px_rgba(0,0,0,.9)]">
-          <div className="relative h-full overflow-hidden rounded-[1.45rem] bg-white px-2.5 pb-3 pt-7 text-[#202124]">
-            <span className="absolute left-1/2 top-2 h-1 w-8 -translate-x-1/2 rounded-full bg-[#303333]" />
-            <div className="flex h-7 items-center gap-1 rounded-full border border-[#dadce0] px-2 text-[7px] text-[#5f6368] shadow-sm"><span aria-hidden="true">⌕</span><span className="truncate">buy 3 bhk in [your location]</span></div>
-            <div className="mt-3 text-[6px] text-[#5f6368]">Sponsored · sample</div>
-            <div className="mt-1 rounded-lg border border-[#e8eaed] p-2">
-              <div className="text-[7px] font-semibold leading-tight text-[#1a0dab]">3 BHK homes at [Your Property Name]</div>
-              <p className="mt-1 text-[6px] leading-[1.45] text-[#4d5156]">Explore plans, pricing and availability for your next home.</p>
-              <div className="mt-1.5 text-[6px] text-[#188038]">yourwebsite.com/[your-project]</div>
-            </div>
-            <div className="mt-2 rounded-md bg-[#f1f3f4] px-2 py-1.5 text-[6px] text-[#5f6368]">Your project page · plans · location · enquiry</div>
+      <figure className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-2xl bg-[#111827]">
+        <Image src="/images/builders-phone-search.jpg" alt="A hand holding a smartphone in front of a residential development at dusk" fill sizes="(max-width: 1024px) 100vw, 34vw" className="object-cover object-[75%_center]" />
+        <div className="absolute left-[46%] top-[16%] z-10 h-[57%] w-[34%] overflow-hidden px-[2%] pt-[9%] text-[#202124]">
+          <div className="flex h-[11%] items-center gap-1 rounded-full border border-[#dadce0] bg-white/95 px-1 text-[6px] leading-none text-[#5f6368] shadow-sm"><span aria-hidden="true">⌕</span><span className="truncate">buy 3 bhk in [your location]</span></div>
+          <div className="mt-[8%] text-[6px] leading-none text-[#5f6368]">Sponsored · sample</div>
+          <div className="mt-1 rounded-md border border-[#e8eaed] bg-white/95 p-[5%]">
+            <div className="text-[7px] font-semibold leading-tight text-[#1a0dab]">3 BHK homes at [Your Property Name]</div>
+            <p className="mt-1 text-[6px] leading-[1.35] text-[#4d5156]">Explore plans, pricing and availability for your next home.</p>
+            <div className="mt-1 text-[6px] leading-tight text-[#188038]">yourwebsite.com/[your-project]</div>
           </div>
+          <div className="mt-1 rounded-md bg-[#f1f3f4]/95 px-1.5 py-1 text-[6px] leading-tight text-[#5f6368]">Your project page · plans · location · enquiry</div>
         </div>
-      </div>
+      </figure>
     </div>
   );
 }
