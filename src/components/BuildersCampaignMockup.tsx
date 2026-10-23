@@ -130,6 +130,42 @@ function LocationIllustration() {
   );
 }
 
+function PhoneSearchPreview() {
+  return (
+    <div className="mt-6 grid gap-6 overflow-hidden rounded-2xl border border-white/10 bg-[#111313] p-5 sm:p-7 lg:grid-cols-[1fr_.8fr] lg:items-center lg:p-8">
+      <div className="max-w-xl">
+        <p className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#E8282B]">Illustrative search ad · sample copy</p>
+        <h3 className="mt-3 text-xl font-semibold leading-snug text-white sm:text-2xl">Show the right project when a buyer searches.</h3>
+        <p className="mt-3 text-sm leading-6 text-white/55">A search such as “buy 3 BHK in [your location]” could lead to an ad for [Your Property Name] and its own project page. The example is illustrative—not a live ad, client result or Google placement.</p>
+        <p className="mt-4 text-xs leading-5 text-white/40">Replace the sample location, project name, offer and website with details approved for your project.</p>
+      </div>
+      <div className="relative mx-auto aspect-[4/5] w-full max-w-[340px]" role="img" aria-label="Illustration of a hand holding a phone with a sample property search result and project website">
+        <div className="pointer-events-none absolute inset-0 rounded-full bg-[#E8282B]/10 blur-3xl" aria-hidden="true" />
+        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 360 450" fill="none" aria-hidden="true">
+          <defs><linearGradient id="phone-hand" x1="84" y1="238" x2="315" y2="430" gradientUnits="userSpaceOnUse"><stop stopColor="#D9A17E"/><stop offset="1" stopColor="#A9674D"/></linearGradient></defs>
+          <path d="M260 450c-5-28-6-53-4-76l-3-79c-.4-12 7-21 17-21 9 0 15 7 16 18l4 41 3-97c.4-12 7-19 16-18 10 1 15 8 14 20l-1 96 7-63c1-11 8-17 17-16 10 1 14 8 12 20l-6 85c-2 33-12 60-28 90H260Z" fill="url(#phone-hand)"/>
+          <path d="M24 450c15-42 23-76 25-107l7-91c1-13 9-22 20-21 10 1 16 9 15 22l-6 56 14-117c2-14 11-21 22-19 11 2 16 11 14 24l-13 113 21-78c4-12 13-17 23-14 10 4 13 13 9 25l-21 89c-7 29-20 61-40 97H24Z" fill="url(#phone-hand)"/>
+          <path d="M67 340c10-9 20-12 30-9m-48 29c10-7 18-9 27-7m-14 28c8-5 15-6 22-4" stroke="#F1C5A5" strokeWidth="4" strokeLinecap="round" opacity=".75"/>
+          <path d="M282 346c8-6 16-7 24-4m7 23c8-4 15-4 22-1" stroke="#F1C5A5" strokeWidth="4" strokeLinecap="round" opacity=".65"/>
+        </svg>
+        <div className="absolute left-[27%] top-[6%] h-[77%] w-[46%] rounded-[2rem] border-[5px] border-[#303333] bg-[#050606] p-1.5 shadow-[0_28px_70px_-28px_rgba(0,0,0,.9)]">
+          <div className="relative h-full overflow-hidden rounded-[1.45rem] bg-white px-2.5 pb-3 pt-7 text-[#202124]">
+            <span className="absolute left-1/2 top-2 h-1 w-8 -translate-x-1/2 rounded-full bg-[#303333]" />
+            <div className="flex h-7 items-center gap-1 rounded-full border border-[#dadce0] px-2 text-[7px] text-[#5f6368] shadow-sm"><span aria-hidden="true">⌕</span><span className="truncate">buy 3 bhk in [your location]</span></div>
+            <div className="mt-3 text-[6px] text-[#5f6368]">Sponsored · sample</div>
+            <div className="mt-1 rounded-lg border border-[#e8eaed] p-2">
+              <div className="text-[7px] font-semibold leading-tight text-[#1a0dab]">3 BHK homes at [Your Property Name]</div>
+              <p className="mt-1 text-[6px] leading-[1.45] text-[#4d5156]">Explore plans, pricing and availability for your next home.</p>
+              <div className="mt-1.5 text-[6px] text-[#188038]">yourwebsite.com/[your-project]</div>
+            </div>
+            <div className="mt-2 rounded-md bg-[#f1f3f4] px-2 py-1.5 text-[6px] text-[#5f6368]">Your project page · plans · location · enquiry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function BuildersCampaignMockup({ data, landingCity }: { data: Record<string, CityData>; landingCity: string }) {
   const [activeCity, setActiveCity] = useState('mumbai');
   const [view, setView] = useState<View>('intent');
@@ -208,6 +244,7 @@ export default function BuildersCampaignMockup({ data, landingCity }: { data: Re
             <div className="flex flex-col gap-3 border-t border-white/10 bg-[#111313] px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5"><p className="text-[10px] leading-5 text-white/40">Keyword Planner sample · estimates only · not campaign performance</p><a href="#project-review" className="inline-flex min-h-10 items-center justify-center gap-2 rounded-full bg-[#E8282B] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#d02225]">Request my project review <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
+        <PhoneSearchPreview />
       </div>
     </section>
   );
