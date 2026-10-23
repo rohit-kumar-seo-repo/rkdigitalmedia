@@ -146,6 +146,25 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       </div>
     </section>
 
+    <section data-motion-reveal className="border-b border-white/[.08] bg-[#101313]" aria-labelledby="about-rohit-title">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="grid gap-8 lg:grid-cols-[.6fr_1.4fr] lg:items-center lg:gap-14">
+          <div className="mx-auto flex w-full max-w-xs flex-col items-center text-center lg:mx-0"><div className="h-56 w-56 overflow-hidden rounded-full border border-white/10 bg-[#171717]"><img src="/images/founder-rohit-kumar.webp" width="640" height="760" loading="lazy" decoding="async" alt="Rohit Kumar, Google Ads campaign manager and founder of R.K Digital Media" className="max-w-none" style={{ width: '145%', height: '145%', marginLeft: '-22.5%', marginTop: '-15.25%' }} /></div><p className="mt-4 font-semibold text-white">Rohit Kumar</p><p className="mt-1 text-xs text-white/55">Founder · Google Ads campaign manager</p></div>
+          <div className="max-w-3xl"><Eyebrow>Meet your campaign manager</Eyebrow><h2 id="about-rohit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">I’ll plan and manage your Google Ads campaigns.</h2><p className="mt-5 leading-7 text-white/70">I’m Rohit Kumar, founder of R.K Digital Media in Greater Noida, Delhi NCR. I work directly with builders and developers across India on Google Ads strategy, setup, optimisation and measurement. For each real-estate project, I match search intent and location to the property, then review enquiry quality—not just form fills. You’ll know who is managing the campaign and how decisions are made.</p>
+            <div className="mt-6">{projectReviewCta("founder_profile", "Discuss your project with me")}</div>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Verified Google Ads certifications</p><p className="mt-1 text-sm leading-6 text-white/55">Search, Display and AI-Powered Performance Ads credentials, with public verification links below.</p></article>
+              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Policy-aware campaign setup</p><p className="mt-1 text-sm leading-6 text-white/55">I also run <a href="https://adssuspensionrecovery.com" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-[#E8282B] underline-offset-4">Ads Suspension Recovery</a>, helping businesses address Google Ads suspension issues.</p></article>
+              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Numbers explained</p><p className="mt-1 text-sm leading-6 text-white/55">Clicks and raw leads are kept apart from qualified enquiries, and data gaps are flagged honestly.</p></article>
+              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Transparent account ownership</p><p className="mt-1 text-sm leading-6 text-white/55">We agree access, responsibilities, tracking and fees before launch. You keep ownership of your Google Ads account.</p></article>
+            </div>
+            <p className="mt-5 text-sm leading-6 text-white/50">I won’t promise a fixed number of leads before reviewing your project, market, budget and tracking. The commitment is a clear process, honest reporting and decisions based on the data available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <CertificationsSection />
+
     <BuildersCampaignMockup data={cityData} landingCity={landingCity} />
 
     <section data-motion-reveal id="buyer-map" className="scroll-mt-4 border-b border-white/[.08] bg-[#101313]" aria-labelledby="buyer-map-title">
@@ -239,23 +258,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       </div>
     </section>
 
-    <section data-motion-reveal className="border-b border-white/[.08] bg-[#101313]" aria-labelledby="about-rohit-title">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-8 lg:grid-cols-[.6fr_1.4fr] lg:items-center lg:gap-14">
-          <div className="mx-auto flex w-full max-w-xs flex-col items-center text-center lg:mx-0"><div className="h-56 w-56 overflow-hidden rounded-full border border-white/10 bg-[#171717]"><img src="/images/founder-rohit-kumar.webp" width="640" height="760" loading="lazy" decoding="async" alt="Rohit Kumar, founder of R.K Digital Media" className="max-w-none" style={{ width: '145%', height: '145%', marginLeft: '-22.5%', marginTop: '-15.25%' }} /></div><p className="mt-4 font-semibold text-white">Rohit Kumar</p><p className="mt-1 text-xs text-white/55">Founder · R.K Digital Media</p></div>
-          <div className="max-w-3xl"><Eyebrow>Direct access, clear accountability</Eyebrow><h2 id="about-rohit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">Work directly with the person responsible for your campaigns.</h2><p className="mt-5 leading-7 text-white/70">I’m Rohit Kumar, founder of R.K Digital Media in Greater Noida, Delhi NCR. I work directly with builders and developers across India on Google Ads strategy, setup, optimisation and measurement. For each real-estate project, the focus is matching search intent and location to the property being sold, then reviewing enquiry quality—not treating every form fill as a successful lead.</p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Google Skillshop certified</p><p className="mt-1 text-sm leading-6 text-white/55">Search, Display and AI-Powered Performance Ads credentials, each with a public verification link below.</p></article>
-              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Policy-aware campaign setup</p><p className="mt-1 text-sm leading-6 text-white/55">I also run <a href="https://adssuspensionrecovery.com" target="_blank" rel="noopener noreferrer" className="text-white underline decoration-[#E8282B] underline-offset-4">Ads Suspension Recovery</a>, helping businesses address Google Ads suspension issues.</p></article>
-              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Numbers explained</p><p className="mt-1 text-sm leading-6 text-white/55">Clicks and raw leads are kept apart from qualified enquiries, and data gaps are flagged honestly.</p></article>
-              <article className="builders-motion-card rounded-xl border border-white/10 bg-[#151515] p-4"><p className="text-sm font-semibold text-white">Transparent ownership</p><p className="mt-1 text-sm leading-6 text-white/55">We agree access, responsibilities, tracking and fees before launch. You can review recommendations before major decisions.</p></article>
-            </div>
-            <p className="mt-5 text-sm leading-6 text-white/50">I won’t promise a fixed number of leads before reviewing your project, market, budget and tracking. The commitment is a clear process, honest reporting and decisions based on the data available.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <CertificationsSection />
+
 
     <section data-motion-reveal className="border-b border-white/[.08]" aria-labelledby="first-days-title"><div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20"><div className="max-w-2xl"><Eyebrow>A clear starting plan</Eyebrow><h2 id="first-days-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">What happens after you get in touch</h2></div><ol className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{STEPS.map(([title, desc]) => <li key={title} className="builders-motion-card builders-timeline-step rounded-2xl border border-white/10 bg-[#141414] p-5"><p className="text-sm font-semibold text-[#E8282B]">{title}</p><p className="mt-3 text-sm leading-6 text-white/65">{desc}</p></li>)}</ol></div></section>
 
