@@ -141,7 +141,7 @@ function PhoneSearchPreview() {
         <p className="mt-4 text-xs leading-5 text-white/40">Replace the sample location, project name, offer and website with details approved for your project.</p>
       </div>
       <figure className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-2xl bg-[#111827]">
-        <Image src="/images/builders-phone-search.jpg" alt="A hand holding a smartphone in front of a residential development at dusk" fill sizes="(max-width: 1024px) 100vw, 34vw" className="object-cover object-[75%_center]" />
+        <Image src="/images/builders-phone-search.jpg" alt="A hand holding a smartphone in front of a residential development at dusk" fill unoptimized sizes="(max-width: 1024px) 100vw, 34vw" className="object-cover object-[75%_center]" />
         <div className="absolute left-[46%] top-[16%] z-10 h-[57%] w-[34%] overflow-hidden px-[2%] pt-[9%] text-[#202124]">
           <div className="flex h-[11%] items-center gap-1 rounded-full border border-[#dadce0] bg-white/95 px-1 text-[6px] leading-none text-[#5f6368] shadow-sm"><span aria-hidden="true">⌕</span><span className="truncate">buy 3 bhk in [your location]</span></div>
           <div className="mt-[8%] text-[6px] leading-none text-[#5f6368]">Sponsored · sample</div>
