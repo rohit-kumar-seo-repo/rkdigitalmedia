@@ -37,15 +37,6 @@ function HorizontalScroller({ testimonials, direction = 'left' }: { testimonials
 export default function TestimonialsSection({ data }: { data: TestimonialsData }) {
   return (
     <section className="relative overflow-hidden border-y border-[var(--rkd-border)] bg-[var(--rkd-bg-secondary)] py-20 md:py-28">
-      <style>{`
-        @keyframes testimonialScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        @keyframes testimonialScrollReverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-        .testimonial-scroller::before, .testimonial-scroller::after { content: ''; position: absolute; top: 0; bottom: 0; z-index: 2; width: clamp(28px, 8vw, 120px); pointer-events: none; }
-        .testimonial-scroller::before { left: 0; background: linear-gradient(to right, #111111, transparent); }
-        .testimonial-scroller::after { right: 0; background: linear-gradient(to left, #111111, transparent); }
-        .testimonial-scroller:hover > div { animation-play-state: paused !important; }
-        @media (prefers-reduced-motion: reduce) { .testimonial-scroller > div { animation: none !important; } }
-      `}</style>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_100%,rgba(232,40,43,0.12)_0%,transparent_70%)]" />
       <div className="relative z-10 mx-auto w-full max-w-[80rem]">
         <div className="mb-14 flex flex-col gap-6 px-4 md:flex-row md:items-end md:justify-between md:px-6">

@@ -268,19 +268,16 @@ export default function ServicesPage() {
           <h2 className="section-heading section-heading-h2 max-w-4xl mb-12">Six capabilities. <span className="text-red-italic">No filler.</span></h2>
           <div className="divide-y divide-[var(--rkd-border)] border-y border-[var(--rkd-border)]">
             {services.map((service) => (
-              <Link href={service.slug} key={service.number} className="group grid md:grid-cols-[70px_1fr_1.2fr_120px] gap-5 md:gap-8 py-8 md:py-10 items-start">
-                <span className="font-mono text-xs text-[var(--rkd-primary)]">{service.number}</span>
-                <div>
-                  <h3 className="section-heading section-heading-h3 group-hover:text-[var(--rkd-primary)] transition-colors">{service.title}</h3>
-                  <p className="text-xs uppercase tracking-wider text-[var(--rkd-fg-muted)] mt-2">{service.intent}</p>
-                </div>
-                <div>
-                  <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed">{service.description}</p>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {service.capabilities.slice(0,4).map(item => <span key={item} className="text-xs px-3 py-1.5 border border-[var(--rkd-border)] rounded-full text-[var(--rkd-fg-muted)]">{item}</span>)}
+              <Link href={service.slug} key={service.number} className="group grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_auto] gap-5 md:gap-12 py-8 md:py-11 items-center transition-all duration-300 hover:translate-x-1 hover:bg-[var(--rkd-card)]/40">
+                <div className="flex gap-5 md:gap-8 items-start">
+                  <span className="font-mono text-xs text-[var(--rkd-primary)] pt-2">{service.number}</span>
+                  <div>
+                    <h3 className="section-heading section-heading-h3 group-hover:text-[var(--rkd-primary)] transition-colors">{service.title}</h3>
+                    <p className="text-xs uppercase tracking-wider text-[var(--rkd-fg-muted)] mt-3 leading-relaxed">{service.intent}</p>
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[var(--rkd-primary)] md:justify-end">Explore <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></span>
+                <p className="text-sm text-[var(--rkd-fg-muted)] leading-relaxed md:pl-8 md:border-l md:border-[var(--rkd-border)]">{service.description}</p>
+                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[var(--rkd-primary)] md:justify-end whitespace-nowrap">Explore <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></span>
               </Link>
             ))}
           </div>

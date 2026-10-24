@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const data: ServicePillarData = {
   "number": "06",
+  "visual": "automation",
   "label": "AI AUTOMATION SERVICES",
   "title": "AI Automation Services that remove repetitive lead-work",
   "intro": "Practical automation for lead capture, qualification, routing, follow-up and internal workflows — designed around the systems your business already uses.",

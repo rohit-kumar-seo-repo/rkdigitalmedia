@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const data: ServicePillarData = {
   "number": "05",
+  "visual": "profile",
   "label": "GOOGLE BUSINESS PROFILE MANAGEMENT",
   "title": "Google Business Profile Management in Noida for Stronger Local Visibility",
   "intro": "Google Business Profile optimisation and ongoing management for businesses in Noida, Greater Noida and Delhi NCR that depend on Google Maps, local discovery, calls, directions and enquiries.",

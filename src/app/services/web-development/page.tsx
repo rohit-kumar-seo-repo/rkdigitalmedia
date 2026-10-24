@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const data: ServicePillarData = {
   "number": "02",
+  "visual": "web",
   "label": "WEBSITE DEVELOPMENT SERVICES",
   "title": "Website Development Company in Noida for Search, Trust and Conversion",
   "intro": "Website development in Noida for businesses that need a credible, responsive website with clean architecture, technical SEO foundations and clear enquiry paths.",

@@ -174,6 +174,7 @@ function PhoneSearchPreview() {
     </div>
   );
 }
+
 export default function BuildersCampaignMockup({ data, landingCity }: { data: Record<string, CityData>; landingCity: string }) {
   const [activeCity, setActiveCity] = useState('mumbai');
   const [view, setView] = useState<View>('intent');

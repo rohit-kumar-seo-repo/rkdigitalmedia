@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const data: ServicePillarData = {
   "number": "04",
+  "visual": "seo",
   "label": "SEO SERVICES",
   "title": "SEO Company in Noida for Search Growth and Local Visibility",
   "intro": "SEO services in Noida covering technical SEO, on-page optimisation, content strategy and local search work designed to earn visibility for searches that can matter to the business.",

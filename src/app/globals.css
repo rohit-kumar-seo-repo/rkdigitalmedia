@@ -135,6 +135,19 @@
     letter-spacing: -0.02em;
   }
 
+  .service-hero-headline {
+    font-size: clamp(2.125rem, 4.2vw, 4.1rem);
+    line-height: 1.03;
+  }
+
+  @keyframes testimonialScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes testimonialScrollReverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .testimonial-scroller::before, .testimonial-scroller::after { content: ''; position: absolute; top: 0; bottom: 0; z-index: 2; width: clamp(28px, 8vw, 120px); pointer-events: none; }
+  .testimonial-scroller::before { left: 0; background: linear-gradient(to right, #111111, transparent); }
+  .testimonial-scroller::after { right: 0; background: linear-gradient(to left, #111111, transparent); }
+  .testimonial-scroller:hover > div { animation-play-state: paused !important; }
+  @media (prefers-reduced-motion: reduce) { .testimonial-scroller > div { animation: none !important; } }
+
   .hero-subheadline {
     font-family: 'Outfit', system-ui, sans-serif;
     color: var(--muted-foreground);

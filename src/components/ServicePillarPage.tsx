@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
 
 
 export type ServicePillarData = {
   number: string;
+  visual: 'google-ads' | 'seo' | 'web' | 'profile' | 'recovery' | 'automation';
   label: string;
   title: string;
   intro: string;
@@ -61,26 +63,124 @@ const defaultRelatedService = (label: string): ServicePillarData['relatedService
   return undefined;
 };
 
+const servicePreviews = {
+  'google-ads': {
+    eyebrow: 'PAID SEARCH · SAMPLE WORKSPACE',
+    title: 'Project launch campaigns',
+    summary: 'Connect buyer intent to the right project page and enquiry action.',
+    rows: [['Campaign groups', 'By project & intent'], ['Landing pages', 'Matched to each offer'], ['Conversion events', 'Calls · forms · qualified leads']],
+    steps: ['Search', 'Project page', 'Enquiry'],
+  },
+  seo: {
+    eyebrow: 'ORGANIC SEARCH · SAMPLE WORKSPACE',
+    title: 'Search visibility plan',
+    summary: 'Map commercial searches to useful pages and measurable actions.',
+    rows: [['Search intent', 'Mapped to page'], ['Technical checks', 'Crawl · index · speed'], ['Measurement', 'Organic enquiries & calls']],
+    steps: ['Discover', 'Improve pages', 'Measure'],
+  },
+  web: {
+    eyebrow: 'WEBSITE · SAMPLE PREVIEW',
+    title: 'A page built to answer',
+    summary: 'Clear project information, proof and enquiry path across screen sizes.',
+    rows: [['First screen', 'Offer · location · action'], ['Project details', 'Plans · amenities · FAQs'], ['Enquiry path', 'Short form · call option']],
+    steps: ['Understand', 'Build trust', 'Enquire'],
+  },
+  profile: {
+    eyebrow: 'LOCAL PRESENCE · SAMPLE WORKSPACE',
+    title: 'Business Profile checklist',
+    summary: 'Keep real business details consistent and useful for local discovery.',
+    rows: [['Business details', 'Name · hours · contact'], ['Profile content', 'Services · photos · updates'], ['Local actions', 'Calls · directions · website']],
+    steps: ['Accurate', 'Complete', 'Maintained'],
+  },
+  recovery: {
+    eyebrow: 'ACCOUNT REVIEW · SAMPLE WORKSPACE',
+    title: 'Suspension review path',
+    summary: 'Investigate account and site issues before preparing an appeal.',
+    rows: [['Account & billing', 'Review for issues'], ['Website & claims', 'Check policy alignment'], ['Next step', 'Document findings']],
+    steps: ['Diagnose', 'Correct', 'Prepare appeal'],
+  },
+  automation: {
+    eyebrow: 'LEAD OPERATIONS · SAMPLE WORKSPACE',
+    title: 'Enquiry follow-up flow',
+    summary: 'Route each new enquiry to the right person with human review.',
+    rows: [['New enquiry', 'Website · email · ads'], ['Qualification', 'Project · location · need'], ['Follow-up', 'Assign · notify · record']],
+    steps: ['Capture', 'Qualify', 'Route'],
+  },
+} as const;
+
+function ServicePreview({ kind }: { kind: ServicePillarData['visual'] }) {
+  const preview = servicePreviews[kind];
+  const reduceMotion = useReducedMotion();
+
+  return (
+    <motion.div
+      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      animate={reduceMotion ? { opacity: 1, y: 0 } : undefined}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      whileHover={reduceMotion ? undefined : { y: -3 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={reduceMotion ? undefined : { duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      className="relative w-full max-w-xl justify-self-end"
+    >
+      <div className="absolute -inset-3 rounded-[2rem] bg-[var(--rkd-primary)]/10 blur-2xl" aria-hidden="true" />
+      <div className="relative overflow-hidden rounded-2xl border border-[var(--rkd-border)] bg-[var(--rkd-card)] shadow-2xl shadow-black/30">
+        <div className="flex items-center justify-between gap-3 border-b border-[var(--rkd-border)] px-4 py-3">
+          <div className="flex items-center gap-2" aria-hidden="true">
+            <span className="h-2 w-2 rounded-full bg-[var(--rkd-primary)]" />
+            <span className="h-2 w-2 rounded-full bg-white/20" />
+            <span className="h-2 w-2 rounded-full bg-white/10" />
+          </div>
+          <span className="text-[10px] font-mono uppercase tracking-[0.16em] text-[var(--rkd-fg-muted)]">Illustrative preview · demo only</span>
+        </div>
+        <div className="p-5 sm:p-7">
+          <p className="section-label mb-3">{preview.eyebrow}</p>
+          <h2 className="font-montserrat text-xl sm:text-2xl font-bold text-[var(--rkd-fg)]">{preview.title}</h2>
+          <p className="mt-2 max-w-md text-sm leading-relaxed text-[var(--rkd-fg-muted)]">{preview.summary}</p>
+          <div className="mt-6 overflow-hidden rounded-xl border border-[var(--rkd-border)]">
+            {preview.rows.map(([label, detail], index) => (
+              <div key={label} className="flex items-center justify-between gap-4 border-b border-[var(--rkd-border)] bg-[var(--rkd-bg-secondary)] px-4 py-3.5 last:border-0">
+                <span className="flex items-center gap-3 text-xs sm:text-sm font-medium text-[var(--rkd-fg)]">
+                  <span className="font-mono text-[10px] text-[var(--rkd-primary)]">0{index + 1}</span>{label}
+                </span>
+                <span className="text-right text-[10px] sm:text-xs text-[var(--rkd-fg-muted)]">{detail}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-5 flex flex-wrap items-center gap-2">
+            {preview.steps.map((step, index) => (
+              <span key={step} className="inline-flex items-center gap-2 text-[10px] sm:text-xs text-[var(--rkd-fg-muted)]">
+                <span className="rounded-full border border-[var(--rkd-border)] px-2.5 py-1.5 text-[var(--rkd-fg)]">{step}</span>
+                {index < preview.steps.length - 1 && <ArrowRight className="h-3 w-3 text-[var(--rkd-primary)]" aria-hidden="true" />}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export function ServicePillarPage({ data }: { data: ServicePillarData }) {
   return (
     <main id="top">
       <section className="relative overflow-hidden bg-[var(--rkd-bg)] grid-pattern">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 pt-20 md:pt-28 pb-16 md:pb-24">
           <div className="text-xs text-[var(--rkd-fg-muted)] mb-10">Home / Services / {data.title}</div>
-          <div className="max-w-5xl">
-            <p className="section-label mb-5">// {data.label}</p>
-            <h1 className="hero-headline text-[var(--rkd-fg)] mb-7">
-              {data.title}
-            </h1>
-            <p className="hero-subheadline max-w-3xl">{data.intro}</p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-9">
-              <Link href="/contact" className="btn-primary group">
-                Discuss Your Requirements <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link href="/case-studies" className="btn-secondary">
-                See Case Studies <ArrowUpRight className="w-4 h-4" />
-              </Link>
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] items-center gap-12 xl:gap-16">
+            <div>
+              <p className="section-label mb-5">// {data.label}</p>
+              <h1 className="hero-headline service-hero-headline text-[var(--rkd-fg)] mb-7">{data.title}</h1>
+              <p className="hero-subheadline max-w-3xl">{data.intro}</p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-9">
+                <Link href="/contact" className="btn-primary group">
+                  Discuss Your Requirements <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link href="/case-studies" className="btn-secondary">
+                  See Case Studies <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
+            <ServicePreview kind={data.visual} />
           </div>
         </div>
         <div className="border-y border-[var(--rkd-border)] bg-[var(--rkd-card)]">

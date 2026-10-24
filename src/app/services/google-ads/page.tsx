@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const data: ServicePillarData = {
   "number": "01",
+  "visual": "google-ads",
   "label": "GOOGLE ADS SERVICES",
   "title": "Google Ads Services in Noida for measurable customer acquisition",
   "intro": "Google Ads management in Noida for Search, Shopping, Performance Max and YouTube campaigns, built around qualified demand, conversion tracking and disciplined optimisation — not simply higher click volume.",

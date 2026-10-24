@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 // Suspension-recovery search intent is intentionally delegated to AdsSuspensionRecovery.com.
 const data: ServicePillarData = {
   "number": "03",
+  "visual": "recovery",
   "label": "GOOGLE ADS SUSPENSION RECOVERY",
   "title": "Google Ads Suspension Support for R.K Digital Media Clients",
   "intro": "If your Google Ads account has been suspended, R.K Digital Media can help identify the advertising, website or business issues that need investigation before you take another appeal step.",
