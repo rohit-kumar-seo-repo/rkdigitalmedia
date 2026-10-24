@@ -14,9 +14,13 @@ import BuildersEnquiryForm from '@/components/BuildersEnquiryForm';
 const WHATSAPP_NUMBER = '919871530594';
 const CAL_URL = 'https://cal.com/rohit-kumar-seo';
 
+
+
 function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">{children}</p>;
 }
+
+
 
 const LEAKS = [
   { title: 'Rental and PG clicks', body: 'Someone searching “pg in your city” will never buy a flat from your project, but a broad keyword can still charge you for the click.' },
