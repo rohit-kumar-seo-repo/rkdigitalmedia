@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import { ArrowRight, BarChart3, Check, FileText, Map, Target, type LucideIcon } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
 import BuildersMotionSystem from '@/components/BuildersMotionSystem';
 import BuildersBuyerMap from '@/components/BuildersBuyerMap';
@@ -13,16 +14,8 @@ import BuildersEnquiryForm from '@/components/BuildersEnquiryForm';
 const WHATSAPP_NUMBER = '919871530594';
 const CAL_URL = 'https://cal.com/rohit-kumar-seo';
 
-function Arrow({ className = '' }: { className?: string }) {
-  return <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11M10 4l6 6-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>;
-}
-
 function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="text-[10px] font-semibold uppercase tracking-[.22em] text-[#E8282B]">{children}</p>;
-}
-
-function Tick() {
-  return <svg viewBox="0 0 20 20" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9" /></svg>;
 }
 
 const LEAKS = [
@@ -107,7 +100,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
   const trackWa = (location: string) => trackEvent('builders_whatsapp_click', { location });
   const primaryClass = 'builders-motion-cta inline-flex items-center justify-center gap-3 rounded-full bg-[#E8282B] px-6 py-4 text-sm font-bold text-white transition hover:bg-[#D02225]';
   const secondaryClass = 'builders-motion-cta inline-flex items-center justify-center gap-3 rounded-full border border-white/20 px-6 py-4 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/[.04]';
-  const projectReviewCta = (location: string, label = 'Request a project campaign review', cls = primaryClass) => <a href="#project-review" onClick={() => trackCta(location)} className={cls}>{label}<Arrow className="h-4 w-4" /></a>;
+  const projectReviewCta = (location: string, label = 'Request a project campaign review', cls = primaryClass) => <a href="#project-review" onClick={() => trackCta(location)} className={cls}>{label}<ArrowRight className="h-4 w-4" /></a>;
   const callCta = (location: string, label = 'Book a free strategy call', cls = secondaryClass) => <a href={CAL_URL} onClick={() => trackCta(location)} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
   const waCta = (location: string, label = 'Message Rohit on WhatsApp', cls = secondaryClass) => <a href={waHref} onClick={() => trackWa(location)} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>;
 
@@ -123,9 +116,9 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
           <h1 id="builders-hero-title" className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-[3.4rem]">Reach the right property buyers with project-specific Google Ads.</h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">I’m Rohit Kumar, based in India. I plan and manage Google Ads for developer projects around their location, price range, available inventory and buyer intent. We define what counts as a qualified enquiry, check how calls and forms are measured, and use sales feedback where available to guide campaign decisions. For projects in other countries, market fit and policy requirements are confirmed before scope is agreed.</p>
           <ul className="mt-7 max-w-2xl space-y-3 text-sm leading-6 text-white/80 sm:text-base">
-            <li className="flex gap-3"><Tick /><span>A project-level campaign plan shaped around location, price range and available inventory.</span></li>
-            <li className="flex gap-3"><Tick /><span>Lead qualification and tracking connected to the questions your sales team needs answered.</span></li>
-            <li className="flex gap-3"><Tick /><span>You retain account ownership; fees and ad budget are agreed separately before work starts.</span></li>
+            <li className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>A project-level campaign plan shaped around location, price range and available inventory.</span></li>
+            <li className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>Lead qualification and tracking connected to the questions your sales team needs answered.</span></li>
+            <li className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>You retain account ownership; fees and ad budget are agreed separately before work starts.</span></li>
           </ul>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {projectReviewCta('hero', 'Request a project review', primaryClass + ' lg:hidden')}
@@ -186,9 +179,9 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
             <div className="mt-6 rounded-2xl border border-white/10 bg-[#141414] p-5">
               <p className="text-xs font-semibold uppercase tracking-[.16em] text-[#E8282B]">Inside the review</p>
               <ul className="mt-4 space-y-3 text-sm leading-6 text-white/75">
-                <li className="flex gap-3"><Tick /><span>Buyer-leaning, mixed, rental/PG and resale/broker search themes.</span></li>
-                <li className="flex gap-3"><Tick /><span>Questions to check against your location, price band and inventory.</span></li>
-                <li className="flex gap-3"><Tick /><span>Measurement gaps and practical next steps—without fabricated lead forecasts.</span></li>
+                <li className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>Buyer-leaning, mixed, rental/PG and resale/broker search themes.</span></li>
+                <li className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>Questions to check against your location, price band and inventory.</span></li>
+                <li className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>Measurement gaps and practical next steps—without fabricated lead forecasts.</span></li>
               </ul>
             </div>
           </div>
@@ -252,7 +245,7 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="max-w-3xl"><Eyebrow>Is this a fit?</Eyebrow><h2 id="fit-title" className="mt-4 text-3xl font-semibold tracking-[-.035em] sm:text-4xl">For developers who want clear decisions—not just a lead count</h2></div>
         <div className="mt-9 grid gap-4 md:grid-cols-2">
-          <article className="rounded-2xl border border-emerald-400/25 bg-emerald-400/[.04] p-6"><h3 className="text-base font-semibold text-emerald-200">A good fit if</h3><ul className="mt-4 space-y-3 text-sm leading-6 text-white/75">{GOOD_FIT.map((t) => <li key={t} className="flex gap-3"><Tick /><span>{t}</span></li>)}</ul></article>
+          <article className="rounded-2xl border border-emerald-400/25 bg-emerald-400/[.04] p-6"><h3 className="text-base font-semibold text-emerald-200">A good fit if</h3><ul className="mt-4 space-y-3 text-sm leading-6 text-white/75">{GOOD_FIT.map((t) => <li key={t} className="flex gap-3"><Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-[#E8282B]" /><span>{t}</span></li>)}</ul></article>
           <article className="rounded-2xl border border-white/10 bg-[#141414] p-6"><h3 className="text-base font-semibold text-white/85">Probably not a fit if</h3><ul className="mt-4 space-y-3 text-sm leading-6 text-white/60">{NOT_FIT.map((t) => <li key={t} className="flex gap-3"><span aria-hidden="true" className="mt-0.5 w-4 shrink-0 text-center text-white/35">–</span><span>{t}</span></li>)}</ul></article>
         </div>
       </div>
@@ -277,14 +270,9 @@ export default function BuildersLandingPage({ cityData }: { cityData: Record<str
 }
 
 function FeatureIcon({ kind }: { kind: string }) {
-  const paths: Record<string, ReactNode> = {
-    target: <><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2M22 12h-2M12 22v-2M2 12h2"/></>,
-    map: <><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/></>,
-    page: <><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></>,
-    chart: <><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-7"/></>,
-    report: <><path d="M5 3h11l3 3v15H5z"/><path d="M16 3v4h4M8 11h8M8 15h8"/></>,
-  };
-  return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[kind] || paths.target}</svg>;
+  const icons: Record<string, LucideIcon> = { target: Target, map: Map, page: FileText, chart: BarChart3, report: FileText };
+  const Icon = icons[kind] ?? Target;
+  return <Icon aria-hidden="true" className="h-5 w-5" />;
 }
 
 function CertificationsSection() {
