@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, Lightbulb, Rocket, BarChart3, ArrowRight } from 'lucide-react';
+import { Search, Lightbulb, Rocket, BarChart3, ArrowRight, Check } from 'lucide-react';
 
 const steps = [
   {
@@ -76,7 +76,7 @@ export function Process() {
                 <ul className="space-y-2 mb-6 flex-1">
                   {step.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-2 text-body-sm text-[var(--rkd-fg-muted)] group-hover:text-[var(--rkd-fg)] transition-colors duration-300">
-                      <svg className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                      <Check aria-hidden="true" className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0 mt-0.5" />
                       {detail}
                     </li>
                   ))}
