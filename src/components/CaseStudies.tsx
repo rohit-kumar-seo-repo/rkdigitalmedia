@@ -101,8 +101,8 @@ export function CaseStudies() {
             <div className="stat-label">Core Services</div>
           </div>
           <div className="card-base text-center">
-            <div className="stat-value text-[var(--rkd-primary)]">12×</div>
-            <div className="stat-label">Peak Reported ROAS</div>
+            <div className="stat-value text-[var(--rkd-primary)]">9×</div>
+            <div className="stat-label">Highest ROAS in displayed cases</div>
           </div>
           <div className="card-base text-center">
             <div className="stat-value text-[var(--rkd-primary)]">22.5K+</div>
