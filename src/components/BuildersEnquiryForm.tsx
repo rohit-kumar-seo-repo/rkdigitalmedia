@@ -56,6 +56,7 @@ export default function BuildersEnquiryForm({ variant, landingCity, tracking, wa
         throw new Error(fields ? 'Please check these fields: ' + fields + '.' : (result.error || 'We could not save your request. Please use WhatsApp instead.'));
       }
       trackEvent('builders_form_submit', { location, step: 'initial' });
+      trackEvent('generate_lead', { location, step: 'initial', form_name: 'builders_enquiry' });
       window.location.assign('/google-ads-for-builders/thanks?' + new URLSearchParams({ l: tracking.ref, city: city.trim().slice(0, 80), id: result.id, request: requestType }).toString());
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please use WhatsApp as a fallback.');
