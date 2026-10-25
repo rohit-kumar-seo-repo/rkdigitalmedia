@@ -34,15 +34,17 @@ export function Contact() {
     const fd = new FormData(e.currentTarget);
     try {
       const res = await fetch('/api/contact', { method: 'POST', body: fd });
-      const data = await res.json();
-      if (res.ok) {
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.success === true) {
+        // Count a lead only after the contact API confirms the enquiry was sent.
         trackEvent('generate_lead', {
+          form_name: 'homepage_enquiry',
+          form_location: window.location.pathname === '/' ? 'homepage' : 'contact_page',
           lead_type: 'contact_form',
           service: String(fd.get('service') || ''),
         });
         setStatus('sent');
-      }
-      else {
+      } else {
         setStatus('error');
         setErrorDetails(data?.error || data?.details || 'Unable to send the enquiry.');
       }
