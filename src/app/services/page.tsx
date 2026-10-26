@@ -382,6 +382,19 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="py-16 md:py-20 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
+          <p className="section-label mb-4">// SPECIALIST SUPPORT</p>
+          <div className="grid md:grid-cols-[1fr_auto] gap-6 md:items-center">
+            <div>
+              <h2 className="section-heading section-heading-h2 mb-4">Need help with a suspended Google Ads account?</h2>
+              <p className="text-sm md:text-base text-[var(--rkd-fg-muted)] leading-relaxed max-w-3xl">For advertisers dealing specifically with account suspensions, policy concerns or appeal preparation, our specialist resource explains the recovery process, what to review before appealing, and how to approach the next steps responsibly.</p>
+            </div>
+            <a href="https://adssuspensionrecovery.com/" className="btn-primary inline-flex items-center justify-center gap-2" target="_blank" rel="noopener noreferrer">Visit Ads Suspension Recovery <ArrowUpRight className="w-4 h-4" /></a>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 bg-[var(--rkd-bg)]">
         <div className="max-w-4xl mx-auto px-4 md:px-6">
           <p className="section-label mb-4">// 09. FAQ</p>
