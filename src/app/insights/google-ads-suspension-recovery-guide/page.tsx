@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process'],
   openGraph: {
     title: 'Google Ads Suspension Recovery: Legacy Guide | R.K Digital Media',
-    description: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts. Google Partner certified agency.',
+    description: 'Legacy Google Ads suspension recovery guide. Recovery outcomes and timelines depend on the policy issue, account evidence, remediation and Google review; reinstatement is not guaranteed.',
     type: 'article',
     locale: 'en_IN',
     url: 'https://rkdigitalmedia.in/insights/google-ads-suspension-recovery-guide',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Google Ads Suspension Recovery: Legacy Guide | R.K Digital Media',
-    description: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts.',
+    description: 'Legacy guide. Recovery depends on the policy issue, evidence, remediation and Google review; no reinstatement outcome or timeline is guaranteed.',
     images: ['/og-image.jpg'],
   },
 };
