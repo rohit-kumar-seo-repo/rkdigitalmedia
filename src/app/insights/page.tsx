@@ -53,7 +53,7 @@ function getInsightCardImage(category: string) {
 }
 
 const indexableBlogPosts = blogPosts.filter(
-  (post) => post.slug !== 'google-ads-suspension-recovery-complete-guide'
+  (post) => post.slug !== 'google-ads-suspension-recovery-complete-guide' && post.slug !== 'google-ads-suspension-recovery-guide'
 );
 
 const blogSchema = {
