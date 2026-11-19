@@ -27,75 +27,68 @@ export default function TextBlockAnimation({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const split = new SplitText(containerRef.current, {
+    // Split the heading itself. Splitting the wrapper made GSAP deep-slice the <h1>
+    // into one <h1> copy per line, which search engines then read as several H1s.
+    const target = (container.firstElementChild as HTMLElement | null) ?? container;
+
+    const split = SplitText.create(target, {
       type: "lines",
       linesClass: "block-line-parent",
+      tag: "span",
+      // Re-split once web fonts load or the width changes, so line breaks match the real font.
+      autoSplit: true,
+      onSplit(self) {
+        const lines = self.lines as HTMLElement[];
+        const blocks = lines.map((line) => {
+          line.style.display = "block";
+
+          const wrapper = document.createElement("span");
+          wrapper.style.position = "relative";
+          wrapper.style.display = "block";
+          wrapper.style.overflow = "hidden";
+
+          const block = document.createElement("span");
+          block.style.position = "absolute";
+          block.style.inset = "0";
+          block.style.backgroundColor = blockColor;
+          block.style.zIndex = "2";
+          block.style.transform = "scaleX(0)";
+          block.style.transformOrigin = "left center";
+          block.setAttribute("aria-hidden", "true");
+
+          line.parentNode?.insertBefore(wrapper, line);
+          wrapper.appendChild(line);
+          wrapper.appendChild(block);
+          return block;
+        });
+
+        gsap.set(lines, { opacity: 0 });
+
+        // Returned so GSAP can carry the animation over when it re-splits.
+        return gsap
+          .timeline({
+            defaults: { ease: "expo.inOut" },
+            delay,
+            ...(animateOnScroll
+              ? {
+                  scrollTrigger: {
+                    trigger: container,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse",
+                  },
+                }
+              : {}),
+          })
+          .to(blocks, { scaleX: 1, duration, stagger, transformOrigin: "left center" })
+          .set(lines, { opacity: 1, stagger }, `<${duration / 2}`)
+          .to(blocks, { scaleX: 0, duration, stagger, transformOrigin: "right center" }, `<${duration * 0.4}`);
+      },
     });
 
-    const lines = split.lines;
-    const blocks: HTMLDivElement[] = [];
-
-    lines.forEach((line) => {
-      const wrapper = document.createElement("div");
-      wrapper.style.position = "relative";
-      wrapper.style.display = "block";
-      wrapper.style.overflow = "hidden";
-
-      const block = document.createElement("div");
-      block.style.position = "absolute";
-      block.style.inset = "0";
-      block.style.backgroundColor = blockColor;
-      block.style.zIndex = "2";
-      block.style.transform = "scaleX(0)";
-      block.style.transformOrigin = "left center";
-      block.setAttribute("aria-hidden", "true");
-
-      line.parentNode?.insertBefore(wrapper, line);
-      wrapper.appendChild(line);
-      wrapper.appendChild(block);
-
-      gsap.set(line, { opacity: 0 });
-      blocks.push(block);
-    });
-
-    const tl = gsap.timeline({
-      defaults: { ease: "expo.inOut" },
-      delay,
-      ...(animateOnScroll
-        ? {
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        : {}),
-    });
-
-    tl.to(blocks, {
-      scaleX: 1,
-      duration,
-      stagger,
-      transformOrigin: "left center",
-    })
-      .set(lines, { opacity: 1, stagger }, `<${duration / 2}`)
-      .to(
-        blocks,
-        {
-          scaleX: 0,
-          duration,
-          stagger,
-          transformOrigin: "right center",
-        },
-        `<${duration * 0.4}`
-      );
-
-    return () => {
-      tl.kill();
-      split.revert();
-    };
+    return () => split.revert();
   }, {
     scope: containerRef,
     dependencies: [animateOnScroll, delay, blockColor, stagger, duration],
