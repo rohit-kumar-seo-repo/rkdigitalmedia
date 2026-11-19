@@ -36,6 +36,14 @@ const nextConfig = {
       { source: '/google-ads-account-suspension-recovery-specialist', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
       { source: '/google-ads-suspended-circumventing-systems', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
       { source: '/google-ads-suspended', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      // Remaining legacy WordPress URLs that still returned 404 (checked 2026-11-19).
+      { source: '/digital-marketing-services-for-business-growth', destination: '/services', permanent: true },
+      { source: '/search-engine-optimization', destination: '/services/seo', permanent: true },
+      { source: '/top-seo-agency-in-noida', destination: '/services/seo', permanent: true },
+      { source: '/website-design-services', destination: '/services/web-development', permanent: true },
+      { source: '/social-media-marketing', destination: '/services', permanent: true },
+      { source: '/google-ads-account-suspended', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      { source: '/how-to-fix-suspended-google-ads-account', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
     ];
   },
 };
