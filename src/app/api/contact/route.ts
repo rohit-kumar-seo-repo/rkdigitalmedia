@@ -31,9 +31,53 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 });
   }
 
+  // Bots fill the hidden field; answer like a success without forwarding anything.
+  if (clean(fd.get('hp'), 200)) {
+    return NextResponse.json({ success: true });
+  }
+
+  // Send to both the lead sheet/alerts webhook and the inbox; the enquiry counts as sent if either works.
+  const [savedToSheet, emailed] = await Promise.all([
+    forwardToWebhook({ name, email, phone, company, service, message, page: req.headers.get('referer') || '' }),
+    sendEmail({ name, email, phone, company, service, message }),
+  ]);
+
+  if (!savedToSheet && !emailed) {
+    return NextResponse.json({ error: 'Failed to send enquiry. Please use WhatsApp instead.' }, { status: 500 });
+  }
+
+  return NextResponse.json({ success: true });
+}
+
+type Lead = { name: string; email: string; phone: string; company: string; service: string; message: string };
+
+async function forwardToWebhook(lead: Lead & { page: string }) {
+  const url = process.env.CONTACT_WEBHOOK_URL;
+  if (!url) {
+    console.error('CONTACT_WEBHOOK_URL not configured');
+    return false;
+  }
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...lead, source: 'contact_form' }),
+      signal: AbortSignal.timeout(10000),
+      cache: 'no-store',
+    });
+    const data = await res.json().catch(() => null);
+    if (!res.ok || data?.ok !== true) console.error('Contact webhook did not confirm; status:', res.status);
+    return res.ok && data?.ok === true;
+  } catch (error) {
+    console.error('Contact webhook failed:', error instanceof Error ? error.message : 'unknown error');
+    return false;
+  }
+}
+
+async function sendEmail({ name, email, phone, company, service, message }: Lead) {
   if (!process.env.RESEND_API_KEY) {
     console.error('RESEND_API_KEY not configured');
-    return NextResponse.json({ error: 'Email service is temporarily unavailable.' }, { status: 500 });
+    return false;
   }
 
   const html = `
@@ -66,10 +110,8 @@ export async function POST(req: Request) {
   });
 
   if (!res.ok) {
-    const err = await res.text();
-    console.error('Resend error:', err);
-    return NextResponse.json({ error: 'Failed to send enquiry. Please use WhatsApp instead.' }, { status: 500 });
+    console.error('Resend error:', await res.text());
+    return false;
   }
-
-  return NextResponse.json({ success: true });
+  return true;
 }

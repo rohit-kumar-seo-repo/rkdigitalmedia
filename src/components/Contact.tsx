@@ -106,6 +106,7 @@ export function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="text" name="hp" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
                   <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                     <Field label="Full Name" name="name" placeholder="Your name" required />
                     <Field label="Email" name="email" type="email" placeholder="you@company.com" required />
