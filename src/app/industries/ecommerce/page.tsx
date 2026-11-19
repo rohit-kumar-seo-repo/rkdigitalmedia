@@ -7,11 +7,11 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, ShoppingCart, Package, CreditCard, Truck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "E-commerce Digital Marketing & Shopping Ads | R.K Digital Media",
-  description: "E-commerce marketing for online stores and D2C brands, combining Google Shopping Ads, Performance Max, product-page SEO, conversion optimisation and retention workflows.",
+  title: "E-commerce Marketing & Shopping Ads | R.K Digital Media",
+  description: "E-commerce marketing for online stores and D2C brands: Google Shopping, Performance Max, product-page SEO, conversion optimisation and retention.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/ecommerce' },
   openGraph: {
-    title: 'E-commerce Digital Marketing & Shopping Ads | R.K Digital Media',
+    title: 'E-commerce Marketing & Shopping Ads | R.K Digital Media',
     description: 'E-commerce marketing for online stores and D2C brands: Shopping Ads, Performance Max, product SEO, conversion optimisation and retention.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/ecommerce',

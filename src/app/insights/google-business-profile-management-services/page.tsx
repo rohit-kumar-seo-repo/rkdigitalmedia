@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Business Profile Management: Ongoing Tasks & Reporting | R.K Digital Media',
+  title: 'Google Business Profile Management: Tasks & Reporting',
   description: 'Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.',
   keywords: ['Google Business Profile management services','Google Business Profile management','GBP management services','GMB management services'],
-  openGraph: { title: "Google Business Profile Management: Ongoing Tasks & Reporting | R.K Digital Media", description: "Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-management-services", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Business Profile Management: Tasks & Reporting", description: "Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-management-services", siteName: 'R.K Digital Media' },
   
-  twitter: { card: 'summary_large_image', title: 'Google Business Profile Management: Ongoing Tasks & Reporting | R.K Digital Media', description: 'Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.', images: ['/og-image.jpg'], creator: '@rkdigitalmedia' },
+  twitter: { card: 'summary_large_image', title: 'Google Business Profile Management: Tasks & Reporting', description: 'Learn what ongoing Google Business Profile management includes: review responses, profile updates, monitoring, reporting and coordination with local SEO.', images: ['/og-image.jpg'], creator: '@rkdigitalmedia' },
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-management-services' },
 };
 

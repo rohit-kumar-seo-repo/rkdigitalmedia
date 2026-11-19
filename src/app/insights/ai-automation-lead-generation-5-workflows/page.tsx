@@ -3,7 +3,7 @@ import InsightArticle from '@/components/InsightArticle';
 import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
-  title: "AI Automation for Lead Generation: 5 Workflows Worth Automating | R.K Digital Media",
+  title: "AI Automation for Lead Generation: 5 Workflows to Automate",
   description: "Five practical workflows for capturing, qualifying and following up with leads—plus where automation should stop and a human should take over.",
   openGraph: { title: "AI Automation for Lead Generation: 5 Workflows Worth Automating", description: "Five practical workflows for capturing, qualifying and following up with leads—plus where automation should stop and a human should take over.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/ai-automation-lead-generation-5-workflows", siteName: 'R.K Digital Media' },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/ai-automation-lead-generation-5-workflows" },

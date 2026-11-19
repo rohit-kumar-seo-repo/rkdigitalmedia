@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { CaseStudyPage, type CaseStudy } from '@/components/CaseStudyPage';
 
 export const metadata: Metadata = {
-  title: 'Multi-Location Clinic Digital Transformation | Case Study | R.K Digital Media',
+  title: 'Healthcare Clinic Marketing Case Study | R.K Digital Media',
   description: 'A multi-location healthcare marketing case study covering Google Business Profile, local landing pages, geo-targeted Google Ads and conversion tracking.',
   alternates: { canonical: 'https://rkdigitalmedia.in/case-studies/healthcare-clinic' },
   openGraph: {
-    title: 'Multi-Location Clinic Digital Transformation | Case Study | R.K Digital Media',
+    title: 'Healthcare Clinic Marketing Case Study | R.K Digital Media',
     description: 'A multi-location healthcare marketing case study covering Google Business Profile, local landing pages, geo-targeted Google Ads and conversion tracking.',
     type: 'article',
     url: 'https://rkdigitalmedia.in/case-studies/healthcare-clinic',

@@ -4,7 +4,7 @@ import InsightArticle from '@/components/InsightArticle';
 import SeoVsPaidAdsVisual from '@/components/SeoVsPaidAdsVisual';
 
 export const metadata: Metadata = {
-  title: "SEO vs Paid Ads for Greater Noida Businesses: How to Choose | R.K Digital Media",
+  title: "SEO vs Paid Ads for Greater Noida Businesses: How to Choose",
   description: "SEO and Google Ads solve different parts of the acquisition problem. Choose based on urgency, economics, search intent and operational capacity.",
   openGraph: { title: "SEO vs Paid Ads for Greater Noida Businesses: How to Choose", description: "SEO and Google Ads solve different parts of the acquisition problem. Choose based on urgency, economics, search intent and operational capacity.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/seo-vs-paid-ads-2025-which-wins", siteName: 'R.K Digital Media' },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/seo-vs-paid-ads-2025-which-wins" },

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'How to Choose a Website Development Company in Noida | R.K Digital Media',
-  description: 'A practical checklist for choosing a website development company in Noida, covering technology, SEO, speed, mobile UX, security, ownership, maintenance and conversion readiness.',
+  title: 'How to Choose a Website Development Company in Noida',
+  description: 'A checklist for choosing a website development company in Noida: technology, SEO, speed, mobile UX, security, ownership and long-term support.',
   keywords: ['website development company Noida','website development company in Noida','web development company Noida','website developer Noida'],
   openGraph: { title: 'How to Choose a Website Development Company in Noida', description: 'Compare website development companies on the factors that affect search visibility, performance, ownership and business results.', type: 'article', locale: 'en_IN', url: 'https://rkdigitalmedia.in/insights/how-to-choose-website-development-company-noida', siteName: 'R.K Digital Media' },
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/how-to-choose-website-development-company-noida' },

@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Management in Noida | R.K Digital Media",
-  description: "Google Business Profile management and optimisation in Noida covering categories, services, reviews, profile updates and local search visibility for businesses in Noida, Greater Noida and Delhi NCR.",
+  title: "Google Business Profile Management in Noida & NCR",
+  description: "Google Business Profile management in Noida: categories, services, photos, posts, review replies and local visibility for businesses across Delhi NCR.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/gmb" },
   openGraph: {
-    title: "Google Business Profile Management in Noida | R.K Digital Media",
-    description: "Google Business Profile management and optimisation in Noida covering categories, services, reviews, profile updates and local search visibility for businesses in Noida, Greater Noida and Delhi NCR.",
+    title: "Google Business Profile Management in Noida & NCR",
+    description: "Google Business Profile management in Noida: categories, services, photos, posts, review replies and local visibility for businesses across Delhi NCR.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/gmb",
     siteName: 'R.K Digital Media',

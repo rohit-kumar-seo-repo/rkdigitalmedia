@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Business Profile Management Cost in India | R.K Digital Media',
+  title: 'Google Business Profile Management Cost in India',
   description: 'Understand what affects Google Business Profile management cost in India, what ongoing GBP work can include and how to compare local SEO proposals.',
   keywords: ['Google Business Profile management cost India','GBP management cost India','GMB management pricing India','Google Business Profile services cost'],
-  openGraph: { title: "Google Business Profile Management Cost in India | R.K Digital Media", description: "Understand what affects Google Business Profile management cost in India, what ongoing GBP work can include and how to compare local SEO proposals.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-cost-india", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Business Profile Management Cost in India", description: "Understand what affects Google Business Profile management cost in India, what ongoing GBP work can include and how to compare local SEO proposals.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-cost-india", siteName: 'R.K Digital Media' },
   
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-cost-india' },
 };

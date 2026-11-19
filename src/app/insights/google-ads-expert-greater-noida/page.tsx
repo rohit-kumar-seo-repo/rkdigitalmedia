@@ -3,7 +3,7 @@ import InsightArticle from '@/components/InsightArticle';
 import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
-  title: "Google Ads Expert in Greater Noida: A Practical Guide to Better Campaign Management | R.K Digital Media",
+  title: "Google Ads Expert in Greater Noida: A Practical Guide",
   description: "What effective Google Ads management looks like for local and regional businesses—from search intent and geography to lead quality and landing-page experience.",
   openGraph: { title: "Google Ads Expert in Greater Noida: A Practical Guide to Better Campaign Management", description: "What effective Google Ads management looks like for local and regional businesses—from search intent and geography to lead quality and landing-page experience.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/google-ads-expert-greater-noida", siteName: 'R.K Digital Media' },
   twitter: {

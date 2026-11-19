@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'SEO Services Cost in Noida | SEO Pricing Guide | R.K Digital Media',
-  description: 'Understand SEO services cost in Noida and the factors that affect pricing, including technical SEO, content, local SEO, competition, links, reporting and ongoing optimisation.',
+  title: 'SEO Services Cost in Noida: What You Pay For',
+  description: 'SEO services cost in Noida explained: what drives pricing, from technical SEO and content to local SEO, links and reporting, and how to compare quotes.',
   keywords: ['SEO services cost Noida','SEO pricing Noida','SEO company cost Noida','SEO packages Noida'],
   openGraph: { title: 'SEO Services Cost in Noida: What Affects Pricing and What to Expect', description: 'A practical guide to evaluating SEO pricing in Noida based on scope, competition and business goals.', type: 'article', locale: 'en_IN', url: 'https://rkdigitalmedia.in/insights/seo-services-cost-noida', siteName: 'R.K Digital Media' },
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/seo-services-cost-noida' },

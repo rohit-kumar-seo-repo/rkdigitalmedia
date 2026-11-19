@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Ads Management Cost in India | PPC Management Fees | R.K Digital Media',
-  description: 'A practical guide to Google Ads management cost in India, including agency fees, ad spend, campaign management, tracking, optimisation and what to compare in a PPC proposal.',
+  title: 'Google Ads Management Cost in India: Fees & Ad Spend',
+  description: 'What Google Ads management costs in India: agency fee models, ad spend, set-up and tracking costs, and what to check in a PPC proposal before signing.',
   keywords: ['Google Ads management cost India','Google Ads management fees India','Google Ads agency cost','PPC management pricing India'],
   openGraph: { title: 'Google Ads Management Cost in India: What You Actually Pay For', description: 'Understand Google Ads management fees, ad spend and the work behind effective PPC management.', type: 'article', locale: 'en_IN', url: 'https://rkdigitalmedia.in/insights/google-ads-management-cost-india', siteName: 'R.K Digital Media' },
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-ads-management-cost-india' },

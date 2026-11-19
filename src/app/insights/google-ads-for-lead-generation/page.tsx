@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Ads for Lead Generation | Practical PPC Guide | R.K Digital Media',
+  title: 'Google Ads for Lead Generation: A Practical PPC Guide',
   description: 'Learn how to structure Google Ads for lead generation with focused campaigns, conversion tracking, landing pages, bidding and lead-quality measurement.',
   keywords: ['Google Ads for lead generation','Google Ads lead generation','lead generation PPC','Google Ads lead generation India'],
-  openGraph: { title: "Google Ads for Lead Generation | Practical PPC Guide | R.K Digital Media", description: "Learn how to structure Google Ads for lead generation with focused campaigns, conversion tracking, landing pages, bidding and lead-quality measurement.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-ads-for-lead-generation", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Ads for Lead Generation: A Practical PPC Guide", description: "Learn how to structure Google Ads for lead generation with focused campaigns, conversion tracking, landing pages, bidding and lead-quality measurement.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-ads-for-lead-generation", siteName: 'R.K Digital Media' },
   
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-ads-for-lead-generation' },
 };

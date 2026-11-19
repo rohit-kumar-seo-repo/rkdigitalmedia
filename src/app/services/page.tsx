@@ -7,7 +7,7 @@ import VisualFramework from '@/components/VisualFramework';
 export const metadata: Metadata = {
   title: 'Digital Marketing Services in Noida | R.K Digital Media',
   description:
-    'Explore Google Ads, website development, Google Ads suspension recovery, SEO, Google Business Profile management, and AI automation services for businesses in Noida, Greater Noida and Delhi NCR.',
+    'Google Ads, SEO, Google Business Profile, website development, suspension recovery and AI automation for businesses in Noida and Delhi NCR.',
   alternates: {
     canonical: 'https://rkdigitalmedia.in/services',
   },

@@ -4,8 +4,8 @@ import { ArrowRight, FileText, Clock, TrendingUp, ArrowLeft } from 'lucide-react
 import { blogPosts } from './blog-posts';
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Blog: SEO, Google Ads & Local SEO | R.K Digital Media",
-  description: "Practical guides on SEO services, Google Ads management, Google Business Profile optimisation, website development and AI automation for businesses in Noida, Greater Noida and India.",
+  title: "Digital Marketing Blog: SEO & Google Ads | R.K Digital Media",
+  description: "Practical guides on SEO, Google Ads, Google Business Profile, website development and AI automation for businesses in Noida, Greater Noida and India.",
   keywords: [
     'digital marketing blog Greater Noida',
     'SEO blog India',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'marketing agency blog',
   ],
   openGraph: {
-    title: 'Digital Marketing Blog: SEO, Google Ads & Local SEO | R.K Digital Media',
+    title: 'Digital Marketing Blog: SEO & Google Ads | R.K Digital Media',
     description: 'Practical guides on SEO, Google Ads, Google Business Profile, website development and AI automation for businesses in Noida, Greater Noida and India.',
     type: 'website',
     locale: 'en_IN',

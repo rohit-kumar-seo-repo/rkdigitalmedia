@@ -3,11 +3,11 @@ import { ServicePillarPage, type ServicePillarData } from '@/components/ServiceP
 
 export const metadata: Metadata = {
   title: "Website Development Company in Noida | R.K Digital Media",
-  description: "Website development company in Noida building responsive business websites, landing pages and SEO-ready web experiences for businesses in Noida, Greater Noida and Delhi NCR.",
+  description: "Website development company in Noida building fast, responsive business websites and landing pages that are SEO-ready and built to win enquiries.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/web-development" },
   openGraph: {
     title: "Website Development Company in Noida | R.K Digital Media",
-    description: "Website development company in Noida building responsive business websites, landing pages and SEO-ready web experiences for businesses in Noida, Greater Noida and Delhi NCR.",
+    description: "Website development company in Noida building fast, responsive business websites and landing pages that are SEO-ready and built to win enquiries.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/web-development",
     siteName: 'R.K Digital Media',

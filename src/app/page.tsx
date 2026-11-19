@@ -8,7 +8,7 @@ import { GoogleReviews } from '@/components/GoogleReviews';
 import Contact from '@/components/Contact';
 
 const title = 'Digital Marketing Agency in Noida & Greater Noida | R.K Digital Media';
-const description = 'R.K Digital Media helps businesses in Noida, Greater Noida and Delhi NCR grow with SEO services, Google Ads management, Google Business Profile optimisation, website development and marketing automation.';
+const description = 'Google Ads, SEO, Google Business Profile, websites and automation for businesses in Noida, Greater Noida and Delhi NCR. Talk to R.K Digital Media.';
 
 export const metadata: Metadata = {
   title,

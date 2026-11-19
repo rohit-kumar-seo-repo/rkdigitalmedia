@@ -3,7 +3,7 @@ import InsightArticle from '@/components/InsightArticle';
 import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Optimization Checklist: What Actually Matters | R.K Digital Media",
+  title: "GMB Optimization Checklist for Map Pack Rankings",
   description: "A practical checklist for improving a Google Business Profile without chasing mythical Map Pack hacks or stuffing keywords into every field.",
   openGraph: { title: "Google Business Profile Optimization Checklist: What Actually Matters", description: "A practical checklist for improving a Google Business Profile without chasing mythical Map Pack hacks or stuffing keywords into every field.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/gmb-optimization-map-pack-checklist-50-steps", siteName: 'R.K Digital Media' },
   alternates: { canonical: "https://rkdigitalmedia.in/insights/gmb-optimization-map-pack-checklist-50-steps" },

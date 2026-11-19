@@ -12,7 +12,7 @@ import delhiNcr from '../../../public/builders-sample-delhi-ncr.json';
 const cityData = { mumbai, pune, bengaluru, hyderabad, chennai, ahmedabad, 'delhi-ncr': delhiNcr } as unknown as Record<string, CityData>;
 
 const pageTitle = 'Google Ads for Builders & Developers | R.K Digital Media';
-const pageDescription = 'Google Ads campaign management for builders and real estate developers. Project-level strategy, lead qualification, conversion tracking and clear reporting; share your market for a tailored review.';
+const pageDescription = 'Google Ads for builders and real estate developers: project-level campaigns, lead qualification, conversion tracking and clear reporting for your project.';
 
 export const metadata: Metadata = {
   title: pageTitle,

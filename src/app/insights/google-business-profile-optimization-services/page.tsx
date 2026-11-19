@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Business Profile Optimization Checklist for Local SEO | R.K Digital Media',
+  title: 'Google Business Profile Optimization Checklist for Local SEO',
   description: 'A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.',
   keywords: ['Google Business Profile optimization services','Google Business Profile optimization','GBP optimization services','GMB optimization services'],
-  openGraph: { title: "Google Business Profile Optimization Checklist for Local SEO | R.K Digital Media", description: "A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-optimization-services", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Business Profile Optimization Checklist for Local SEO", description: "A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-business-profile-optimization-services", siteName: 'R.K Digital Media' },
   
-  twitter: { card: 'summary_large_image', title: 'Google Business Profile Optimization Checklist for Local SEO | R.K Digital Media', description: 'A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.', images: ['/og-image.jpg'], creator: '@rkdigitalmedia' },
+  twitter: { card: 'summary_large_image', title: 'Google Business Profile Optimization Checklist for Local SEO', description: 'A step-by-step Google Business Profile optimisation checklist for improving categories, business details, services, reviews, photos and local-search readiness.', images: ['/og-image.jpg'], creator: '@rkdigitalmedia' },
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-business-profile-optimization-services' },
 };
 

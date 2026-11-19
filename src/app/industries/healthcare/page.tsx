@@ -7,11 +7,11 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Stethoscope, HeartPulse, Pill, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Healthcare Digital Marketing for Clinics in Noida | R.K Digital Media",
-  description: "Digital marketing for clinics, hospitals and healthcare providers in Noida and Delhi NCR, including local SEO, Google Ads, website optimisation and patient enquiry tracking.",
+  title: "Healthcare Digital Marketing in Noida | R.K Digital Media",
+  description: "Digital marketing for clinics and healthcare providers in Noida and Delhi NCR: local SEO, Google Ads, website optimisation and enquiry tracking.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/healthcare' },
   openGraph: {
-    title: 'Healthcare Digital Marketing for Clinics in Noida | R.K Digital Media',
+    title: 'Healthcare Digital Marketing in Noida | R.K Digital Media',
     description: 'Digital marketing for clinics and hospitals in Noida and Delhi NCR: local SEO, Google Ads, website optimisation and patient enquiry tracking.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/healthcare',

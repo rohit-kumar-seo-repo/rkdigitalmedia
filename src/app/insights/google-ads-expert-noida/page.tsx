@@ -3,7 +3,7 @@ import InsightArticle from '@/components/InsightArticle';
 import InsightVisual from '@/components/InsightVisual';
 
 export const metadata: Metadata = {
-  title: "Google Ads Expert in Noida: What a Good PPC Partner Should Actually Do | R.K Digital Media",
+  title: "Google Ads Expert in Noida: What a Good PPC Partner Does",
   description: "Hiring a Google Ads specialist is less about knowing the interface and more about connecting search intent, economics, tracking and landing-page experience.",
   openGraph: { title: "Google Ads Expert in Noida: What a Good PPC Partner Should Actually Do", description: "Hiring a Google Ads specialist is less about knowing the interface and more about connecting search intent, economics, tracking and landing-page experience.", type: 'article', locale: 'en_IN', url: "https://rkdigitalmedia.in/insights/google-ads-expert-noida", siteName: 'R.K Digital Media' },
   twitter: {

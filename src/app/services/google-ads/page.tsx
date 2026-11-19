@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Google Ads Services in Noida | Google Ads Management | R.K Digital Media",
-  description: "Google Ads services and management in Noida for Search, Shopping, Performance Max and YouTube campaigns, with conversion tracking, search-term optimisation and landing-page alignment.",
+  title: "Google Ads Management Services in Noida | R.K Digital Media",
+  description: "Google Ads management in Noida for Search, Shopping, Performance Max and YouTube, with conversion tracking, search-term clean-up and landing-page fixes.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/google-ads" },
   openGraph: {
-    title: "Google Ads Services in Noida | Google Ads Management | R.K Digital Media",
+    title: "Google Ads Management Services in Noida | R.K Digital Media",
     description: "Google Ads management for Search, Shopping, Performance Max and YouTube campaigns with conversion tracking, optimisation and transparent reporting.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/google-ads",

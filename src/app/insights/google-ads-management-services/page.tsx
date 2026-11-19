@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import InsightArticle from '@/components/InsightArticle';
 
 export const metadata: Metadata = {
-  title: 'Google Ads Management Services: What Is Included? | R.K Digital Media',
-  description: 'Understand what Google Ads management services should include: strategy, campaign setup, keyword management, ads, conversion tracking, optimisation and reporting.',
+  title: 'Google Ads Management Services: What Is Included?',
+  description: 'What Google Ads management services should include: strategy, set-up, keywords, ads, conversion tracking, ongoing optimisation and clear reporting.',
   keywords: ['Google Ads management services','Google Ads management','PPC management services','Google Ads agency services'],
-  openGraph: { title: "Google Ads Management Services: What Is Included? | R.K Digital Media", description: "Understand what Google Ads management services should include: strategy, campaign setup, keyword management, ads, conversion tracking, optimisation and reporting.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-ads-management-services", siteName: 'R.K Digital Media' },
+  openGraph: { title: "Google Ads Management Services: What Is Included?", description: "What Google Ads management services should include: strategy, set-up, keywords, ads, conversion tracking, ongoing optimisation and clear reporting.", type: 'article', url: "https://rkdigitalmedia.in/insights/google-ads-management-services", siteName: 'R.K Digital Media' },
   
   alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-ads-management-services' },
 };

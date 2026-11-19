@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { CaseStudyPage, type CaseStudy } from '@/components/CaseStudyPage';
 
 export const metadata: Metadata = {
-  title: 'B2B Lead Generation for Industrial Supplier | Case Study | R.K Digital Media',
+  title: 'B2B Lead Generation Case Study | R.K Digital Media',
   description: 'A B2B lead-generation case study combining technical SEO, Google Ads, LinkedIn Ads, CRM lead scoring and buyer-intent content.',
   alternates: { canonical: 'https://rkdigitalmedia.in/case-studies/b2b-lead-gen' },
   openGraph: {
-    title: 'B2B Lead Generation for Industrial Supplier | Case Study | R.K Digital Media',
+    title: 'B2B Lead Generation Case Study | R.K Digital Media',
     description: 'A B2B lead-generation case study combining technical SEO, Google Ads, LinkedIn Ads, CRM lead scoring and buyer-intent content.',
     type: 'article',
     url: 'https://rkdigitalmedia.in/case-studies/b2b-lead-gen',

@@ -89,7 +89,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
         name: 'R.K Digital Media',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://rkdigitalmedia.in/logo.png',
+          url: 'https://rkdigitalmedia.in/logo.svg',
         },
       },
       articleSection: config.article.section,
@@ -292,7 +292,7 @@ export function generateArticleSchema(article: {
       name: 'R.K Digital Media',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://rkdigitalmedia.in/logo.png',
+        url: 'https://rkdigitalmedia.in/logo.svg',
       },
     },
     articleSection: article.section,
