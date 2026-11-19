@@ -23,7 +23,9 @@ const reasons = [
   'Lead capture, CRM or workflow automation',
 ];
 
-export function Contact() {
+export function Contact({ embedded = false }: { embedded?: boolean }) {
+  const Wrapper = embedded ? 'section' : 'main';
+  const Heading = embedded ? 'h2' : 'h1';
   const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle');
   const [errorDetails, setErrorDetails] = useState('');
 
@@ -55,7 +57,7 @@ export function Contact() {
   }
 
   return (
-    <main className="rkd-contact bg-[var(--rkd-bg)]">
+    <Wrapper className="rkd-contact bg-[var(--rkd-bg)]">
       <section className="relative overflow-hidden border-b border-[var(--rkd-border)]">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_76%_35%,rgba(232,40,43,0.13),transparent_34%)]" />
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 pt-20 md:pt-28 pb-16 md:pb-24 relative">
@@ -65,7 +67,7 @@ export function Contact() {
           </div>
           <div className="grid lg:grid-cols-[1fr_0.75fr] gap-12 lg:gap-20 items-end">
             <div>
-              <h1 className="hero-headline text-[var(--rkd-fg)] max-w-5xl">Tell us what is <span className="text-red-italic">not working.</span></h1>
+              <Heading className="hero-headline text-[var(--rkd-fg)] max-w-5xl">Tell us what is <span className="text-red-italic">not working.</span></Heading>
             </div>
             <div>
               <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed">Give us the context, the current constraint and what you are trying to achieve. We’ll review the enquiry and tell you what we would investigate first.</p>
@@ -135,7 +137,7 @@ export function Contact() {
           </div>
         </div>
       </section>
-    </main>
+    </Wrapper>
   );
 }
 

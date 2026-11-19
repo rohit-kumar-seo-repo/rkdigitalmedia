@@ -13,13 +13,22 @@ const footerNav = {
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'Google Business Profile Management', href: '/services/gmb' },
     { label: 'AI Automation Services', href: '/services/ai-automation' },
+    { label: 'Google Ads for Builders', href: '/google-ads-for-builders' },
   ],
   Company: [
     { label: 'About Us', href: '/about' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Insights', href: '/insights' },
     { label: 'Process', href: '/process' },
+    { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
+  ],
+  Industries: [
+    { label: 'Healthcare', href: '/industries/healthcare' },
+    { label: 'Real Estate', href: '/industries/real-estate' },
+    { label: 'Education', href: '/industries/education' },
+    { label: 'Ecommerce', href: '/industries/ecommerce' },
+    { label: 'Hospitality', href: '/industries/hospitality' },
   ],
   Legal: [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -89,6 +98,20 @@ export function Footer() {
             <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Company</h4>
             <ul className="space-y-3">
               {footerNav.Company.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mt-10 mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Industries</h4>
+            <ul className="space-y-3">
+              {footerNav.Industries.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

@@ -36,10 +36,10 @@ export default function HomePage() {
       <Hero />
       <Services />
       <CaseStudies />
-      <Process />
-      <About />
+      <Process embedded />
+      <About embedded />
       <GoogleReviews />
-      <Contact />
+      <Contact embedded />
     </main>
   );
 }

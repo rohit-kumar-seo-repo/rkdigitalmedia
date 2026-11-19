@@ -10,6 +10,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // One canonical host: www.rkdigitalmedia.in served a duplicate copy of the site.
+      { source: '/:path*', has: [{ type: 'host', value: 'www.rkdigitalmedia.in' }], destination: 'https://rkdigitalmedia.in/:path*', permanent: true },
       { source: '/services/performance-marketing', destination: '/services/google-ads', permanent: true },
       { source: '/services/creative', destination: '/services', permanent: true },
       { source: '/services/crm', destination: '/services/ai-automation', permanent: true },

@@ -34,7 +34,8 @@ const steps = [
   },
 ];
 
-export function Process() {
+export function Process({ embedded = false }: { embedded?: boolean }) {
+  const Heading = embedded ? 'h2' : 'h1';
   return (
     <section id="process" className="relative py-20 md:py-32 lg:py-36 bg-[var(--rkd-bg)] grid-pattern">
       <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8">
@@ -46,9 +47,9 @@ export function Process() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="section-label mb-4">HOW WE WORK</p>
-          <h1 className="section-heading section-heading-h2 mb-6">
+          <Heading className="section-heading section-heading-h2 mb-6">
             Our Digital Marketing Process: Audit, Strategy, Build and Optimization
-          </h1>
+          </Heading>
           <p className="section-subhead mx-auto">
             No black boxes. No "we'll be in touch" and silence. Four steps between your inbound and a system that compounds.
           </p>

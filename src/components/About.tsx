@@ -52,9 +52,11 @@ const process = [
   ['04', 'Learn', 'Review what changed, what the data says and what should happen next.'],
 ];
 
-export function About() {
+export function About({ embedded = false }: { embedded?: boolean }) {
+  const Wrapper = embedded ? 'section' : 'main';
+  const Heading = embedded ? motion.h2 : motion.h1;
   return (
-    <main className="rkd-about bg-[var(--rkd-bg)]">
+    <Wrapper className="rkd-about bg-[var(--rkd-bg)]">
       <section className="relative overflow-hidden border-b border-[var(--rkd-border)]">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_72%_35%,rgba(232,40,43,0.13),transparent_34%)]" />
         <div className="max-w-[80rem] mx-auto px-4 md:px-6 pt-20 md:pt-28 pb-20 md:pb-28 relative">
@@ -63,9 +65,9 @@ export function About() {
             <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--rkd-fg-muted)]">NOIDA / NCR / INDIA</span>
           </div>
           <div className="grid lg:grid-cols-[1.12fr_0.88fr] gap-12 lg:gap-20 items-end">
-            <motion.h1 initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7}} className="hero-headline text-[var(--rkd-fg)]">
+            <Heading initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7}} className="hero-headline text-[var(--rkd-fg)]">
               One growth partner. <span className="text-red-italic">Fewer moving parts.</span>
-            </motion.h1>
+            </Heading>
             <motion.div initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7,delay:.08}}>
               <p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-xl">
                 R.K Digital Media is a founder-led digital growth business based in Greater Noida. We bring paid acquisition, organic search, local visibility, websites and automation into one connected operating system.
@@ -229,7 +231,7 @@ export function About() {
       <section className="py-20 md:py-32 bg-[var(--rkd-bg-secondary)] border-y border-[var(--rkd-border)]">
         <div className="max-w-[80rem] mx-auto px-4 md:px-6"><div className="max-w-4xl"><p className="section-label mb-5">// NEXT STEP</p><h2 className="section-heading section-heading-h2 mb-6">Let's start with the <span className="text-red-italic">actual problem.</span></h2><p className="text-body-lg text-[var(--rkd-fg-muted)] leading-relaxed max-w-2xl mb-8">Tell us what is limiting growth right now. We’ll review the situation and explain what we would investigate first.</p><Link href="/contact" className="btn-primary group inline-flex">Talk to R.K Digital Media <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link></div></div>
       </section>
-    </main>
+    </Wrapper>
   );
 }
 

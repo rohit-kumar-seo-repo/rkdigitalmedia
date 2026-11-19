@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Montserrat, Outfit } from 'next/font/google';
 import { SiteHeaderChrome, SiteFooterChrome } from '@/components/SiteChrome';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import Script from 'next/script';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -250,15 +249,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${outfit.variable} scroll-smooth`} style={{ scrollBehavior: 'smooth' }}>
       <head>
-        <Script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <Script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
         />
-        <Script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
@@ -272,7 +271,7 @@ export default function RootLayout({
         <SiteHeaderChrome />
         <div id="main-content">{children}</div>
         <SiteFooterChrome />
-        <Script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
