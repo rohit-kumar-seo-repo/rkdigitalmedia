@@ -1,7 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import CustomCursor from '@/components/ui/CustomCursor';
 import Link from 'next/link';
 import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Building, Home, Key, MapPin } from 'lucide-react';
@@ -22,8 +19,6 @@ export const metadata: Metadata = {
 export default function RealEstateIndustryPage() {
   return (
     <>
-      <CustomCursor />
-      <Header />
       <main className="pt-16">
         <section className="relative min-h-[60vh] flex items-center justify-center bg-[var(--rkd-bg)] grid-pattern">
           <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center">
@@ -88,7 +83,6 @@ export default function RealEstateIndustryPage() {
         </div>
       </section>
       </main>
-      <Footer />
     </>
   );
 }
