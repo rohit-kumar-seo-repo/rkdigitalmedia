@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "SEO Services in Noida & Local SEO | R.K Digital Media",
-  description: "SEO services in Noida covering local SEO, technical SEO, on-page optimisation and content for businesses in Noida, Greater Noida and Delhi NCR.",
+  title: "SEO Company in Noida | R.K Digital Media",
+  description: "SEO company in Noida for local SEO, technical SEO, on-page optimisation and content that turns search visits into enquiries for Noida businesses.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/seo" },
   openGraph: {
-    title: "SEO Services in Noida & Local SEO | R.K Digital Media",
-    description: "SEO services in Noida covering local SEO, technical SEO, on-page optimisation and content for businesses in Noida, Greater Noida and Delhi NCR.",
+    title: "SEO Company in Noida | R.K Digital Media",
+    description: "SEO company in Noida for local SEO, technical SEO, on-page optimisation and content that turns search visits into enquiries for Noida businesses.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/seo",
     siteName: 'R.K Digital Media',
@@ -131,10 +131,10 @@ const data: ServicePillarData = {
   ],
   "relatedResources": [
     {
-      "eyebrow": "LOCAL SEO",
-      "title": "Local SEO Strategy for Greater Noida",
-      "text": "A practical local-search framework covering location relevance, website structure and Google Business Profile alignment.",
-      "href": "/insights/local-seo-strategy-greater-noida",
+      "eyebrow": "SEO PRICING",
+      "title": "SEO Services Cost in Noida",
+      "text": "What drives SEO pricing for Noida businesses and what a monthly retainer should actually cover.",
+      "href": "/insights/seo-services-cost-noida",
       "label": "Read the guide"
     },
     {

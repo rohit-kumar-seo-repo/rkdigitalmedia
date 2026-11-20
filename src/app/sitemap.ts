@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['/services/web-development', 'monthly', 0.8],
     ['/case-studies', 'weekly', 0.9],
     ['/case-studies/local-seo-domination', 'monthly', 0.8],
-    ['/case-studies/google-ads-recovery', 'monthly', 0.8],
     ['/case-studies/b2b-lead-gen', 'monthly', 0.8],
     ['/case-studies/healthcare-clinic', 'monthly', 0.8],
     ['/about', 'monthly', 0.7],

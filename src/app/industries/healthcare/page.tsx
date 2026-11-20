@@ -7,12 +7,12 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Stethoscope, HeartPulse, Pill, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Healthcare Digital Marketing in Noida | R.K Digital Media",
-  description: "Digital marketing for clinics and healthcare providers in Noida and Delhi NCR: local SEO, Google Ads, website optimisation and enquiry tracking.",
+  title: "Digital Marketing for Doctors & Clinics | R.K Digital Media",
+  description: "Digital marketing for doctors, clinics and healthcare providers in Noida and Delhi NCR: local SEO, Google Ads, website optimisation and enquiry tracking.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/healthcare' },
   openGraph: {
-    title: 'Healthcare Digital Marketing in Noida | R.K Digital Media',
-    description: 'Digital marketing for clinics and hospitals in Noida and Delhi NCR: local SEO, Google Ads, website optimisation and patient enquiry tracking.',
+    title: 'Digital Marketing for Doctors & Clinics | R.K Digital Media',
+    description: 'Digital marketing for doctors, clinics and hospitals in Noida and Delhi NCR: local SEO, Google Ads, website optimisation and patient enquiry tracking.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/healthcare',
     siteName: 'R.K Digital Media',
@@ -29,7 +29,7 @@ export default function HealthcareIndustryPage() {
           <div className="max-w-[80rem] mx-auto px-4 md:px-6 text-center">
             <p className="section-label mb-4">// INDUSTRY</p>
             <h1 className="font-montserrat font-black text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: '1.1' }}>
-              Healthcare <span className="text-red-italic">Digital Marketing</span>
+              Digital Marketing for <span className="text-red-italic">Doctors &amp; Clinics</span>
             </h1>
             <p className="text-body-lg text-[var(--rkd-fg-muted)] max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
               Clinics, hospitals, and specialty practices. Patient acquisition systems that are compliant, ethical, and measurable.

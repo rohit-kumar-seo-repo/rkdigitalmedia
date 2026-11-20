@@ -18,6 +18,13 @@ const nextConfig = {
       { source: '/insights/ai-automation-lead-generation', destination: '/insights/ai-automation-lead-generation-5-workflows', permanent: true },
       { source: '/insights/seo-vs-paid-ads-greater-noida', destination: '/insights/seo-vs-paid-ads-2025-which-wins', permanent: true },
       { source: '/insights/google-ads-suspension-recovery-guide', destination: 'https://adssuspensionrecovery.com/google-ads-suspended/', permanent: true },
+      // Merged 2026-11-20: rohitkumarseo.com owns "expert in Noida/Greater Noida", Greater Noida SEO
+      // and national Google Business Profile searches, so these posts fold into RKDM's agency pages.
+      { source: '/insights/google-ads-expert-noida', destination: '/insights/google-ads-agency-noida', permanent: true },
+      { source: '/insights/google-ads-expert-greater-noida', destination: '/insights/google-ads-agency-noida', permanent: true },
+      { source: '/insights/google-business-profile-management-services', destination: '/services/gmb', permanent: true },
+      { source: '/insights/google-business-profile-optimization-services', destination: '/services/gmb', permanent: true },
+      { source: '/insights/local-seo-strategy-greater-noida', destination: '/services/seo', permanent: true },
       { source: '/sitemap_index.xml', destination: '/sitemap.xml', permanent: true },
       // Redirect legacy URLs with historical Search Console impressions to the closest current equivalent.
       { source: '/blog', destination: '/insights', permanent: true },

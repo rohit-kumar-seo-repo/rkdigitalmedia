@@ -134,9 +134,9 @@ const data: ServicePillarData = {
     },
     {
       "eyebrow": "NOIDA SEARCH",
-      "title": "Google Ads Expert in Noida",
-      "text": "See the local commercial considerations behind choosing and working with a Google Ads specialist in Noida.",
-      "href": "/insights/google-ads-expert-noida",
+      "title": "Google Ads Agency in Noida",
+      "text": "See the local commercial considerations behind choosing and working with a Google Ads agency in Noida.",
+      "href": "/insights/google-ads-agency-noida",
       "label": "Read the guide"
     },
     {

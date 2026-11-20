@@ -7,11 +7,11 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, Building, Home, Key, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Real Estate Digital Marketing | R.K Digital Media",
+  title: "Digital Marketing for Real Estate Builders | R.K Digital Media",
   description: "Digital marketing for real estate builders, developers and brokers: Google Ads lead generation, local SEO, landing pages, tracking and CRM follow-up.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/real-estate' },
   openGraph: {
-    title: 'Real Estate Digital Marketing | R.K Digital Media',
+    title: 'Digital Marketing for Real Estate Builders | R.K Digital Media',
     description: 'Digital marketing for real estate builders, developers and brokers: Google Ads lead generation, local SEO, landing pages and CRM follow-up.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/real-estate',

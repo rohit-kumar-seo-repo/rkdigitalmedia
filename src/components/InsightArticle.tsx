@@ -97,7 +97,6 @@ function getRelatedResources(category:string,title:string){
       ['/insights/google-ads-management-services','Google Ads Management Services'],
       ['/insights/google-ads-agency-noida','Google Ads Agency in Noida'],
       ['/insights/ppc-services-india','PPC Services in India'],
-      ['/insights/google-ads-expert-noida','Google Ads Expert in Noida'],
       ['/insights/google-ads-expert-delhi','Google Ads Expert in Delhi'],
     ];
     return items
@@ -107,22 +106,18 @@ function getRelatedResources(category:string,title:string){
 
   if(category==='LOCAL SEO'){
     return [
-      ['/services/gmb','Google Business Profile Management'],
+      ['/services/gmb','Google Business Profile Management in Noida'],
       ['/services/seo','SEO Services'],
       ['/insights/gmb-optimization-map-pack-checklist-50-steps','Google Business Profile Optimization Checklist'],
-      ['/insights/google-business-profile-management-services','Google Business Profile Management Services'],
-      ['/insights/google-business-profile-optimization-services','Google Business Profile Optimization Services'],
       ['/insights/google-business-profile-cost-india','Google Business Profile Management Cost in India'],
-      ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
     ].filter(([href])=>!normalized.includes(href.split('/').pop()!.replace(/-/g,' '))).slice(0,4);
   }
 
   if(category==='SEO STRATEGY'){
     return [
-      ['/services/seo','SEO Services'],
+      ['/services/seo','SEO Company in Noida'],
       ['/insights/seo-services-cost-noida','SEO Services Cost in Noida'],
       ['/insights/seo-company-noida-how-to-choose','How to Choose an SEO Company in Noida'],
-      ['/insights/local-seo-strategy-greater-noida','Local SEO Strategy for Greater Noida'],
       ['/insights/seo-vs-paid-ads-2025-which-wins','SEO vs Paid Ads for Greater Noida Businesses'],
     ].filter(([href])=>!normalized.includes(href.split('/').pop()!.replace(/-/g,' '))).slice(0,4);
   }

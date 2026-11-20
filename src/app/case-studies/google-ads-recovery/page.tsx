@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Google Ads Recovery & Scale Case Study | R.K Digital Media',
   description: 'A documented Google Ads suspension recovery and campaign rebuild case study covering policy diagnosis, landing-page corrections and campaign scaling.',
   alternates: { canonical: 'https://rkdigitalmedia.in/case-studies/google-ads-recovery' },
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Google Ads Recovery & Scale Case Study | R.K Digital Media',
     description: 'A documented Google Ads suspension recovery and campaign rebuild case study covering policy diagnosis, landing-page corrections and campaign scaling.',

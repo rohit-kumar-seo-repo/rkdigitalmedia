@@ -38,10 +38,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -54,11 +52,6 @@ export function Header() {
     }
   }, [isOpen]);
 
-  if (!mounted) {
-    return (
-      <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-[var(--rkd-bg)]/85 backdrop-blur-[12px] border border-[var(--rkd-border)] rounded-none md:rounded-[0.5rem] mx-0 md:mx-4 mt-4 md:mt-0" />
-    );
-  }
 
   return (
     <header

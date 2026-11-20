@@ -7,11 +7,11 @@ import VisualFramework from '@/components/VisualFramework';
 import { ArrowRight, GraduationCap, School, BookOpen, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Education Digital Marketing | R.K Digital Media",
+  title: "Digital Marketing for Schools & Colleges | R.K Digital Media",
   description: "Digital marketing for schools, colleges and coaching centres: student lead generation, Google Ads, local SEO and admission follow-up automation.",
   alternates: { canonical: 'https://rkdigitalmedia.in/industries/education' },
   openGraph: {
-    title: 'Education Digital Marketing | R.K Digital Media',
+    title: 'Digital Marketing for Schools & Colleges | R.K Digital Media',
     description: 'Digital marketing for schools, colleges and coaching centres: student lead generation, Google Ads, local SEO and admission-funnel automation.',
     type: 'website',
     url: 'https://rkdigitalmedia.in/industries/education',

@@ -11,15 +11,6 @@ const blogPosts = [
     keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process'],
   },
   {
-    slug: 'local-seo-strategy-greater-noida',
-    title: 'Local SEO Strategy for Greater Noida: A Practical Framework',
-    excerpt: 'A practical local SEO framework covering technical SEO, Google Business Profile optimisation, citations, content and location-focused search intent for Greater Noida service businesses.',
-    category: 'Local SEO',
-    readTime: '18 min',
-    date: '2024-12-28',
-    keywords: ['local SEO Greater Noida', 'SEO services Greater Noida', 'Map Pack optimization', 'local business SEO strategy'],
-  },
-  {
     slug: 'ai-automation-lead-generation-5-workflows',
     title: 'AI Automation for Lead Generation: 5 Workflows Worth Automating',
     excerpt: 'Five practical automation workflows covering lead capture, qualification, CRM routing, follow-up and human handoff.',
@@ -48,15 +39,6 @@ const blogPosts = [
   },
   // NEW ARTICLES ADDED
   {
-    slug: 'google-ads-expert-noida',
-    title: 'Google Ads Expert in Noida: How to Evaluate a PPC Partner | R.K Digital Media',
-    excerpt: 'What to look for when evaluating Google Ads management in Noida, including account structure, conversion tracking, landing pages and optimisation.',
-    category: 'Google Ads',
-    readTime: '10 min',
-    date: '2025-01-17',
-    keywords: ['Google Ads Expert in Noida', 'Google Ads expert Noida', 'Certified Google Ads professional Noida', 'PPC expert Noida'],
-  },
-  {
     slug: 'google-ads-expert-delhi',
     title: 'Google Ads Expert in Delhi: How to Evaluate a PPC Partner | R.K Digital Media',
     excerpt: 'A practical guide to evaluating Google Ads management in Delhi, from campaign structure and tracking to landing pages and optimisation.',
@@ -64,15 +46,6 @@ const blogPosts = [
     readTime: '10 min',
     date: '2025-01-17',
     keywords: ['Google Ads Expert in Delhi', 'Google Ads expert Delhi', 'Certified Google Ads professional Delhi', 'PPC expert Delhi'],
-  },
-  {
-    slug: 'google-ads-expert-greater-noida',
-    title: 'Google Ads Expert in Greater Noida: How to Evaluate a PPC Partner | R.K Digital Media',
-    excerpt: 'A practical guide to evaluating Google Ads management in Greater Noida, including account structure, tracking, landing pages and optimisation.',
-    category: 'Google Ads',
-    readTime: '10 min',
-    date: '2025-01-17',
-    keywords: ['Google Ads Expert in Greater Noida', 'Google Ads expert Greater Noida', 'Certified Google Ads professional Greater Noida', 'PPC expert Greater Noida'],
   },
 
   {
@@ -138,24 +111,6 @@ const blogPosts = [
     readTime: '12 min',
     date: '2026-10-07',
     keywords: ['website development cost Noida', 'website development price Noida', 'website cost Noida', 'web development cost Noida'],
-  },
-  {
-    slug: 'google-business-profile-management-services',
-    title: 'Google Business Profile Management Services: What Should Be Included? | R.K Digital Media',
-    excerpt: 'A practical guide to what ongoing Google Business Profile management should cover, including profile optimisation, categories, services, reviews, photos, monitoring and reporting.',
-    category: 'Local SEO',
-    readTime: '12 min',
-    date: '2026-10-07',
-    keywords: ['Google Business Profile management services', 'Google Business Profile management', 'GBP management services', 'GMB management services'],
-  },
-  {
-    slug: 'google-business-profile-optimization-services',
-    title: 'Google Business Profile Optimization Services: Complete Guide | R.K Digital Media',
-    excerpt: 'Learn what effective Google Business Profile optimisation services should cover, from business information and categories to reviews, photos, local relevance and measurement.',
-    category: 'Local SEO',
-    readTime: '13 min',
-    date: '2026-10-07',
-    keywords: ['Google Business Profile optimization services', 'Google Business Profile optimization', 'GBP optimization services', 'GMB optimization services'],
   },
   {
     slug: 'google-business-profile-cost-india',

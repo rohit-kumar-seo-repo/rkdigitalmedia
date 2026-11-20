@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { ServicePillarPage, type ServicePillarData } from '@/components/ServicePillarPage';
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Management in Noida & NCR",
-  description: "Google Business Profile management in Noida: categories, services, photos, posts, review replies and local visibility for businesses across Delhi NCR.",
+  title: "Google Business Profile Management in Noida | R.K Digital Media",
+  description: "Google Business Profile management for Noida businesses: categories, services, photos, posts, review replies and steady calls from Google Maps.",
   alternates: { canonical: "https://rkdigitalmedia.in/services/gmb" },
   openGraph: {
-    title: "Google Business Profile Management in Noida & NCR",
-    description: "Google Business Profile management in Noida: categories, services, photos, posts, review replies and local visibility for businesses across Delhi NCR.",
+    title: "Google Business Profile Management in Noida | R.K Digital Media",
+    description: "Google Business Profile management for Noida businesses: categories, services, photos, posts, review replies and steady calls from Google Maps.",
     type: 'website',
     url: "https://rkdigitalmedia.in/services/gmb",
     siteName: 'R.K Digital Media',
@@ -126,10 +126,10 @@ const data: ServicePillarData = {
   ],
   "relatedResources": [
     {
-      "eyebrow": "LOCAL SEO",
-      "title": "Local SEO Strategy for Greater Noida",
-      "text": "See how website structure, location relevance and local search signals work together beyond the Business Profile itself.",
-      "href": "/insights/local-seo-strategy-greater-noida",
+      "eyebrow": "SEO PRICING",
+      "title": "SEO Services Cost in Noida",
+      "text": "What drives SEO pricing for Noida businesses and what a monthly retainer should actually cover.",
+      "href": "/insights/seo-services-cost-noida",
       "label": "Read the guide"
     },
     {
