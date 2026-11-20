@@ -1,15 +1,17 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Google Ads Suspension Recovery: Complete 2025 Guide (98% Success Rate) | R.K Digital Media',
-  description: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts. Google Partner certified agency.',
-  keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process', 'Google Ads suspension recovery Greater Noida'],
+  title: 'Google Ads Suspension Recovery: Legacy Guide | R.K Digital Media',
+  description: 'Legacy Google Ads suspension recovery guide. For current guidance, use the practical account review and appeal guide on this site.',
+  robots: { index: false, follow: true },
+  alternates: { canonical: 'https://rkdigitalmedia.in/insights/google-ads-suspension-recovery-guide' },
+  keywords: ['Google Ads suspended account recovery', 'Google Ads policy violation appeal', 'circumventing systems suspension fix', 'Google Ads reinstatement process'],
   openGraph: {
-    title: 'Google Ads Suspension Recovery: Complete 2025 Guide (98% Success Rate) | R.K Digital Media',
-    description: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts. Google Partner certified agency.',
+    title: 'Google Ads Suspension Recovery: Legacy Guide | R.K Digital Media',
+    description: 'Legacy Google Ads suspension recovery guide. Recovery outcomes and timelines depend on the policy issue, account evidence, remediation and Google review; reinstatement is not guaranteed.',
     type: 'article',
     locale: 'en_IN',
-    url: 'https://rkdigitalmedia.in/insights/google-ads-suspension-recovery-complete-guide',
+    url: 'https://rkdigitalmedia.in/insights/google-ads-suspension-recovery-guide',
     images: [
       {
         url: '/og-image.jpg',
@@ -21,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Google Ads Suspension Recovery: Complete 2025 Guide (98% Success Rate) | R.K Digital Media',
-    description: 'Step-by-step suspension recovery process: policy audit, landing page fixes, appeal templates, and post-reinstatement scaling. Used by 100+ accounts.',
+    title: 'Google Ads Suspension Recovery: Legacy Guide | R.K Digital Media',
+    description: 'Legacy guide. Recovery depends on the policy issue, evidence, remediation and Google review; no reinstatement outcome or timeline is guaranteed.',
     images: ['/og-image.jpg'],
   },
 };
@@ -38,7 +40,7 @@ export default function PostPage() {
             Google Ads Suspension Recovery
           </h1>
           <p className="text-body-lg text-[var(--rkd-fg-muted)] max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
-            Complete 2025 guide with 98% success rate on policy-related suspensions.
+            Legacy guide. Recovery outcomes and timelines depend on the account, policy issue and Google's review; no reinstatement outcome is guaranteed.
           </p>
         </div>
       </section>
@@ -90,7 +92,7 @@ export default function PostPage() {
 
             <div className="mt-8 pt-8 border-t border-[var(--rkd-border)]">
               <p className="font-montserrat font-medium text-[var(--rkd-primary)] mb-2">
-                98% Success Rate · 3-14 Day Typical Recovery · Google Partner Certified
+                Recovery depends on the policy issue, evidence, remediation and Google's review. No outcome or timeline is guaranteed.
               </p>
               <a href="/contact" className="btn-primary inline-flex mt-4">
                 Book Free Audit
