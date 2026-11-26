@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'CRM & Growth Systems Services | R.K Digital Media Greater Noida',
@@ -129,7 +129,7 @@ export default function CRMPage() {
           <ul className="grid md:grid-cols-2 gap-4">
             {included.map((item) => (
               <li key={item} className="flex items-start gap-3 p-4 bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl">
-                <svg className="w-5 h-5 text-[var(--rkd-primary)] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <Check aria-hidden="true" className="w-5 h-5 text-[var(--rkd-primary)] flex-shrink-0 mt-0.5" />
                 <span className="text-body text-[var(--rkd-fg-muted)]">{item}</span>
               </li>
             ))}
@@ -165,9 +165,7 @@ export default function CRMPage() {
               <details key={index} className="group bg-[var(--rkd-card)] border border-[var(--rkd-border)] rounded-xl p-6">
                 <summary className="flex items-center justify-between cursor-pointer list-none font-montserrat font-semibold text-[var(--rkd-fg)]">
                   {faq.question}
-                  <svg className="w-5 h-5 text-[var(--rkd-primary)] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
+                  <ChevronDown aria-hidden="true" className="w-5 h-5 text-[var(--rkd-primary)] group-open:rotate-180 transition-transform" />
                 </summary>
                 <div className="mt-4 text-[var(--rkd-fg-muted)] leading-relaxed">{faq.answer}</div>
               </details>

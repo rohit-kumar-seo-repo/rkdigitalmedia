@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import TextBlockAnimation from '@/components/ui/text-block-animation';
 
 export function Hero() {
@@ -141,11 +141,11 @@ export function Hero() {
         <div className="mt-5 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto max-w-md sm:max-w-none">
           <a href="/contact" className="btn-primary inline-flex w-full sm:w-auto justify-center items-center gap-2 px-8 py-4 rounded-full font-montserrat font-bold text-white bg-[var(--rkd-primary)]">
             Book a Strategy Call
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <ArrowRight aria-hidden="true" className="w-4 h-4" />
           </a>
           <a href="/case-studies" className="inline-flex w-full sm:w-auto justify-center items-center gap-2 font-montserrat font-semibold text-[var(--rkd-fg)] hover:text-[var(--rkd-primary)] transition-colors">
             See Our Work
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            <ArrowUpRight aria-hidden="true" className="w-4 h-4" />
           </a>
         </div>
 
