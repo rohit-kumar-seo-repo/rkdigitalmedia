@@ -46,11 +46,11 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="relative bg-[var(--rkd-bg)] border-t border-[var(--rkd-border)] noise-overlay">
-      <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
+      <div className="max-w-[80rem] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
         {/* Top Section */}
-        <div className="grid lg:grid-cols-4 gap-8 md:gap-12 mb-16 md:mb-20">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4 md:gap-x-10 md:gap-y-12 xl:grid-cols-[1.6fr_1.15fr_0.95fr_0.95fr_1.35fr] xl:gap-12 mb-12 md:mb-16">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 md:col-span-2 xl:col-span-1">
             <Link href="/" className="flex items-center gap-3 text-[var(--rkd-fg)] hover:opacity-80 transition-opacity duration-300 mb-6">
               <div className="flex items-center justify-center w-11 h-11 shrink-0">
                 <img src="/logo-mark.svg" alt="" className="w-full h-full object-contain" />
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <nav className="lg:col-span-1">
+          <nav className="col-span-1" aria-label="Services">
             <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Services</h4>
             <ul className="space-y-3">
               {footerNav.Services.map((item) => (
@@ -94,22 +94,43 @@ export function Footer() {
           </nav>
 
           {/* Company */}
-          <nav className="lg:col-span-1">
-            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Company</h4>
-            <ul className="space-y-3">
-              {footerNav.Company.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="col-span-1">
+            <nav aria-label="Company">
+              <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Company</h4>
+              <ul className="space-y-3">
+                {footerNav.Company.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mt-10 mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Industries</h4>
+            <nav aria-label="Legal" className="mt-8">
+              <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-4" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Legal</h4>
+              <ul className="space-y-3">
+                {footerNav.Legal.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          {/* Industries */}
+          <nav className="col-span-2 md:col-span-2 xl:col-span-1" aria-label="Industries">
+            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Industries</h4>
             <ul className="space-y-3">
               {footerNav.Industries.map((item) => (
                 <li key={item.href}>
@@ -124,35 +145,21 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Legal + Contact */}
-          <div className="lg:col-span-1">
-            <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Legal</h4>
-            <ul className="space-y-3 mb-10">
-              {footerNav.Legal.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-body-sm text-[var(--rkd-fg-muted)] hover:text-[var(--rkd-primary)] transition-colors duration-300 font-outfit font-medium"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
+          {/* Contact */}
+          <div className="col-span-2 md:col-span-2 xl:col-span-1">
             <h4 className="font-montserrat font-semibold text-[var(--rkd-fg)] mb-6" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.125rem)', lineHeight: '1.4' }}>Contact</h4>
-            <address className="not-italic text-body-sm text-[var(--rkd-fg-muted)] space-y-2">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <span>5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, Uttar Pradesh 201016</span>
+            <address className="not-italic text-body-sm text-[var(--rkd-fg-muted)] space-y-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 mt-1 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
+                <span className="min-w-0">5th Ave, Gaur City 1, Sector 4, Greater Noida, Ghaziabad, Uttar Pradesh 201016</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
                 <a href="tel:+919871530594" onClick={() => trackEvent('phone_click', { location: 'footer' })} className="hover:text-[var(--rkd-primary)] transition-colors">+91 98715 30594</a>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[var(--rkd-primary)] flex-shrink-0" aria-hidden="true" />
-                <a href="mailto:info@rkdigitalmedia.in" onClick={() => trackEvent('email_click', { location: 'footer' })} className="hover:text-[var(--rkd-primary)] transition-colors">info@rkdigitalmedia.in</a>
+                <a href="mailto:info@rkdigitalmedia.in" onClick={() => trackEvent('email_click', { location: 'footer' })} className="min-w-0 break-words hover:text-[var(--rkd-primary)] transition-colors">info@rkdigitalmedia.in</a>
               </div>
             </address>
           </div>
